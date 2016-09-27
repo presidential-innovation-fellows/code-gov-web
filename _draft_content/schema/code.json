@@ -1,7 +1,7 @@
 {
     "agency": "DOABC",
     "organization": "XYZ Department",
-    "projects": [
+    "project": [
         {
             "name": "mygov",
             "description": "A Platform for Conecting People and Government",
