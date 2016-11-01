@@ -3,9 +3,7 @@
   
 [Section 7.1](https://policy.cio.gov/source-code/implementation/) of the Source Code Policy discusses roles and responsibilities at the agency level in meeting the overall requirements of the policy.  Regarding Open Source, it also notes that:
 
-` 
-agencies should strengthen internal capacity to efficiently and securely deliver OSS as part of regular operations. Additional information on this topic will be provided on Code.gov.  
-`
+> agencies should strengthen internal capacity to efficiently and securely deliver OSS as part of regular operations. Additional information on this topic will be provided on Code.gov.  
 
 In order to build this capacity, agencies will need to develop staff expertise in a number of areas, as well as build technical capacity.  The open source practice for the U.S. government is expected to rapidly evolve and become more sophisticated over the next several years, so the advice provided here will also evolve. 
 
@@ -17,9 +15,7 @@ Agencies and teams often experience churn in establishing their open source prac
 # Open Source is an interdisciplinary practice.
 Section 7.1 of the policy provides a long (and non-exhaustive) list of individuals and teams within an agency who have a role in your agency's open source practice:
 
-`
-public affairs staff, open government staff, web manager or digital strategist, program owners, 
-`
+> public affairs staff, open government staff, web manager or digital strategist, program owners, 
 
 In order to be successful in meeting the requirements of the policy and realize real, sustained value from its investment in open source, your agency shouldn't silo it as merely a technical or acquisitions issue.  Instead, the most successful agencies will approach open source in a similar manner to security and change management - as an essentially interdisciplinary capability that requires deliberate, formal, horizontal coordination across the organization.
 
