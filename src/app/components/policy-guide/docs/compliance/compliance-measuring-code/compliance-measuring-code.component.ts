@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SeoService } from '../../../../../services/seo';
 
 @Component({
   selector: 'measuring-code',
