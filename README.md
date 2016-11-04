@@ -98,7 +98,7 @@ with this waiver of copyright interest.
 
 > This repo is built on top of the
 [Angular2 Webpack Starter](https://github.com/AngularClass/angular2-webpack-starter)
-from Angular Class and includes the original [MIT License](/LICENSE). Should you
+from Angular Class and includes the original [MIT License](https://opensource.org/licenses/MIT). Should you
 choose to use this repo for your own purposes, be sure to retain the MIT license
 that comes with it.
 
