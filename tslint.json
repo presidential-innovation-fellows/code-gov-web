@@ -98,7 +98,6 @@
     "interface-name": false,
     "jsdoc-format": true,
     "no-consecutive-blank-lines": false,
-    "no-parameter-properties": false,
     "one-line": [
       true,
       "check-open-brace",
