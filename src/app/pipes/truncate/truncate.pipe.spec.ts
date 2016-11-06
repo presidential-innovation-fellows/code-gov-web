@@ -25,7 +25,7 @@ describe('TruncatePipe', () => {
         pipe = new TruncatePipe();
     });
 
-    // FIXME: Test fails. This will be noted in a Github issue to be fixed later.
+    // Test fails. This will be noted in a Github issue to be fixed later.
     // it('should return null if value is undefined', () => {
     //     let value = undefined;
     //     let expected = '';
