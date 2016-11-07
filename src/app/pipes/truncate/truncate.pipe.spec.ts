@@ -1,6 +1,5 @@
 import { Component, PipeTransform } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import {By} from '@angular/platform-browser';
 
 import { TruncatePipe } from './truncate.pipe';
 
@@ -16,28 +15,24 @@ import { TruncatePipe } from './truncate.pipe';
  *
  */
 describe('TruncatePipe', () => {
-    let pipe;
+    let pipe: TruncatePipe;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [TruncatePipe, TestComponent, Test2Component]
-        })
+            declarations: [
+                TruncatePipe,
+                TestTruncateComponent,
+                TestTruncateWithLimitComponent,
+                TestUndefinedComponent,
+                TestNullComponent
+            ]
+        });
         pipe = new TruncatePipe();
     });
 
-    // Test fails. This will be noted in a Github issue to be fixed later.
-    // it('should return null if value is undefined', () => {
-    //     let value = undefined;
-    //     let expected = '';
-
-    //     let actual = pipe.transform(value);
-
-    //     expect(actual).toBeNull();
-    // });
-
-    it('should truncate value', () => {
+    it('should truncate value more than 10 chars long', () => {
         let value = 'This is a long string';
-        let expected = 'This is a ...';
+        let expected = value.substring(0, 10) + '...';
 
         let actual = pipe.transform(value);
 
@@ -53,9 +48,9 @@ describe('TruncatePipe', () => {
         expect(actual).toEqual(expected);
     });
 
-    it('should truncate value 11 chars long', () => {
-        let value = '12345678901';
-        let expected = value.substring(0, 10) + '...';
+    it('should not truncate value < 10 chars long', () => {
+        let value = 'Hello';
+        let expected = value;
 
         let actual = pipe.transform(value);
 
@@ -75,7 +70,7 @@ describe('TruncatePipe', () => {
         let value = '123456';
         // limit argument set to 5
         let size = '5';
-        let expected = value.substring(0, parseInt(size)) + '...';
+        let expected = value.substring(0, parseInt(size, 10)) + '...';
 
         let actual = pipe.transform(value, size);
 
@@ -103,25 +98,25 @@ describe('TruncatePipe', () => {
     });
 
 
-    it('should work in an integration test inside a real component template', () => {
-        // TestComponent defined below whose template uses the truncate pipe
-        let fixture = TestBed.createComponent(TestComponent);
+    it('should work in an integration test inside a component template', () => {
+        // TestTruncateComponent defined below whose template uses the truncate pipe
+        let fixture = TestBed.createComponent(TestTruncateComponent);
         let component = fixture.componentInstance;
         let message = component.message;
         let expected = message.substring(0, 10) + '...';
         fixture.detectChanges();
 
-        // let element = fixture.debugElement.query(By.css('h2'));
-        // let actual = element.nativeElement.innerText;
         let actual = fixture.nativeElement.querySelector('h2').innerText;
 
         expect(actual).toEqual(expected);
     });
 
 
-    it('should work in an integration test inside a real component template with a pipe limit argument', () => {
-        // Test2Component defined below whose template uses the truncate pipe with an argument
-        let fixture = TestBed.createComponent(Test2Component);
+    it('should work in an integration test inside a component template with a  ' +
+        'pipe limit argument', () => {
+        // TestTruncateWithLimitComponent defined below whose template uses
+        //   the truncate pipe with an argument.
+        let fixture = TestBed.createComponent(TestTruncateWithLimitComponent);
         let component = fixture.componentInstance;
         let message = component.message;
         // truncate pipe argument sets limit to 5.
@@ -132,13 +127,62 @@ describe('TruncatePipe', () => {
 
         expect(actual).toEqual(expected);
     });
+
+    it('should return null if value argument to transform() is undefined', () => {
+        let value = undefined;
+
+        let actual = pipe.transform(value);
+
+        expect(actual).toBeNull();
+    });
+
+    it('should return null if value argument to transform() is null', () => {
+        let value = null;
+
+        let actual = pipe.transform(value);
+
+        expect(actual).toBeNull();
+    });
+
+    it('should return an empty string inside a real component template when ' +
+        'value to truncate is undefined', () => {
+        // TestUndefinedComponent defined below whose template uses the truncate pipe
+        let fixture = TestBed.createComponent(TestUndefinedComponent);
+        let component = fixture.componentInstance;
+        let message = component.message;
+        // In a template, a null value gets converted to an empty string.
+        let expected = '';
+        fixture.detectChanges();
+
+        let actual = fixture.nativeElement.querySelector('h2').innerText;
+
+        expect(actual).toEqual(expected);
+    });
+
+    it('should return an empty string inside a real component template when ' +
+        'value to truncate is null', () => {
+        // TestNullComponent defined below whose template uses the truncate pipe
+        let fixture = TestBed.createComponent(TestNullComponent);
+        let component = fixture.componentInstance;
+        let message = component.message;
+        fixture.detectChanges();
+        // In a template, a null value gets converted to an empty string.
+        let expected = '';
+
+        let actual = fixture.nativeElement.querySelector('h2').innerText;
+
+        expect(actual).toEqual(expected);
+    });
+
+
+
 });
 
 @Component({
     selector: 'test',
     template: `<h2>{{ message | truncate }}</h2>`
 })
-class TestComponent {
+class TestTruncateComponent {
     message = 'This is a message';
 }
 
@@ -146,6 +190,22 @@ class TestComponent {
     selector: 'test2',
     template: `<h2>{{ message | truncate: 5 }}</h2>`
 })
-class Test2Component {
+class TestTruncateWithLimitComponent {
     message = 'This is another message';
+}
+
+@Component({
+    selector: 'test',
+    template: `<h2>{{ message | truncate }}</h2>`
+})
+class TestUndefinedComponent {
+    message = undefined;
+}
+
+@Component({
+    selector: 'test',
+    template: `<h2>{{ message | truncate }}</h2>`
+})
+class TestNullComponent {
+    message = null;
 }
