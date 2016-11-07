@@ -22,9 +22,7 @@ describe('ModalComponent', () => {
     this.modalService = this.modalComponent.modalService;
   });
 
-  it('should have a title set in the template when ModalService.modalActivated$.next() is ' +
-    'called with an object containing a title property with a valid ' +
-    'value (not undefined)', () => {
+  it('should display a title in h1 when component\'s title property is set', () => {
     // Call ModalService.showModal() to push an Object through the modalActivated$
     // Observable since ModalComponent subscribes to that Obesrvable to get the value of its title property.
     // In this case, the title is set to 'Foobar', which means that 'Foobar' will be displayed
@@ -38,8 +36,7 @@ describe('ModalComponent', () => {
     expect(this.modalComponent.visible).toBeTruthy();
   });
 
-  it('should NOT have a title set in the template when ModalService.modalActivated$.next() is ' +
-    'called with an object containing a title property with an undefined value', () => {
+  it('should NOT display a title or h1 tag when component\'s title property is set to undefined', () => {
     // Call ModalService.showModal() to push an Object through the modalActivated$
     // Observable since ModalComponent subscribes to that Obesrvable to get the value of its title property.
     // In this case, the title pushed through the Observable is undefined, which means that the title
@@ -53,9 +50,7 @@ describe('ModalComponent', () => {
     expect(element).toBeNull();
   });
 
-  it('should have a description set in the template when ModalService.modalActivated$.next() is ' +
-    'called with an object containing a description property with a valid ' +
-    'value (not undefined)', () => {
+  it('should display a description when component\'s description property is set', () => {
     // Call ModalService.showModal() to push an Object through the modalActivated$
     // Observable since ModalComponent subscribes to that Obesrvable to get the value of its desdcription property.
     // In this case, the description is set to 'Modal Desc', which means that 'Modal Desc' will be displayed
@@ -68,9 +63,7 @@ describe('ModalComponent', () => {
     expect(element.nativeElement.children[0].innerHTML).toBe(newDesc);
   });
 
-  it('should have a url set in the template when ModalService.modalActivated$.next() is ' +
-    'called with an object containing a url property with a valid ' +
-    'value (not undefined)', () => {
+  it('should show a url link when component\'s url property is set', () => {
     // Call ModalService.showModal() to push an Object through the modalActivated$
     // Observable since ModalComponent subscribes to that Obesrvable to get the value of its url property.
     // In this case, the description is set to 'http://foo.bar/', which means that 'http://foo.bar/' will be
@@ -84,7 +77,7 @@ describe('ModalComponent', () => {
     expect(element.nativeElement.href).toBe(newUrl);
   });
 
-  it('should no longer be visible in the template since ModalComponent.close() sets the visible property to false.', () => {
+  it('should no longer be visible when ModalComponent.close() is called.', () => {
     // Call ModalService.showModal() to push an item into the modalActivated$ Observable. All values
     // are undefined since we are only concerned about the visible property that is set
     // in the subscribe() call in the ModalComponent constructor (line 23).
