@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AgencyService } from '../../../services/agency';
+import { AgencyService, Agency } from '../../../services/agency';
 import { ExternalLinkDirective } from '../../../directives/external-link';
 import { ReposService } from '../../../services/repos';
 import { SeoService } from '../../../services/seo';
@@ -12,7 +12,7 @@ import { SeoService } from '../../../services/seo';
 })
 
 export class RepoComponent {
-  agency: any;
+  agency: Agency;
   repo: any;
 
   constructor(

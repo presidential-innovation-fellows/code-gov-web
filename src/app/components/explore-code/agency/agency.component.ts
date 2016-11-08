@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AgencyService } from '../../../services/agency';
+import { AgencyService, Agency } from '../../../services/agency';
 import { ReposService } from '../../../services/repos';
 import { LanguageIconPipe } from '../../../pipes/language-icon';
 import { PluralizePipe } from '../../../pipes/pluralize';
@@ -14,7 +14,7 @@ import { TruncatePipe } from '../../../pipes/truncate';
 })
 
 export class AgencyComponent {
-  agency: any;
+  agency: Agency;
   public hasRepos: boolean = false;
   public repos;
 

@@ -3,13 +3,18 @@ import { AGENCIES } from './agency.data';
 
 @Injectable()
 export class AgencyService {
-  agencies = AGENCIES;
+  agencies: Agency[] = AGENCIES;
 
-  getAgencies() {
+  getAgencies(): Agency[] {
     return this.agencies;
   }
 
-  getAgency(id) {
+  getAgency(id): Agency {
     return this.agencies.filter(agency => agency.id === id)[0];
   }
+}
+
+export interface Agency {
+  id: string;
+  name: string;
 }
