@@ -3,7 +3,7 @@ import { SeoService } from '../../../../../services/seo';
 
 @Component({
   selector: 'measuring-code',
-  template: require('./compliance-measuring-code.template.html')
+  templateUrl: './compliance-measuring-code.template.html'
 })
 
 export class ComplianceMeasuringCodeComponent {

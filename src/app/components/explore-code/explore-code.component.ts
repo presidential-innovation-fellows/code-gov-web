@@ -3,8 +3,8 @@ import { StateService } from '../../services/state';
 
 @Component({
   selector: 'explore-code',
-  styles: [require('./explore-code.style.scss')],
-  template: require('./explore-code.template.html')
+  styleUrls: ['./explore-code.style.scss'],
+  templateUrl: './explore-code.template.html'
 })
 
 export class ExploreCodeComponent {

@@ -8,6 +8,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class PluralizePipe implements PipeTransform {
   transform(value: string, arg: number): any {
 
-    return pluralize.plural(value, arg);
+    return pluralize.plural(value);
   }
 }

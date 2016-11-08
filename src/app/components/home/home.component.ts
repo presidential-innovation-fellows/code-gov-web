@@ -8,8 +8,8 @@ import { StateService } from '../../services/state';
   // for `document.querySelectorAll(selector)` in our index.html
   // where, in this case, selector is the string 'home'
   selector: 'home',  // <home></home>
-  styles: [require('./home.style.scss')],
-  template: require('./home.template.html')
+  styleUrls: ['./home.style.scss'],
+  templateUrl: './home.template.html'
 })
 export class HomeComponent {
   url = 'https://pif.gov';

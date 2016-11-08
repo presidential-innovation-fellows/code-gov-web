@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-
 import { ModalService } from '../../services/modal';
 
 @Component({
   selector: 'modal',
-  styles: [require('./modal.style.scss')],
-  template: require('./modal.template.html')
+  styleUrls: ['./modal.style.scss'],
+  templateUrl: './modal.template.html'
 })
 
 export class ModalComponent {

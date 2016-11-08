@@ -4,7 +4,7 @@ import { MobileService } from '../../../../services/mobile';
 
 @Component({
   selector: 'overview',
-  template: require('./overview.template.html')
+  templateUrl: './overview.template.html'
 })
 export class OverviewComponent {
 

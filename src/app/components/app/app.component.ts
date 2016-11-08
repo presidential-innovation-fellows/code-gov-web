@@ -5,9 +5,9 @@ import { StateService } from '../../services/state';
 
 @Component({
   selector: 'app',
-  encapsulation: ViewEncapsulation.None,
-  styles: [require('./app.style.scss')],
-  template: require('./app.template.html')
+ // encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./app.style.scss'],
+  templateUrl: './app.template.html'
 })
 
 export class AppComponent {

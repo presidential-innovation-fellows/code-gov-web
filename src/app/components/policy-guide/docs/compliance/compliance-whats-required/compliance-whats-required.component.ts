@@ -3,7 +3,7 @@ import { SeoService } from '../../../../../services/seo';
 
 @Component({
   selector: 'compliance-whats-required',
-  template: require('./compliance-whats-required.template.html')
+  templateUrl: './compliance-whats-required.template.html'
 })
 
 export class ComplianceWhatsRequiredComponent {

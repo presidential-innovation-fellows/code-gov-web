@@ -9,8 +9,8 @@ import { TruncatePipe } from '../../../pipes/truncate';
 
 @Component({
   selector: 'agency',
-  styles: [require('./agency.styles.scss')],
-  template: require('./agency.template.html')
+  styleUrls: ['./agency.styles.scss'],
+  templateUrl: './agency.template.html'
 })
 
 export class AgencyComponent {

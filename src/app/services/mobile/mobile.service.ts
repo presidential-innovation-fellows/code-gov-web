@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
+import { Observable } from 'rxjs/Observable'
 
 @Injectable()
 
 export class MobileService {
   active: boolean;
   private mobileMenuActive = new Subject<boolean>();
-  activeMobileMenu$ = this.mobileMenuActive.asObservable();
+  activeMobileMenu$:Observable<boolean> = this.mobileMenuActive.asObservable();
 
   constructor() {
     this.active = false;

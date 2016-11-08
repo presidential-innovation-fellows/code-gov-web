@@ -3,7 +3,7 @@ import { SeoService } from '../../../../../services/seo';
 
 @Component({
   selector: 'introduction',
-  template: require('./capacity-introduction.template.html')
+  templateUrl: './capacity-introduction.template.html'
 })
 
 export class CapacityIntroductionComponent {

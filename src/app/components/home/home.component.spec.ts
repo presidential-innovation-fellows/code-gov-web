@@ -3,7 +3,7 @@ import { inject, TestBed } from '@angular/core/testing';
 import { BannerArtComponent } from './banner-art';
 import { ExternalLinkDirective } from '../../directives/external-link';
 import { HomeComponent } from './';
-import { ModalComponent } from '../modal';
+import { ModalModule } from '../modal';
 import { ModalService } from '../../services/modal';
 import { SeoService } from '../../services/seo';
 import { StateService } from '../../services/state';
@@ -12,11 +12,13 @@ describe('HomeComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [
+        ModalModule
+      ],
       declarations: [
         BannerArtComponent,
         ExternalLinkDirective,
-        HomeComponent,
-        ModalComponent
+        HomeComponent
       ],
       providers: [
         ModalService,

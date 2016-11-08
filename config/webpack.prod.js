@@ -5,6 +5,7 @@
 const helpers = require('./helpers');
 const webpackMerge = require('webpack-merge'); // used to merge webpack configs
 const commonConfig = require('./webpack.common.js'); // the settings that are common to prod and dev
+const CriticalCssPlugin = require('./critical-css-plugin');
 
 /**
  * Webpack Plugins
@@ -216,17 +217,6 @@ module.exports = function (env) {
       new CriticalCssPlugin({
         src: 'index.html'
       }),
-
-      new CopyWebpackPlugin([
-       {
-         from: 'src/assets',
-         to: 'assets',
-       },
-       {
-         from: 'config/CNAME'
-       }
-      ]),
-
       /**
        * Plugin LoaderOptionsPlugin (experimental)
        *

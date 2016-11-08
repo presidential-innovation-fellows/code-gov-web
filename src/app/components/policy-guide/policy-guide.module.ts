@@ -1,4 +1,9 @@
+import { NgModule } from '@angular/core'
+import { CommonModule } from '@angular/common'
 import { Routes, RouterModule } from '@angular/router';
+import { ModalModule } from '../../components/modal'
+import { AppPipesModule } from '../../pipes';
+
 import {
   CapacityComponent,
   CapacityBasicsComponent,
@@ -21,13 +26,13 @@ import {
   OverviewPilotComponent,
   OverviewTrackingProgressComponent,
   PolicyGuideComponent
-} from '../../utils/app-components';
+} from '../../components/policy-guide';
 import { DataResolver } from '../../app.resolver';
 
 
 export const POLICY_GUIDE_ROUTES: Routes = [
   {
-    path: 'policy-guide',
+    path: '',
     component: PolicyGuideComponent,
     children: [
       { path: '', redirectTo: 'docs/overview/introduction'},
@@ -108,3 +113,36 @@ export const POLICY_GUIDE_ROUTES: Routes = [
     ]
   }
 ];
+
+@NgModule({
+  imports: [
+    CommonModule,
+    ModalModule,
+    AppPipesModule,
+    RouterModule.forChild(POLICY_GUIDE_ROUTES)
+  ],
+  declarations: [
+    CapacityComponent,
+    CapacityBasicsComponent,
+    CapacityCollaborationComponent,
+    CapacityInteragencySharingComponent,
+    CapacityIntroductionComponent,
+    CapacityResourcesComponent,
+    CapacitySecurityComponent,
+    ComplianceComponent,
+    ComplianceAcquiringCodeComponent,
+    ComplianceInventoryCodeComponent,
+    ComplianceLicensingComponent,
+    ComplianceMeasuringCodeComponent,
+    ComplianceMetadataSchemaComponent,
+    ComplianceWhatsRequiredComponent,
+    DocsComponent,
+    IntroductionComponent,
+    OverviewComponent,
+    OverviewInventoryComponent,
+    OverviewPilotComponent,
+    OverviewTrackingProgressComponent,
+    PolicyGuideComponent
+  ]
+})
+export class PolicyGuideModule {}
