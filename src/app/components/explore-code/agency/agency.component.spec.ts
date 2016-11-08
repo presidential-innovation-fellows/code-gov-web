@@ -66,6 +66,15 @@ describe('AgencyComponent', () => {
       expect(this.agencyComponent.filterByAgency(repo)).toBe(true);
     });
   });
+
+  describe('destroy', () => {
+    it('should unsubscribe from router events on destroy', () => {
+      this.fixture.detectChanges();
+      spyOn(this.agencyComponent.eventSub, 'unsubscribe');
+      this.fixture.destroy();
+      expect(this.agencyComponent.eventSub.unsubscribe).toHaveBeenCalled();
+    });
+  });
 });
 
 class MockActivatedRoute extends ActivatedRoute {
