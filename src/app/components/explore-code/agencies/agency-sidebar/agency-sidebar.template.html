@@ -1,5 +1,5 @@
 <h3>Agencies</h3>
-<nav [ngClass]="{active: menuActive}" role="navigation">
+<nav [ngClass]="{active: menuActive | async}" role="navigation">
   <button toggle-menu class="mobile-submenu" role="button" aria-pressed="false">
     <span class="menu-icon">
       <span class="line"></span>
