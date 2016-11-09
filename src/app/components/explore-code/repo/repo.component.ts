@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs/Subscription';
 import { AgencyService, Agency } from '../../../services/agency';
 import { ExternalLinkDirective } from '../../../directives/external-link';
 import { ReposService } from '../../../services/repos';
@@ -11,9 +12,11 @@ import { SeoService } from '../../../services/seo';
   template: require('./repo.template.html')
 })
 
-export class RepoComponent {
+export class RepoComponent implements OnInit, OnDestroy {
   agency: Agency;
   repo: any;
+  eventSub: Subscription;
+  repoSub: Subscription;
 
   constructor(
     private route: ActivatedRoute,
@@ -23,7 +26,7 @@ export class RepoComponent {
   ) {}
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
+    this.eventSub = this.route.params.subscribe(params => {
 
       let id = params['id'];
 
@@ -31,8 +34,13 @@ export class RepoComponent {
     });
   }
 
+  ngOnDestroy() {
+    if (this.eventSub) this.eventSub.unsubscribe();
+    if (this.repoSub) this.repoSub.unsubscribe();
+  }
+
   getRepo(id) {
-    this.reposService.getJsonFile().
+    this.repoSub = this.reposService.getJsonFile().
       subscribe((result) => {
         if (result) {
           this.repo = result['repos'].filter(repo => repo.repoID === id)[0];

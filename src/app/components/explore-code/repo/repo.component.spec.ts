@@ -48,6 +48,16 @@ describe('RepoComponent', () => {
       console.log(repoComponent.getRepo(id));
     }));
   }));
+
+
+  describe('destroy', () => {
+    it('should unsubscribe from router events on destroy', () => {
+      this.fixture.detectChanges();
+      spyOn(repoComponent.eventSub, 'unsubscribe');
+      this.fixture.destroy()
+      expect(repoComponent.eventSub.unsubscribe).toHaveBeenCalled();
+    });
+  });
   */
 });
 
