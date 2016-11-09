@@ -100,4 +100,12 @@ describe('ModalComponent', () => {
     expect(this.modalComponent.visible).toBeFalsy();
   });
 
+  describe('destroy', () => {
+    it('should unsubscribe from router events on destroy', () => {
+      this.fixture.detectChanges();
+      spyOn(this.modalComponent.modalSub, 'unsubscribe');
+      this.fixture.destroy()
+      expect(this.modalComponent.modalSub.unsubscribe).toHaveBeenCalled();
+    });
+  });
 });

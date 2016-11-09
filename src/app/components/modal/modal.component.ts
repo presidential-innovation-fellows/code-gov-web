@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs/Subscription';
 
 import { ModalService } from '../../services/modal';
 
@@ -8,14 +9,15 @@ import { ModalService } from '../../services/modal';
   template: require('./modal.template.html')
 })
 
-export class ModalComponent {
+export class ModalComponent implements OnDestroy {
   description: string;
   title: string;
   url: string;
   visible: boolean;
+  modalSub: Subscription;
 
   constructor(private modalService: ModalService) {
-    modalService.modalActivated$.subscribe(
+    this.modalSub = modalService.modalActivated$.subscribe(
       modal => {
         this.description = modal['description'];
         this.title = modal['title'];
@@ -23,6 +25,10 @@ export class ModalComponent {
         this.visible = true;
       }
     );
+  }
+
+  ngOnDestroy() {
+    if (this.modalSub) this.modalSub.unsubscribe();
   }
 
   close() {
