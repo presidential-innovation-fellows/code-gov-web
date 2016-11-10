@@ -28,30 +28,38 @@ export class IsDefinedPipe implements PipeTransform {
      * or one whose value is 'null', otherwise false.
      */
     transform(value: any, args?: any[]): any {
-        if (typeof value === 'string') {
-            value = value.trim();
-            if (value === 'null') {
-                return false;
-            } else if (value === 'undefined') {
-                return false;
-            } else {
-                if (value) {
-                    return true;
-                }
-            }
+      if (typeof value === 'string') {
+          return this.isDefinedString(value);
       } else if (typeof value === 'number') {
-          // in this case, zero is truthy, since in JS, zero is falsy
-          if ( value === 0 ) {
-              return true;
-          } else {
-              if (value) {
-                  return true;
-              }
-          }
+          return this.isDefinedNumber(value);
       } else if (value) {
           return true;
       }
-
       return false;
+    }
+
+    private isDefinedString(value: string): boolean {
+        value = value.trim();
+        if (value === 'null') {
+            return false;
+        } else if (value === 'undefined') {
+            return false;
+        } else {
+            if (value) {
+                return true;
+            }
+        }
+    }
+
+    private isDefinedNumber(value: number): boolean {
+        // In this case, zero is truthy,
+        //  since in JavaScript, zero is false/falsy
+        if ( value === 0 ) {
+            return true;
+        } else {
+            if (value) {
+                return true;
+            }
+        }
     }
 }
