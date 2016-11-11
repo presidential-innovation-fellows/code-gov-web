@@ -114,15 +114,6 @@ describe('RepoComponent', () => {
   }));
 
 
-  // describe('destroy', () => {
-  //   it('should unsubscribe from router events on destroy', () => {
-  //     this.fixture.detectChanges();
-  //     spyOn(repoComponent.eventSub, 'unsubscribe');
-  //     this.fixture.destroy()
-  //     expect(repoComponent.eventSub.unsubscribe).toHaveBeenCalled();
-  //   });
-  // });
-
   it('should display repoUrl in template if repo.repoUrl property is set',
     inject([AgencyService, ReposService, SeoService],
       (agencyService, reposService, seoService)  => {
@@ -288,6 +279,16 @@ describe('RepoComponent', () => {
         expect(parent.children[0]).toBeDefined();
       }
   ));
+
+  describe('ngOnDestroy()', () => {
+    it('should unsubscribe from router event subscription on destroy', () => {
+      fixture.detectChanges();
+      spyOn(repoComponent.eventSub, 'unsubscribe');
+      fixture.destroy()
+      expect(repoComponent.eventSub.unsubscribe).toHaveBeenCalled();
+    });
+  });
+
 });
 
 /**
