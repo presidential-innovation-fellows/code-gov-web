@@ -298,6 +298,18 @@ describe('IsDefinedPipe', () => {
 
             expect(el).toBeNull();
         });
+        it('should display text when value is expression evaluating to true', () => {
+            let expected = true ||  false;
+            testComponent.setValue(expected);
+
+            fixture.detectChanges();
+
+            let actual = fixture.nativeElement.querySelector('h1').innerText;
+            // console.log('actual value', actual);
+
+            expect(actual).toEqual('true');
+        });
+
     });
 
 });
