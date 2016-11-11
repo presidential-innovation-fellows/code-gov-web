@@ -6,11 +6,11 @@ import { Pipe, PipeTransform } from '@angular/core';
  * transform() method.
  *
  * If the transform() argument is defined, then the method
- * will return true. However, if the argument to tranform()
+ * will return true. However, if the argument to transform()
  * is a string and it can be trimmed to an empty string,
  * then false is returned. Also, if the argument to tranform()
- * is a string with a trimmed value of 'null', then false
- * is returned.
+ * is a string with a trimmed value of 'null' or 'undefined;,
+ * then false is returned.
  *
  */
 @Pipe({
@@ -25,7 +25,7 @@ export class IsDefinedPipe implements PipeTransform {
      * @param args - Not used by this pipe
      * @return true if value is defined or if a string
      * that the trimmed value is not an empty string
-     * or one whose value is 'null', otherwise false.
+     * or one whose value is 'null' or 'undefined', otherwise false.
      */
     transform(value: any, args?: any[]): any {
       if (typeof value === 'string') {
