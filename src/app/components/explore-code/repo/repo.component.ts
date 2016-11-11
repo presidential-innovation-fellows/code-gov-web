@@ -49,7 +49,7 @@ export class RepoComponent implements OnInit, OnDestroy {
           this.seoService.setMetaDescription(this.repo.description);
           this.seoService.setMetaRobots('Index, Follow');
         } else {
-          console.log('Error.');
+          console.log('Error. Source code repositories not found');
         }
     });
   }

@@ -20,6 +20,7 @@ import { LanguageIconPipe } from './pipes/language-icon';
 import { PluralizePipe } from './pipes/pluralize';
 import { TruncatePipe } from './pipes/truncate';
 import { AppComponent } from './utils/app-components';
+import { IsDefinedPipe } from './pipes/is-defined';
 import { APP_COMPONENTS } from './utils/app-components';
 import { AgencyService, AGENCIES } from './services/agency';
 import { MobileService } from './services/mobile';
@@ -55,6 +56,7 @@ const APP_PROVIDERS = [
     ExternalLinkDirective,
     LanguageIconPipe,
     PluralizePipe,
+    IsDefinedPipe,
     ToggleMenuDirective,
     TruncatePipe
   ],

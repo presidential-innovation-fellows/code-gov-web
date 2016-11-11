@@ -7,18 +7,18 @@
         </a>
       </h3>
       <h1>{{ repo.name }}</h1>
-      <p *ngIf="repo.description && repo.description != 'null' && repo.description != 'null '">{{ repo.description }}</p>
+      <p *ngIf="repo.description | isdefined">{{ repo.description }}</p>
     </div>
     <div class="repo-actions">
       <ul class="usa-unstyled-list">
-        <li *ngIf="repo.homepage && repo.homepage != 'null'">
-          <a external-link class="usa-button" href="{{repo.homepage}}" target="_blank">
+        <li *ngIf="repo.homepage | isdefined">
+          <a external-link class="usa-button" href="{{repo.homepage}}">
             Homepage
           </a>
         </li>
 
-        <li *ngIf="repo.repoURL && repo.repoURL != 'null'">
-          <a external-link class="usa-button" href="{{ repo.repoURL }}" target="_blank">
+        <li *ngIf="repo.repoURL | isdefined">
+          <a external-link class="usa-button" href="{{ repo.repoURL }}">
             Visit Repo
           </a>
         </li>
@@ -31,7 +31,7 @@
       <h2>Highlights</h2>
       <ul class="usa-unstyled-list repo-features-list">
         <li class="repo-language usa-width-one-half">
-          <div *ngIf="repo.codeLanguage">
+          <div *ngIf="repo.codeLanguage | isdefined">
             <div *ngFor="let language of repo.codeLanguage" class="feature-icon">
               <i class="devicons devicons-{{language.language | lowercase | languageIcon }}">
               </i>
@@ -44,7 +44,7 @@
               </span>
             </p>
           </div>
-          <div *ngIf="!repo.codeLanguage">
+          <div *ngIf="!repo.codeLanguage | isdefined">
             <div class="feature-icon">
               <i class="fa fa-question"></i>
             </div>
@@ -56,7 +56,7 @@
           </div>
         </li>
         <li class="repo-license usa-width-one-half">
-          <div *ngIf="repo.license && repo.license_name">
+          <div *ngIf="repo.license && repo.license_name | isdefined">
             <div class="feature-icon">
               <i class="fa fa-file-text-o "></i>
             </div>
