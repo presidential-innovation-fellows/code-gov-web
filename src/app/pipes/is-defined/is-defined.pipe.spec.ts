@@ -243,6 +243,7 @@ describe('IsDefinedPipe', () => {
             // console.log('actual value', actual);
 
             // actual is '0' string, so we use == comparison
+            // tslint:disable-next-line: triple-equals
             expect(actual == expected).toBeTruthy();
         });
 

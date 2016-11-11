@@ -150,7 +150,8 @@ describe('RepoComponent', () => {
 
 /******* Test repo.description  ****/
 
-  it('should NOT display repository description in template if repo.description property is undefined',
+  it('should NOT display repository description in template if repo.description '
+    + 'property is undefined',
     inject([AgencyService, ReposService, SeoService],
       (agencyService, reposService, seoService)  => {
         setupRepoPropertyTest(agencyService, reposService, seoService,
@@ -284,7 +285,7 @@ describe('RepoComponent', () => {
     it('should unsubscribe from router event subscription on destroy', () => {
       fixture.detectChanges();
       spyOn(repoComponent.eventSub, 'unsubscribe');
-      fixture.destroy()
+      fixture.destroy();
       expect(repoComponent.eventSub.unsubscribe).toHaveBeenCalled();
     });
   });
