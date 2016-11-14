@@ -1,5 +1,8 @@
 import { Component, ViewEncapsulation, OnInit, OnDestroy } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+
+import { Angulartics2 } from 'angulartics2';
+import { Angulartics2GoogleTagManager } from 'angulartics2/dist/providers';
 import { Subscription } from 'rxjs/Subscription';
 
 import { StateService } from '../../services/state';
@@ -15,6 +18,8 @@ export class AppComponent implements OnInit, OnDestroy {
   eventSub: Subscription;
 
   constructor(
+    public angulartics2: Angulartics2,
+    public angularticsGtm: Angulartics2GoogleTagManager,
     private router: Router,
     public stateService: StateService
   ) {}

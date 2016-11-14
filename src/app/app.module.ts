@@ -3,9 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
-import { AuthHttp, AuthConfig, AUTH_PROVIDERS, provideAuth} from 'angular2-jwt';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
+import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
+import { Angulartics2Module } from 'angulartics2';
+import { Angulartics2GoogleTagManager } from 'angulartics2/dist/providers';
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -45,6 +47,7 @@ const APP_PROVIDERS = [
  */
 @NgModule({
   imports: [ // import Angular's modules
+    Angulartics2Module.forRoot(),
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
@@ -61,6 +64,7 @@ const APP_PROVIDERS = [
     TruncatePipe
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
+    Angulartics2GoogleTagManager,
     ENV_PROVIDERS,
     {provide: LocationStrategy, useClass: HashLocationStrategy},
     APP_PROVIDERS

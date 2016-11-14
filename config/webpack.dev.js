@@ -26,7 +26,7 @@ const METADATA = webpackMerge(commonConfig({ env: ENV }).metadata, {
   port: PORT,
   ENV: ENV,
   HMR: HMR,
-  gtmId: 'GTM-MSJCVSA'
+  gtmAuth: 'GTM-MSJCVS'
 });
 
 /**
