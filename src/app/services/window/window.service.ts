@@ -6,6 +6,11 @@ function _window(): Window {
    return window;
 }
 
+/**
+ * A servioe that wraps the native global 'window' object
+ * like $window in AngularJS 1.x. This allows for mocking
+ * in unit tests.
+ */
 @Injectable()
 export class WindowRef {
     constructor() {

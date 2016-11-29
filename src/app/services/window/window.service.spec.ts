@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { inject, TestBed, ComponentFixture } from '@angular/core/testing';
 import { Component, Injectable } from '@angular/core';
@@ -72,6 +73,10 @@ class DummyComponent {
     constructor(private _windowRef: WindowRef) {
         this.windowRef = _windowRef;
     }
+}
+
+class MockRouter extends Router {
+
 }
 
 export class MockWindowRef extends WindowRef {
