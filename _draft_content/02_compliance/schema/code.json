@@ -1,4 +1,4 @@
-{
+[{
     "agency": "DOABC",
     "organization": "XYZ Department",
     "projects": [
@@ -33,7 +33,7 @@
                 {
                     "name": "DOXYZ",
                     "email": "project@doxyz.gov"
-                }    
+                }
             ],
             "exemption": null,
             "updated": {
@@ -43,4 +43,4 @@
             }
         }
     ]
-}
+}]
