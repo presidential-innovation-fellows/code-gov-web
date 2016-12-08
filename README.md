@@ -53,9 +53,21 @@ You can then run the server using `npm start`.
 By default, the development server will listen on <http://localhost:2700/>. You can change the default port by setting the `PORT` environment variable before starting the server (for example, `PORT=3000 npm start`).
 
 ## Testing
-This app uses Karma + Jasmine to handle testing. Run `npm test` to execute
+### Unit tests
+This app uses Karma + Jasmine to handle unit testing. Run `npm test` to execute
 tests. To add tests, simply create a file with `.spec.ts` as the extension and
 your tests will be included.
+### End-to-end tests
+End-to-end testing is done with Protractor and tests are written in Jasmine with the Protractor API
+used to locate elements and interact with the page.
+Running e2e tests requires the following steps:
+* Run `npm start` to start the application.
+* In a second terminal window, run `npm run webdriver:start` to start the selenium server used to run the tests.
+This step must be done before the next step.
+* In a third terminal window, run `npm run e2e`. The Chrome browser will be launched to
+run the tests and the test results will be displayed in this window.
+
+End-to-end tests need to be written in a file with an `.e2e.ts` extension.
 
 ## Deployment
 This app uses the `github-deploy` package for handling deployment. To configure
