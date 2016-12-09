@@ -17,7 +17,7 @@ Each organization JSON object in the `code.json` file, represents the projects f
 
 *   `agency`: [string] The agency acronym. For example "GSA" or "DOD"
 *   `organization`: [string] The organization within the agency that the projects listed belong to. For example, "18F" or "Navy".
-*   `projects`: [list] Contains list of `project` objects representing each software project, as defined below.
+*   `projects`: [array] Contains list of `project` objects representing each software project, as defined below.
 
 ### Project JSON Object
 
@@ -30,10 +30,10 @@ Each `project` object requires the following fields:
 *   `name`: [string] The project name
 *   `description`: [string] A description of the project
 *   `license`: [`null` or string] The URL of the project license, if available. `null` should be used if not.
-*   `openSourceProject`: [integer] A value indicating whether or not the project is open source.
+*   `openSourceProject`: [number] A value indicating whether or not the project is open source.
     *   `0`: The project is not open source.
     *   `1`: The project is open source.
-*   `governmentWideReuseProject`: [integer] A value indicating whether or not the project is built for government-wide reuse.
+*   `governmentWideReuseProject`: [number] A value indicating whether or not the project is built for government-wide reuse.
     *   `0`: The project is not built for government-wide reuse.
     *   `1`: The project is built for government-wide reuse.
 *   `tags`: [array] A list of string alphanumeric keywords that identify the project.
@@ -60,7 +60,7 @@ The following `project` object fields are optional:
     *   `twitter`: [string] The username of the project's Twitter account
     *   `phone`: [string] The phone number to contact a project.
 *   `partners`: [array] A list of strings containing the acronyms of agencies partnering on the project.
-*   `exemption`: [integer] The exemption that excuses the project from government-wide reuse.
+*   `exemption`: [number] The exemption that excuses the project from government-wide reuse.
     *   `1`: The sharing of the source code is restricted by law or regulation, including—but not limited to—patent or intellectual property law, the Export Asset Regulations, the International Traffic in Arms Regulation, and the Federal laws and regulations governing classified information.
     *   `2`: The sharing of the source code would create an identifiable risk to the detriment of national security, confidentiality of Government information, or individual privacy.
     *   `3`: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency's systems or personnel.
