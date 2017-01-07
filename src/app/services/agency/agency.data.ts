@@ -41,7 +41,7 @@ export const AGENCIES = [
   },
   {
     id: 'NASA',
-    name: 'NASA'
+    name: 'National Aeronautics and Space Administration'
   },
   {
     id: 'NARA',
