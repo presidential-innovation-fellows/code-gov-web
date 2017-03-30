@@ -1,0 +1,13 @@
+<div *ngIf="hasAgencies" class="agencies-container">
+  <ul class="ragencies-list usa-unstyled-list">
+    <li *ngFor="let agency of agencies" class="agency">
+     <agency-list-item [agency]="agency"></agency-list-item>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="!hasAgencies" class="no-agencies">
+  <p>
+    No agencies found.
+  </p>
+</div>
