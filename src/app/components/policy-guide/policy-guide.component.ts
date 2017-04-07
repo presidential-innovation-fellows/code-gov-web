@@ -3,8 +3,8 @@ import { StateService } from '../../services/state';
 
 @Component({
   selector: 'policy-guide',
-  styles: [require('./policy-guide.style.scss')],
-  template: require('./policy-guide.template.html')
+  styleUrls: ['./policy-guide.style.scss'],
+  templateUrl: './policy-guide.template.html'
 })
 export class PolicyGuideComponent {
 

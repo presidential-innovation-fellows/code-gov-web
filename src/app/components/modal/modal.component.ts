@@ -6,8 +6,8 @@ import { ModalService } from '../../services/modal';
 
 @Component({
   selector: 'modal',
-  styles: [require('./modal.style.scss')],
-  template: require('./modal.template.html')
+  styles: ['./modal.style.scss'],
+  templateUrl: './modal.template.html'
 })
 
 export class ModalComponent implements OnDestroy {

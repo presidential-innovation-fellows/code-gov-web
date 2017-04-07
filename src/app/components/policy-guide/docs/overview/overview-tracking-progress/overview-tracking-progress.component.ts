@@ -3,7 +3,7 @@ import { SeoService } from '../../../../../services/seo';
 
 @Component({
   selector: 'overview-tracking-progress',
-  template: require('./overview-tracking-progress.template.html')
+  templateUrl: './overview-tracking-progress.template.html'
 })
 export class OverviewTrackingProgressComponent {
 

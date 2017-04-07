@@ -10,7 +10,7 @@
         <a routerLink="/explore-code/repos/{{repo.repoID}}">
           <h3 class="repo-name">{{ repo.name }}</h3>
           <p class="repo-description">
-            {{ repo.description | truncate : 200 }}
+            {{ repo.description | truncate : '200' }}
           </p>
           <ul class="usa-unstyled-list repo-features">
             <li *ngFor="let language of repo.codeLanguage" class="language">

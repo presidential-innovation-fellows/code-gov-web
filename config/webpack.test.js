@@ -54,6 +54,7 @@ module.exports = function (options) {
       modules: [ path.resolve(__dirname, 'src'), 'node_modules' ]
 
     },
+    entry: './config/spec-bundle',
 
     /**
      * Options affecting the normal modules.
@@ -100,18 +101,11 @@ module.exports = function (options) {
          */
         {
           test: /\.ts$/,
-          loader: 'awesome-typescript-loader',
-          query: {
-            // use inline sourcemaps for "karma-remap-coverage" reporter
-            sourceMap: false,
-            inlineSourceMap: true,
-            compilerOptions: {
+          loaders: [
+            'awesome-typescript-loader?inlineSourceMap=true&sourceMap=false',
+            'angular2-template-loader',
+          ],
 
-              // Remove TypeScript helpers to be injected
-              // below by DefinePlugin
-              removeComments: true
-            }
-          },
           exclude: [/\.e2e\.ts$/]
         },
 
@@ -135,13 +129,13 @@ module.exports = function (options) {
         {
           test: /\.css$/,
           include: helpers.root('src', 'app'),
-          loader: 'raw!postcss'
+          loader: 'raw-loader!postcss-loader'
         },
 
         {
           test: /\.scss$/,
           exclude: /node_modules/,
-          loader: 'raw!postcss!sass'
+          loader: 'raw-loader!postcss-loader!sass-loader'
         },
 
         /**
@@ -237,6 +231,8 @@ module.exports = function (options) {
               require('bourbon-neat').includePaths
             ]
           },
+
+          awesomeTypescriptLoader: {},
 
           tslint: {
             emitErrors: false,

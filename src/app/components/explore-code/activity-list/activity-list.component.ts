@@ -7,8 +7,8 @@ import { TruncatePipe } from '../../../pipes/truncate';
 
 @Component({
   selector: 'activity-list',
-  styles: [require('./activity-list.style.scss')],
-  template: require('./activity-list.template.html')
+  styleUrls: ['./activity-list.style.scss'],
+  templateUrl: './activity-list.template.html'
 })
 
 export class ActivityListComponent {

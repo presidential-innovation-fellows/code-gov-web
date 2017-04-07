@@ -16,24 +16,24 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
     "noEmitHelpers": true,
     "strictNullChecks": false,
-    "baseUrl": "./src",
-    "paths": {
-    },
+    "outDir": "lib",
     "lib": [
       "dom",
       "es6"
-    ]
+    ],
+    "baseUrl": "."
   },
-  "exclude": [
-    "node_modules",
-    "dist"
+  "include": [
+    "src/**/*.ts"
   ],
   "awesomeTypescriptLoaderOptions": {
     "forkChecker": true,
     "useWebpackText": true
+  },
+  "angularCompilerOptions": {
+    "genDir": "./src/ngfactory"
   },
   "compileOnSave": false,
   "buildOnSave": false,

@@ -5,7 +5,7 @@ import { Pipe, PipeTransform, Component } from '@angular/core';
 })
 
 export class TruncatePipe implements PipeTransform {
-  transform(value: string, arg?: string): any {
+  transform(value: string, arg?: number | string): any {
     /*
       This check follows the same behavior as Angular 2 standard
       pipes that handle strings such as UppercasePipe.
@@ -17,7 +17,7 @@ export class TruncatePipe implements PipeTransform {
     if (value == null) {
       return null;
     }
-    let limit = parseInt(arg, 10) || 10;
+    let limit = (typeof arg === 'string' ? parseInt(arg, 10) : arg)  || 10;
     let trail = '...';
 
     return value.length > limit ? value.substring(0, limit) + trail : value;

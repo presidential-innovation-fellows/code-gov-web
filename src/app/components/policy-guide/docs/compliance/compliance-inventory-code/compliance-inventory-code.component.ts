@@ -3,7 +3,7 @@ import { SeoService } from '../../../../../services/seo';
 
 @Component({
   selector: 'inventory-code',
-  template: require('./compliance-inventory-code.template.html')
+  templateUrl: './compliance-inventory-code.template.html'
 })
 
 export class ComplianceInventoryCodeComponent {

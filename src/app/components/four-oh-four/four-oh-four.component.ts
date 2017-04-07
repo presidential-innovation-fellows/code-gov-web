@@ -3,8 +3,8 @@ import { StateService } from '../../services/state';
 
 @Component({
   selector: 'four-oh-four',
-  styles: [require('./four-oh-four.style.scss')],
-  template: require('./four-oh-four.template.html')
+  styleUrls: ['./four-oh-four.style.scss'],
+  templateUrl: './four-oh-four.template.html'
 })
 
 export class FourOhFourComponent {

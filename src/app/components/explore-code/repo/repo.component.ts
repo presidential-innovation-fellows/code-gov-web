@@ -8,8 +8,8 @@ import { SeoService } from '../../../services/seo';
 
 @Component({
   selector: 'repo',
-  styles: [require('./repo.styles.scss')],
-  template: require('./repo.template.html')
+  styleUrls: ['./repo.styles.scss'],
+  templateUrl: './repo.template.html'
 })
 
 export class RepoComponent implements OnInit, OnDestroy {

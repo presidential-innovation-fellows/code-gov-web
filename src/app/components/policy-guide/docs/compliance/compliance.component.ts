@@ -4,7 +4,7 @@ import { MobileService } from '../../../../services/mobile';
 
 @Component({
   selector: 'compliance',
-  template: require('./compliance.template.html')
+  templateUrl: './compliance.template.html'
 })
 
 export class ComplianceComponent {

@@ -8,8 +8,8 @@ import { StateService } from '../../services/state';
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
-  styles: [require('./app.style.scss')],
-  template: require('./app.template.html')
+  styleUrls: ['./app.style.scss'],
+  templateUrl: './app.template.html'
 })
 
 export class AppComponent implements OnInit, OnDestroy {

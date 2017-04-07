@@ -24,6 +24,7 @@ const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const CriticalCssPlugin = require('./critical-css-plugin');
 const NamedModulesPlugin = require('webpack/lib/NamedModulesPlugin');
+const NgCompilerPlugin = require('@ngtools/webpack');
 
 module.exports = function (options) {
   isProd = ['production', 'staging'].includes(options.env);
@@ -49,12 +50,17 @@ module.exports = function (options) {
    * Common Plugins
    */
   const commonPlugins = [
+    new NgCompilerPlugin.AotPlugin({
+      tsConfigPath: './tsconfig.json',
+      entryModule: 'src/app/app.module#AppModule',
+      skipCodeGeneration: !isProd
+    }),
     new AssetsPlugin({
       path: helpers.root('dist'),
       filename: 'webpack-assets.json',
       prettyPrint: true
     }),
-    new ForkCheckerPlugin(),
+    //new ForkCheckerPlugin(),
     new CommonsChunkPlugin({
       name: ['polyfills', 'vendor'].reverse()
     }),
@@ -119,6 +125,7 @@ module.exports = function (options) {
    * Prod-Specific Plugins
    */
   const prodPlugins = commonPlugins.concat([
+
     new WebpackMd5Hash(),
     new UglifyJsPlugin({
       beautify: false,
@@ -131,10 +138,6 @@ module.exports = function (options) {
       },
       comments: false
     }),
-    new NormalModuleReplacementPlugin(
-      /angular2-hmr/,
-      helpers.root('config/modules/angular2-hmr-prod.js')
-    ),
     /**
      * Inline critical-path CSS in index.html, and asynchronously load remainder of stylesheet.
      */
@@ -165,7 +168,7 @@ module.exports = function (options) {
     entry: {
       'polyfills': './src/polyfills.browser.ts',
       'vendor': './src/vendor.browser.ts',
-      'main': './src/main.browser.ts'
+      'main': isProd ? './src/main.browser.prod.ts' : './src/main.browser.ts',
     },
 
     resolve: {
@@ -177,11 +180,7 @@ module.exports = function (options) {
       rules: [
         {
           test: /\.ts$/,
-          loaders: [
-           '@angularclass/hmr-loader?pretty=' + !isProd + '&prod=' + isProd,
-           'awesome-typescript-loader',
-           'angular2-template-loader'
-          ],
+          loader: '@ngtools/webpack',
           exclude: [/\.(spec|e2e)\.ts$/]
         },
         {
@@ -191,12 +190,12 @@ module.exports = function (options) {
         {
           test: /\.css$/,
           include: helpers.root('src', 'app'),
-          loader: 'raw!postcss'
+          loader: 'raw-loader!postcss-loader'
         },
         {
           test: /\.scss$/,
           exclude: /node_modules/,
-          loader: 'raw!postcss!sass'
+          loader: 'raw-loader!postcss-loader!sass-loader'
         },
         {
           test: /\.html$/,
@@ -205,7 +204,7 @@ module.exports = function (options) {
         },
         {
           test: /\.(jpe?g|png|gif|svg)$/,
-          loader: 'file'
+          loader: 'file-loader'
         },
         {
           test: /\.(woff|woff2|ttf|eot)$/,

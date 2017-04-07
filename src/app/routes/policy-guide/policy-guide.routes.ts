@@ -30,17 +30,17 @@ export const POLICY_GUIDE_ROUTES: Routes = [
     path: 'policy-guide',
     component: PolicyGuideComponent,
     children: [
-      { path: '', redirectTo: 'docs/overview/introduction'},
+      { path: '', redirectTo: 'docs/overview/introduction', pathMatch: 'full'},
       {
         path: 'docs',
         component: DocsComponent,
         children: [
-          { path: '', redirectTo: 'overview/introduction'},
+          { path: '', redirectTo: 'overview/introduction', pathMatch: 'full'},
           {
             path: 'compliance',
             component: ComplianceComponent,
             children: [
-              { path: '', redirectTo: 'whats-required'},
+              { path: '', redirectTo: 'whats-required', pathMatch: 'full'},
               {
                 path: 'acquiring-code',
                 component: ComplianceAcquiringCodeComponent
@@ -71,7 +71,7 @@ export const POLICY_GUIDE_ROUTES: Routes = [
             path: 'open-source',
             component: CapacityComponent,
             children: [
-              { path: '', redirectTo: 'introduction' },
+              { path: '', redirectTo: 'introduction', pathMatch: 'full' },
               { path: 'basics', component: CapacityBasicsComponent },
               {
                 path: 'collaboration',
@@ -93,7 +93,7 @@ export const POLICY_GUIDE_ROUTES: Routes = [
             path: 'overview',
             component: OverviewComponent,
             children: [
-              { path: '', redirectTo: 'introduction'},
+              { path: '', redirectTo: 'introduction', pathMatch: 'full'},
               { path: 'introduction', component: IntroductionComponent },
               { path: 'inventory', component: OverviewInventoryComponent },
               { path: 'pilot', component: OverviewPilotComponent },

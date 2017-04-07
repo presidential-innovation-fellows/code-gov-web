@@ -4,7 +4,7 @@ import { MobileService } from '../../../../services/mobile';
 
 @Component({
   selector: 'capacity',
-  template: require('./capacity.template.html')
+  templateUrl: './capacity.template.html'
 })
 
 export class CapacityComponent {

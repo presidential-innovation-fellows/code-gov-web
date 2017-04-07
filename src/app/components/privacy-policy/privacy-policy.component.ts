@@ -4,8 +4,8 @@ import { SeoService } from '../../services/seo';
 
 @Component({
   selector: 'privacy-policy',
-  styles: [require('./privacy-policy.style.scss')],
-  template: require('./privacy-policy.template.html')
+  styleUrls: ['./privacy-policy.style.scss'],
+  templateUrl: './privacy-policy.template.html'
 })
 
 export class PrivacyPolicyComponent {
