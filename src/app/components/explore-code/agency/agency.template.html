@@ -1,0 +1,34 @@
+<div *ngIf="agency" class="agency-container">
+  <h1>{{ agency.name }}</h1>
+
+  <div *ngIf="hasRepos" class="repos-container">
+    <p class="repos-count">
+      {{ repos.length }} Featured {{ "Projects" | pluralize : repos.length }}
+    </p>
+    <ul class="repos-list usa-unstyled-list">
+      <li *ngFor="let repo of repos" class="repo">
+        <a routerLink="/explore-code/repos/{{repo.repoID}}">
+          <h3 class="repo-name">{{ repo.name }}</h3>
+          <p class="repo-description">
+            {{ repo.description | truncate : 200 }}
+          </p>
+          <ul class="usa-unstyled-list repo-features">
+            <li *ngFor="let language of repo.codeLanguage" class="language">
+              <i class="devicons devicons-{{language.language | lowercase | languageIcon }}"></i>
+              <span>{{ language.language }}</span>
+            </li>
+            <li>
+              <i class="fa fa-code"></i><span>Open Source</span>
+            </li>
+          </ul>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="!hasRepos">
+    <p>
+      No repositories found.
+    </p>
+  </div>
+</div>

@@ -24,7 +24,7 @@ module.exports = function(config) {
     files: [ { pattern: './config/spec-bundle.js', watched: false } ],
 
     proxies: {
-      '/assets/fonts/': '/base/assets/fonts/'
+        '/assets/fonts': '/base/assets/fonts'
     },
 
     /*
@@ -90,7 +90,7 @@ module.exports = function(config) {
      * Continuous Integration mode
      * if true, Karma captures browsers, runs the tests and exits
      */
-    singleRun: true,
+    singleRun: true
   };
 
   if (process.env.TRAVIS){

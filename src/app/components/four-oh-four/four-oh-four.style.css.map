@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,uBAAwB;EACtB,cAAc,EAAE,GAAG;EACnB,WAAW,EAAE,GAAG",
-"sources": ["four-oh-four.style.scss"],
-"names": [],
-"file": "four-oh-four.style.css"
-}

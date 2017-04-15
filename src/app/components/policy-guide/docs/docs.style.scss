@@ -1,4 +1,5 @@
 @import '../../../../styles/base/all';
+@import '../../../../styles/utils/all';
 
 .docs-content {
   background-color: $color-white;
@@ -236,5 +237,156 @@
 
   .usa-sidenav-sub_list {
     display: none;
+  }
+}
+
+li.dashboard-agency.compliant {
+  border-left: 2em solid $color-green;
+}
+
+li.dashboard-agency.partial {
+  border-left: 2em solid $color-gold;
+}
+
+li.dashboard-agency.noncompliant {
+  border-left: 2em solid $color-secondary-darkest;
+}
+
+h4 .compliant {
+  color: $color-green;
+  text-decoration: underline;
+}
+
+
+h4 .partial {
+  color: $color-gold; 
+  text-decoration: underline;
+}
+
+h4 .noncompliant {
+  color: $color-secondary-darkest;
+  text-decoration: underline;
+}
+
+.requirement {
+  font-size: 0.9em;
+  margin-bottom: .5em;
+  padding-left: .5em;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.requirement.compliant {
+  border-left: 1.25em solid $color-green;
+}
+
+
+.requirement.partial {
+  border-left: 1.25em solid $color-gold;
+}
+
+
+.requirement.noncompliant {
+  border-left: 1.25em solid $color-secondary-darkest;
+}
+
+li.dashboard-agency {
+  @extend %card;
+  @include transition(all 0.2s ease);
+  position: relative;
+  color: $color-gray;
+  display: block;
+
+  font-size: 0.95em;
+  text-decoration: none;
+
+  padding-left: 8em;
+  padding-right: 1em;
+  margin-bottom: 1em;
+
+
+  p {
+    font-size: 0.95em;
+    margin: 0;
+  }
+
+  .dashboard-agency-status {
+    position: absolute;
+    background-color: green;
+    width: 2em;
+    height: 100%
+  }
+
+
+  .dashboard-agency-icon {
+    left: 1.5em;
+    width: 5em;
+    top: 1.5em;
+    vertical-align: middle;
+    position: absolute;
+
+    @include media($medium-screen) {
+      left: 1.5em;
+      padding: 0;
+      top: 1.5em;
+    }
+
+    i {
+      color: $brand-teal;
+      font-size: 1em;
+      height: 1em;
+      line-height: 0.85em;
+      width: 1em;
+
+      @include media($medium-screen) {
+        font-size: 1.25em;
+        line-height: 1em;
+      }
+    }
+  }
+
+  .dashboard-agency-content {
+    min-height: 2.75em;
+
+    @include media($medium-screen) {
+      min-height: 3.5em;
+    }
+  }
+
+  .dashboard-agency-heading {
+    @include clearfix;
+
+    div {
+      @include span-columns(6);
+    }
+
+    h3 {
+      margin-bottom: 0;
+    }
+  }
+
+  .date {
+    font-size: 0.9em;
+    text-align: right;
+  }
+
+  .requirement {
+    max-width: 35em;
+    margin-right: 2em;  
+  }
+
+  .dashboard-agency-link {
+    margin: 1em .5em 0 0;
+    text-align: right;
+
+      a {
+      color: $brand-blue;
+      font-weight: bold;
+      padding-bottom: 0.1em;
+      text-decoration: none;
+
+      &:hover {
+        border-bottom: 2px solid $brand-blue;
+      }
+    }
   }
 }

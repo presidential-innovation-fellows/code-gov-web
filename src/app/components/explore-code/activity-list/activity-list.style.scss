@@ -1,0 +1,86 @@
+@import '../../../../styles/base/all';
+@import '../../../../styles/utils/all';
+
+.activity {
+  @extend %card;
+  margin-bottom: 1em;
+  padding-left: 3.5em;
+  padding-right: 0.5em;
+  position: relative;
+
+  @include media($medium-screen) {
+    padding-left: 4.75em;
+    padding-right: 1em;
+  }
+
+  h3 {
+    font-size: 1em;
+
+    @include media($medium-screen) {
+      font-size: 1.25em;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .activity-icon {
+    border: 2px solid $brand-teal;
+    border-radius: 50%;
+    left: 0.5em;
+    padding: 0.4em 0.6em;
+    position: absolute;
+    text-align: center;
+    top: 0.5em;
+    vertical-align: middle;
+
+    @include media($medium-screen) {
+      left: 1em;
+      padding: 0.75em 0.75em 0.7em;
+      top: 1em;
+    }
+
+    i {
+      color: $brand-teal;
+      font-size: 1em;
+      height: 1em;
+      line-height: 0.85em;
+      width: 1em;
+
+      @include media($medium-screen) {
+        font-size: 1.25em;
+        line-height: 1em;
+      }
+    }
+  }
+
+  .activity-content {
+    min-height: 2.75em;
+
+    @include media($medium-screen) {
+      min-height: 3.5em;
+    }
+  }
+
+  .activity-heading {
+    @include clearfix;
+
+    div {
+      @include span-columns(6);
+    }
+
+    h3 {
+      margin-bottom: 0;
+    }
+  }
+
+  .date {
+    font-size: 0.9em;
+    text-align: right;
+  }
+
+  .message {
+    font-size: 0.9em;
+  }
+}

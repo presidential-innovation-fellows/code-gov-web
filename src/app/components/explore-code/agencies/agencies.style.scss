@@ -1,0 +1,22 @@
+@import '../../../../styles/base/all';
+
+.agencies-content {
+  background-color: $color-white;
+  padding: 2.5em 1.5em;
+
+  @include media($medium-screen) {
+    @include span-columns(9);
+  }
+
+  @include media($extra-large-screen) {
+    padding: 2.5em 2em;
+  }
+}
+
+.sidebar-agencies {
+  position: relative;
+
+  @include media($medium-screen) {
+    @include span-columns(3);
+  }
+}

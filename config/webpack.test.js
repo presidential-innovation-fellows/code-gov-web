@@ -17,7 +17,6 @@ const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin')
  * Webpack Constants
  */
 const ENV = process.env.ENV = process.env.NODE_ENV = 'test';
-const API_URL = 'http://localhost:3001/api/0.1/';
 
 /**
  * Webpack configuration
@@ -64,6 +63,19 @@ module.exports = function (options) {
     module: {
 
       rules: [
+
+        /**
+         * Tslint loader support for *.ts files
+         *
+         * See: https://github.com/wbuchwalter/tslint-loader
+         */
+        {
+          enforce: 'pre',
+          test: /\.ts$/,
+          loader: 'tslint-loader',
+          exclude: [helpers.root('node_modules')]
+        },
+
         /**
          * Source map loader support for *.js files
          * Extracts SourceMaps for source files that as added as sourceMappingURL comment.
@@ -144,17 +156,6 @@ module.exports = function (options) {
           exclude: [helpers.root('src/index.html')]
         },
 
-        {
-          test: /\.(jpe?g|png|gif|svg)$/,
-          loader: 'file',
-          options: {
-            watched: false,
-            included: false,
-            served: true,
-            nocache: false
-          }
-        },
-
         /**
          * Instruments JS files with Istanbul for subsequent code coverage reporting.
          * Instrument only testing sources.
@@ -193,7 +194,6 @@ module.exports = function (options) {
        */
       // NOTE: when adding more properties make sure you include them in custom-typings.d.ts
       new DefinePlugin({
-        'API_URL': JSON.stringify(API_URL),
         'ENV': JSON.stringify(ENV),
         'HMR': false,
         'process.env': {

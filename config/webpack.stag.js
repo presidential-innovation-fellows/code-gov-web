@@ -23,13 +23,12 @@ const CriticalCssPlugin = require('./critical-css-plugin');
 /**
  * Webpack Constants
  */
-const ENV = process.env.NODE_ENV = process.env.ENV = 'staging';
+const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 8080;
 
 /** Be sure to update gtmAuth for Final Deployment to WH **/
 const METADATA = webpackMerge(commonConfig({ env: ENV }).metadata, {
-  API_URL: 'https://code-api.app.cloud.gov/api/0.1/',
   host: HOST,
   port: PORT,
   ENV: ENV,
@@ -38,7 +37,6 @@ const METADATA = webpackMerge(commonConfig({ env: ENV }).metadata, {
 });
 
 module.exports = function (env) {
- 
   return webpackMerge(commonConfig({ env: ENV }), {
 
     /**
@@ -125,7 +123,6 @@ module.exports = function (env) {
        */
       // NOTE: when adding more properties make sure you include them in custom-typings.d.ts
       new DefinePlugin({
-        'API_URL': JSON.stringify(METADATA.API_URL),
         'ENV': JSON.stringify(METADATA.ENV),
         'HMR': METADATA.HMR,
         'process.env': {
@@ -280,5 +277,4 @@ module.exports = function (env) {
     }
 
   });
-
 }

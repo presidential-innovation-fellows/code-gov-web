@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,EAAG;EACD,UAAU,EAAE,IAAI;;AAGlB,aAAc;EACZ,gBAAgB,EAAE,OAAO;EACzB,MAAM,EAAE,iBAA8B;EACtC,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,MAAM;EACX,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI",
-"sources": ["autocomplete.style.scss"],
-"names": [],
-"file": "autocomplete.style.css"
-}

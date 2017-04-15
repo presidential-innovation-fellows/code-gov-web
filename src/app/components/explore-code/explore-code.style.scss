@@ -1,15 +1,5 @@
 @import '../../../styles/base/all';
 
-h1 {
-  text-align: center;
-}
-
-.content-col {
-  @include media($medium-screen) {
-    @include span-columns(9);
-  }
-}
-
 .explore-code-content {
   background-color: lighten($color-gray-lightest, 2);
   padding: 0.75em 0 3em;
@@ -21,5 +11,4 @@ h1 {
 
 .explore-code-nav {
   background-color: darken($color-gray-lightest, 5);
-  padding: 0.5em 0;
 }

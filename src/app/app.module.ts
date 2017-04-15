@@ -4,11 +4,11 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
+import { AuthHttp, AuthConfig, AUTH_PROVIDERS, provideAuth} from 'angular2-jwt';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { Angulartics2On } from 'angulartics2';
 import { Angulartics2Module, Angulartics2GoogleTagManager } from 'angulartics2';
-import { InfiniteScrollModule } from 'angular2-infinite-scroll';
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -25,28 +25,31 @@ import { TruncatePipe } from './pipes/truncate';
 import { AppComponent } from './utils/app-components';
 import { IsDefinedPipe } from './pipes/is-defined';
 import { APP_COMPONENTS } from './utils/app-components';
-import { AgencyService } from './services/agency';
-import { ApiService } from './services/api';
+import { AgencyService, AGENCIES } from './services/agency';
 import { MobileService } from './services/mobile';
 import { ModalService } from './services/modal';
-import { RepoService } from './services/repo';
-import { SearchService } from './services/search';
+import { ReposService } from './services/repos';
 import { SeoService } from './services/seo';
 import { StateService } from './services/state';
-import { TermService } from './services/term';
+import { StatusService } from './services/status';
 
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
   AgencyService,
-  ApiService,
   MobileService,
   ModalService,
-  RepoService,
-  SearchService,
+  ReposService,
   SeoService,
   StateService,
-  TermService,
+  StatusService
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> parent of 0f70609... Merge branch 'ok-deploymentfixes' into policy-guide-updates
+>>>>>>> origin/policy-guide-updates
 ];
 
 /**
@@ -57,9 +60,8 @@ const APP_PROVIDERS = [
     Angulartics2Module.forRoot(),
     BrowserModule,
     FormsModule,
-    HttpModule,
-    InfiniteScrollModule,
     ReactiveFormsModule,
+    HttpModule,
     RouterModule.forRoot(ROUTES, { useHash: true })
   ],
   declarations: [

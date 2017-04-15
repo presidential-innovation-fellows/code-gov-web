@@ -11,20 +11,7 @@ function getWebpackConfigModule() {
     return require('../webpack.prod.js');
   } else if (helpers.hasProcessFlag('github-stag')){
     return require('../webpack.stag.js');
-  }
-   else if (helpers.hasProcessFlag('federalist-dev')){
-    return require('../webpack.prod.js');
-  }
-  else if (helpers.hasProcessFlag('federalist-stag')){
-    return require('../webpack.prod.js');
-  }
-  else if (helpers.hasProcessFlag('federalist-prod')){
-    return require('../webpack.prod.js');
-  }
-  else if (helpers.hasProcessFlag('dashboard-preview')){
-    return require('../webpack.prod.js');
-  }
-  else {
+  } else {
     throw new Error('Invalid compile option.');
   }
 }

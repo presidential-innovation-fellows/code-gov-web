@@ -1,8 +1,0 @@
- <form class="search-form" [formGroup]="searchForm" (ngSubmit)="onSubmit(searchForm.value) (focus)">
-  <label for="searchQuery">Query</label>
-  <input id="searchQuery" type="text" required class="form-control" value="{{queryValue}}" [formControl]="searchForm.controls['query']" (focus)="this.toggleAutocomplete(true)" (keyup)="onKey($event)" placeholder="Search Code.gov" autofocus autocomplete="off"/>
-  <input type="submit" value="Search" />
-</form>
-<div *ngIf="hasQuery() && autocompleteVisible" class="autocomplete-container">
-  <autocomplete [query]='queryInputValue'></autocomplete>
-</div>
