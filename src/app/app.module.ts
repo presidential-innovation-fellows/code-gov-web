@@ -31,6 +31,8 @@ import { ModalService } from './services/modal';
 import { ReposService } from './services/repos';
 import { SeoService } from './services/seo';
 import { StateService } from './services/state';
+import { StatusService } from './services/status';
+
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -40,7 +42,9 @@ const APP_PROVIDERS = [
   ModalService,
   ReposService,
   SeoService,
-  StateService
+  StateService,
+  StatusService
+
 ];
 
 /**

@@ -40,7 +40,7 @@ export const POLICY_GUIDE_ROUTES: Routes = [
             path: 'compliance',
             component: ComplianceComponent,
             children: [
-              { path: '', redirectTo: 'whats-required'},
+              { path: '', redirectTo: 'dashboard'},
               {
                 path: 'acquiring-code',
                 component: ComplianceAcquiringCodeComponent
@@ -59,7 +59,7 @@ export const POLICY_GUIDE_ROUTES: Routes = [
               },
               {
                 path: 'whats-required',
-                component: ComplianceWhatsRequiredComponent
+                redirectTo: 'dashboard'
               },
               {
                 path: 'dashboard',
