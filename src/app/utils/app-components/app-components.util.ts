@@ -34,4 +34,13 @@ export * from '../../components/policy-guide/docs/overview';
 export * from '../../components/policy-guide/docs/overview/overview-inventory';
 export * from '../../components/policy-guide/docs/overview/overview-pilot';
 export * from '../../components/policy-guide/docs/overview/overview-tracking-progress';
-
+export * from '../../components/policy-guide/policy';
+export * from '../../components/policy-guide/policy/policy-introduction';
+export * from '../../components/policy-guide/policy/policy-objectives';
+export * from '../../components/policy-guide/policy/policy-scope';
+export * from '../../components/policy-guide/policy/policy-solutions-analysis';
+export * from '../../components/policy-guide/policy/policy-code-reuse';
+export * from '../../components/policy-guide/policy/policy-open-source';
+export * from '../../components/policy-guide/policy/policy-exceptions';
+export * from '../../components/policy-guide/policy/policy-implementation';
+export * from '../../components/policy-guide/policy/policy-appendix';

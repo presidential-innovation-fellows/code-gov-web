@@ -10,6 +10,10 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { Angulartics2On } from 'angulartics2';
 import { Angulartics2Module, Angulartics2GoogleTagManager } from 'angulartics2';
 
+import {Ng2PageScrollModule} from 'ng2-page-scroll';
+import {Ng2SimplePageScrollModule} from 'ng2-simple-page-scroll';
+
+
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -55,7 +59,9 @@ const APP_PROVIDERS = [
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES, { useHash: true })
+    RouterModule.forRoot(ROUTES, { useHash: true }),
+    Ng2PageScrollModule.forRoot(),
+    Ng2SimplePageScrollModule.forRoot()
   ],
   declarations: [
     APP_COMPONENTS,

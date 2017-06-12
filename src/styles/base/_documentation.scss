@@ -1,0 +1,392 @@
+@import 'all';
+@import '../utils/all';
+
+.docs-content {
+  background-color: $color-white;
+  padding: 1em 1em 2em;
+
+  @include media($medium-screen) {
+    @include span-columns(9);
+    padding: 2em 2em 3em;
+  }
+
+  @include media($extra-large-screen) {
+    padding: 2.5em 2em;
+  }
+
+  a {
+    color: darken($brand-teal, 10);
+    text-decoration: none;
+
+    &:hover {
+      color: darken($brand-teal, 20);
+    }
+  }
+
+  blockquote {
+    background-color: lighten($color-gray-lightest, 2);
+    border-left: 6px solid $brand-purple;
+    color: darken($color-gray, 6);
+    margin: 1.5em 0;
+    padding: 1em 1em 1em 2.5em;
+
+    p {
+      font-size: 0.95em;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  code {
+    background-color: $brand-blue-gray;
+    border-radius: 3px;
+    color: $brand-teal;
+    font-size: 0.9em;
+    padding: 2px 3px;
+  }
+
+  li {
+    color: $color-gray;
+
+    p {
+      font-size: 1em;
+    }
+
+    ul {
+      margin-top: 0.2em;
+      padding-left: 1.25em;
+    }
+  }
+}
+
+.menu-icon {
+  @include transform(rotate(0deg));
+  @include transition(0.3s ease-in-out);
+  cursor: pointer;
+  display: inline-block;
+  height: 16px;
+  position: relative;
+  width: 18px;
+
+  @include media($medium-screen) {
+    display: none;
+  }
+
+  .line {
+    @include transform(rotate(0deg));
+    @include transition(0.2s ease-in-out);
+    background: lighten($color-white, 5);
+    border-radius: 3px;
+    display: block;
+    height: 2px;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      top: 6px;
+    }
+
+    &:nth-child(4) {
+      top: 12px;
+    }
+  }
+}
+
+.menu-text {
+  display: inline-block;
+  margin-left: 0.2em;
+  vertical-align: top;
+}
+
+.policy-guide-subnav {
+  position: relative;
+
+  @include media($medium-screen) {
+    @include span-columns(3);
+  }
+
+  &.active {
+
+    .usa-sidenav-list {
+      display: block;
+    }
+
+    .menu-icon {
+
+      .line {
+
+        &:nth-child(1) {
+          left: 50%;
+          top: 6px;
+          width: 0%;
+        }
+
+        &:nth-child(2) {
+          @include transform(rotate(45deg));
+        }
+
+        &:nth-child(3) {
+          @include transform(rotate(-45deg));
+        }
+
+        &:nth-child(4) {
+          left: 50%;
+          top: 6px;
+          width: 0%;
+        }
+      }
+    }
+  }
+
+  .mobile-submenu {
+    font-size: 0.95em;
+    margin-bottom: 1.25em;
+    padding: 0.75em 0.5em 0.65em;
+    width: auto;
+
+    @include media($medium-screen) {
+      display: none;
+    }
+  }
+
+  .usa-sidenav-list {
+    background-color: darken($brand-blue-gray, 10);
+    display: none;
+    padding: 1em;
+    position: relative;
+    width: 100%;
+
+    &::before {
+      border-bottom: 10px solid darken($brand-blue-gray, 10);
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      content: "";
+      height: 0;
+      left: 1em;
+      position: absolute;
+      top: -10px;
+      width: 0;
+
+      @include media($medium-screen) {
+        display: none;
+      }
+    }
+
+    @include media($medium-screen) {
+      background-color: transparent;
+      display: block;
+      left: auto;
+      padding: 0;
+      position: static;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    a {
+      color: $color-gray-lightest;
+    }
+  }
+
+  a {
+    font-size: 0.95em;
+    text-decoration: none;
+
+    &:focus {
+      box-shadow: 0 0 3px rgba(darken($color-gray-dark, 15), 0.25), 0 0 7px rgba(darken($color-gray-dark, 15), 0.25);
+      outline: 0;
+    }
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  li {
+    font-size: 1em;
+  }
+
+  .usa-current {
+
+    .usa-sidenav-sub_list {
+      display: block;
+    }
+  }
+
+  .usa-sidenav-list {
+
+    a {
+
+      &:hover {
+        background-color: darken($brand-blue-gray, 10);
+      }
+    }
+  }
+
+  .usa-sidenav-sub_list {
+    display: none;
+  }
+}
+
+li.dashboard-agency.compliant {
+  border-left: 2em solid $color-green;
+}
+
+li.dashboard-agency.partial {
+  border-left: 2em solid $color-gold;
+}
+
+li.dashboard-agency.noncompliant {
+  border-left: 2em solid $color-secondary-darkest;
+}
+
+h4 .compliant {
+  color: $color-green;
+  text-decoration: underline;
+}
+
+
+h4 .partial {
+  color: $color-gold; 
+  text-decoration: underline;
+}
+
+h4 .noncompliant {
+  color: $color-secondary-darkest;
+  text-decoration: underline;
+}
+
+.requirement {
+  font-size: 0.9em;
+  margin-bottom: .5em;
+  padding-left: .5em;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.requirement.compliant {
+  border-left: 1.25em solid $color-green;
+}
+
+
+.requirement.partial {
+  border-left: 1.25em solid $color-gold;
+}
+
+
+.requirement.noncompliant {
+  border-left: 1.25em solid $color-secondary-darkest;
+}
+
+li.dashboard-agency {
+  @extend %card;
+  @include transition(all 0.2s ease);
+  position: relative;
+  color: $color-gray;
+  display: block;
+
+  font-size: 0.95em;
+  text-decoration: none;
+
+  padding-left: 8em;
+  padding-right: 1em;
+  margin-bottom: 1em;
+
+
+  p {
+    font-size: 0.95em;
+    margin: 0;
+  }
+
+  .dashboard-agency-status {
+    position: absolute;
+    background-color: green;
+    width: 2em;
+    height: 100%
+  }
+
+
+  .dashboard-agency-icon {
+    left: 1.5em;
+    width: 5em;
+    top: 1.5em;
+    vertical-align: middle;
+    position: absolute;
+
+    @include media($medium-screen) {
+      left: 1.5em;
+      padding: 0;
+      top: 1.5em;
+    }
+
+    i {
+      color: $brand-teal;
+      font-size: 1em;
+      height: 1em;
+      line-height: 0.85em;
+      width: 1em;
+
+      @include media($medium-screen) {
+        font-size: 1.25em;
+        line-height: 1em;
+      }
+    }
+  }
+
+  .dashboard-agency-content {
+    min-height: 2.75em;
+
+    @include media($medium-screen) {
+      min-height: 3.5em;
+    }
+  }
+
+  .dashboard-agency-heading {
+    @include clearfix;
+
+    div {
+      @include span-columns(6);
+    }
+
+    h3 {
+      margin-bottom: 0;
+    }
+  }
+
+  .date {
+    font-size: 0.9em;
+    text-align: right;
+  }
+
+  .requirement {
+    max-width: 35em;
+    margin-right: 2em;  
+  }
+
+  .dashboard-agency-link {
+    margin: 1em .5em 0 0;
+    text-align: right;
+
+      a {
+      color: $brand-blue;
+      font-weight: bold;
+      padding-bottom: 0.1em;
+      text-decoration: none;
+
+      &:hover {
+        border-bottom: 2px solid $brand-blue;
+      }
+    }
+  }
+}

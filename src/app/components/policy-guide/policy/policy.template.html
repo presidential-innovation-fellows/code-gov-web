@@ -1,0 +1,46 @@
+<nav [ngClass]="{active: menuActive}" class="policy-guide-subnav docs-nav" role="navigation">
+  <button toggle-menu class="mobile-submenu" role="button" aria-pressed="false">
+    <span class="menu-icon">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </span>
+    <span class="menu-text">
+      Menu
+    </span>
+  </button>
+  <ul class="usa-sidenav-list">
+    <li routerLinkActive="usa-current">
+      <a routerLink="introduction" routerLinkActive="usa-current">Introduction</a>
+    </li>
+    <li routerLinkActive="usa-current">
+      <a routerLink="objectives" routerLinkActive="usa-current">1. Objectives</a>
+    </li>
+    <li routerLinkActive="usa-current">
+      <a routerLink="scope" routerLinkActive="usa-current">2. Scope & Applicability</a>
+    </li>
+    <li routerLinkActive="usa-current">
+      <a routerLink="solutions-analysis" routerLinkActive="usa-current">3. Three-Step Software Solutions Analysis</a>
+    </li>
+    <li routerLinkActive="usa-current">
+      <a routerLink="code-reuse" routerLinkActive="usa-current">4. Government-Wide Code Reuse</a>
+    </li>
+    <li routerLinkActive="usa-current">
+      <a routerLink="open-source" routerLinkActive="usa-current">5. Open Source Software</a>
+    </li>
+    <li routerLinkActive="usa-current">
+      <a routerLink="exceptions" routerLinkActive="usa-current">6. Exceptions to Government Code Reuse</a>
+    </li>
+    <li routerLinkActive="usa-current">
+      <a routerLink="implementation" routerLinkActive="usa-current">7. Implementation</a>
+    </li>
+    <li routerLinkActive="usa-current">
+      <a routerLink="appendix" routerLinkActive="usa-current">Appendix A - Definitions</a>
+    </li>
+  </ul>
+</nav>
+
+<section class="docs-content"> 
+  <router-outlet></router-outlet>
+</section>
