@@ -247,14 +247,14 @@
           "website": "https://www.dol.gov",
           "codeUrl": "https://www.dol.gov/code.json",
           "requirements": {
-            "agencyWidePolicy": 0.5,
+            "agencyWidePolicy": 1,
             "schemaFormat": 0.5,
             "overallCompliance": 0.5
           }
         }
       },
       "requirements": {
-        "agencyWidePolicy": 0.5,
+        "agencyWidePolicy": 1,
         "schemaFormat": 0.5,
         "overallCompliance": 0.5
       }
