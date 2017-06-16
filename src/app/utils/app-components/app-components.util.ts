@@ -29,6 +29,7 @@ export * from '../../components/policy-guide/docs/compliance/compliance-licensin
 export * from '../../components/policy-guide/docs/compliance/compliance-measuring-code';
 export * from '../../components/policy-guide/docs/compliance/compliance-whats-required';
 export * from '../../components/policy-guide/docs/compliance/compliance-dashboard';
+export * from '../../components/policy-guide/docs/compliance/compliance-procurement';
 export * from '../../components/policy-guide/docs/overview/introduction';
 export * from '../../components/policy-guide/docs/overview';
 export * from '../../components/policy-guide/docs/overview/overview-inventory';
@@ -44,3 +45,4 @@ export * from '../../components/policy-guide/policy/policy-open-source';
 export * from '../../components/policy-guide/policy/policy-exceptions';
 export * from '../../components/policy-guide/policy/policy-implementation';
 export * from '../../components/policy-guide/policy/policy-appendix';
+export * from '../../components/policy-guide/docs/open-source/open-source-licensing';
