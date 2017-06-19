@@ -1,0 +1,150 @@
+<h1><a id="Releasing_Open__Source_Code_124"></a>Releasing Open Source Code</h1>
+<p>The Federal Source Code Policy's Pilot Program requires agencies to release at least 20 percent of new custom-developed code each year as open source software.  While agencies are encouraged to release a greater percentage of code, if doing so is beneficial to the government, agencies are not required to release more than 20 percent of code.</p>
+<p>Releasing open source code involves more than just publishing it online. In order to release open source software responsibly, your agency will need to:</p>
+<ol>
+  <li>Ensure it has secured and documented adequate intellectual property rights to the code;</li>
+  <li>Apply an appropriate open source license; and</li>
+  <li>Provide materials alongside the code to help people understand and reuse it.</li>
+</ol>
+<p>Each of these is discussed below.  For the sake of simplicity, this article addresses the retroactive release of code that has already been created. In cases where code development is being conducted in the open, the same principles apply.</p>
+<h3>Securing and Documenting Rights</h3>
+<p>Your agency must ensure it has adequate data rights to the code prior to its publication as open source software.  Advice on how to ensure that adequate rights to release data are secured during procurement can be found on <a href="http://code.gov/">Code.gov</a>.</p>
+<h3>Selecting an Open Source License</h3>
+<p>Assuming your agency's rights to a codebase are well understood and documented, the next step in the process is to apply an open source license.</p>
+<p>As outlined in Section 7.5 of the Federal Source Code Policy:</p>
+<blockquote>
+  <p>Licensing is a critical component of OSS and can affect how the source code can be used and modified. Accordingly, when agencies release custom-developed code as OSS, they shall append appropriate OSS licenses to the source code.
+  </p>
+</blockquote> 
+<p>Your agency should choose a standard license (or licenses) that can be applied across its open source projects in order to minimize the cost and risk of choosing a license on a project by project basis.</p>
+<p>In choosing your open source license, here are some considerations:</p>
+<ul>
+  <li>The Open Source Initiative (OSI) approves open source licenses, a list of which can be found at <a href="https://opensource.org/licenses/category">https://opensource.org/licenses/category</a>. Further still, OSI considers some licenses to be "popular, [and] widely used." Using OSI popular licenses may maximize the interoperability of your open source license with other open source code and increase the comfort level in the minds of potential contributors. OSI maintains a list of popular licenses at <a href="https://opensource.org/licenses">https://opensource.org/licenses</a>.</li>
+  <li>Choose licenses that do not place unnecessary restrictions on the code. Any restrictions on the code should be reasonable and essential to furthering your agency's mission.</li>
+  <li>Avoid the creation of ad hoc licenses to prevent uncertainty in the minds of contributors as to the legal rights of distribution and reuse. Opt instead to use standardized and well-vetted legal licenses.</li>
+</ul>
+<h3>Documentation</h3>
+<p>Having determined a licensing strategy, it is now time to publish your codebase. In order to enable reuse of and contribution to your code, it is important to provide documentation in line with open source community norms.  At a minimum, when your agency releases OSS, it should:</p>
+<ul>
+  <li>Clearly communicate the licensing status of the codebase in a LICENSE file in the root directory of the codebase. The LICENSE file should include the full text of the open source license or a link to the license where it is maintained officially.</li>
+  <li>Complement the LICENSE file with a CONTRIBUTING file in the same location.  The CONTRIBUTING file should include plain language describing the licensing status of the code, as well as how contributions by third parties to the codebase will be released (<em>e.g.,</em> whether they will be released under the same license and whether those contributors waive their rights accordingly). It can also describe coding practices and community norms that are requested of potential contributors.</li>
+  <li>Include a README file, also in the same location, that provides a plain language description of what the code does, relevant technical information, and any other context that a developer or organization may need.</li>
+</ul>
+<h3>Examples of Open Source licenses</h3>
+<p>Below is a list of some examples of open source licenses and waivers that various government teams and agencies have chosen to use.</p>
+<p>You should work with your general counsel and consult with other agencies to determine the best approach to meet your agency's needs and continue to iterate on it over time.</p>
+<h4>Apache</h4>
+<ol>
+  <li>
+    <p>Some agencies that have used this license:</p>
+  </li>
+  <ol type="a">
+    <li>
+      <p>National Security Agency</p>
+    </li>
+    <ol type="i">
+      <li>
+        <p><a href="https://github.com/NationalSecurityAgency/timely/blob/master/LICENSE">https://github.com/NationalSecurityAgency/timely/blob/master/LICENSE</a></p>
+      </li>
+    </ol>
+    <li>
+      <p>Department of Health and Human Services</p>
+    </li>
+    <ol type="i">
+      <li>
+        <p><a href="https://github.com/HHS/lodestar/blob/master/LICENSE">https://github.com/HHS/lodestar/blob/master/LICENSE</a></p>
+      </li>
+    </ol>
+  </ol> 
+  <li>
+    <p>Available at:</p>
+  </li>
+  <ol type="a">
+    <li>
+      <p>Apache v2 – <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+    </li>
+  </ol>
+</ol>
+<h4>GNU Public License (GPL)</h4>
+<ol>
+  <li>
+    <p>Some agencies that have used this license:</p>
+  </li>
+  <ol type="a">
+    <li>
+      <p>Department of Energy</p>
+    </li>
+    <ol type="i">
+      <li>
+        <p><a href="https://github.com/samilliken/openDCIM/blob/master/README.md">https://github.com/samilliken/openDCIM/blob/master/README.md</a></p>
+      </li>
+    </ol>
+    <li>
+      <p>Environmental Protection Agency</p>
+    </li>
+    <ol type="i">
+      <li>
+        <p><a href="https://github.com/USEPA/E-Enterprise-Portal/blob/master/drupal/LICENSE.txt">https://github.com/USEPA/E-Enterprise-Portal/blob/master/drupal/LICENSE.txt</a></p>
+      </li>
+    </ol>
+  </ol>
+  <li>
+    <p>Available at:</p>
+  </li>
+  <ol type="a">
+    <li>
+      <p>GPL v2 – <a href="https://www.gnu.org/licenses/gpl-2.0.html">https://www.gnu.org/licenses/gpl-2.0.html</a></p>
+    </li>
+    <li>
+      <p>GPL v3 – <a href="https://www.gnu.org/licenses/gpl-3.0.html">https://www.gnu.org/licenses/gpl-3.0.html</a></p>
+    </li>
+  </ol>
+</ol>
+<h4>Creative Commons Zero (CC0)</h4>
+<ol>
+  <li>
+    <p>Some agencies that have used this  waiver:</p>
+  </li>
+  <ol type="a">
+    <li>
+      <p>Department of Treasury</p>
+    </li>
+    <ol type="i">
+      <li>
+        <p><a href="https://github.com/fedspendingtransparency/data-act-broker-backend/blob/master/LICENSE.md">https://github.com/fedspendingtransparency/data-act-broker-backend/blob/master/LICENSE.md</a></p>
+      </li>
+    </ol>
+    <li>
+      <p>Department of Veterans Affairs</p>
+    </li>
+    <ol type="i">
+      <li>
+        <p><a href="https://github.com/department-of-veterans-affairs/vets-website/blob/master/LICENSE">https://github.com/department-of-veterans-affairs/vets-website/blob/master/LICENSE</a></p>
+      </li>
+    </ol>
+    <li>
+      <p>Food and Drug Administration</p>
+    </li>
+    <ol type="i">
+      <li>
+        <p><a href="https://github.com/FDA/precisionFDA/blob/master/CONTRIBUTING.txt">https://github.com/FDA/precisionFDA/blob/master/CONTRIBUTING.txt</a></p>
+      </li>
+    </ol>
+    <li>
+      <p>General Services Administration</p>
+    </li>
+    <ol type="i">
+      <li>
+        <p><a href="https://github.com/18F/analytics.usa.gov/blob/18f-pages/LICENSE.md">https://github.com/18F/analytics.usa.gov/blob/18f-pages/LICENSE.md</a></p>
+      </li>
+    </ol>
+  </ol>
+  <li>
+    <p>Available at:</p>
+  </li>
+  <ol type="a">
+    <li>
+      <p><a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode">https://creativecommons.org/publicdomain/zero/1.0/legalcode</a></p>
+    </li>
+  </ol>
+</ol>
