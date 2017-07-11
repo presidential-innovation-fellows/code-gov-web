@@ -3,6 +3,37 @@ import { TestBed } from '@angular/core/testing';
 
 import { TruncatePipe } from './truncate.pipe';
 
+@Component({
+    selector: 'test',
+    template: `<h2>{{ message | truncate }}</h2>`
+})
+class TestTruncateComponent {
+    message = 'This is a message';
+}
+
+@Component({
+    selector: 'test2',
+    template: `<h2>{{ message | truncate: 5 }}</h2>`
+})
+class TestTruncateWithLimitComponent {
+    message = 'This is another message';
+}
+
+@Component({
+    selector: 'test',
+    template: `<h2>{{ message | truncate }}</h2>`
+})
+class TestUndefinedComponent {
+    message = undefined;
+}
+
+@Component({
+    selector: 'test',
+    template: `<h2>{{ message | truncate }}</h2>`
+})
+class TestNullComponent {
+    message = null;
+}
 
 /**
  * Unit tests for TruncatePipe class.
@@ -177,35 +208,3 @@ describe('TruncatePipe', () => {
 
 
 });
-
-@Component({
-    selector: 'test',
-    template: `<h2>{{ message | truncate }}</h2>`
-})
-class TestTruncateComponent {
-    message = 'This is a message';
-}
-
-@Component({
-    selector: 'test2',
-    template: `<h2>{{ message | truncate: 5 }}</h2>`
-})
-class TestTruncateWithLimitComponent {
-    message = 'This is another message';
-}
-
-@Component({
-    selector: 'test',
-    template: `<h2>{{ message | truncate }}</h2>`
-})
-class TestUndefinedComponent {
-    message = undefined;
-}
-
-@Component({
-    selector: 'test',
-    template: `<h2>{{ message | truncate }}</h2>`
-})
-class TestNullComponent {
-    message = null;
-}

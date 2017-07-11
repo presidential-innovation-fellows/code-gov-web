@@ -9,7 +9,7 @@ body {
   border-bottom: 1px solid $color-gray-lightest;
   padding: 2em 0 1em;
 
-  @include media($medium-screen) {
+  @media screen and (min-width: $medium-screen) {
     padding: 4em 0;
   }
 
@@ -17,7 +17,7 @@ body {
     margin: 0 auto;
     text-align: center;
 
-    @include media($small-screen) {
+    @media screen and (min-width: $small-screen) {
       max-width: 43em;
     }
 
@@ -27,11 +27,11 @@ body {
       margin: 0 auto;
       max-width: 17em;
 
-      @include media($small-screen) {
+      @media screen and (min-width: $small-screen) {
         font-size: 2em;
       }
 
-      @include media($medium-screen) {
+      @media screen and (min-width: $medium-screen) {
         font-size: 4rem;
       }
     }
@@ -39,7 +39,7 @@ body {
     p {
       font-size: 1em;
 
-      @include media($medium-screen) {
+      @media screen and (min-width: $medium-screen) {
         font-size: 1.2em;
       }
     }
@@ -69,7 +69,7 @@ body {
   margin-top: 2em;
   padding: 0;
 
-  @include media($medium-screen) {
+  @media screen and (min-width: $medium-screen) {
     margin-top: 4em;
   }
 
@@ -108,7 +108,7 @@ body {
   padding: 2em 0 9em;
   position: relative;
 
-  @include media($small-screen) {
+  @media screen and (min-width: $small-screen) {
     padding: 4em 0 8em;
   }
 
@@ -117,11 +117,11 @@ body {
     font-size: 2em;
     margin: 0 0 0.25em;
 
-    @include media($small-screen) {
+    @media screen and (min-width: $small-screen) {
       font-size: 2.8em;
     }
 
-    @include media($medium-screen) {
+    @media screen and (min-width: $medium-screen) {
       font-size: 3.2em;
     }
   }
@@ -131,11 +131,11 @@ body {
     font-size: 1em;
     margin-top: 0;
 
-    @include media($small-screen) {
+    @media screen and (min-width: $small-screen) {
       font-size: 1.2em;
     }
 
-    @include media($medium-screen) {
+    @media screen and (min-width: $medium-screen) {
       font-size: 1.4em;
     }
   }
@@ -150,7 +150,7 @@ body {
       background-color: darken($color-primary, 15);
     }
 
-    @include media($small-screen) {
+    @media screen and (min-width: $small-screen) {
       font-size: 1.2em;
       max-width: none;
     }
@@ -165,7 +165,7 @@ body {
       background-color: darken($color-primary, 15);
     }
 
-    @include media($small-screen) {
+    @media screen and (min-width: $small-screen) {
       font-size: 1em;
       max-width: none;
     }
@@ -201,21 +201,21 @@ body {
   margin-top: 2em;
   text-align: center;
 
-  @include media($medium-screen) {
+  @media screen and (min-width: $medium-screen) {
     margin-top: 0;
     text-align: right;
   }
 
   img {
-    @include backface-visibility(visible);
-    @include transition(all 0.2s ease);
-    @include transform-style(preserve-3d);
-    @include transform(translate3d(0,0,0));
+    backface-visibility: visible;
+    transition: all 0.2s ease;
+    transform-style: preserve-3d;
+    transform: translate3d(0,0,0);
     max-width: 7.5em;
     -webkit-perspective: 1000;
 
     &:hover {
-      @include transform(translateY(-2px));
+      transform: translateY(-2px);
     }
   }
 
@@ -233,7 +233,7 @@ body {
     padding-left: 0.75em;
     position: relative;
 
-    @include media($medium-screen) {
+    @media screen and (min-width: $medium-screen) {
       font-size: 2.5em;
     }
 
@@ -245,7 +245,7 @@ body {
       position: absolute;
       top: -0.275em;
 
-      @include media($medium-screen) {
+      @media screen and (min-width: $medium-screen) {
         font-size: 2.5em;
       }
     }
@@ -257,19 +257,19 @@ body {
     margin-left: 1.3em;
     padding-top: 0.75em;
 
-    @include media($medium-screen) {
+    @media screen and (min-width: $medium-screen) {
       margin-left: 2em;
     }
 
     img {
-      @include backface-visibility(visible);
-      @include transition(all 0.2s ease);
-      @include transform-style(preserve-3d);
+      backface-visibility: visible;
+      transition: all 0.2s ease;
+      transform-style: preserve-3d;
       max-width: 5em;
       -webkit-perspective: 1000;
 
       &:hover {
-        @include transform(translateY(-2px));
+        transform: translateY(-2px);
       }
     }
   }

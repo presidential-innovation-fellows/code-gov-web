@@ -1,10 +1,10 @@
 body {
-  @include font-feature-settings("kern", "liga", "pnum");
+  font-feature-settings: "kern", "liga", "pnum";
   -webkit-font-smoothing: antialiased;
 }
 
 label {
-  @include font-feature-settings("kern", "liga", "pnum");
+  font-feature-settings: "kern", "liga", "pnum";
   -webkit-font-smoothing: antialiased;
 }
 
@@ -33,7 +33,7 @@ h6 {
 p {
   color: $color-gray;
 
-  @include media($medium-screen) {
+  @media screen and (min-width: $medium-screen) {
     font-size: 1.1em;
   }
 }

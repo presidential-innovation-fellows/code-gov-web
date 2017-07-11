@@ -5,12 +5,12 @@
   background-color: $color-white;
   padding: 1em 1em 2em;
 
-  @include media($medium-screen) {
-    @include span-columns(9);
+  @media screen and (min-width: $medium-screen) {
+    @include grid-column(9);
     padding: 2em 2em 3em;
   }
 
-  @include media($extra-large-screen) {
+  @media screen and (min-width: $extra-large-screen) {
     padding: 2.5em 2em;
   }
 
@@ -66,21 +66,21 @@
 }
 
 .menu-icon {
-  @include transform(rotate(0deg));
-  @include transition(0.3s ease-in-out);
+  transform: rotate(0deg);
+  transition: 0.3s ease-in-out;
   cursor: pointer;
   display: inline-block;
   height: 16px;
   position: relative;
   width: 18px;
 
-  @include media($medium-screen) {
+  @media screen and (min-width: $medium-screen) {
     display: none;
   }
 
   .line {
-    @include transform(rotate(0deg));
-    @include transition(0.2s ease-in-out);
+    transform: rotate(0deg);
+    transition: 0.2s ease-in-out;
     background: lighten($color-white, 5);
     border-radius: 3px;
     display: block;
@@ -114,8 +114,8 @@
 .policy-guide-subnav {
   position: relative;
 
-  @include media($medium-screen) {
-    @include span-columns(3);
+  @media screen and (min-width: $medium-screen) {
+    @include grid-column(3);
   }
 
   &.active {
@@ -135,11 +135,11 @@
         }
 
         &:nth-child(2) {
-          @include transform(rotate(45deg));
+          transform: rotate(45deg);
         }
 
         &:nth-child(3) {
-          @include transform(rotate(-45deg));
+          transform: rotate(-45deg);
         }
 
         &:nth-child(4) {
@@ -157,7 +157,7 @@
     padding: 0.75em 0.5em 0.65em;
     width: auto;
 
-    @include media($medium-screen) {
+    @media screen and (min-width: $medium-screen) {
       display: none;
     }
   }
@@ -180,12 +180,12 @@
       top: -10px;
       width: 0;
 
-      @include media($medium-screen) {
+      @media screen and (min-width: $medium-screen) {
         display: none;
       }
     }
 
-    @include media($medium-screen) {
+    @media screen and (min-width: $medium-screen) {
       background-color: transparent;
       display: block;
       left: auto;
@@ -259,7 +259,7 @@ h4 .compliant {
 
 
 h4 .partial {
-  color: $color-gold; 
+  color: $color-gold;
   text-decoration: underline;
 }
 
@@ -291,7 +291,7 @@ h4 .noncompliant {
 
 li.dashboard-agency {
   @extend %card;
-  @include transition(all 0.2s ease);
+  transition: all 0.2s ease;
   position: relative;
   color: $color-gray;
   display: block;
@@ -324,7 +324,7 @@ li.dashboard-agency {
     vertical-align: middle;
     position: absolute;
 
-    @include media($medium-screen) {
+    @media screen and (min-width: $medium-screen) {
       left: 1.5em;
       padding: 0;
       top: 1.5em;
@@ -337,7 +337,7 @@ li.dashboard-agency {
       line-height: 0.85em;
       width: 1em;
 
-      @include media($medium-screen) {
+      @media screen and (min-width: $medium-screen) {
         font-size: 1.25em;
         line-height: 1em;
       }
@@ -347,7 +347,7 @@ li.dashboard-agency {
   .dashboard-agency-content {
     min-height: 2.75em;
 
-    @include media($medium-screen) {
+    @media screen and (min-width: $medium-screen) {
       min-height: 3.5em;
     }
   }
@@ -356,7 +356,7 @@ li.dashboard-agency {
     @include clearfix;
 
     div {
-      @include span-columns(6);
+      @include grid-column(6);
     }
 
     h3 {
@@ -371,7 +371,7 @@ li.dashboard-agency {
 
   .requirement {
     max-width: 35em;
-    margin-right: 2em;  
+    margin-right: 2em;
   }
 
   .dashboard-agency-link {

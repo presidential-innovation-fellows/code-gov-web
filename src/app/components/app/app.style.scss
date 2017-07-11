@@ -63,7 +63,7 @@
   .email-signup {
     margin-top: 2em;
 
-    @include media($medium-screen) {
+    @media screen and (min-width: $medium-screen) {
       margin-top: 0;
     }
   }
@@ -74,13 +74,13 @@
   }
 
   .submit {
-    @include transition(all 0.2s ease);
+    transition: all 0.2s ease;
     background-color: $brand-purple;
     font-size: 0.9em;
     margin: 0.75em 0 0;
 
     &:hover {
-      @include transform(translateY(-2px));
+      transform: translateY(-2px);
       background-color: darken($brand-purple, 10);
     }
   }
@@ -145,7 +145,7 @@
   font-size: 0.8em;
   padding: 1.75em 0;
 
-  @include media($small-screen) {
+  @media screen and (min-width: $small-screen) {
     font-size: 1em;
   }
 

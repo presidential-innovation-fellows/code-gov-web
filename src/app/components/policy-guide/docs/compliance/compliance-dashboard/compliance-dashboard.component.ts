@@ -14,89 +14,92 @@ import { SeoService } from '../../../../../services/seo';
 })
 
 export class ComplianceDashboardComponent implements OnInit, OnDestroy {
-  agencyIds=[];
-  public statuses=[];
+  agencyIds = [];
+  public statuses = [];
   public updated;
   private statusesSub: Subscription;
 
   constructor(
     private agencyService: AgencyService,
     private statusService: StatusService
-    ) {}
+  ) {
+  }
 
   ngOnInit() {
     this.getAgencyIds();
     this.getStatuses();
   }
 
-  ngOnDestroy(){
-  	if (this.statusesSub) this.statusesSub.unsubscribe();
+  ngOnDestroy() {
+    if (this.statusesSub) this.statusesSub.unsubscribe();
   }
 
 
-  getAgencyIds(){
+  getAgencyIds() {
     this.agencyIds = [];
-    var agencies = this.agencyService.getAgencies();
-    for(let agency of agencies){
+    const agencies = this.agencyService.getAgencies();
+    for (let agency of agencies){
       this.agencyIds.push(agency.id);
     }
   }
 
   getStatuses() {
-    var agency;
-    var requirements
-    var rValue;
-    var requirementStatus;
-    var overallStatus;
-    var codePath;
+    let agency;
+    let requirements;
+    let rValue;
+    let requirementStatus;
+    let overallStatus;
+    let codePath;
 
     this.statusesSub = this.statusService.getJsonFile().
       subscribe((result) => {
         if (result) {
-
           for (let status in result.statuses) {
- 			      
-             //if agencyWidePolicy is null in report.json it means the agency doesn't have to comply, 
-             //so don't include it in the dash.
-             //TODO: should make this more explicit in the API, 
-            if(result.statuses[status].requirements["agencyWidePolicy"] != null){
-              
-              // TODO: pull from AgencyService, which currently only provides agencies that have code included on the site.
 
-              requirements = new Array();
-              for(let requirement in result.statuses[status].requirements){
-               
-                rValue = result.statuses[status].requirements[requirement];
-                if(rValue <1){
-                  if(rValue > 0){
-                    requirementStatus = "partial";
+             // if agencyWidePolicy is null in report.json it means the agency doesn't have
+             // to comply, so don't include it in the dash.
+             // TODO: should make this more explicit in the API,
+            if (result.statuses[status].requirements['agencyWidePolicy'] != null) {
+              requirements = [];
+              for (let requirement in result.statuses[status].requirements) {
+                if (result.statuses[status].requirements.hasOwnProperty(requirement)) {
+                  rValue = result.statuses[status].requirements[requirement];
+
+                  if (rValue < 1) {
+                    if (rValue > 0) {
+                      requirementStatus = 'partial';
+                    } else {
+                      requirementStatus = 'noncompliant';
+                    }
+                  } else {
+                    requirementStatus = 'compliant';
                   }
-                  else {
-                    requirementStatus = "noncompliant";
+
+                  if (requirement !== 'overallCompliance') {
+                    requirements.push({ text: requirement, status: requirementStatus });
+                  } else {
+                   overallStatus = requirementStatus;
                   }
                 }
-                else{
-                  requirementStatus = "compliant";
-                }
-
-                if(requirement != "overallCompliance"){
-                  requirements.push({"text": requirement, "status": requirementStatus});
-                }
-                else{
-                 overallStatus = requirementStatus;
-                }
-
               }
 
-              if(this.agencyIds.find(function(x){return x==status;})){
-                codePath = "/explore-code/agencies/" + status;
-              }
-              else{
+              if (this.agencyIds.find((x) => x === status)) {
+                codePath = '/explore-code/agencies/' + status;
+              } else {
                 codePath = null;
               }
 
-              agency = { "id" : status, "name" : result.statuses[status].metadata.agency.name, "overall" : overallStatus, "codePath": codePath }; 
-            	this.statuses.push({"id": status, "agency": agency, "requirements": requirements});
+              agency = {
+                id: status,
+                name: result.statuses[status].metadata.agency.name,
+                overall: overallStatus,
+                codePath: codePath
+              };
+              this.statuses.push({
+                id: status,
+                agency: agency,
+                requirements: requirements
+              });
               this.updated = result.timestamp;
 
             }

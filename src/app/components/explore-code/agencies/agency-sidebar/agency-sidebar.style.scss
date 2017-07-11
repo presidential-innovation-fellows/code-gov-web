@@ -3,27 +3,27 @@
 h3 {
   display: none;
 
-  @include media($medium-screen) {
+  @media screen and (min-width: $medium-screen) {
     display: block;
   }
 }
 
 .menu-icon {
-  @include transform(rotate(0deg));
-  @include transition(0.3s ease-in-out);
+  transform: rotate(0deg);
+  transition: 0.3s ease-in-out;
   cursor: pointer;
   display: inline-block;
   height: 16px;
   position: relative;
   width: 18px;
 
-  @include media($medium-screen) {
+  @media screen and (min-width: $medium-screen) {
     display: none;
   }
 
   .line {
-    @include transform(rotate(0deg));
-    @include transition(0.2s ease-in-out);
+    transform: rotate(0deg);
+    transition: 0.2s ease-in-out;
     background: lighten($color-white, 5);
     border-radius: 3px;
     display: block;
@@ -60,7 +60,7 @@ h3 {
   padding: 0.75em 0.5em 0.65em;
   width: auto;
 
-  @include media($medium-screen) {
+  @media screen and (min-width: $medium-screen) {
     display: none;
   }
 }
@@ -79,11 +79,11 @@ h3 {
       }
 
       &:nth-child(2) {
-        @include transform(rotate(45deg));
+        transform: rotate(45deg);
       }
 
       &:nth-child(3) {
-        @include transform(rotate(-45deg));
+        transform: rotate(-45deg);
       }
 
       &:nth-child(4) {
@@ -117,12 +117,12 @@ h3 {
     top: -10px;
     width: 0;
 
-    @include media($medium-screen) {
+    @media screen and (min-width: $medium-screen) {
       display: none;
     }
   }
 
-  @include media($medium-screen) {
+  @media screen and (min-width: $medium-screen) {
     background-color: transparent;
     display: block;
     margin-bottom: 0;

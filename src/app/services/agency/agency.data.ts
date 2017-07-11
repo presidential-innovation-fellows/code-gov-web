@@ -16,10 +16,10 @@ export const AGENCIES = [
     name: 'Department of Commerce'
   },
   {
-  id:'DOD',
-  name: 'Department of Defense'
+    id: 'DOD',
+    name: 'Department of Defense'
   },
- 
+
   {
     id: 'DOE',
     name: 'Department of Energy'
@@ -52,7 +52,7 @@ export const AGENCIES = [
     id: 'DOT',
     name: 'Department of Transportation'
   },
-  
+
   {
     id: 'TRE',
     name: 'Department of the Treasury'

@@ -74,4 +74,4 @@ export const APP_COMPONENTS = [
   PrivacyPolicyComponent,
   RepoComponent,
   ReposComponent
-]
+];

@@ -11,7 +11,7 @@ const AssetsPlugin = require('assets-webpack-plugin');
 const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
 const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
+const CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
 const HtmlElementsPlugin = require('./html-elements-plugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
@@ -56,15 +56,29 @@ module.exports = function (options) {
       filename: 'webpack-assets.json',
       prettyPrint: true
     }),
-    new ForkCheckerPlugin(),
+    new CheckerPlugin(),
     new CommonsChunkPlugin({
       name: ['polyfills', 'vendor'].reverse()
     }),
-    new ContextReplacementPlugin(
-      // The (\\|\/) piece accounts for path separators in *nix and Windows
-      /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
-      helpers.root('src') // location of your src
-    ),
+    /**
+      * Plugin: ContextReplacementPlugin
+      * Description: Provides context to Angular's use of System.import
+      *
+      * See: https://webpack.github.io/docs/list-of-plugins.html#contextreplacementplugin
+      * See: https://github.com/angular/angular/issues/11580
+      */
+     new ContextReplacementPlugin(
+       /**
+        * The (\\|\/) piece accounts for path separators in *nix and Windows
+        */
+       /angular(\\|\/)core(\\|\/)@angular/,
+       helpers.root('src'), // location of your src
+       {
+         /**
+          * Your Angular Async Route paths relative to this root directory
+          */
+       }
+     ),
     new CopyWebpackPlugin(copyPluginOptions),
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: 'defer'
@@ -193,12 +207,12 @@ module.exports = function (options) {
         {
           test: /\.css$/,
           include: helpers.root('src', 'app'),
-          loader: 'raw!postcss'
+          loader: 'raw-loader!postcss-loader'
         },
         {
           test: /\.scss$/,
           exclude: /node_modules/,
-          loader: 'raw!postcss!sass'
+          loader: 'raw-loader!postcss-loader!sass-loader'
         },
         {
           test: /\.html$/,
@@ -207,7 +221,7 @@ module.exports = function (options) {
         },
         {
           test: /\.(jpe?g|png|gif|svg)$/,
-          loader: 'file'
+          loader: 'file-loader'
         },
         {
           test: /\.(woff|woff2|ttf|eot)$/,
@@ -246,11 +260,10 @@ module.exports = function (options) {
         watchOptions: {
           aggregateTimeout: 300,
           poll: 1000
-        },
-        outputPath: helpers.root('dist')
+        }
       }
     });
-    
-    
+
+
   }
 }

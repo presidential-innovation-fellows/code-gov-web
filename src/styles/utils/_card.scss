@@ -4,7 +4,7 @@
   box-sizing: border-box;
   padding: 0.5em;
 
-  @include media($medium-screen) {
+  @media screen and (min-width: $medium-screen) {
     padding: 1em;
   }
 }
