@@ -1,0 +1,28 @@
+jobs:
+  build:
+    working_directory: ~/code-gov
+    docker:
+      - image: circleci/node:6.11.0
+    steps:
+      - checkout
+      - run:
+          name: Add Node Module's bin to PATH
+          command: echo "export PATH=`pwd`/node_modules/.bin:$PATH" >> $BASH_ENV
+      - restore_cache:
+          key: code-gov-web-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Dependencies
+          command: yarn install
+      - save_cache:
+          key: code-gov-web-{{ checksum "yarn.lock" }}
+          paths:
+            - "~/.cache/yarn"
+      - run:
+          name: Run Tests
+          command: yarn test
+      - run:
+          name: Install CodeClimate Test Reporter
+          command: yarn add codeclimate-test-reporter
+      - run:
+          name: Run CodeClimate Test Reporter
+          command: codeclimate-test-reporter < coverage/lcov.info
