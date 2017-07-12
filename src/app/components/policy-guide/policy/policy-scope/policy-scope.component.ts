@@ -9,7 +9,9 @@ export class PolicyScopeComponent {
 
   constructor(private seoService: SeoService) {
     seoService.setTitle('Source Code Policy Scope and Applicability', true);
-    seoService.setMetaDescription('Read the Federal Open Source Code Policy Scope and Applicability.');
+    seoService.setMetaDescription(
+      'Read the Federal Open Source Code Policy Scope and Applicability.'
+    );
     seoService.setMetaRobots('Index, Follow');
   }
 }

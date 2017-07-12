@@ -3,6 +3,7 @@
     "types": [
       "hammerjs",
       "jasmine",
+      "jasminewd2",
       "node",
       "protractor",
       "selenium-webdriver",

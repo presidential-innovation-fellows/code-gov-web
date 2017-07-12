@@ -9,7 +9,9 @@ import { SeoService } from '../../../../../services/seo';
 export class OpenSourceLicensingComponent {
   constructor(private seoService: SeoService) {
     seoService.setTitle('Open Source Licensing', true);
-    seoService.setMetaDescription('Learn about open source licensing under the Source Code Policy.');
+    seoService.setMetaDescription(
+      'Learn about open source licensing under the Source Code Policy.'
+    );
     seoService.setMetaRobots('Index, Follow');
   }
 }

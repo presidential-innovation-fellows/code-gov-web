@@ -8,17 +8,17 @@
   position: absolute;
   width: 20em;
 
-  @include media($small-screen) {
+  @media screen and (min-width: $small-screen) {
     margin-left: -13em;
     width: 26em;
   }
 
-  @include media($medium-screen) {
+  @media screen and (min-width: $medium-screen) {
     margin-left: -18.5em;
     width: 37em;
   }
 
-  @include media($large-screen) {
+  @media screen and (min-width: $large-screen) {
     margin-left: -22.5em;
     width: 45em;
   }
@@ -42,11 +42,11 @@
     font-size: 0.85em;
     margin: 0 0 0.1em;
 
-    @include media($medium-screen) {
+    @media screen and (min-width: $medium-screen) {
       font-size: 0.9em;
     }
 
-    @include media($large-screen) {
+    @media screen and (min-width: $large-screen) {
       font-size: 1em;
     }
   }
@@ -58,7 +58,7 @@
     margin-right: 0.1em;
     width: 0.53em;
 
-    @include media($medium-screen) {
+    @media screen and (min-width: $medium-screen) {
       height: 0.65em;
       margin-right: 0.25em;
       width: 0.65em;
@@ -83,13 +83,13 @@
     font-size: 0.8em;
     padding: 0.75em;
 
-    @include media($medium-screen) {
+    @media screen and (min-width: $medium-screen) {
       padding: 1em;
     }
   }
 
   .cursor {
-    @include animation(blink 0.8s step-end infinite);
+    animation: blink 0.8s step-end infinite;
     color: $brand-teal;
     font-size: 1.1em;
   }
@@ -103,7 +103,7 @@
     border-radius: 0.3em 0.3em 0 0;
     padding: 0.05em 0.75em;
 
-    @include media($medium-screen) {
+    @media screen and (min-width: $medium-screen) {
       padding: 0.25em 1em;
     }
   }

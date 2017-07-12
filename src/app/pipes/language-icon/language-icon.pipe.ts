@@ -9,7 +9,7 @@ export class LanguageIconPipe implements PipeTransform {
 
   parameterize(value: string): any {
     let lowercasedValue = value.toLowerCase();
-    return lowercasedValue.replace(/ /g,"_");
+    return lowercasedValue.replace(/ /g, '_');
   }
 
   transform(value: string): any {

@@ -9,7 +9,9 @@ export class PolicyAppendixComponent {
 
   constructor(private seoService: SeoService) {
     seoService.setTitle('Source Code Policy Appendix A - Definitions', true);
-    seoService.setMetaDescription('Read the Federal Open Source Code Policy Appendix A - Definitions.');
+    seoService.setMetaDescription(
+      'Read the Federal Open Source Code Policy Appendix A - Definitions.'
+    );
     seoService.setMetaRobots('Index, Follow');
   }
 }

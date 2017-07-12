@@ -1,3 +1,5 @@
+import { browser, by, element } from 'protractor';
+
 describe('AppComponent', () => {
 
   beforeEach(() => {
@@ -6,7 +8,7 @@ describe('AppComponent', () => {
 
   it('should have <home>', () => {
     let subject = element(by.css('home')).isPresent();
-    let result  = true;
+    let result = true;
     expect(subject).toEqual(result);
   });
 });

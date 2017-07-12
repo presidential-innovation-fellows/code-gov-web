@@ -8,7 +8,7 @@
   padding-right: 0.5em;
   position: relative;
 
-  @include media($medium-screen) {
+  @media screen and (min-width: $medium-screen) {
     padding-left: 4.75em;
     padding-right: 1em;
   }
@@ -16,7 +16,7 @@
   h3 {
     font-size: 1em;
 
-    @include media($medium-screen) {
+    @media screen and (min-width: $medium-screen) {
       font-size: 1.25em;
     }
   }
@@ -35,7 +35,7 @@
     top: 0.5em;
     vertical-align: middle;
 
-    @include media($medium-screen) {
+    @media screen and (min-width: $medium-screen) {
       left: 1em;
       padding: 0.75em 0.75em 0.7em;
       top: 1em;
@@ -48,7 +48,7 @@
       line-height: 0.85em;
       width: 1em;
 
-      @include media($medium-screen) {
+      @media screen and (min-width: $medium-screen) {
         font-size: 1.25em;
         line-height: 1em;
       }
@@ -58,7 +58,7 @@
   .activity-content {
     min-height: 2.75em;
 
-    @include media($medium-screen) {
+    @media screen and (min-width: $medium-screen) {
       min-height: 3.5em;
     }
   }
@@ -67,7 +67,7 @@
     @include clearfix;
 
     div {
-      @include span-columns(6);
+      @include grid-column(6);
     }
 
     h3 {

@@ -1,8 +1,8 @@
 @import '../../../styles/base/all';
 
 .modal-container {
-  @include animation(fadeInUp 0.2s ease);
-  @include animation-fill-mode(forwards);
+  animation: fadeInUp 0.2s ease;
+  animation-fill-mode: forwards;
   background-color: $color-white;
   left: 2em;
   padding: 2em 1em;
@@ -11,11 +11,11 @@
   text-align: center;
   top: 2em;
 
-  @include media($small-screen) {
+  @media screen and (min-width: $small-screen) {
     padding: 3em 2em;
   }
 
-  @include media($medium-screen) {
+  @media screen and (min-width: $medium-screen) {
     left: 50%;
     margin: -10em 0 0 -16em;
     right: auto;
@@ -30,7 +30,7 @@
   }
 
   button {
-    @include transition(all 0.2s ease);
+    transition: all 0.2s ease;
     background-color: transparent;
     color: $color-gray;
     padding: 0;
@@ -44,7 +44,7 @@
   h1 {
     font-size: 1.5em;
 
-    @include media($small-screen) {
+    @media screen and (min-width: $small-screen) {
       font-size: 1.75em;
     }
   }

@@ -9,7 +9,9 @@ export class PolicySolutionsAnalysisComponent {
 
   constructor(private seoService: SeoService) {
     seoService.setTitle('Source Code Policy Three-Step Software Solutions Analysis', true);
-    seoService.setMetaDescription('Read the Federal Open Source Code Policy Three-Step Software Solutions Analysis.');
+    seoService.setMetaDescription(
+      'Read the Federal Open Source Code Policy Three-Step Software Solutions Analysis.'
+    );
     seoService.setMetaRobots('Index, Follow');
   }
 }

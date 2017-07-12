@@ -8,9 +8,9 @@ button.usa-button-big,
 [type="submit"].usa-button-big,
 [type="reset"].usa-button-big,
 [type="image"].usa-button-big {
-  @include transition(all 0.2s ease);
+  transition: all 0.2s ease;
 
   &:hover {
-    @include transform(translateY(-2px));
+    transform: translateY(-2px);
   }
 }

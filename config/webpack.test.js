@@ -72,7 +72,10 @@ module.exports = function (options) {
         {
           enforce: 'pre',
           test: /\.ts$/,
-          loader: 'tslint-loader',
+          loader: 'tslint-loader?',
+          options: {
+            typeCheck: true
+          },
           exclude: [helpers.root('node_modules')]
         },
 
@@ -135,13 +138,13 @@ module.exports = function (options) {
         {
           test: /\.css$/,
           include: helpers.root('src', 'app'),
-          loader: 'raw!postcss'
+          loader: 'raw-loader!postcss-loader'
         },
 
         {
           test: /\.scss$/,
           exclude: /node_modules/,
-          loader: 'raw!postcss!sass'
+          loader: 'raw-loader!postcss-loader!sass-loader'
         },
 
         /**

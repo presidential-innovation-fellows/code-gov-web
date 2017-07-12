@@ -1,9 +1,19 @@
 import { APP_BASE_HREF, Location } from '@angular/common';
-import { Component, Type, Compiler,
-    NgModuleFactoryLoader, Injector } from '@angular/core';
-import { Router, Routes, UrlSerializer,
-    NavigationStart, NavigationEnd,
-    RouterOutletMap, Event } from '@angular/router';
+import {
+  Component,
+  Type,
+  Compiler,
+  NgModuleFactoryLoader,
+  Injector
+} from '@angular/core';
+import {
+  Router,
+  Routes,
+  UrlSerializer,
+  NavigationStart,
+  NavigationEnd,
+  Event
+} from '@angular/router';
 import { Angulartics2Module, Angulartics2, Angulartics2GoogleTagManager } from 'angulartics2';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
@@ -13,6 +23,24 @@ import { StateService } from './../../services/state/state.service';
 import { AppComponent } from './app.component';
 import { TestBed, ComponentFixture, inject } from '@angular/core/testing';
 
+class MockRouter {
+  routerState = {root: ''};
+  private rootComponentType: Type<any>;
+
+  private events: Observable<Event>;
+
+  constructor() {
+      this.events = Observable.of(new NavigationStart(2, ''));
+  }
+
+  createUrlTree() {
+      return {};
+  }
+
+  serializeUrl() {
+      return 'foo';
+  }
+}
 
 describe('AppComponent', () => {
 
@@ -131,24 +159,3 @@ describe('AppComponent', () => {
  });
 
 });
-
-class MockRouter {
-    routerState = {root: ''};
-    private rootComponentType: Type<any>;
-
-    private events: Observable<Event>;
-
-    constructor() {
-        this.events = Observable.of(new NavigationStart(2, ''));
-    }
-
-    createUrlTree() {
-        return {};
-    }
-
-    serializeUrl() {
-        return 'foo';
-    }
-
-}
-
