@@ -67,7 +67,8 @@ export const POLICY_GUIDE_ROUTES: Routes = [
               },
               {
                 path: 'whats-required',
-                redirectTo: 'dashboard'
+                redirectTo: 'dashboard',
+                pathMatch: 'full'
               },
               {
                 path: 'dashboard',
@@ -123,7 +124,7 @@ export const POLICY_GUIDE_ROUTES: Routes = [
         path: 'policy',
         component: PolicyComponent,
         children: [
-          { path: '', redirectTo: 'introduction'},
+          { path: '', redirectTo: 'introduction', pathMatch: 'full' },
           { path: 'introduction', component: PolicyIntroductionComponent },
           { path: 'objectives', component: PolicyObjectivesComponent },
           { path: 'scope', component: PolicyScopeComponent },
