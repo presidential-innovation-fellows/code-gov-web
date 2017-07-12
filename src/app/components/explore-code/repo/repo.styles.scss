@@ -6,7 +6,7 @@
   background-color: $color-white;
   padding: 1em 1em 2em;
 
-  @include media($medium-screen) {
+  @media screen and (min-width: $medium-screen) {
     padding: 2em 2em 3em;
   }
 
@@ -75,7 +75,7 @@
     padding: 1em 1em 1em 2.5em;
     position: relative;
 
-    @include media($medium-screen) {
+    @media screen and (min-width: $medium-screen) {
       margin-bottom: 0;
     }
 

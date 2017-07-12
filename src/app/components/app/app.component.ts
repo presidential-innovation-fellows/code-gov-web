@@ -2,6 +2,7 @@ import { Angulartics2, Angulartics2GoogleTagManager } from 'angulartics2';
 import { Component, ViewEncapsulation, OnInit, OnDestroy } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
+import { PageScrollConfig } from 'ng2-page-scroll';
 
 import { StateService } from '../../services/state';
 
@@ -20,7 +21,9 @@ export class AppComponent implements OnInit, OnDestroy {
     private angulartics2Gtm: Angulartics2GoogleTagManager,
     private router: Router,
     public stateService: StateService
-  ) {}
+  ) {
+     PageScrollConfig.defaultDuration = 0;
+  }
 
   ngOnInit() {
     this.eventSub = this.router.events.subscribe((evt) => {

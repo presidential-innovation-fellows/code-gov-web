@@ -76,6 +76,9 @@ files to match your settings. When ready to deploy, run
 `npm run github-deploy:dev` or `npm run github-deploy:prod`, depending on your
 intended destination.
 
+## Deployment Problems
+When pushing to staging or dev branches, you might run into an occasional error warning that the branch you're pushing to already exists. If you see this, you need to clear the cache in the gh-pages module using this command: `rm -rf node_modules/gh-pages/.cache` 
+
 ## Generating License Data
 To update the `dependency_licenses.json` file, run `npm run licenses`.
 

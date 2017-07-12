@@ -17,17 +17,39 @@ const commonConfig = require('./webpack.common.js');
  */
 const GIT_REMOTE_NAME = 'origin';
 const COMMIT_MESSAGE = 'Updates';
+
 const GH_REPO_NAME = ghDeploy.getRepoName(GIT_REMOTE_NAME);
 const ENV = 'production';
 let BASEURL;
 let gtmAuth;
+let GIT_BRANCH_NAME;
 
 if (helpers.hasProcessFlag('github-stag')) {
   BASEURL = '/code-gov-web/';
   gtmAuth = 'GTM-NTMZFB';
-} else {
-  BASEURL = '/';
+  GIT_BRANCH_NAME = 'gh-pages';
+} else if (helpers.hasProcessFlag('federalist-stag')){
+  
+  BASEURL = '/site/presidential-innovation-fellows/code-gov-web/';
   gtmAuth = 'GTM-M9L9Q5';
+  GIT_BRANCH_NAME = 'federalist-stag';
+
+} else if (helpers.hasProcessFlag('federalist-dev')){
+  
+  BASEURL = '/preview/presidential-innovation-fellows/code-gov-web/';
+  gtmAuth = 'GTM-M9L9Q5';
+  GIT_BRANCH_NAME = 'federalist-dev';
+}
+else if (helpers.hasProcessFlag('federalist-prod')){
+  
+  BASEURL = '/site/presidential-innovation-fellows/code-gov-web/';
+  gtmAuth = 'GTM-M9L9Q5';
+  GIT_BRANCH_NAME = 'federalist-pages';
+}
+else {
+  BASEURL = '/site/presidential-innovation-fellows/code-gov-web/';
+  gtmAuth = 'GTM-M9L9Q5';
+  GIT_BRANCH_NAME = 'federalist-pages';
 }
 
 const METADATA = webpackMerge(webpackConfig.metadata, {
@@ -94,7 +116,7 @@ module.exports = function (env) {
 
           const options = {
             logger: logger,
-            branch: 'federalist-pages',
+            branch: GIT_BRANCH_NAME,
             remote: GIT_REMOTE_NAME,
             message: COMMIT_MESSAGE,
             dotfiles: true

@@ -34,7 +34,10 @@ export class ExternalLinkDirective {
   onClick(event: any) {
     this.url = this.el.nativeElement.getAttribute('href');
 
-    this.angulartics2.eventTrack.next({ action: 'Click', properties: { category: 'External Link' }});
+    this.angulartics2.eventTrack.next({
+      action: 'Click',
+      properties: { category: 'External Link' }
+    });
 
     if (this.isExternalLink(this.url)) {
       event.preventDefault();

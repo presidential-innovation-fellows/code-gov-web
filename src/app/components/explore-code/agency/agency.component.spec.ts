@@ -13,6 +13,12 @@ import { ReposService } from '../../../services/repos';
 import { SeoService } from '../../../services/seo';
 import { TruncatePipe } from '../../../pipes/truncate';
 
+class MockActivatedRoute extends ActivatedRoute {
+  constructor() {
+    super();
+    this.params = Observable.of({id: 'DOL'});
+  }
+}
 
 describe('AgencyComponent', () => {
 
@@ -77,10 +83,3 @@ describe('AgencyComponent', () => {
     });
   });
 });
-
-class MockActivatedRoute extends ActivatedRoute {
-  constructor() {
-    super();
-    this.params = Observable.of({id: 'DOL'});
-  }
-}

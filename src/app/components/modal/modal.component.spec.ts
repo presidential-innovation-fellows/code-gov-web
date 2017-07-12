@@ -97,9 +97,9 @@ describe('ModalComponent', () => {
 
   describe ('close', () => {
     it('should hide the modal', () => {
-      // Call ModalService.showModal() to push an item into the modalActivated$ Observable. All values
-      // are undefined since we are only concerned about the visible property that is set
-      // in the subscribe() call in the ModalComponent constructor (line 23).
+      // Call ModalService.showModal() to push an item into the modalActivated$ Observable.
+      // All values are undefined since we are only concerned about the visible property
+      // that is set in the subscribe() call in the ModalComponent constructor (line 23).
       this.modalService.showModal({description: undefined, title: undefined, url: undefined});
       this.fixture.detectChanges();
       // close the modal, which sets ModalComponent.visible to false
@@ -115,7 +115,7 @@ describe('ModalComponent', () => {
     });
 
     it('should trigger a close Event via Angulartics2', inject([Angulartics2], (angulartics2) => {
-      spyOn(angulartics2.eventTrack, "next");
+      spyOn(angulartics2.eventTrack, 'next');
       this.modalComponent.close();
 
       expect(angulartics2.eventTrack.next).toHaveBeenCalledWith(
@@ -128,7 +128,7 @@ describe('ModalComponent', () => {
     it('should unsubscribe from router events on destroy', () => {
       this.fixture.detectChanges();
       spyOn(this.modalComponent.modalSub, 'unsubscribe');
-      this.fixture.destroy()
+      this.fixture.destroy();
       expect(this.modalComponent.modalSub.unsubscribe).toHaveBeenCalled();
     });
   });

@@ -4,11 +4,14 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
-import { AuthHttp, AuthConfig, AUTH_PROVIDERS, provideAuth} from 'angular2-jwt';
+import { AuthHttp, AuthConfig, AUTH_PROVIDERS, provideAuth } from 'angular2-jwt';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { Angulartics2On } from 'angulartics2';
 import { Angulartics2Module, Angulartics2GoogleTagManager } from 'angulartics2';
+
+import { Ng2PageScrollModule } from 'ng2-page-scroll';
+import { Ng2SimplePageScrollModule } from 'ng2-simple-page-scroll';
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -31,6 +34,7 @@ import { ModalService } from './services/modal';
 import { ReposService } from './services/repos';
 import { SeoService } from './services/seo';
 import { StateService } from './services/state';
+import { StatusService } from './services/status';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -40,7 +44,8 @@ const APP_PROVIDERS = [
   ModalService,
   ReposService,
   SeoService,
-  StateService
+  StateService,
+  StatusService
 ];
 
 /**
@@ -53,7 +58,9 @@ const APP_PROVIDERS = [
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES, { useHash: true })
+    RouterModule.forRoot(ROUTES, { useHash: true }),
+    Ng2PageScrollModule.forRoot(),
+    Ng2SimplePageScrollModule.forRoot()
   ],
   declarations: [
     APP_COMPONENTS,

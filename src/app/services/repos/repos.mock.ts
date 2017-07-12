@@ -28,8 +28,8 @@ export const REPOS = {
       ],
       // tslint:disable-next-line:max-line-length
       'license': 'https://github.com/department-of-veterans-affairs/vets-website/blob/master/LICENSE',
-      'openproject': 1,
-      'govwideReuseproject': 0,
+      'openSourceProject': 1,
+      'governmentWideReuseProject': 0,
       'closedproject': 0,
       'exemption': null,
       'projectTags': [

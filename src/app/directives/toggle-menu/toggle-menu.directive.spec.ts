@@ -11,14 +11,45 @@ import { Angulartics2 } from 'angulartics2';
 import { ToggleMenuDirective } from './toggle-menu.directive';
 import { MobileService } from '../../services/mobile';
 
+@Component({
+  selector: 'test',
+  template: `
+    <a toggle-menu id="menu" routerLink="/explore-code" aria-pressed="false">Test Link</a>
+  `
+})
+
+class TestComponent {
+}
+
+@Component({
+  selector: 'explore-code',
+  template: '<div></div>'
+})
+class EmptyComponent {
+
+}
+
+class MockMobileService {
+  hideMenu() {
+    return true;
+  }
+
+  toggleMenu() {
+    return true;
+  }
+}
 
 describe('ToggleMenuDirective', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ ToggleMenuDirective, TestComponent ],
-      imports: [ RouterModule.forRoot([]) ],
+      declarations: [ ToggleMenuDirective, TestComponent, EmptyComponent ],
+      imports: [
+        RouterModule.forRoot([
+          { path: 'explore-code', component: EmptyComponent }
+        ])
+      ],
       providers: [
-        { provide: MobileService, useClass: mockMobileService },
+        { provide: MobileService, useClass: MockMobileService },
         { provide: APP_BASE_HREF, useValue: '/' }
       ]
     });
@@ -45,23 +76,3 @@ describe('ToggleMenuDirective', () => {
     });
   });
 });
-
-@Component({
-    selector: 'test',
-    template: `
-      <a toggle-menu id="menu" routerLink="/explore-code" aria-pressed="false">Test Link</a>
-    `
-})
-
-class TestComponent {
-}
-
-class mockMobileService {
-  hideMenu() {
-    return true;
-  }
-
-  toggleMenu() {
-    return true;
-  }
-}

@@ -9,25 +9,121 @@
       <h1>{{ repo.name }}</h1>
       <p *ngIf="repo.description | isdefined">{{ repo.description }}</p>
     </div>
-    <div class="repo-actions">
+    <div *ngIf="repo.openSourceProject==1 && repo.governmentWideReuseProject==0" class="repo-actions">
       <ul class="usa-unstyled-list">
         <li *ngIf="repo.homepage | isdefined">
           <a external-link class="usa-button" href="{{repo.homepage}}">
             Homepage
           </a>
         </li>
-
-        <li *ngIf="repo.repoURL | isdefined">
-          <a external-link class="usa-button" href="{{ repo.repoURL }}">
+<li >
+          <a *ngIf="repo.repoURL | isdefined" external-link class="usa-button" href="{{ repo.repoURL }}">
             Visit Repo
           </a>
+          <a *ngIf="(repo.repository).includes('http')"
+ external-link class="usa-button" href="{{ repo.repository }}">
+            Visit Repo
+          </a>
+          
+        </li></ul>
+    </div>
+    <div *ngIf="repo.openSourceProject==0 && repo.governmentWideReuseProject==1" class="repo-actions">
+      <ul class="usa-unstyled-list">
+        <li *ngIf="repo.homepage | isdefined">
+          <a external-link class="usa-button" href="{{repo.homepage}}">
+            Homepage
+          </a>
+        </li>
+        <li *ngIf="repo.contact.email | isdefined">
+          <a external-link class="usa-button" href="mailto:{{ repo.contact.email }}">
+            Contact Agency
+          </a>
+        </li>
+          
+      </ul>
+    </div>
+    <div *ngIf="repo.openSourceProject==1 && repo.governmentWideReuseProject==1" class="repo-actions">
+      <ul class="usa-unstyled-list">
+        <li *ngIf="repo.homepage | isdefined">
+          <a external-link class="usa-button" href="{{repo.homepage}}">
+            Homepage
+          </a>
+        </li>
+      
+          
+        
+        <li >
+          <a *ngIf="(repo.repository).includes('http')"
+ external-link class="usa-button" href="{{ repo.repository }}">
+            Visit Repo
+          </a>
+          <!--  <a *ngIf="repo.repoURL | isdefined" external-link class="usa-button" href="{{ repo.repoURL }}">
+            Visit Repo
+          </a>-->
+          
+          
         </li>
       </ul>
     </div>
   </header>
 
   <div class="repo-content">
-    <div class="repo-features>">
+    
+    <div *ngIf="repo.openSourceProject==1 && repo.governmentWideReuseProject==0" class="repo-features>">
+      <h2>Highlights</h2>
+      <ul class="usa-unstyled-list repo-features-list">
+        <li class="repo-language usa-width-one-half">
+          <div *ngIf="repo.codeLanguage | isdefined">
+            <div *ngFor="let language of repo.codeLanguage" class="feature-icon">
+              <i class="devicons devicons-{{language.language | languageIcon }}">
+              </i>
+            </div>
+            <h3>Language</h3>
+            <p>
+              This repo is built in
+              <span *ngFor="let language of repo.codeLanguage" class="language">
+                {{ language.language }}.
+              </span>
+            </p>
+          </div>
+          <div *ngIf="!repo.codeLanguage | isdefined">
+            <div class="feature-icon">
+              <i class="fa fa-question"></i>
+            </div>
+            <h3>Language</h3>
+            <p>
+              We’re not sure what this repo is built in. Try making a pull
+              request that updates this repo’s <code>code.json</code> file.
+            </p>
+          </div>
+        </li>
+        <li class="repo-license usa-width-one-half">
+          <div *ngIf="repo.license && repo.license_name | isdefined">
+            <div class="feature-icon">
+              <i class="fa fa-file-text-o "></i>
+            </div>
+            <h3>License</h3>
+            <p>
+              This repo uses the
+              <a external-link href="{{repo.license}}">
+                {{repo.license_name}} license.
+              </a>
+            </p>
+          </div>
+          <div *ngIf="!repo.license || !repo.license_name">
+            <div class="feature-icon">
+              <i class="fa fa-question"></i>
+            </div>
+            <h3>License</h3>
+            <p>
+              We’re not sure what license this repo has. Try making a pull
+              request that updates this repo’s <code>code.json</code> file.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="repo.openSourceProject==1 && repo.governmentWideReuseProject==1" class="repo-features>">
       <h2>Highlights</h2>
       <ul class="usa-unstyled-list repo-features-list">
         <li class="repo-language usa-width-one-half">
@@ -82,7 +178,7 @@
       </ul>
     </div>
 
-    <div class="activity-container">
+     <div *ngIf="repo.openSourceProject==1" class="activity-container">
       <h2>Activity</h2>
       <ul class="usa-unstyled-list">
         <activity-list  *ngIf="repo" [eventRepo]="repo"></activity-list>

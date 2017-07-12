@@ -4,6 +4,63 @@ import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { IsDefinedPipe } from './is-defined.pipe';
 import { Pipe, PipeTransform } from '@angular/core';
 
+@Component({
+    selector: '',
+    template: `<h1 *ngIf="value | isdefined">{{value}}</h1>`
+})
+class TestIsDefinedPipeComponent {
+    private value: any;
+
+    setValue(val: any) {
+        this.value = val;
+    }
+}
+
+interface TestObject {
+    id: number;
+    name: string;
+}
+
+@Component({
+    selector: '',
+    template: `<h1 *ngIf="value | isdefined">{{value.name}}</h1>`
+})
+class TestIsDefinedPipeWithObjectComponent {
+    private value: TestObject;
+
+    setValue(val: TestObject) {
+        this.value = val;
+    }
+}
+
+@Component({
+    selector: '',
+    template: `<h1 *ngIf="!value | isdefined">Undefined</h1>`
+})
+class TestIsNotDefinedPipeComponent {
+    private value: any;
+
+    setValue(val: any) {
+        this.value = val;
+    }
+}
+
+@Component({
+    selector: '',
+    template: `<h1 *ngIf="value1 && value2 | isdefined">Two Values Defined</h1>`
+})
+class TestIsDefinedWithExpressionPipeComponent {
+    private value1: any;
+    private value2: any;
+
+    setValue1(val: any) {
+        this.value1 = val;
+    }
+
+    setValue2(val: any) {
+        this.value2 = val;
+    }
+}
 
 /**
  * Unit tests for IsDefinedPipe including tests for
@@ -314,61 +371,3 @@ describe('IsDefinedPipe', () => {
     });
 
 });
-
-@Component({
-    selector: '',
-    template: `<h1 *ngIf="value | isdefined">{{value}}</h1>`
-})
-class TestIsDefinedPipeComponent {
-    private value: any;
-
-    setValue(val: any) {
-        this.value = val;
-    }
-}
-
-interface TestObject {
-    id: number;
-    name: string;
-}
-
-@Component({
-    selector: '',
-    template: `<h1 *ngIf="value | isdefined">{{value.name}}</h1>`
-})
-class TestIsDefinedPipeWithObjectComponent {
-    private value: TestObject;
-
-    setValue(val: TestObject) {
-        this.value = val;
-    }
-}
-
-@Component({
-    selector: '',
-    template: `<h1 *ngIf="!value | isdefined">Undefined</h1>`
-})
-class TestIsNotDefinedPipeComponent {
-    private value: any;
-
-    setValue(val: any) {
-        this.value = val;
-    }
-}
-
-@Component({
-    selector: '',
-    template: `<h1 *ngIf="value1 && value2 | isdefined">Two Values Defined</h1>`
-})
-class TestIsDefinedWithExpressionPipeComponent {
-    private value1: any;
-    private value2: any;
-
-    setValue1(val: any) {
-        this.value1 = val;
-    }
-
-    setValue2(val: any) {
-        this.value2 = val;
-    }
-}

@@ -7,6 +7,8 @@
     </p>
     <ul class="repos-list usa-unstyled-list">
       <li *ngFor="let repo of repos" class="repo">
+
+        <span *ngIf="repo.openSourceProject==1 || repo.governmentWideReuseProject==1">
         <a routerLink="/explore-code/repos/{{repo.repoID}}">
           <h3 class="repo-name">{{ repo.name }}</h3>
           <p class="repo-description">
@@ -18,10 +20,14 @@
               <span>{{ language.language }}</span>
             </li>
             <li>
-              <i class="fa fa-code"></i><span>Open Source</span>
+              <i class="fa fa-code"></i>
+              <span *ngIf="repo.openSourceProject==1 && repo.governmentWideReuseProject==0 ">Open Source</span> 
+              <span *ngIf="repo.governmentWideReuseProject==1 && repo.openSourceProject==0">Government-Wide Reuse</span>
+              <span *ngIf="repo.openSourceProject==1 && repo.governmentWideReuseProject==1 ">Open Source</span>
             </li>
           </ul>
         </a>
+          </span>
       </li>
     </ul>
   </div>

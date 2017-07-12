@@ -1,6 +1,8 @@
 .table {
   margin-bottom: 10px;
+  text-align: center;
 }
+
 .table-striped > tbody > tr:nth-of-type(odd),
 .table-hover > tbody > tr:hover,
 .table > thead > tr > td.active,
@@ -16,6 +18,7 @@
 .table > tbody > tr.active > th,
 .table > tfoot > tr.active > th {
   background-color: #f4f8fb !important;
+  
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,
@@ -107,7 +110,7 @@ table.focus-on tbody tr.focused td {
   z-index: 1;
   outline: none !important;
 }
-.table-rep-plugin .checkbox-row input[type="checkbox"]:disabled + label {
+  .table-rep-plugin .checkbox-row input[type="checkbox"]:disabled + label {
   opacity: 0.65;
 }
 .table-rep-plugin .checkbox-row input[type="checkbox"]:focus + label::before {
@@ -263,3 +266,37 @@ table.dataTable td.focus {
   box-shadow: none !important;
   background-image: none;
 }
+
+#circle-red {
+      width: 25px;
+      height: 25px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border-radius: 25px;
+      background: red;
+      text-align: center;
+      vertical-align: middle;
+      display:inline-flex;  
+    }
+#circle-yellow {
+      width: 25px;
+      height: 25px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border-radius: 25px;
+      background: yellow;
+      text-align:center;
+      vertical-align: middle;
+      display:inline-flex; 
+    }
+#circle-green {
+      width: 25px;
+      height: 25px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border-radius: 25px;
+      background: green;
+      text-align:center;
+      vertical-align: middle;
+      display:inline-flex; 
+    }

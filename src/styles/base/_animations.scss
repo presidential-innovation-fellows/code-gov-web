@@ -1,17 +1,17 @@
-@include keyframes(fadeInUp) {
+@keyframes fadeInUp {
   from {
-    @include transform(translateY(0.5em));
+    transform: translateY(0.5em);
     opacity: 0;
     visibility: hidden;
   }
   to {
-    @include transform(translateY(0));
+    transform: translateY(0);
     opacity: 1;
     visibility: visible;
   }
 }
 
-@include keyframes(fadeIn) {
+@keyframes fadeIn {
   from {
     opacity: 0;
     visibility: hidden;
@@ -22,11 +22,13 @@
   }
 }
 
-@include keyframes(blink) {
-  from, to {
+@keyframes blink {
+  from {
     color: transparent;
   }
-
+  to {
+    color: transparent;
+  }
   50% {
     color: $brand-teal;
   }

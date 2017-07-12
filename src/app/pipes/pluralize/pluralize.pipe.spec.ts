@@ -16,7 +16,7 @@ describe('PluralizePipe', () => {
   });
 
   describe('transform', () => {
-    const pluralize:any = Pluralize;
+    const pluralize: any = Pluralize;
     const value = 'Value';
 
     it('calls Pluralize', () => {
@@ -24,8 +24,6 @@ describe('PluralizePipe', () => {
     });
 
     describe('when a number greater than 1 is passed as an argument', () => {
-      const value = 'Value';
-
       it('returns a plural value', () => {
         expect(pipe.transform(value, 2)).toEqual('Values');
       });

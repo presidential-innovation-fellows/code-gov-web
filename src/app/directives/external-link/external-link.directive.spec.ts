@@ -10,6 +10,23 @@ import { Angulartics2 } from 'angulartics2';
 import { ExternalLinkDirective } from './external-link.directive';
 import { ModalService } from '../../services/modal';
 
+@Component({
+  selector: 'test',
+  template: `
+    <a external-link id="gov-link" href="https://code.gov" target="_blank">Code.gov</a>
+    <a external-link id="mil-link" href="https://code.mil" target="_blank">Code.mil</a>
+    <a external-link id="ext-link" href="https://github.com" target="_blank">GitHub</a>
+  `
+})
+
+class TestComponent {
+}
+
+class MockModalService {
+  showModal(data: any) {
+    return Observable.of({});
+  }
+}
 
 describe('ExternalLinkDirective', () => {
   beforeEach(() => {
@@ -19,7 +36,7 @@ describe('ExternalLinkDirective', () => {
       providers: [
         Angulartics2,
         { provide: Location, useClass: SpyLocation },
-        { provide: ModalService, useClass: mockModalService }
+        { provide: ModalService, useClass: MockModalService }
       ]
     });
 
@@ -29,7 +46,7 @@ describe('ExternalLinkDirective', () => {
 
   it('should trigger Angularitics when an external link is quicked', () => {
     let angulartics2 = TestBed.get(Angulartics2);
-    spyOn(angulartics2.eventTrack, "next");
+    spyOn(angulartics2.eventTrack, 'next');
     this.fixture.debugElement.nativeElement.querySelector('#ext-link').click();
 
     expect(angulartics2.eventTrack.next).toHaveBeenCalledWith(
@@ -61,21 +78,3 @@ describe('ExternalLinkDirective', () => {
     expect(modalService.showModal).not.toHaveBeenCalled();
   });
 });
-
-@Component({
-    selector: 'test',
-    template: `
-      <a external-link id="gov-link" href="https://code.gov" target="_blank">Code.gov</a>
-      <a external-link id="mil-link" href="https://code.mil" target="_blank">Code.mil</a>
-      <a external-link id="ext-link" href="https://github.com" target="_blank">GitHub</a>
-    `
-})
-
-class TestComponent {
-}
-
-class mockModalService {
-  showModal(data: any) {
-    return Observable.of({});
-  }
-}

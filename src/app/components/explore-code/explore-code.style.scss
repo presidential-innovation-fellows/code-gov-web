@@ -4,7 +4,7 @@
   background-color: lighten($color-gray-lightest, 2);
   padding: 0.75em 0 3em;
 
-  @include media($medium-screen) {
+  @media screen and (min-width: $medium-screen) {
     padding: 2em 0 3em;
   }
 }
