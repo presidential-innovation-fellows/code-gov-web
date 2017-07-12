@@ -3805,9 +3805,9 @@
 				"email": " "
 			}],
 			"license": "https://github.com/nasa/openmct/blob/master/LICENSES.md",
-			"license_name": "Apache v1",
-			"openSourceProject": 1,
-			"governmentWideReuseProject": 0,
+			"license_name": "Apache v2",
+			"openproject": 1,
+			"govwideReuseproject": 0,
 			"closedproject": 0,
 			"exemption": "",
 			"projectTags": [{
