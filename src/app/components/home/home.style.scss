@@ -7,11 +7,6 @@ body {
 
 .about {
   border-bottom: 1px solid $color-gray-lightest;
-  padding: 2em 0 1em;
-
-  @media screen and (min-width: $medium-screen) {
-    padding: 4em 0;
-  }
 
   header {
     margin: 0 auto;
@@ -48,21 +43,6 @@ body {
   li {
     @extend %card;
   }
-
-  .usa-button {
-    background-color: $brand-purple;
-
-    &:hover {
-      background-color: darken($brand-purple, 10);
-    }
-  }
-  .usa-mail-button {
-    background-color: $brand-teal;
-
-    &:hover {
-      background-color: darken($brand-teal, 10);
-    }
-  }
 }
 
 .about-actions {
@@ -83,14 +63,7 @@ body {
     padding-left: 3em;
     position: relative;
 
-    .icon {
-      left: 1em;
-      position: absolute;
-      top: 1em;
-    }
-
     i {
-      color: $brand-teal;
       font-size: 1.2em;
     }
   }
@@ -102,9 +75,6 @@ body {
 }
 
 .banner {
-  background-color: darken($color-primary, 10);
-  background-size: cover;
-  background-repeat: no-repeat;
   padding: 2em 0 9em;
   position: relative;
 
@@ -113,9 +83,8 @@ body {
   }
 
   h1 {
-    color: $color-white;
     font-size: 2em;
-    margin: 0 0 0.25em;
+    margin-bottom: 0.25em;
 
     @media screen and (min-width: $small-screen) {
       font-size: 2.8em;
@@ -127,7 +96,6 @@ body {
   }
 
   p {
-    color: lighten($brand-blue-gray, 50);
     font-size: 1em;
     margin-top: 0;
 
@@ -147,7 +115,7 @@ body {
     max-width: 12em;
 
     &:hover {
-      background-color: darken($color-primary, 15);
+      background-color: $brand-button-primary-hover;
     }
 
     @media screen and (min-width: $small-screen) {
@@ -155,33 +123,16 @@ body {
       max-width: none;
     }
   }
-  .usa-mail-button {
-    box-shadow: 0 3px 7px rgba($color-black, 0.1);
-    font-size: 1em;
-    margin: 0 auto;
-    max-width: 12em;
-
-    &:hover {
-      background-color: darken($color-primary, 15);
-    }
-
-    @media screen and (min-width: $small-screen) {
-      font-size: 1em;
-      max-width: none;
-    }
-  }
 }
 
 .banner-container {
-  background-color: darken($color-primary, 10);
+  background-color: $brand-primary;
   margin: 0 auto;
   max-width: 37em;
   text-align: center;
 }
 
 .press {
-  padding: 4em 0;
-
   h2 {
     color: $color-gray-light;
     font-size: 1em;
@@ -238,7 +189,7 @@ body {
     }
 
     &::before {
-      color: $brand-teal;
+      color: $brand-highlight;
       content: "“";
       font-size: 1.75em;
       left: 0em;

@@ -1,3 +1,6 @@
+$header-color: $color-gray-dark;
+$text-color: $color-gray;
+
 body {
   font-feature-settings: "kern", "liga", "pnum";
   -webkit-font-smoothing: antialiased;
@@ -21,19 +24,27 @@ h3,
 h4,
 h5
 h6 {
-  color: $color-gray-dark;
+  color: $header-color;
   font-family: $header-font-family;
   font-weight: 500;
 
   &:first-child {
     margin-top: 0;
   }
+
+  .block--dark & {
+    color: $color-white;
+  }
 }
 
 p {
-  color: $color-gray;
+  color: $text-color;
 
   @media screen and (min-width: $medium-screen) {
     font-size: 1.1em;
+  }
+
+  .block--dark & {
+    color: lighten($brand-blue-gray, 50);
   }
 }

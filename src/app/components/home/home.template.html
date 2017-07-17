@@ -1,4 +1,4 @@
-<section class="banner">
+<section class="block block--dark banner">
   <div class="usa-grid">
     <div class="banner-container">
       <div class="banner-content">
@@ -14,7 +14,7 @@
     <banner-art></banner-art>
   </div>
 </section>
-<section class="about">
+<section class="about l-block--large">
   <div class="usa-grid">
     <header>
       <h1>Help propel America’s next breakthrough in innovation.</h1>
@@ -24,37 +24,41 @@
       </p>
     </header>
     <ul class="usa-unstyled-list usa-grid about-actions">
-      <li class="usa-width-one-half">
-        <div class="icon">
-          <i class="fa fa-code"></i>
+      <li class="card usa-width-one-half">
+        <div class="card__icon">
+          <i class="icon fa fa-code"></i>
         </div>
-        <h2>Explore Code</h2>
-        <p>
-           Choose from dozens of open source projects that you can reuse or
-           contribute to.
-        </p>
-        <a routerLink="explore-code" class="usa-button">
-          Browse Code
-        </a>
+        <div class="card__body">
+          <h2>Explore Code</h2>
+          <p>
+             Choose from dozens of open source projects that you can reuse or
+             contribute to.
+          </p>
+          <a routerLink="explore-code" class="usa-button button--secondary">
+            Browse Code
+          </a>
+        </div>
       </li>
-      <li class="usa-width-one-half">
-        <div class="icon">
-          <i class="fa fa-book"></i>
+      <li class="card usa-width-one-half">
+        <div class="card__icon">
+          <i class="icon fa fa-book"></i>
         </div>
-        <h2>Implement Policy</h2>
-        <p>
-           Discover tools and resources designed to help federal
-           agencies implement the Federal Source Code Policy.
-        </p>
-        <a routerLink="policy-guide" class="usa-button">
-          Get Started
-        </a>
+        <div class="card__body">
+          <h2>Implement Policy</h2>
+          <p>
+             Discover tools and resources designed to help federal
+             agencies implement the Federal Source Code Policy.
+          </p>
+          <a routerLink="policy-guide" class="usa-button button--secondary">
+            Get Started
+          </a>
+        </div>
       </li>
     </ul>
   </div>
 </section>
 
-<section class="press">
+<section class="press l-block--large">
   <div class="usa-grid">
     <h2>Press</h2>
     <div class="press-container">

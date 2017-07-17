@@ -1,20 +1,36 @@
 $header-font-family: 'TT Lakes', $helvetica;
 
-$brand-blue: #1c4772;
+$brand-primary: #005289;
+
+$brand-highlight: #23c0ba;
+$brand-highlight-light: lighten($brand-highlight, 10);
+
+$brand-button-primary: #0071bc;
+$brand-button-primary-hover: darken($brand-button-primary, 15);
+
+$brand-button-secondary: #42519F;
+$brand-button-secondary-hover: darken($brand-button-secondary, 10);
+
+$text-contrast-color: #ffffff;
+
+// $brand-blue: #1c4772;
+
+$brand-blue: #0071bc;
+$brand-blue-dark: darken($brand-blue, 10);
+$brand-blue-darker: darken($brand-blue, 15);
 $brand-blue-gray: #485568;
-$brand-teal: #23c0ba;
+
+$brand-teal: #43ddd7;
+$brand-teal-dark: darken($brand-teal, 10);
+$brand-teal-darker: darken($brand-teal, 15);
+
 $brand-purple: #42519F;
+$brand-purple-dark: darken($brand-purple, 10);
 
 // USWDS Colors
 $color-primary:              #0071bc;
 $color-primary-darker:       #205493;
 $color-primary-darkest:      #112e51;
-
-$color-primary-alt:          #02bfe7;
-$color-primary-alt-dark:     #00a6d2;
-$color-primary-alt-darkest:  #046b99;
-$color-primary-alt-light:    #9bdaf1; // lighten($color-primary-alt, 60%)
-$color-primary-alt-lightest: #e1f3f8; // lighten($color-primary-alt, 90%)
 
 $color-secondary:            #e31c3d;
 $color-secondary-dark:       #cd2026;
@@ -23,7 +39,6 @@ $color-secondary-light:      #e59393; // lighten($color-secondary, 60%)
 $color-secondary-lightest:   #f9dede; // lighten($color-secondary, 90%)
 
 $color-white:                #ffffff;
-$color-base:                 #212121;
 $color-black:                #000000;
 
 $color-gray-dark:            #323a45;

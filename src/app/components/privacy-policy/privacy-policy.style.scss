@@ -3,7 +3,7 @@
 .privacy-content {
 
   a {
-    color: $color-primary;
+    color: $brand-button-primary;
 
     &:hover {
       color: darken($color-primary, 10);

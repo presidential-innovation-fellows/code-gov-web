@@ -1,16 +1,18 @@
-.usa-button,
-.usa-button.usa-button-big,
-.usa-button-primary.usa-button-big,
-.usa-button:visited.usa-button-big,
-.usa-button-primary:visited.usa-button-big,
-button.usa-button-big,
-[type="button"].usa-button-big,
-[type="submit"].usa-button-big,
-[type="reset"].usa-button-big,
-[type="image"].usa-button-big {
-  transition: all 0.2s ease;
+.code-gov {
+  .usa-button,
+  .usa-button.usa-button-big,
+  .usa-button-primary.usa-button-big,
+  .usa-button:visited.usa-button-big,
+  .usa-button-primary:visited.usa-button-big,
+  button.usa-button-big,
+  [type="button"].usa-button-big,
+  [type="submit"].usa-button-big,
+  [type="reset"].usa-button-big,
+  [type="image"].usa-button-big {
+    transition: all 0.2s ease;
 
-  &:hover {
-    transform: translateY(-2px);
+    &:hover {
+      transform: translateY(-2px);
+    }
   }
 }

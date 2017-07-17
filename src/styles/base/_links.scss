@@ -1,0 +1,29 @@
+.code-gov {
+  a.link {
+    color: $color-gray;
+    text-decoration: none;
+
+    &:visited {
+      color: $color-gray;
+    }
+
+    &:hover {
+      border-bottom: 3px solid $brand-highlight;
+      color: $brand-blue-dark;
+    }
+  }
+
+  .block--dark {
+    a.link {
+      color: lighten($brand-blue-gray, 50);
+
+      &:visited {
+        color: lighten($brand-blue-gray, 50);
+      }
+
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+}

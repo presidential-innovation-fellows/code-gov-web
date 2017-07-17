@@ -1,6 +1,6 @@
-<div class="app-container {{ stateService.state.section }}">
-  <header role="banner">
-    <div class="usa-disclaimer">
+<div class="app-container">
+  <header role="banner" class="block" [ngClass]="{ 'block--dark': stateService.state.section === 'home', 'block--white': stateService.state.section !== 'home' }">
+    <div class="usa-disclaimer block l-block--small">
       <div class="usa-grid">
         <span class="usa-disclaimer-official">
           <img src="assets/img/us_flag_small.png" alt="U.S. flag"/>
@@ -23,18 +23,18 @@
         </div>
         <ul class="app-links usa-unstyled-list">
           <li>
-            <a routerLink="explore-code" routerLinkActive="active">
+            <a class="link link--contrast" routerLink="explore-code" routerLinkActive="active">
               Explore Code
             </a>
           </li>
           <li>
-            <a routerLink="policy-guide" routerLinkActive="active">
+            <a class="link link--contrast" routerLink="policy-guide" routerLinkActive="active">
               Policy Info
             </a>
           </li>
           <li>
-                <a href="https://bit.ly/2pnRlYN" rel="noopener">Join Mailing List</a>
-              </li>
+            <a class="link link--contrast" href="https://bit.ly/2pnRlYN" rel="noopener">Join Mailing List</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -44,43 +44,47 @@
     <router-outlet></router-outlet>
   </main>
 
-  <footer class="app-footer" role="contentinfo">
+  <footer class="app-footer block l-block--medium" role="contentinfo">
     <div class="usa-grid">
-      <div class="usa-width-two-thirds">
-        <div class="row">
-          <nav class="footer-links">
-            <ul class="usa-unstyled-list">
-              <li>
-                <a routerLink="privacy-policy">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="https://github.com/presidential-innovation-fellows/code-gov-web" target="_blank" rel="noopener">Visit Project Page</a>
-              </li>
-               <li>
-                <a href="https://bit.ly/2pnRlYN" rel="noopener">Join Mailing List</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="row">
-          <ul class="agency-logos usa-unstyled-list">
-            <li class="whitehouse">
-              <a href="https://whitehouse.gov" target="_blank" rel="noopener">
-                <img src="assets/img/logos/whitehouse.png" alt="The White House">
+      <div class="usa-width-one-whole">
+        <nav class="footer-links">
+          <ul class="usa-unstyled-list">
+            <li>
+              <a class="link" routerLink="privacy-policy">Privacy Policy</a>
+            </li>
+            <li>
+              <a
+                  class="link"
+                  href="https://github.com/presidential-innovation-fellows/code-gov-web"
+                  target="_blank"
+                  rel="noopener">
+                Visit Project Page
               </a>
             </li>
-            <li class="pif">
-              <a href="https://presidentialinnovationfellows.gov/" target="_blank" rel="noopener">
-                <img src="assets/img/logos/PIF.png" alt="Presidential Innovation Fellows">
-              </a>
-            </li>
-            <li class="gsa">
-              <a href="//www.gsa.gov" target="_blank" rel="noopener">
-                <img src="assets/img/logos/GSA.png" alt="General Services Administration">
-              </a>
+            <li>
+              <a class="link" href="https://bit.ly/2pnRlYN" rel="noopener">Join Mailing List</a>
             </li>
           </ul>
-        </div>
+        </nav>
+      </div>
+      <div class="usa-width-one-whole">
+        <ul class="agency-logos usa-unstyled-list">
+          <li class="whitehouse">
+            <a href="https://whitehouse.gov" target="_blank" rel="noopener">
+              <img src="assets/img/logos/whitehouse.png" alt="The White House">
+            </a>
+          </li>
+          <li class="pif">
+            <a href="https://presidentialinnovationfellows.gov/" target="_blank" rel="noopener">
+              <img src="assets/img/logos/PIF.png" alt="Presidential Innovation Fellows">
+            </a>
+          </li>
+          <li class="gsa">
+            <a href="//www.gsa.gov" target="_blank" rel="noopener">
+              <img src="assets/img/logos/GSA.png" alt="General Services Administration">
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </footer>

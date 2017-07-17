@@ -33,7 +33,7 @@
     }
 
     &:hover {
-      border-bottom: 2px solid $brand-teal;
+      border-bottom: 2px solid $brand-highlight;
     }
   }
 
@@ -90,7 +90,7 @@
 
   .cursor {
     animation: blink 0.8s step-end infinite;
-    color: $brand-teal;
+    color: $brand-highlight;
     font-size: 1.1em;
   }
 

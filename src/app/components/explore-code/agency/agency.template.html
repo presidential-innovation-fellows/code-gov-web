@@ -9,25 +9,27 @@
       <li *ngFor="let repo of repos" class="repo">
 
         <span *ngIf="repo.openSourceProject==1 || repo.governmentWideReuseProject==1">
-        <a routerLink="/explore-code/repos/{{repo.repoID}}">
-          <h3 class="repo-name">{{ repo.name }}</h3>
-          <p class="repo-description">
-            {{ repo.description | truncate : 200 }}
-          </p>
-          <ul class="usa-unstyled-list repo-features">
-            <li *ngFor="let language of repo.codeLanguage" class="language">
-              <i class="devicons devicons-{{language.language | lowercase | languageIcon }}"></i>
-              <span>{{ language.language }}</span>
-            </li>
-            <li>
-              <i class="fa fa-code"></i>
-              <span *ngIf="repo.openSourceProject==1 && repo.governmentWideReuseProject==0 ">Open Source</span> 
-              <span *ngIf="repo.governmentWideReuseProject==1 && repo.openSourceProject==0">Government-Wide Reuse</span>
-              <span *ngIf="repo.openSourceProject==1 && repo.governmentWideReuseProject==1 ">Open Source</span>
-            </li>
-          </ul>
-        </a>
-          </span>
+          <a routerLink="/explore-code/repos/{{repo.repoID}}">
+            <div class="card card--focusable">
+              <h3 class="repo-name">{{ repo.name }}</h3>
+              <p class="repo-description">
+                {{ repo.description | truncate : 200 }}
+              </p>
+              <ul class="usa-unstyled-list repo-features">
+                <li *ngFor="let language of repo.codeLanguage" class="language">
+                  <i class="icon devicons devicons-{{language.language | lowercase | languageIcon }}"></i>
+                  <span>{{ language.language }}</span>
+                </li>
+                <li>
+                  <i class="icon fa fa-code"></i>
+                  <span *ngIf="repo.openSourceProject==1 && repo.governmentWideReuseProject==0 ">Open Source</span>
+                  <span *ngIf="repo.governmentWideReuseProject==1 && repo.openSourceProject==0">Government-Wide Reuse</span>
+                  <span *ngIf="repo.openSourceProject==1 && repo.governmentWideReuseProject==1 ">Open Source</span>
+                </li>
+              </ul>
+            </div>
+          </a>
+        </span>
       </li>
     </ul>
   </div>

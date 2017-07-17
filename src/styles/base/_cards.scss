@@ -1,0 +1,31 @@
+$card-shadow-color: rgba($color-gray-dark, 0.25);
+$card-border-color: $color-gray-lightest;
+
+.card {
+  background-color: $color-white;
+  border: 1px solid $card-border-color;
+  box-sizing: border-box;
+  padding: 0.5em;
+
+  @media screen and (min-width: $medium-screen) {
+    padding: 1em;
+  }
+}
+
+.card--focusable {
+  transition: all 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 3px 5px $card-shadow-color;
+  }
+}
+
+.card__icon {
+  left: 1em;
+  position: absolute;
+  top: 1em;
+}
+
+.card__body {
+
+}

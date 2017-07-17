@@ -24,7 +24,7 @@
  external-link class="usa-button" href="{{ repo.repository }}">
             Visit Repo
           </a>
-          
+
         </li></ul>
     </div>
     <div *ngIf="repo.openSourceProject==0 && repo.governmentWideReuseProject==1" class="repo-actions">
@@ -39,7 +39,7 @@
             Contact Agency
           </a>
         </li>
-          
+
       </ul>
     </div>
     <div *ngIf="repo.openSourceProject==1 && repo.governmentWideReuseProject==1" class="repo-actions">
@@ -49,77 +49,93 @@
             Homepage
           </a>
         </li>
-      
-          
-        
+
+
+
         <li >
-          <a *ngIf="(repo.repository).includes('http')"
- external-link class="usa-button" href="{{ repo.repository }}">
+          <a
+              *ngIf="(repo.repository).includes('http')"
+              external-link
+              class="usa-button"
+              href="{{ repo.repository }}">
             Visit Repo
           </a>
           <!--  <a *ngIf="repo.repoURL | isdefined" external-link class="usa-button" href="{{ repo.repoURL }}">
             Visit Repo
           </a>-->
-          
-          
+
+
         </li>
       </ul>
     </div>
   </header>
 
   <div class="repo-content">
-    
+
     <div *ngIf="repo.openSourceProject==1 && repo.governmentWideReuseProject==0" class="repo-features>">
       <h2>Highlights</h2>
       <ul class="usa-unstyled-list repo-features-list">
-        <li class="repo-language usa-width-one-half">
-          <div *ngIf="repo.codeLanguage | isdefined">
-            <div *ngFor="let language of repo.codeLanguage" class="feature-icon">
-              <i class="devicons devicons-{{language.language | languageIcon }}">
+        <li class="card repo-language usa-width-one-half">
+          <div *ngIf="repo.codeLanguage | isdefined; then codeLanguageBlock else noCodeLanguageBlock"></div>
+          <ng-template #codeLanguageBlock>
+            <div class="card__icon">
+              <i
+                  class="icon devicons devicons-{{language.language | languageIcon }}"
+                  *ngFor="let language of repo.codeLanguage">
               </i>
             </div>
-            <h3>Language</h3>
-            <p>
-              This repo is built in
-              <span *ngFor="let language of repo.codeLanguage" class="language">
-                {{ language.language }}.
-              </span>
-            </p>
-          </div>
-          <div *ngIf="!repo.codeLanguage | isdefined">
-            <div class="feature-icon">
-              <i class="fa fa-question"></i>
+            <div class="card__body">
+              <h3>Language</h3>
+              <p>
+                This repo is built in
+                <span *ngFor="let language of repo.codeLanguage" class="language">
+                  {{ language.language }}.
+                </span>
+              </p>
             </div>
-            <h3>Language</h3>
-            <p>
-              We’re not sure what this repo is built in. Try making a pull
-              request that updates this repo’s <code>code.json</code> file.
-            </p>
-          </div>
+          </ng-template>
+          <ng-template #noCodeLanguageBlock>
+            <div class="card__icon">
+              <i class="icon fa fa-question"></i>
+            </div>
+            <div class="card__body">
+              <h3>Language</h3>
+              <p>
+                We’re not sure what this repo is built in. Try making a pull
+                request that updates this repo’s <code>code.json</code> file.
+              </p>
+            </div>
+          </ng-template>
         </li>
-        <li class="repo-license usa-width-one-half">
-          <div *ngIf="repo.license && repo.license_name | isdefined">
-            <div class="feature-icon">
-              <i class="fa fa-file-text-o "></i>
+        <li class="card repo-license usa-width-one-half">
+          <div *ngIf="repo.license && repo.license_name | isdefined; then licenseBlock else noLicenseBlock"></div>
+          <ng-template #licenseBlock>
+            <div class="card__icon">
+              <i class="icon fa fa-file-text-o"></i>
             </div>
-            <h3>License</h3>
-            <p>
-              This repo uses the
-              <a external-link href="{{repo.license}}">
-                {{repo.license_name}} license.
-              </a>
-            </p>
-          </div>
-          <div *ngIf="!repo.license || !repo.license_name">
-            <div class="feature-icon">
-              <i class="fa fa-question"></i>
+            <div class="card__body">
+              <h3>License</h3>
+              <p>
+                This repo uses the
+                <a external-link href="{{repo.license}}">
+                  {{repo.license_name}} license.
+                </a>
+              </p>
             </div>
-            <h3>License</h3>
-            <p>
-              We’re not sure what license this repo has. Try making a pull
-              request that updates this repo’s <code>code.json</code> file.
-            </p>
-          </div>
+          </ng-template>
+          <ng-template #noLicenseBlock>
+            <div class="card__icon">
+              <i class="icon fa fa-question"></i>
+            </div>
+            <div class="card__body">
+              <h3>License</h3>
+              <p>
+                We’re not sure what license this repo has. Try making a pull
+                request that updates this repo’s <code>code.json</code> file.
+              </p>
+            </div>
+          </ng-template>
+
         </li>
       </ul>
     </div>
@@ -128,7 +144,7 @@
       <ul class="usa-unstyled-list repo-features-list">
         <li class="repo-language usa-width-one-half">
           <div *ngIf="repo.codeLanguage | isdefined">
-            <div *ngFor="let language of repo.codeLanguage" class="feature-icon">
+            <div *ngFor="let language of repo.codeLanguage" class="icon">
               <i class="devicons devicons-{{language.language | languageIcon }}">
               </i>
             </div>
@@ -141,8 +157,8 @@
             </p>
           </div>
           <div *ngIf="!repo.codeLanguage | isdefined">
-            <div class="feature-icon">
-              <i class="fa fa-question"></i>
+            <div>
+              <i class="icon fa fa-question"></i>
             </div>
             <h3>Language</h3>
             <p>
@@ -153,8 +169,8 @@
         </li>
         <li class="repo-license usa-width-one-half">
           <div *ngIf="repo.license && repo.license_name | isdefined">
-            <div class="feature-icon">
-              <i class="fa fa-file-text-o "></i>
+            <div>
+              <i class="icon fa fa-file-text-o "></i>
             </div>
             <h3>License</h3>
             <p>
@@ -165,8 +181,8 @@
             </p>
           </div>
           <div *ngIf="!repo.license || !repo.license_name">
-            <div class="feature-icon">
-              <i class="fa fa-question"></i>
+            <div>
+              <i class="icon fa fa-question"></i>
             </div>
             <h3>License</h3>
             <p>

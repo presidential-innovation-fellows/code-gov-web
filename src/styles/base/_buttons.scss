@@ -1,0 +1,36 @@
+$button-primary-color: $brand-blue;
+$button-primary-color-hover: $brand-blue-darker;
+
+$button-secondary-color: $brand-purple;
+$button-secondary-color-hover: $brand-purple-dark;
+
+$button-tertiary-color: $brand-teal-dark;
+$button-tertiary-color-hover: $brand-teal-darker;
+
+.button {
+
+}
+
+.button--primary {
+  background-color: $button-primary-color;
+
+  &:hover {
+    background-color: $button-primary-color-hover;
+  }
+}
+
+.button--secondary {
+  background-color: $brand-button-secondary;
+
+  &:hover {
+    background-color: $button-secondary-color-hover;
+  }
+}
+
+.button--tertiary {
+  background-color: $button-tertiary-color;
+
+  &:hover {
+    background-color: $button-tertiary-color-hover;
+  }
+}

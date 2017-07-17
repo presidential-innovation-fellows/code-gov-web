@@ -1,0 +1,15 @@
+.block {
+  background-color: darken($color-gray-lightest, 5);
+}
+
+.block--dark {
+  background-color: $brand-primary;
+}
+
+.block--light {
+  background-color: lighten($color-gray-lightest, 2);
+}
+
+.block--white {
+  background-color: $color-white;
+}
