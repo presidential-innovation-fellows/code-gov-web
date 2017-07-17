@@ -1,4 +1,4 @@
-import { NgModule, ApplicationRef } from '@angular/core';
+import { NgModule, ApplicationRef, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -77,7 +77,8 @@ const APP_PROVIDERS = [
     APP_PROVIDERS,
     Angulartics2GoogleTagManager
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 
 export class AppModule {

@@ -44,7 +44,8 @@ import {
   PolicyAppendixComponent,
   PrivacyPolicyComponent,
   RepoComponent,
-  ReposComponent
+  ReposComponent,
+  SidebarComponent
 } from './app-components.util';
 
 export const APP_COMPONENTS = [
@@ -93,5 +94,6 @@ export const APP_COMPONENTS = [
   PolicyAppendixComponent,
   PrivacyPolicyComponent,
   RepoComponent,
-  ReposComponent
+  ReposComponent,
+  SidebarComponent
 ];

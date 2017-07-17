@@ -1,0 +1,16 @@
+<nav [ngClass]="{active: menuActive}" class="sidebar docs-nav" role="navigation">
+  <button toggle-menu class="mobile-submenu" role="button" aria-pressed="false">
+    <span class="menu-icon">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </span>
+    <span class="menu-text">
+      <ng-content select="sidebar-menu-text"></ng-content>
+    </span>
+  </button>
+  <ul class="usa-sidenav-list sidebar-list">
+    <ng-content select="sidebar-content"></ng-content>
+  </ul>
+</nav>

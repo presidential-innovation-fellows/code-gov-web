@@ -1,16 +1,6 @@
-<nav [ngClass]="{active: menuActive}" class="policy-guide-subnav docs-nav" role="navigation">
-  <button toggle-menu class="mobile-submenu" role="button" aria-pressed="false">
-    <span class="menu-icon">
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
-    </span>
-    <span class="menu-text">
-      Menu
-    </span>
-  </button>
-  <ul class="usa-sidenav-list">
+<sidebar>
+  <sidebar-menu-text>Menu</sidebar-menu-text>
+  <sidebar-content>
     <li routerLinkActive="usa-current">
       <a routerLink="overview" routerLinkActive="usa-current">Overview</a>
       <ul class="usa-sidenav-sub_list">
@@ -43,7 +33,7 @@
           <a routerLink="compliance/inventory-code" routerLinkActive="usa-current">
             How to Inventory Code
           </a>
-        </li> 
+        </li>
       </ul>
     </li>
     <li routerLinkActive="usa-current">
@@ -71,8 +61,8 @@
         </li>
       </ul>
     </li>
-  </ul>
-</nav>
+  </sidebar-content>
+</sidebar>
 
 <section class="docs-content">
   <router-outlet></router-outlet>

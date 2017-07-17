@@ -1,7 +1,4 @@
-import { Component, OnDestroy, ViewEncapsulation } from '@angular/core';
-import { Subscription } from 'rxjs/Subscription';
-
-import { MobileService } from '../../../services/mobile';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'docs',
@@ -9,21 +6,6 @@ import { MobileService } from '../../../services/mobile';
   template: require('./docs.template.html'),
   encapsulation: ViewEncapsulation.None
 })
-export class DocsComponent implements OnDestroy {
-  menuActive: boolean;
-  activeMenuSub: Subscription;
+export class DocsComponent {
 
-  constructor(private mobileService: MobileService) {
-    this.menuActive = false;
-
-    this.activeMenuSub = mobileService.activeMobileMenu$.subscribe(
-      menuStatus => {
-        this.menuActive = menuStatus;
-      }
-    );
-  }
-
-  ngOnDestroy() {
-    if (this.activeMenuSub) this.activeMenuSub.unsubscribe();
-  }
 }

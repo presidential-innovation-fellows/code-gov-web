@@ -12,11 +12,3 @@
     padding: 2.5em 2em;
   }
 }
-
-.sidebar-agencies {
-  position: relative;
-
-  @media screen and (min-width: $medium-screen) {
-    @include grid-column(3);
-  }
-}

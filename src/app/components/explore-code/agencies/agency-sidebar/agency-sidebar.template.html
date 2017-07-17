@@ -1,17 +1,7 @@
 <h3>Agencies</h3>
-<nav [ngClass]="{active: menuActive | async}" role="navigation">
-  <button toggle-menu class="mobile-submenu" role="button" aria-pressed="false">
-    <span class="menu-icon">
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
-    </span>
-    <span class="menu-text">
-      Agencies
-    </span>
-  </button>
-  <ul class="sidebar-agencies-list usa-sidenav-list">
+<sidebar>
+  <sidebar-menu-text>Agencies</sidebar-menu-text>
+  <sidebar-content>
     <li *ngFor="let agency of agencies">
       <a toggle-menu routerLink="{{agency.id}}" routerLinkActive="usa-current">
         <img src="assets/img/logos/agencies/{{agency.id}}-50x50.png" alt="{{agency.name}}"/>
@@ -20,5 +10,5 @@
         </span>
       </a>
     </li>
-  </ul>
-</nav>
+  </sidebar-content>
+</sidebar>

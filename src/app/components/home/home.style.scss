@@ -114,10 +114,6 @@ body {
     margin: 0 auto;
     max-width: 12em;
 
-    &:hover {
-      background-color: $brand-button-primary-hover;
-    }
-
     @media screen and (min-width: $small-screen) {
       font-size: 1.2em;
       max-width: none;
@@ -126,7 +122,6 @@ body {
 }
 
 .banner-container {
-  background-color: $brand-primary;
   margin: 0 auto;
   max-width: 37em;
   text-align: center;
@@ -157,17 +152,8 @@ body {
     text-align: right;
   }
 
-  img {
-    backface-visibility: visible;
-    transition: all 0.2s ease;
-    transform-style: preserve-3d;
-    transform: translate3d(0,0,0);
+  .press-logo {
     max-width: 7.5em;
-    -webkit-perspective: 1000;
-
-    &:hover {
-      transform: translateY(-2px);
-    }
   }
 
   li {
@@ -212,16 +198,20 @@ body {
       margin-left: 2em;
     }
 
-    img {
-      backface-visibility: visible;
-      transition: all 0.2s ease;
-      transform-style: preserve-3d;
+    .press-logo {
       max-width: 5em;
-      -webkit-perspective: 1000;
-
-      &:hover {
-        transform: translateY(-2px);
-      }
     }
+  }
+}
+
+.press-logo {
+  backface-visibility: visible;
+  transition: all 0.2s ease;
+  transform-style: preserve-3d;
+  transform: translate3d(0,0,0);
+  -webkit-perspective: 1000;
+
+  &:hover {
+    transform: translateY(-2px);
   }
 }
