@@ -1,14 +1,16 @@
-<h3>Agencies</h3>
-<sidebar>
-  <sidebar-menu-text>Agencies</sidebar-menu-text>
-  <sidebar-content>
-    <li *ngFor="let agency of agencies">
-      <a toggle-menu routerLink="{{agency.id}}" routerLinkActive="usa-current">
-        <img src="assets/img/logos/agencies/{{agency.id}}-50x50.png" alt="{{agency.name}}"/>
-        <span>
-          {{agency.name}}
-        </span>
-      </a>
-    </li>
-  </sidebar-content>
-</sidebar>
+<div class="agency-sidebar">
+  <sidebar>
+    <sidebar-menu-text>Agencies</sidebar-menu-text>
+    <sidebar-title>Agencies</sidebar-title>
+    <sidebar-content>
+      <li *ngFor="let agency of agencies">
+        <a toggle-menu routerLink="{{agency.id}}" routerLinkActive="usa-current">
+          <img src="assets/img/logos/agencies/{{agency.id}}-50x50.png" alt="{{agency.name}}"/>
+          <span>
+            {{agency.name}}
+          </span>
+        </a>
+      </li>
+    </sidebar-content>
+  </sidebar>
+</div>

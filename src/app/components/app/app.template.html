@@ -1,6 +1,6 @@
 <div class="app-container">
   <header role="banner" class="block" [ngClass]="{ 'block--dark': stateService.state.section === 'home', 'block--white': stateService.state.section !== 'home' }">
-    <div class="usa-disclaimer block l-block--small">
+    <div class="usa-disclaimer block block--light l-block--small">
       <div class="usa-grid">
         <span class="usa-disclaimer-official">
           <img src="assets/img/us_flag_small.png" alt="U.S. flag"/>
@@ -23,12 +23,12 @@
         </div>
         <ul class="app-links usa-unstyled-list">
           <li>
-            <a class="link link--contrast" routerLink="explore-code" routerLinkActive="active">
+            <a class="link link--contrast" routerLink="explore-code" routerLinkActive="link--active">
               Explore Code
             </a>
           </li>
           <li>
-            <a class="link link--contrast" routerLink="policy-guide" routerLinkActive="active">
+            <a class="link link--contrast" routerLink="policy-guide" routerLinkActive="link--active">
               Policy Info
             </a>
           </li>

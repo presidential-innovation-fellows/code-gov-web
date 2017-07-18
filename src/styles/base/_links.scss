@@ -11,6 +11,11 @@
       border-bottom: 3px solid $brand-highlight;
       color: $brand-blue-dark;
     }
+
+    &.link--active {
+      color: $brand-blue-dark;
+      font-weight: bold;
+    }
   }
 
   .block--dark {
@@ -22,6 +27,10 @@
       }
 
       &:hover {
+        color: $color-white;
+      }
+
+      &.link--active {
         color: $color-white;
       }
     }

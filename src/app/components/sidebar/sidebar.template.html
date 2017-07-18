@@ -6,10 +6,9 @@
       <span class="line"></span>
       <span class="line"></span>
     </span>
-    <span class="menu-text">
-      <ng-content select="sidebar-menu-text"></ng-content>
-    </span>
+    <span class="menu-text"><ng-content select="sidebar-menu-text"></ng-content></span>
   </button>
+  <h3 #sidebarTitle *ngIf="showTitle" class="sidebar__title"><ng-content select="sidebar-title"></ng-content></h3>
   <ul class="usa-sidenav-list sidebar-list">
     <ng-content select="sidebar-content"></ng-content>
   </ul>

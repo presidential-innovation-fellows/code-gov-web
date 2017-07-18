@@ -5,6 +5,7 @@ export * from '../../components/home/banner-art';
 export * from '../../components/modal';
 export * from '../../components/privacy-policy';
 export * from '../../components/sidebar';
+export * from '../../components/subnav';
 
 export * from '../../components/explore-code';
 export * from '../../components/explore-code/activity-list';

@@ -1,13 +1,5 @@
 @import '../../../styles/base/all';
 
-h3 {
-  display: none;
-
-  @media screen and (min-width: $medium-screen) {
-    display: block;
-  }
-}
-
 .menu-icon {
   transform: rotate(0deg);
   transition: 0.3s ease-in-out;
@@ -139,6 +131,7 @@ h3 {
   li {
     border-top: 1px solid lighten($color-gray-light, 13);
     font-size: 0.9em;
+    margin-bottom: 0;
     position: relative;
 
     &:first-child {
@@ -200,40 +193,6 @@ h3 {
     }
   }
 
-  // .usa-sidenav-list {
-  //   background-color: darken($brand-blue-gray, 10);
-  //   display: none;
-  //   padding: 1em;
-  //   position: relative;
-  //   width: 100%;
-  //
-  //   &::before {
-  //     border-bottom: 10px solid darken($brand-blue-gray, 10);
-  //     border-left: 10px solid transparent;
-  //     border-right: 10px solid transparent;
-  //     content: "";
-  //     height: 0;
-  //     left: 1em;
-  //     position: absolute;
-  //     top: -10px;
-  //     width: 0;
-  //
-  //     @media screen and (min-width: $medium-screen) {
-  //       display: none;
-  //     }
-  //   }
-  //
-  //   @media screen and (min-width: $medium-screen) {
-  //     background-color: transparent;
-  //     display: block;
-  //     left: auto;
-  //     padding: 0;
-  //     position: static;
-  //     opacity: 1;
-  //     visibility: visible;
-  //   }
-  // }
-
   a {
     font-size: 0.95em;
     text-decoration: none;
@@ -256,5 +215,14 @@ h3 {
 
   .usa-sidenav-sub_list {
     display: none;
+  }
+}
+
+.sidebar__title {
+  display: none;
+  margin-top: 0;
+
+  @media screen and (min-width: $medium-screen) {
+    display: block;
   }
 }
