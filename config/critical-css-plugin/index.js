@@ -3,10 +3,6 @@ const rimraf = require('rimraf');
 const path = require('path');
 const mkdirp = require('mkdirp');
 const critical = require('critical');
-const postcss = require('postcss');
-const cssnano = require('cssnano')({
-  preset: 'default',
-});
 
 function CriticalCssPlugin(options) {
   this.options = Object.assign({}, {
@@ -37,22 +33,14 @@ CriticalCssPlugin.prototype.apply = function(compiler) {
     });
     critical.generate(opts, (err, output) => {
       // TODO: Make recursive and start at root of tmp
-      const allFiles = fs.readdirSync(path.resolve(tmp, 'assets'))
-        .map((p) => {
+      fs.readdirSync(path.resolve(tmp, 'assets'))
+        .forEach((p) => {
           const src = fs.readFileSync(path.resolve(tmp, 'assets', p), 'utf-8');
-          return postcss([cssnano])
-            .process(src)
-            .then(result => {
-              compilation.assets[`assets/${p}`] = {source: () => result.css, size: () => result.css.length};
-            });
+          compilation.assets[`assets/${p}`] = {source: () => src, size: () => src.length};
         });
-      Promise
-        .all(allFiles)
-        .then(() => {
-          compilation.assets[opts.src] = {source: () => output, size: () => output.length};
-          rimraf.sync(tmp);
-          callback(err);
-        });
+      compilation.assets[opts.src] = {source: () => output, size: () => output.length};
+      rimraf.sync(tmp);
+      callback(err);
     });
   });
 };
