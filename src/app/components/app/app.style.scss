@@ -29,21 +29,24 @@
   display: block;
   float: right;
 
-  a {
-    &.active {
-      color: $brand-primary;
-      font-weight: bold;
-    }
-  }
-
   .app-link {
     display: inline-block;
     font-size: 1em;
     margin-left: 1em;
+    vertical-align: top;
 
     &:first-of-type {
       margin-left: 0;
     }
+  }
+}
+
+.app-link > a {
+  line-height: 40px;
+
+  &.active {
+    color: $brand-primary;
+    font-weight: bold;
   }
 }
 
@@ -112,14 +115,6 @@
     .autocomplete-container {
       right: 0;
       width: 180%;
-    }
-  }
-
-  li {
-    vertical-align: top;
-
-    a {
-      line-height: 40px;
     }
   }
 }

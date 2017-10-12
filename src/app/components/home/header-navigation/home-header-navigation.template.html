@@ -8,15 +8,37 @@
       </a>
     </div>
     <ul class="app-links usa-unstyled-list">
-      <li class="app-link">
-        <a class="link link--contrast" routerLink="explore-code" routerLinkActive="link--active">
-          Explore Code
+      <li class="dropdown app-link">
+        <a class="hidden-xs link link--contrast" routerLink="/explore-code">
+          Browse Projects
         </a>
       </li>
-      <li class="app-link">
-        <a class="link link--contrast" routerLink="policy-guide" routerLinkActive="link--active">
+      <li class="dropdown app-link">
+        <a
+            class="visible-xs link link--contrast"
+            routerLink="/policy-guide"
+            routerLinkActive="link--active">
           Policy Info
         </a>
+        <a
+            class="link link--contrast"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            href="#">
+          Policy Info
+        </a>
+        <ul class="dropdown-menu">
+          <li class="menu-item">
+            <a routerLink="/policy-guide">Overview</a>
+          </li>
+          <li class="menu-item">
+            <a routerLink="/policy-guide/docs/compliance/dashboard">Compliance</a>
+          </li>
+          <li class="menu-item">
+            <a routerLink="/policy-guide/docs/open-source/introduction">Open Source Pilot</a>
+          </li>
+        </ul>
       </li>
       <li class="app-link">
         <a class="link link--contrast" href="https://bit.ly/2pnRlYN" rel="noopener">Join Mailing List</a>

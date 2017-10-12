@@ -36,4 +36,11 @@ export class HeaderNavigationComponent {
   search() {
     this.router.navigateByUrl('/search?q=' + this.searchQuery);
   }
+
+  /**
+   * Whether we are on an Policy Guide page.
+   */
+  isPolicyGuide() {
+    return this.router.isActive('/policy-guide', false);
+  }
 }
