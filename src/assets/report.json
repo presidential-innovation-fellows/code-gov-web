@@ -1,5 +1,5 @@
 {
-  "timestamp": "Mon Oct 23 2017 06:15:38 GMT-0400 (EDT)",
+  "timestamp": "Fri Sep 22 2017 10:59:26 GMT-0400 (EDT)",
   "statuses": {
     "USDA": {
       "status": "FULLY COMPLIANT: 0 validation errors",
@@ -13,15 +13,19 @@
           "codeUrl": "https://www.usda.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
+            "openSourceRequirement": 0,
+            "inventoryRequirement": 0,
             "schemaFormat": 1,
-            "overallCompliance": 0.75
+            "overallCompliance": 0
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
+        "openSourceRequirement": 0,
+        "inventoryRequirement": 0,
         "schemaFormat": 1,
-        "overallCompliance": 0.75
+        "overallCompliance": 0
       }
     },
     "DOC": {
@@ -37,15 +41,19 @@
           "codeUrl": "https://www.commerce.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
+            "openSourceRequirement": 0,
+            "inventoryRequirement": 0,
             "schemaFormat": 0,
-            "overallCompliance": 0.5
+            "overallCompliance": 0
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
+        "openSourceRequirement": 0,
+        "inventoryRequirement": 0,
         "schemaFormat": 0,
-        "overallCompliance": 0.5
+        "overallCompliance": 0
       }
     },
     "DOD": {
@@ -61,6 +69,8 @@
           "codeUrl": "https://www.defense.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0,
+            "openSourceRequirement": 0,
+            "inventoryRequirement": 0,
             "schemaFormat": 0,
             "overallCompliance": 0
           }
@@ -68,12 +78,14 @@
       },
       "requirements": {
         "agencyWidePolicy": 0,
+        "openSourceRequirement": 0,
+        "inventoryRequirement": 0,
         "schemaFormat": 0,
         "overallCompliance": 0
       }
     },
     "ED": {
-      "status": "NOT FULLY COMPLIANT: 69 WARNINGS, 69 validation errors",
+      "status": "NOT FULLY COMPLIANT: 54 WARNINGS, 54 validation errors",
       "issues": [
         {
           "repoID": "ed_oese_sharepoint_sites",
@@ -227,9 +239,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -247,9 +259,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -307,9 +319,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -327,9 +339,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -387,9 +399,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -407,9 +419,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -467,9 +479,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -487,9 +499,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -547,9 +559,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -567,9 +579,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -627,9 +639,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -647,9 +659,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -707,9 +719,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -727,9 +739,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -787,9 +799,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -807,9 +819,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -867,9 +879,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -887,9 +899,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -947,9 +959,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -967,9 +979,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -1027,9 +1039,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -1047,9 +1059,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -1107,9 +1119,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -1127,9 +1139,9 @@
                 "dataPath": ".repository",
                 "schemaPath": "#/properties/repository/format",
                 "params": {
-                  "format": "uri"
+                  "missingProperty": "repository"
                 },
-                "message": "should match format \"uri\""
+                "message": "should have required property 'repository'"
               }
             ],
             "errors": []
@@ -1139,306 +1151,6 @@
           "repoID": "ed_education_logic_model_elm_application",
           "agency": "Department of Education",
           "project_name": "The Education Logic Model (ELM) application",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "format",
-                "dataPath": ".repository",
-                "schemaPath": "#/properties/repository/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "ed_application_eligibility_determiination_system_aeds_",
-          "agency": "Department of Education",
-          "project_name": "Application and Eligibility Determiination System (AEDS)",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "format",
-                "dataPath": ".repository",
-                "schemaPath": "#/properties/repository/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "ed_audit_accoutability_resolution_tracking_system_aarts_",
-          "agency": "Department of Education",
-          "project_name": "Audit Accoutability Resolution and Tracking System (AARTS)",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "format",
-                "dataPath": ".repository",
-                "schemaPath": "#/properties/repository/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "ed_budget_formulation_database",
-          "agency": "Department of Education",
-          "project_name": "Budget Formulation Database",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "format",
-                "dataPath": ".repository",
-                "schemaPath": "#/properties/repository/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "ed_case_activity_management_system_cams_",
-          "agency": "Department of Education",
-          "project_name": "Case and Activity Management System (CAMS)",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "format",
-                "dataPath": ".repository",
-                "schemaPath": "#/properties/repository/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "ed_civil_rights_data_collection_crdc_",
-          "agency": "Department of Education",
-          "project_name": "Civil Rights Data Collection (CRDC)",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "format",
-                "dataPath": ".repository",
-                "schemaPath": "#/properties/repository/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "ed_contract_purchasing_support_systems_cpss_",
-          "agency": "Department of Education",
-          "project_name": "Contract and Purchasing Support Systems (CPSS)",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "format",
-                "dataPath": ".repository",
-                "schemaPath": "#/properties/repository/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "ed_debt_management_collections_system_dmcs_",
-          "agency": "Department of Education",
-          "project_name": "Debt Management and Collections System (DMCS)",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "format",
-                "dataPath": ".repository",
-                "schemaPath": "#/properties/repository/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "ed_edexpress",
-          "agency": "Department of Education",
-          "project_name": "EDExpress",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "format",
-                "dataPath": ".repository",
-                "schemaPath": "#/properties/repository/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "ed_edfacts",
-          "agency": "Department of Education",
-          "project_name": "EDFacts",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "format",
-                "dataPath": ".repository",
-                "schemaPath": "#/properties/repository/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "ed_enterprise_it_architecture",
-          "agency": "Department of Education",
-          "project_name": "Enterprise IT Architecture",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "format",
-                "dataPath": ".repository",
-                "schemaPath": "#/properties/repository/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "ed_ez_audit",
-          "agency": "Department of Education",
-          "project_name": "eZ-Audit",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "format",
-                "dataPath": ".repository",
-                "schemaPath": "#/properties/repository/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "ed_federal_student_aid_financial_management_system_fsafms_",
-          "agency": "Department of Education",
-          "project_name": "Federal Student Aid Financial Management System (FSAFMS)",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "format",
-                "dataPath": ".repository",
-                "schemaPath": "#/properties/repository/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "ed_financial_aid_toolkit",
-          "agency": "Department of Education",
-          "project_name": "Financial Aid Toolkit",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "format",
-                "dataPath": ".repository",
-                "schemaPath": "#/properties/repository/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "ed_financial_management_support_system",
-          "agency": "Department of Education",
-          "project_name": "Financial Management Support System",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "format",
-                "dataPath": ".repository",
-                "schemaPath": "#/properties/repository/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "ed_grants_management_system_g5_",
-          "agency": "Department of Education",
-          "project_name": "Grants Management System (G5)",
           "issues": {
             "enhancements": [],
             "warnings": [
@@ -1465,6 +1177,8 @@
           "codeUrl": "https://www2.ed.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
+            "openSourceRequirement": 1,
+            "inventoryRequirement": 0.5,
             "schemaFormat": 0.5,
             "overallCompliance": 0.75
           }
@@ -1472,6 +1186,8 @@
       },
       "requirements": {
         "agencyWidePolicy": 1,
+        "openSourceRequirement": 1,
+        "inventoryRequirement": 0.5,
         "schemaFormat": 0.5,
         "overallCompliance": 0.75
       }
@@ -1489,15 +1205,19 @@
           "codeUrl": "https://energy.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
+            "openSourceRequirement": 0,
+            "inventoryRequirement": 0.5,
             "schemaFormat": 0,
-            "overallCompliance": 0.25
+            "overallCompliance": 0.333
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
+        "openSourceRequirement": 0,
+        "inventoryRequirement": 0.5,
         "schemaFormat": 0,
-        "overallCompliance": 0.25
+        "overallCompliance": 0.333
       }
     },
     "HHS": {
@@ -1512,21 +1232,24 @@
           "codeUrl": "https://hhs.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
+            "openSourceRequirement": 1,
+            "inventoryRequirement": 0,
             "schemaFormat": 1,
-            "overallCompliance": 1
+            "overallCompliance": 0.667
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
+        "openSourceRequirement": 1,
+        "inventoryRequirement": 0,
         "schemaFormat": 1,
-        "overallCompliance": 1
+        "overallCompliance": 0.667
       }
     },
     "HUD": {
-      "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
+      "status": "FULLY COMPLIANT: 0 validation errors",
       "issues": [],
-      "version": "",
       "metadata": {
         "agency": {
           "name": "Department of Housing and Urban Development",
@@ -1535,15 +1258,19 @@
           "codeUrl": "https://www.hud.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
-            "schemaFormat": 0,
-            "overallCompliance": 0.25
+            "openSourceRequirement": 0,
+            "inventoryRequirement": 1,
+            "schemaFormat": 1,
+            "overallCompliance": 0.5
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
-        "schemaFormat": 0,
-        "overallCompliance": 0.25
+        "openSourceRequirement": 0,
+        "inventoryRequirement": 1,
+        "schemaFormat": 1,
+        "overallCompliance": 0.5
       }
     },
     "DHS": {
@@ -1558,15 +1285,19 @@
           "codeUrl": "https://www.dhs.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
+            "openSourceRequirement": 0,
+            "inventoryRequirement": 0,
             "schemaFormat": 1,
-            "overallCompliance": 0.75
+            "overallCompliance": 0
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
+        "openSourceRequirement": 0,
+        "inventoryRequirement": 0,
         "schemaFormat": 1,
-        "overallCompliance": 0.75
+        "overallCompliance": 0
       }
     },
     "DOI": {
@@ -1582,21 +1313,25 @@
           "codeUrl": "https://data.doi.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
+            "openSourceRequirement": 1,
+            "inventoryRequirement": 1,
             "schemaFormat": 0,
-            "overallCompliance": 0.25
+            "overallCompliance": 0.75
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
+        "openSourceRequirement": 1,
+        "inventoryRequirement": 1,
         "schemaFormat": 0,
-        "overallCompliance": 0.25
+        "overallCompliance": 0.75
       }
     },
     "DOJ": {
-      "status": "FULLY COMPLIANT: 0 validation errors",
+      "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
       "issues": [],
-      "version": "2.0.0",
+      "version": "",
       "metadata": {
         "agency": {
           "id": 9,
@@ -1606,15 +1341,19 @@
           "codeUrl": "https://justice.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
-            "schemaFormat": 1,
-            "overallCompliance": 0.75
+            "openSourceRequirement": 0,
+            "inventoryRequirement": 0,
+            "schemaFormat": 0,
+            "overallCompliance": 0.125
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
-        "schemaFormat": 1,
-        "overallCompliance": 0.75
+        "openSourceRequirement": 0,
+        "inventoryRequirement": 0,
+        "schemaFormat": 0,
+        "overallCompliance": 0.125
       }
     },
     "DOL": {
@@ -1626,82 +1365,79 @@
           "organization": "DOL Department",
           "project_name": "DEVELOPER",
           "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
+            "enhancements": [],
             "warnings": [],
-            "errors": []
+            "errors": [
+              {
+                "keyword": "required",
+                "dataPath": "",
+                "schemaPath": "#/required",
+                "params": {
+                  "missingProperty": "repository"
+                },
+                "message": "should have required property 'repository'"
+              }
+            ]
           }
         },
         {
-          "repoID": "dol_dol_department_vets4212",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "VETS4212",
+          "repoID": "gsa_fec_pattern_library",
+          "agency": "General Services Administration",
+          "project_name": "fec-pattern-library",
           "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
+            "enhancements": [],
             "warnings": [],
-            "errors": []
+            "errors": [
+              {
+                "keyword": "required",
+                "dataPath": "",
+                "schemaPath": "#/required",
+                "params": {
+                  "missingProperty": "repository"
+                },
+                "message": "should have required property 'repository'"
+              }
+            ]
           }
         },
         {
-          "repoID": "dol_dol_department_doldatasdk_ios",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DOLDATASDK IOS",
+          "repoID": "gsa_tock_management_reports",
+          "agency": "General Services Administration",
+          "project_name": "tock-management-reports",
           "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".downloadURL",
-                "schemaPath": "#/properties/downloadURL/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
+            "enhancements": [],
             "warnings": [],
-            "errors": []
+            "errors": [
+              {
+                "keyword": "required",
+                "dataPath": "",
+                "schemaPath": "#/required",
+                "params": {
+                  "missingProperty": "repository"
+                },
+                "message": "should have required property 'repository'"
+              }
+            ]
           }
         },
         {
-          "repoID": "dol_dol_department_js_dashboard",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "JS DASHBOARD",
+          "repoID": "gsa_deployer_account_broker",
+          "agency": "General Services Administration",
+          "project_name": "deployer-account-broker",
           "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".license",
-                "schemaPath": "#/properties/license/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
+            "enhancements": [],
             "warnings": [],
-            "errors": []
+            "errors": [
+              {
+                "keyword": "required",
+                "dataPath": "",
+                "schemaPath": "#/required",
+                "params": {
+                  "missingProperty": "repository"
+                },
+                "message": "should have required property 'repository'"
+              }
+            ]
           }
         }
       ],
@@ -1714,15 +1450,19 @@
           "codeUrl": "https://www.dol.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
+            "openSourceRequirement": 0,
+            "inventoryRequirement": 0,
             "schemaFormat": 1,
-            "overallCompliance": 1
+            "overallCompliance": 0.333
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
+        "openSourceRequirement": 0,
+        "inventoryRequirement": 0,
         "schemaFormat": 1,
-        "overallCompliance": 1
+        "overallCompliance": 0.333
       }
     },
     "DOS": {
@@ -1737,21 +1477,25 @@
           "codeUrl": "http://state.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
+            "openSourceRequirement": 0,
+            "inventoryRequirement": 0,
             "schemaFormat": 1,
-            "overallCompliance": 0.75
+            "overallCompliance": 0
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
+        "openSourceRequirement": 0,
+        "inventoryRequirement": 0,
         "schemaFormat": 1,
-        "overallCompliance": 0.75
+        "overallCompliance": 0
       }
     },
-    "USDOT": {
-      "status": "FULLY COMPLIANT: 0 validation errors",
+    "DOT": {
+      "status": "FAILURE: MISSING PROJECTS FIELD",
       "issues": [],
-      "version": "2.0.0",
+      "version": "",
       "metadata": {
         "agency": {
           "name": "Department of Transportation",
@@ -1760,15 +1504,19 @@
           "codeUrl": "https://www.transportation.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
-            "schemaFormat": 1,
-            "overallCompliance": 1
+            "openSourceRequirement": 0.5,
+            "inventoryRequirement": 0,
+            "schemaFormat": 0,
+            "overallCompliance": 0.5
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
-        "schemaFormat": 1,
-        "overallCompliance": 1
+        "openSourceRequirement": 0.5,
+        "inventoryRequirement": 0,
+        "schemaFormat": 0,
+        "overallCompliance": 0.5
       }
     },
     "TREASURY": {
@@ -1783,15 +1531,19 @@
           "codeUrl": "https://www.treasury.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
+            "openSourceRequirement": 1,
+            "inventoryRequirement": 0,
             "schemaFormat": 1,
-            "overallCompliance": 0.75
+            "overallCompliance": 0.5
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
+        "openSourceRequirement": 1,
+        "inventoryRequirement": 0,
         "schemaFormat": 1,
-        "overallCompliance": 0.75
+        "overallCompliance": 0.5
       }
     },
     "VA": {
@@ -1807,6 +1559,8 @@
           "codeUrl": "https://va.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0,
+            "openSourceRequirement": 0,
+            "inventoryRequirement": 0,
             "schemaFormat": 0,
             "overallCompliance": 0
           }
@@ -1814,6 +1568,8 @@
       },
       "requirements": {
         "agencyWidePolicy": 0,
+        "openSourceRequirement": 0,
+        "inventoryRequirement": 0,
         "schemaFormat": 0,
         "overallCompliance": 0
       }
@@ -1830,15 +1586,19 @@
           "codeUrl": "https://epa.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0,
+            "openSourceRequirement": 0.5,
+            "inventoryRequirement": 0,
             "schemaFormat": 1,
-            "overallCompliance": 0.5
+            "overallCompliance": 0
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0,
+        "openSourceRequirement": 0.5,
+        "inventoryRequirement": 0,
         "schemaFormat": 1,
-        "overallCompliance": 0.5
+        "overallCompliance": 0
       }
     },
     "NASA": {
@@ -1853,15 +1613,19 @@
           "codeUrl": "https://code.nasa.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
+            "openSourceRequirement": 1,
+            "inventoryRequirement": 0.5,
             "schemaFormat": 1,
-            "overallCompliance": 1
+            "overallCompliance": 0.875
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
+        "openSourceRequirement": 1,
+        "inventoryRequirement": 0.5,
         "schemaFormat": 1,
-        "overallCompliance": 1
+        "overallCompliance": 0.875
       }
     },
     "AID": {
@@ -1876,15 +1640,19 @@
           "codeUrl": "https://usaid.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
+            "openSourceRequirement": 0,
+            "inventoryRequirement": 0.5,
             "schemaFormat": 1,
-            "overallCompliance": 1
+            "overallCompliance": 0.5
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
+        "openSourceRequirement": 0,
+        "inventoryRequirement": 0.5,
         "schemaFormat": 1,
-        "overallCompliance": 1
+        "overallCompliance": 0.5
       }
     },
     "FEMA": {
@@ -1900,6 +1668,8 @@
           "codeUrl": "https://fema.gov/code.json",
           "requirements": {
             "agencyWidePolicy": null,
+            "openSourceRequirement": null,
+            "inventoryRequirement": null,
             "schemaFormat": 0,
             "overallCompliance": 0
           }
@@ -1907,6 +1677,8 @@
       },
       "requirements": {
         "agencyWidePolicy": null,
+        "openSourceRequirement": null,
+        "inventoryRequirement": null,
         "schemaFormat": 0,
         "overallCompliance": 0
       }
@@ -17783,15 +17555,19 @@
           "codeUrl": "https://gsa.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
+            "openSourceRequirement": 1,
+            "inventoryRequirement": 1,
             "schemaFormat": 0.5,
-            "overallCompliance": 0.75
+            "overallCompliance": 1
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
+        "openSourceRequirement": 1,
+        "inventoryRequirement": 1,
         "schemaFormat": 0.5,
-        "overallCompliance": 0.75
+        "overallCompliance": 1
       }
     },
     "NSF": {
@@ -17805,6 +17581,8 @@
           "codeUrl": "https://nsf.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
+            "openSourceRequirement": 1,
+            "inventoryRequirement": 1,
             "schemaFormat": 1,
             "overallCompliance": 1
           }
@@ -17812,14 +17590,16 @@
       },
       "requirements": {
         "agencyWidePolicy": 1,
+        "openSourceRequirement": 1,
+        "inventoryRequirement": 1,
         "schemaFormat": 1,
         "overallCompliance": 1
       }
     },
     "NRC": {
-      "status": "FULLY COMPLIANT: 0 validation errors",
+      "status": "FAILURE: ERROR WHEN FETCHING (read ETIMEDOUT)",
       "issues": [],
-      "version": "1.0.1",
+      "version": "",
       "metadata": {
         "agency": {
           "name": "Nuclear Regulatory Commission",
@@ -17828,14 +17608,18 @@
           "codeUrl": "https://www.nrc.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
-            "schemaFormat": 1,
+            "openSourceRequirement": 1,
+            "inventoryRequirement": 1,
+            "schemaFormat": 0,
             "overallCompliance": 1
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
-        "schemaFormat": 1,
+        "openSourceRequirement": 1,
+        "inventoryRequirement": 1,
+        "schemaFormat": 0,
         "overallCompliance": 1
       }
     },
@@ -17852,15 +17636,19 @@
           "codeUrl": "https://opm.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
+            "openSourceRequirement": 0,
+            "inventoryRequirement": 0,
             "schemaFormat": 0,
-            "overallCompliance": 0.25
+            "overallCompliance": 0
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
+        "openSourceRequirement": 0,
+        "inventoryRequirement": 0,
         "schemaFormat": 0,
-        "overallCompliance": 0.25
+        "overallCompliance": 0
       }
     },
     "SBA": {
@@ -17874,15 +17662,19 @@
           "codeUrl": "https://sba.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
+            "openSourceRequirement": 0,
+            "inventoryRequirement": 0,
             "schemaFormat": 1,
-            "overallCompliance": 1
+            "overallCompliance": 0
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
+        "openSourceRequirement": 0,
+        "inventoryRequirement": 0,
         "schemaFormat": 1,
-        "overallCompliance": 1
+        "overallCompliance": 0
       }
     },
     "NARA": {
@@ -17897,15 +17689,19 @@
           "codeUrl": "https://archives.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
+            "openSourceRequirement": 0.5,
+            "inventoryRequirement": 0.5,
             "schemaFormat": 1,
-            "overallCompliance": 1
+            "overallCompliance": 0.75
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
+        "openSourceRequirement": 0.5,
+        "inventoryRequirement": 0.5,
         "schemaFormat": 1,
-        "overallCompliance": 1
+        "overallCompliance": 0.75
       }
     },
     "CFPB": {
@@ -17920,15 +17716,19 @@
           "codeUrl": "https://consumerfinance.gov/code.json",
           "requirements": {
             "agencyWidePolicy": null,
+            "openSourceRequirement": null,
+            "inventoryRequirement": null,
             "schemaFormat": 1,
-            "overallCompliance": 0.5
+            "overallCompliance": 0.25
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": null,
+        "openSourceRequirement": null,
+        "inventoryRequirement": null,
         "schemaFormat": 1,
-        "overallCompliance": 0.5
+        "overallCompliance": 0.25
       }
     },
     "EOP": {
@@ -17944,6 +17744,8 @@
           "codeUrl": "https://whitehouse.gov/code.json",
           "requirements": {
             "agencyWidePolicy": null,
+            "openSourceRequirement": null,
+            "inventoryRequirement": null,
             "schemaFormat": 0,
             "overallCompliance": 0
           }
@@ -17951,6 +17753,8 @@
       },
       "requirements": {
         "agencyWidePolicy": null,
+        "openSourceRequirement": null,
+        "inventoryRequirement": null,
         "schemaFormat": 0,
         "overallCompliance": 0
       }
@@ -17967,15 +17771,19 @@
           "codeUrl": "https://www.ssa.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
+            "openSourceRequirement": 1,
+            "inventoryRequirement": 0.5,
             "schemaFormat": 1,
-            "overallCompliance": 1
+            "overallCompliance": 0.875
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
+        "openSourceRequirement": 1,
+        "inventoryRequirement": 0.5,
         "schemaFormat": 1,
-        "overallCompliance": 1
+        "overallCompliance": 0.875
       }
     }
   }
