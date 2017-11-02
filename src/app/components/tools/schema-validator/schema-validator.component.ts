@@ -1,6 +1,5 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { MonacoEditorService } from '../../monaco-editor';
-const _ = require('lodash');
 
 /**
  * Class representing the schema validator tool.

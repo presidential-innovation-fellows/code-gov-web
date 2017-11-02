@@ -7,7 +7,7 @@ import {
 } from '@angular/router';
 import {
   Subscription,
-} from 'rxjs';
+} from 'rxjs/Subscription';
 
 import { AgencyService } from '../../services/agency';
 import { MobileService } from '../../services/mobile';

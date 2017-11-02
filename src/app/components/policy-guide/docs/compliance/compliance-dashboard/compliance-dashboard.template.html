@@ -14,7 +14,7 @@
   <ul class="dashboard-list usa-unstyled-list">
     <li class="card dashboard-agency {{status.agency.overall}}" *ngFor="let status of statuses">
       <div class="dashboard-agency-icon">
-        <img src="assets/img/logos/agencies/{{status.agency.id}}.png" alt="{{status.agency.name}}"/>
+        <img [src]="getIcon(status)" alt="{{status.agency.name}}"/>
       </div>
       <div class="dashboard-agency-content">
         <div class="dashboard-agency-heading">

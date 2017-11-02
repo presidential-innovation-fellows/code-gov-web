@@ -4,7 +4,8 @@ import {
   CUSTOM_ELEMENTS_SCHEMA,
 } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Observable, Subject } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 import { HeaderNavigationComponent } from './header-navigation.component';
 import { TestBed, ComponentFixture, inject } from '@angular/core/testing';
 import { MobileService } from '../../services/mobile';

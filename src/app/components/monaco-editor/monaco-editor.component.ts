@@ -61,7 +61,7 @@ export class MonacoEditorComponent {
       loaderScript.type = 'text/javascript';
       loaderScript.src = 'vs/loader.js';
       loaderScript.addEventListener('load', () => {
-        this.onGotAmdLoader(resolve);
+        this.onGotAmdLoader.call(this, resolve);
       });
       window.document.body.appendChild(loaderScript);
     });

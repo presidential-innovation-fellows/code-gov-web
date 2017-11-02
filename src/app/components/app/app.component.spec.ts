@@ -18,7 +18,8 @@ import { Angulartics2Module, Angulartics2, Angulartics2GoogleTagManager } from '
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { RouterTestingModule } from '@angular/router/testing';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { AppComponent } from './app.component';
 import { TestBed, ComponentFixture, inject } from '@angular/core/testing';
 

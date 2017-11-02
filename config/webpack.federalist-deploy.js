@@ -105,7 +105,6 @@ module.exports = function (env) {
             postcssImport({ addDependencyTo: webpack }),
             postcssCssnext({
               browsers: ['last 2 versions', 'ie >= 9'],
-              compress: true,
             }),
           ],
           sassLoader: {

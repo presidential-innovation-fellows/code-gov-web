@@ -1,7 +1,10 @@
-@import '../../../styles/base/all';
+@import '../../../styles/base/variables';
+@import '~bourbon/app/assets/stylesheets/bourbon';
+@import '~bourbon-neat/app/assets/stylesheets/neat';
+@import '~uswds/src/stylesheets/core/variables';
 
 .browse {
-  @include grid-column(12);
+  @include span-columns(12);
   margin-top: 0.7rem;
 
   @media screen and (min-width: $small-screen) {
@@ -19,7 +22,7 @@
 }
 
 .search-with-icon-button {
-  @include grid-column(3);
+  @include span-columns(3);
   font-size: 0.8em;
   margin: 0;
   margin-left: 10px;
@@ -64,8 +67,10 @@ button {
   }
 
   &.search-with-icon-button {
+    @include span-columns(3);
     display: block;
     font-size: 0.8em;
+    margin-left: 0;
 
     @media screen and (min-width: $small-screen) {
       display: none;
@@ -88,20 +93,21 @@ label {
 
 .search-form {
   @include clearfix;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .search-input-container {
-  @include grid-column(9);
-  width: calc(75% - 25px);
+  @include span-columns(9);
 
   @media screen and (min-width: $small-screen) {
-    @include grid-column(12);
+    @include span-columns(12);
   }
 }
 
 .search-results-content {
   .search-input-container {
-    @include grid-column(9);
+    @include span-columns(9);
     margin-left: 0;
   }
 

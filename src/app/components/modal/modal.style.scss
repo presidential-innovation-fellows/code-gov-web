@@ -1,4 +1,6 @@
-@import '../../../styles/base/all';
+@import '~bourbon/app/assets/stylesheets/addons/font-stacks';
+@import '../../../styles/base/variables';
+@import '~uswds/src/stylesheets/core/variables';
 
 .modal-container {
   animation: fadeInUp 0.2s ease;

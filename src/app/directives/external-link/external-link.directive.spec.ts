@@ -4,7 +4,7 @@ import { Location } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { SpyLocation } from '@angular/common/testing';
 
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
 import { Angulartics2 } from 'angulartics2';
 
 import { ExternalLinkDirective } from './external-link.directive';

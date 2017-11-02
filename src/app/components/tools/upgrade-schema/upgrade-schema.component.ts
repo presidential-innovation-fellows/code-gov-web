@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
-import { clone } from 'lodash';
+import clone from 'lodash/clone';
 import { MonacoEditorService } from '../../monaco-editor';
 import * as Clipboard from 'clipboard';
 

@@ -111,4 +111,8 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
 
   }
 
+  getIcon(status) {
+    return `assets/img/logos/agencies/${status.agency.id}.png`;
+  }
+
 }

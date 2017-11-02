@@ -1,6 +1,40 @@
 @import '~bourbon/app/assets/stylesheets/bourbon';
-@import '~bourbon-neat/core/neat';
+@import '~bourbon-neat/app/assets/stylesheets/neat';
 @import '~hamburgers/_sass/hamburgers/hamburgers';
+
+@import '~font-awesome/scss/font-awesome';
+@import '~devicons/css/devicons.scss';
+
+@import '~normalize.css';
+@import '~uswds/src/stylesheets/core/variables';
+@import '~uswds/src/stylesheets/core/utilities';
+@import '~uswds/src/stylesheets/core/base';
+@import '~uswds/src/stylesheets/core/grid';
+
+@import '~uswds/src/stylesheets/elements/buttons';
+@import '~uswds/src/stylesheets/elements/embed';
+@import '~uswds/src/stylesheets/elements/figure';
+@import '~uswds/src/stylesheets/elements/inputs';
+@import '~uswds/src/stylesheets/elements/labels';
+@import '~uswds/src/stylesheets/elements/list';
+@import '~uswds/src/stylesheets/elements/table';
+@import '~uswds/src/stylesheets/elements/typography';
+
+@import '~uswds/src/stylesheets/components/accordions';
+@import '~uswds/src/stylesheets/components/alerts';
+@import '~uswds/src/stylesheets/components/banner';
+@import '~uswds/src/stylesheets/components/footer';
+@import '~uswds/src/stylesheets/components/forms';
+@import '~uswds/src/stylesheets/components/graphic-list';
+@import '~uswds/src/stylesheets/components/header';
+@import '~uswds/src/stylesheets/components/hero';
+@import '~uswds/src/stylesheets/components/layout';
+@import '~uswds/src/stylesheets/components/media-block';
+@import '~uswds/src/stylesheets/components/navigation';
+@import '~uswds/src/stylesheets/components/search';
+@import '~uswds/src/stylesheets/components/section';
+@import '~uswds/src/stylesheets/components/sidenav';
+@import '~uswds/src/stylesheets/components/skipnav';
 
 @import 'variables';
 @import 'grid-settings';

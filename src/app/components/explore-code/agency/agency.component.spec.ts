@@ -5,7 +5,7 @@ import { inject, TestBed } from '@angular/core/testing';
 
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 
 import { AgencyComponent } from './index';
 import { AgencyService } from '../../../services/agency';

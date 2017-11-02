@@ -1,5 +1,5 @@
 <a class="card card--focusable agency-list-item" routerLink="/explore-code/agencies/{{agency.id}}">
   <div class="icon">
-    <img src="assets/img/logos/agencies/{{agency.id}}-50x50.png">
+    <img [src]="getIcon">
   </div><h3>{{ agency.name }}</h3>
 </a>

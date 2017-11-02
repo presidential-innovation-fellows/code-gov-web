@@ -1,4 +1,8 @@
+@import 'variables';
+
 .code-gov {
+  font-size: 14px;
+
   button,
   .usa-button,
   .usa-button.usa-button-big,
@@ -16,6 +20,10 @@
 
   .usa-grid {
     max-width: 1200px;
+  }
+
+  *:focus, .usa-focus {
+    outline: none;
   }
 }
 

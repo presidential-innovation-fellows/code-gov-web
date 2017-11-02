@@ -1,7 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject, Subscription } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
+import { Subscription } from 'rxjs/Subscription';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import 'rxjs/add/observable/concat';
+import 'rxjs/add/observable/zip';
+import 'rxjs/add/operator/first';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/single';
 
 import { AgenciesIndexService, ReleasesIndexService } from '../indexes';
 import { TermService } from './term.service';

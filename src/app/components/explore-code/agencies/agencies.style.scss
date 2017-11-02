@@ -1,11 +1,20 @@
-@import '../../../../styles/base/all';
+@import '../../../../styles/base/variables';
+@import '../../../../styles/base/grid-settings';
+@import '~bourbon/app/assets/stylesheets/bourbon';
+@import '~bourbon-neat/app/assets/stylesheets/neat';
+
+.sidebar-agencies {
+  @media screen and (min-width: $medium-screen) {
+    @include span-columns(3);
+  }
+}
 
 .agencies-content {
   background-color: $color-white;
   padding: 2.5em 1.5em;
 
   @media screen and (min-width: $medium-screen) {
-    @include grid-column(9);
+    @include span-columns(9);
   }
 
   @media screen and (min-width: $extra-large-screen) {

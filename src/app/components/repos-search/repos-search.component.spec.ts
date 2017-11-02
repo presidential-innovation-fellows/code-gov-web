@@ -7,7 +7,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
 
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 
 import { AutocompleteComponent } from '../autocomplete';
 import { AutocompleteResultComponent } from '../autocomplete-result';

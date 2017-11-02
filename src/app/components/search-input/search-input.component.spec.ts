@@ -7,7 +7,8 @@ import {
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { Observable, Subject } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 import { SearchInputComponent } from './search-input.component';
 import { LunrSearchService, SearchService } from '../../services/search';
 import { AgenciesIndexService, ReleasesIndexService } from '../../services/indexes';

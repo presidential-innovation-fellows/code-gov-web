@@ -3,7 +3,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { TestBed, ComponentFixture, inject } from '@angular/core/testing';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
 
 import { SearchResultsComponent } from './search-results.component';
 import { StateService } from '../../services/state';

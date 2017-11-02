@@ -5,7 +5,10 @@ $text-color: $color-gray;
 $text-contrast-color: $color-white;
 
 body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  
+  font-size: 14px;
   font-feature-settings: "kern", "liga", "pnum";
+  line-height: 1.42857143;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -73,4 +76,8 @@ code {
   color: $color-gray-lightest;
   font-size: 0.9em;
   padding: 2px 3px;
+}
+
+a {
+  text-decoration: none;
 }
