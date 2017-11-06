@@ -1,5 +1,5 @@
 {
-  "timestamp": "Mon Nov 06 2017 11:04:58 GMT-0500 (EST)",
+  "timestamp": "Mon Nov 06 2017 14:11:17 GMT-0500 (EST)",
   "statuses": {
     "USDA": {
       "status": "FULLY COMPLIANT: 0 validation errors",
@@ -1825,19 +1825,19 @@
           "codeUrl": "https://energy.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
-            "openSourceRequirement": 1,
+            "openSourceRequirement": 0,
             "inventoryRequirement": 0,
             "schemaFormat": 0,
-            "overallCompliance": 0.5
+            "overallCompliance": 0
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
-        "openSourceRequirement": 1,
+        "openSourceRequirement": 0,
         "inventoryRequirement": 0,
         "schemaFormat": 0,
-        "overallCompliance": 0.5
+        "overallCompliance": 0
       }
     },
     "HHS": {
@@ -2769,9 +2769,9 @@
       }
     },
     "NRC": {
-      "status": "FULLY COMPLIANT: 0 validation errors",
+      "status": "FAILURE: ERROR WHEN FETCHING (read ETIMEDOUT)",
       "issues": [],
-      "version": "1.0.1",
+      "version": "",
       "metadata": {
         "agency": {
           "name": "Nuclear Regulatory Commission",
@@ -2782,7 +2782,7 @@
             "agencyWidePolicy": 1,
             "openSourceRequirement": 1,
             "inventoryRequirement": 1,
-            "schemaFormat": 1,
+            "schemaFormat": 0,
             "overallCompliance": 1
           }
         }
@@ -2791,7 +2791,7 @@
         "agencyWidePolicy": 1,
         "openSourceRequirement": 1,
         "inventoryRequirement": 1,
-        "schemaFormat": 1,
+        "schemaFormat": 0,
         "overallCompliance": 1
       }
     },
