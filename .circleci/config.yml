@@ -30,5 +30,4 @@ jobs:
           command: npm test
       - run:
           name: Upload Test Report to Code Climate
-          command: |
-             ./cc-test-reporter after-build -t lcov --exit-code $?
+          command: ./cc-test-reporter after-build -t lcov --exit-code $?
