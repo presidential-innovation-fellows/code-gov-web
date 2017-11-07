@@ -1,5 +1,5 @@
 {
-  "timestamp": "Tue Nov 07 2017 15:21:18 GMT-0500 (EST)",
+  "timestamp": "Tue Nov 07 2017 15:59:11 GMT-0500 (EST)",
   "statuses": {
     "USDA": {
       "status": "NOT FULLY COMPLIANT: 25 WARNINGS, 25 validation errors, 2 REQUESTED ENHANCEMENTS",
@@ -772,7 +772,7 @@
           "website": "https://www.commerce.gov/",
           "codeUrl": "/data/fallback/DOC.json",
           "requirements": {
-            "agencyWidePolicy": 1,
+            "agencyWidePolicy": 0.5,
             "openSourceRequirement": 0,
             "inventoryRequirement": 0,
             "schemaFormat": 0,
@@ -781,7 +781,7 @@
         }
       },
       "requirements": {
-        "agencyWidePolicy": 1,
+        "agencyWidePolicy": 0.5,
         "openSourceRequirement": 0,
         "inventoryRequirement": 0,
         "schemaFormat": 0,
@@ -827,20 +827,20 @@
           "website": "https://ed.gov/",
           "codeUrl": "/data/fallback/ED.json",
           "requirements": {
-            "agencyWidePolicy": 1,
+            "agencyWidePolicy": 0,
             "openSourceRequirement": 1,
             "inventoryRequirement": 0,
             "schemaFormat": 1,
-            "overallCompliance": 0.6666666666666666
+            "overallCompliance": 0
           }
         }
       },
       "requirements": {
-        "agencyWidePolicy": 1,
+        "agencyWidePolicy": 0,
         "openSourceRequirement": 1,
         "inventoryRequirement": 0,
         "schemaFormat": 1,
-        "overallCompliance": 0.6666666666666666
+        "overallCompliance": 0
       }
     },
     "DOE": {
@@ -908,7 +908,7 @@
           "website": "https://www.hud.gov/",
           "codeUrl": "/data/fallback/HUD.json",
           "requirements": {
-            "agencyWidePolicy": 0,
+            "agencyWidePolicy": 0.5,
             "openSourceRequirement": 0,
             "inventoryRequirement": 0,
             "schemaFormat": 1,
@@ -917,7 +917,7 @@
         }
       },
       "requirements": {
-        "agencyWidePolicy": 0,
+        "agencyWidePolicy": 0.5,
         "openSourceRequirement": 0,
         "inventoryRequirement": 0,
         "schemaFormat": 1,
@@ -936,7 +936,7 @@
           "website": "https://data.doi.gov/",
           "codeUrl": "/data/fallback/DOI.json",
           "requirements": {
-            "agencyWidePolicy": 0.5,
+            "agencyWidePolicy": 0,
             "openSourceRequirement": 0,
             "inventoryRequirement": 0,
             "schemaFormat": 0,
@@ -945,7 +945,7 @@
         }
       },
       "requirements": {
-        "agencyWidePolicy": 0.5,
+        "agencyWidePolicy": 0,
         "openSourceRequirement": 0,
         "inventoryRequirement": 0,
         "schemaFormat": 0,
@@ -1020,7 +1020,7 @@
           "website": "https://state.gov/",
           "codeUrl": "/data/fallback/DOS.json",
           "requirements": {
-            "agencyWidePolicy": 0.5,
+            "agencyWidePolicy": 0,
             "openSourceRequirement": 0,
             "inventoryRequirement": 0,
             "schemaFormat": 0,
@@ -1029,7 +1029,7 @@
         }
       },
       "requirements": {
-        "agencyWidePolicy": 0.5,
+        "agencyWidePolicy": 0,
         "openSourceRequirement": 0,
         "inventoryRequirement": 0,
         "schemaFormat": 0,
@@ -4050,20 +4050,20 @@
           "website": "https://epa.gov/",
           "codeUrl": "/data/fallback/EPA.json",
           "requirements": {
-            "agencyWidePolicy": 0,
+            "agencyWidePolicy": 0.5,
             "openSourceRequirement": 0.5,
             "inventoryRequirement": 0,
             "schemaFormat": 0,
-            "overallCompliance": 0
+            "overallCompliance": 0.3333333333333333
           }
         }
       },
       "requirements": {
-        "agencyWidePolicy": 0,
+        "agencyWidePolicy": 0.5,
         "openSourceRequirement": 0.5,
         "inventoryRequirement": 0,
         "schemaFormat": 0,
-        "overallCompliance": 0
+        "overallCompliance": 0.3333333333333333
       }
     },
     "NASA": {
