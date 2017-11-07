@@ -1,5 +1,5 @@
 {
-  "timestamp": "Tue Nov 07 2017 16:20:23 GMT-0500 (EST)",
+  "timestamp": "Tue Nov 07 2017 16:33:46 GMT-0500 (EST)",
   "statuses": {
     "USDA": {
       "status": "NOT FULLY COMPLIANT: 25 WARNINGS, 25 validation errors, 2 REQUESTED ENHANCEMENTS",
@@ -855,7 +855,7 @@
           "website": "https://energy.gov/",
           "codeUrl": "/data/fallback/DOE.json",
           "requirements": {
-            "agencyWidePolicy": 0.5,
+            "agencyWidePolicy": 0,
             "openSourceRequirement": 0,
             "inventoryRequirement": 0,
             "schemaFormat": 0,
@@ -864,7 +864,7 @@
         }
       },
       "requirements": {
-        "agencyWidePolicy": 0.5,
+        "agencyWidePolicy": 0,
         "openSourceRequirement": 0,
         "inventoryRequirement": 0,
         "schemaFormat": 0,

@@ -101,9 +101,12 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
                 requirements: requirements
               });
               this.updated = result.timestamp;
-
             }
           }
+
+          this.statuses = this.statuses.sort((a, b) => {
+            return a.agency.name < b.agency.name ? -1 : a.agency.name === b.agency.name ? 0 : 1;
+          });
         } else {
           console.log('Error.');
         }
