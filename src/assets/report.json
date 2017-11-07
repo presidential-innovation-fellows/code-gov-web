@@ -1,5 +1,5 @@
 {
-  "timestamp": "Tue Nov 07 2017 15:59:11 GMT-0500 (EST)",
+  "timestamp": "Tue Nov 07 2017 16:20:23 GMT-0500 (EST)",
   "statuses": {
     "USDA": {
       "status": "NOT FULLY COMPLIANT: 25 WARNINGS, 25 validation errors, 2 REQUESTED ENHANCEMENTS",
@@ -827,20 +827,20 @@
           "website": "https://ed.gov/",
           "codeUrl": "/data/fallback/ED.json",
           "requirements": {
-            "agencyWidePolicy": 0,
+            "agencyWidePolicy": 1,
             "openSourceRequirement": 1,
             "inventoryRequirement": 0,
             "schemaFormat": 1,
-            "overallCompliance": 0
+            "overallCompliance": 0.6666666666666666
           }
         }
       },
       "requirements": {
-        "agencyWidePolicy": 0,
+        "agencyWidePolicy": 1,
         "openSourceRequirement": 1,
         "inventoryRequirement": 0,
         "schemaFormat": 1,
-        "overallCompliance": 0
+        "overallCompliance": 0.6666666666666666
       }
     },
     "DOE": {
@@ -895,6 +895,34 @@
         "openSourceRequirement": 0,
         "inventoryRequirement": 0,
         "schemaFormat": 1,
+        "overallCompliance": 0
+      }
+    },
+    "DHS": {
+      "status": "FAILURE: MISSING PROJECTS FIELD",
+      "issues": [],
+      "version": "",
+      "metadata": {
+        "agency": {
+          "id": 28,
+          "name": "Department of Homeland Security",
+          "acronym": "DHS",
+          "website": "https://www.dhs.gov",
+          "codeUrl": "/data/fallback/DHS.json",
+          "requirements": {
+            "agencyWidePolicy": 0,
+            "openSourceRequirement": 0,
+            "inventoryRequirement": 0,
+            "schemaFormat": 0,
+            "overallCompliance": 0
+          }
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0,
+        "openSourceRequirement": 0,
+        "inventoryRequirement": 0,
+        "schemaFormat": 0,
         "overallCompliance": 0
       }
     },
@@ -8498,20 +8526,20 @@
           "website": "https://www.nrc.gov/",
           "codeUrl": "/data/fallback/NRC.json",
           "requirements": {
-            "agencyWidePolicy": 1,
-            "openSourceRequirement": 1,
+            "agencyWidePolicy": 0.5,
+            "openSourceRequirement": 0,
             "inventoryRequirement": 1,
             "schemaFormat": 1,
-            "overallCompliance": 1
+            "overallCompliance": 0.5
           }
         }
       },
       "requirements": {
-        "agencyWidePolicy": 1,
-        "openSourceRequirement": 1,
+        "agencyWidePolicy": 0.5,
+        "openSourceRequirement": 0,
         "inventoryRequirement": 1,
         "schemaFormat": 1,
-        "overallCompliance": 1
+        "overallCompliance": 0.5
       }
     },
     "OPM": {
@@ -8707,34 +8735,6 @@
         "inventoryRequirement": 0.5,
         "schemaFormat": 1,
         "overallCompliance": 0.8333333333333334
-      }
-    },
-    "DHS": {
-      "status": "FAILURE: MISSING PROJECTS FIELD",
-      "issues": [],
-      "version": "",
-      "metadata": {
-        "agency": {
-          "id": 28,
-          "name": "Department of Homeland Security",
-          "acronym": "DHS",
-          "website": "https://www.dhs.gov",
-          "codeUrl": "/data/fallback/DHS.json",
-          "requirements": {
-            "agencyWidePolicy": 0.5,
-            "openSourceRequirement": 0,
-            "inventoryRequirement": 0,
-            "schemaFormat": 0,
-            "overallCompliance": 0
-          }
-        }
-      },
-      "requirements": {
-        "agencyWidePolicy": 0.5,
-        "openSourceRequirement": 0,
-        "inventoryRequirement": 0,
-        "schemaFormat": 0,
-        "overallCompliance": 0
       }
     }
   }
