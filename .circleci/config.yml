@@ -17,12 +17,18 @@ jobs:
           key: code-gov-web-{{ checksum "package.json" }}
           paths:
             - code-gov-web/node_modules
+      - run: 
+          name: Download CondeClimate Test Reporter
+          command: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+      - run: 
+          name: Make Test Reporter Executable
+          command: chmod +x ./cc-test-reporter
+      - run:
+          command: ./cc-test-reporter before-build
       - run:
           name: Run Tests
           command: npm test
       - run:
-          name: Install CodeClimate Test Reporter
-          command: npm install codeclimate-test-reporter
-      - run:
-          name: Run CodeClimate Test Reporter
-          command: codeclimate-test-reporter < coverage/lcov.info
+          name: Upload Test Report to Code Climate
+          command: |
+             ./cc-test-reporter after-build -t lcov --exit-code $?
