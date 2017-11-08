@@ -3,12 +3,12 @@
   The Source Code Policy requires agencies to perform specific one-time and recurring tasks in order to be considered compliant. Currently, agencies are evaluated on whether they've completed three tasks:
 </p>
 <ol>
-  <li><b>Revised agency policy</b>: agencies must update their policies to be consistent with the Federal Source Code Policy.</li>
-  <li><b>Completed code inventory</b>: agencies must publish a complete inventory of their source code in the prescribed format on their website.</li>
-  <li><b>Met open source objective</b>: agencies must open source 20% or more of their new custom code created after August 2016.</li>
+  <li><b>Updated agency policy</b>: Agencies must update their policies to be consistent with the Federal Source Code Policy.</li>
+  <li><b>Completed code inventory</b>: Agencies must inventory all new custom code created after August 2016 (notwithstanding exceptions enumerated in the Federal Source Code Policy).</li>
+  <li><b>Completed open source objective</b>: Agencies must open source at least 20% of all new custom code created after August 2016.</li>
 </ol>
 
-<p>Agencies are rated as fully, partially, or non-compliant with these factors - green, yellow or red. An agency's overall compliance is green only if both of the factors are green.
+<p>Agencies are rated as fully compliant (green), partially compliant (yellow), or non-compliant (red) with these factors. An agency's overall compliance is green only if all of the factors are green.
 </p>
 <hr/>
 <div class="dashboard-container">
@@ -34,7 +34,7 @@
             <div class="requirement {{requirement.status}} ">
                 <span *ngIf="requirement.status=='compliant'">Agency policy is consistent with the Federal Source Code Policy</span>
                 <span *ngIf="requirement.status=='partial'">Agency policy is being updated for consistency with the Federal Source Code Policy.</span>
-                <span *ngIf="requirement.status=='noncompliant'">Agency policy has not been reviewed for consistency with the Federal Source Code Policy</span>
+                <span *ngIf="requirement.status=='noncompliant'">Agency policy has not been updated for consistency with the Federal Source Code Policy</span>
             </div>
           </div>
           <div *ngIf="requirement.text=='schemaFormat'">
@@ -47,30 +47,26 @@
           <div *ngIf="requirement.text=='inventoryRequirement'">
             <div class="requirement {{requirement.status}} ">
                 <span *ngIf="requirement.status=='compliant'">
-                  All custom code created after August 2016 must be inventoried.
+                  Agency has inventoried 100% of its new custom code.
                 </span>
                 <span *ngIf="requirement.status=='partial'">
-                  All custom code created after August 2016 must be inventoried.
-                  This agency has inventoried more than 50% of its new custom code.
+                  Agency has inventoried more than 50% of its new custom code.
                 </span>
                 <span *ngIf="requirement.status=='noncompliant'">
-                  All custom code created after August 2016 must be inventoried.
-                  This agency has inventoried less than 50% of its new custom code.
+                  Agency has inventoried less than 50% of its new custom code.
                 </span>
             </div>
           </div>
           <div *ngIf="requirement.text=='openSourceRequirement'">
             <div class="requirement {{requirement.status}} ">
                 <span *ngIf="requirement.status=='compliant'">
-                  More than 20% of custom code created after August 2016 must be released as open source.
+                  Agency has open sourced more than 20% of its new custom code.
                 </span>
                 <span *ngIf="requirement.status=='partial'">
-                  More than 20% of custom code created after August 2016 must be released as open source.
-                  This agency currently has open sourced more than 10% of its custom developed code.
+                  Agency has open sourced more than 10% of its new custom code.
                 </span>
                 <span *ngIf="requirement.status=='noncompliant'">
-                  More than 20% of custom code created after August 2016 must be released as open source.
-                  This agency currently has open sourced less than 10% of its custom developed code.
+                  Agency has open sourced less than 10% of its new custom code.
                 </span>
             </div>
           </div>
