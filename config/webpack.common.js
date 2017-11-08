@@ -27,7 +27,6 @@ const NamedModulesPlugin = require('webpack/lib/NamedModulesPlugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const postcssCssnext = require('postcss-cssnext');
 const postcssImport = require('postcss-import');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = function (options) {
   isProd = ['production', 'staging'].includes(options.env);
@@ -147,7 +146,6 @@ module.exports = function (options) {
       inject: 'head'
     }),
     new PreloadWebpackPlugin(),
-    new BundleAnalyzerPlugin(),
   ];
 
   /**
@@ -232,7 +230,7 @@ module.exports = function (options) {
         {
           test: /\.scss$/,
           exclude: [ /node_modules/, /src\/styles/],
-          loader: 'raw-loader!postcss-loader!resolve-url-loader!sass-loader?sourceMap',
+          loader: 'raw-loader!postcss-loader!sass-loader?sourceMap',
         },
         {
           test: /\.scss$/,

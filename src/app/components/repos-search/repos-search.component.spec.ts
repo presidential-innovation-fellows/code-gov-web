@@ -25,7 +25,7 @@ class MockRouter {
     this.routerState = {
       route: '/'
     };
-    this.events = Observable.from([]);
+    this.events = Observable.of([]);
   }
 
   navigateByUrl() {

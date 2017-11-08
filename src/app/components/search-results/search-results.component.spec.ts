@@ -1,10 +1,12 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
 import { HttpModule } from '@angular/http';
+import { ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { TestBed, ComponentFixture, inject } from '@angular/core/testing';
 import { Observable } from 'rxjs/Observable';
 
+import { PluralizePipe } from '../../pipes/pluralize';
 import { SearchResultsComponent } from './search-results.component';
 import { StateService } from '../../services/state';
 import { MobileService } from '../../services/mobile';
@@ -39,10 +41,14 @@ describe('SearchResultsComponent', () => {
     beforeEach(() => {
       TestBed.configureTestingModule({
         imports: [
+          ReactiveFormsModule,
           RouterModule.forRoot([]),
           HttpModule,
         ],
-        declarations: [ SearchResultsComponent ],
+        declarations: [
+          PluralizePipe,
+          SearchResultsComponent,
+        ],
         providers: [
           StateService,
           AgenciesIndexService,
@@ -72,10 +78,14 @@ describe('SearchResultsComponent', () => {
       TestBed.resetTestingModule();
       TestBed.configureTestingModule({
         imports: [
+          ReactiveFormsModule,
           RouterModule.forRoot([]),
           HttpModule,
         ],
-        declarations: [ SearchResultsComponent ],
+        declarations: [
+          PluralizePipe,
+          SearchResultsComponent,
+        ],
         providers: [
           StateService,
           AgenciesIndexService,

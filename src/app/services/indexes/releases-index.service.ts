@@ -60,7 +60,7 @@ export class ReleasesIndexService {
     Observable.concat(
       this.loadResources,
       Observable.create(() => {
-        source.next(this.releasesIndex.search(this.query));
+        source.next(this.releasesIndex.search(query));
       })
     )
     .single()

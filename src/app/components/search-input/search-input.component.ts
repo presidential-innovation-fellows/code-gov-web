@@ -142,7 +142,6 @@ export class SearchInputComponent {
   }
 
   focus() {
-    console.log('focusing');
     this.queryElement.nativeElement.focus();
   }
 

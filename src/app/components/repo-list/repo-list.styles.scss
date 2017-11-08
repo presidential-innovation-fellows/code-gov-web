@@ -1,3 +1,8 @@
+@import '~bourbon/app/assets/stylesheets/bourbon';
+@import '~bourbon-neat/app/assets/stylesheets/neat';
+@import '~uswds/src/stylesheets/core/variables';
+@import '../../../styles/base/variables';
+
 .repos-container,
 .no-repos {
   margin-top: 2rem;
@@ -12,5 +17,96 @@
 
   > img {
     margin-bottom: 120px;
+  }
+}
+
+.repo-list-summary-wrapper,
+.ngx-pagination {
+  display: none;
+
+  @media screen and (min-width: $medium-screen) {
+    display: inline-block;
+  }
+}
+
+.repo-list-summary {
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 22px;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.repo-list::ng-deep .ngx-pagination {
+  float: right;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin: 0;
+  user-select: none;
+
+  li {
+    display: inline-block;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+
+    @media screen and (min-width: $large-screen) {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+
+    &.disabled {
+      span {
+        color: $color-gray-light;
+      }
+    }
+
+    a,
+    span {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    a {
+      color: $color-gray-dark;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+  .page:not(.first) {
+    border-left: 2px solid $color-gray;
+  }
+
+  .current {
+    background: none;
+    color: $brand-teal;
+  }
+}
+
+.repos-list {
+  clear: both;
+
+  &--paged {
+    display: none;
+    
+    @media screen and (min-width: $medium-screen) {
+      display: block;
+    }
+  }
+
+  &--infinite-scrolled {
+    display: block;
+
+    @media screen and (min-width: $medium-screen) {
+      display: none;
+    }
+  }
+}
+
+.repo:last-child::ng-deep {
+  @media screen and (max-width: $small-screen - 1) {
+    .repo-list-item {
+      border-bottom: 0;
+    }
   }
 }

@@ -41,9 +41,11 @@ body {
   }
 
   hr {
+    border-bottom: 0;
     border-top: 6px solid $brand-teal;
+    margin-bottom: 2rem;
     margin-top: 3rem;
-    width: 30rem;
+    max-width: 30rem;
 
     @media screen and (min-width: $small-screen) {
       margin-top: 6rem;
@@ -477,9 +479,11 @@ body {
   }
 
   hr {
+    border-bottom: 0;
     border-top: 4px solid $brand-teal;
+    margin-bottom: 2rem;
     margin-top: 2rem;
-    width: 30rem;
+    max-width: 30rem;
 
     @media screen and (min-width: $small-screen) {
       margin-top: 3rem;

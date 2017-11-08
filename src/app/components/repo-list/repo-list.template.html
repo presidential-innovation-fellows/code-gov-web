@@ -1,19 +1,45 @@
 <div class="loading-dialog" *ngIf="isLoading">
   <p>Loading Results...</p>
-  <img alt="United States of America Flag" width="44" height="30" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIwLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgogICB2aWV3Qm94PSIwIDAgMzAwIDIwNy41IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMDAgMjA3LjU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KICAuc3Qwe2ZpbGw6I0YxNUQ1RDt9CiAgLnN0MXtmaWxsOiNGRkZGRkY7fQogIC5zdDJ7ZmlsbDojMzM4REM5O30KPC9zdHlsZT4KCjxkZWZzPgogIDxtYXNrIGlkPSJmbGFnTWFzayIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0zMDApIj4KICAgICAgPGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJ0cmFuc2xhdGUiIGZyb209Ii0zMDAgMCIgdG89IjAgMCIgZHVyPSIzcyIgYmVnaW49IjBzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPgogICAgICA8dXNlIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhsaW5rOmhyZWY9IiN3YXZlIi8+CiAgICA8L2c+CiAgPC9tYXNrPgogIDxnIGlkPSJ3YXZlIj4KICAgIDxwYXRoIGZpbGw9IndoaXRlIiBkPSJNMzAwLDIwMS43YzAsMCwyMiwxMS44LDUwLDBjMjcuOC0xMS43LDUwLDAsNTAsMHMyNi42LDEyLDUwLDBzNTAsMCw1MCwwczIyLjksMTEuNyw1MC4xLDBjMjcuMi0xMS43LDUwLDAsNTAsMAogICAgICBWNS43YzAsMC0yOC4yLTExLjctNTAsMHMtNTAsMC01MCwwcy0yNS0xMi43LTUwLDBjLTIzLjQsMTEuOS01MCwwLTUwLDBzLTIzLjEtMTIuMi01MC4xLDBjLTI5LjUsMTMuMy01MCwwLTUwLDBsMCwwCiAgICAgIGMtMS4zLTAuNS0yOC42LTExLjQtNDkuOSwwYy0yMS44LDExLjctNTAsMC01MCwwcy0yNS0xMi43LTUwLDBjLTIzLjQsMTEuOS01MCwwLTUwLDBTNzYuOS02LjUsNTAsNS43QzIwLjUsMTksMCw1LjcsMCw1Ljd2MTk2CiAgICAgIGMwLDAsMjIsMTEuOCw1MCwwYzI3LjgtMTEuNyw1MCwwLDUwLDBzMjYuNiwxMiw1MCwwczUwLDAsNTAsMHMyMi45LDExLjcsNTAuMSwwQzI3Ni43LDE5MC4yLDI5OS4zLDIwMS4zLDMwMCwyMDEuN0wzMDAsMjAxLjd6Ii8+CiAgPC9nPgogIDxnIGlkPSJmbGFnIj4KICAgIDxyZWN0IGNsYXNzPSJzdDAiIHdpZHRoPSIzMDAiIGhlaWdodD0iMjA3LjUiLz4KICAgIDxyZWN0IHg9IjEzNC45IiB5PSIzMC40IiBjbGFzcz0ic3QxIiB3aWR0aD0iMTY1LjEiIGhlaWdodD0iMjcuOSIvPgogICAgPHJlY3QgeD0iMTM0LjkiIHk9IjkwLjciIGNsYXNzPSJzdDEiIHdpZHRoPSIxNjUuMSIgaGVpZ2h0PSIyNy45Ii8+CiAgICA8cmVjdCB5PSIxNDkuNSIgY2xhc3M9InN0MSIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyNy45Ii8+CiAgICA8cmVjdCBjbGFzcz0ic3QyIiB3aWR0aD0iMTM0LjkiIGhlaWdodD0iMTE4LjUiLz4KICA8L2c+CjwvZGVmcz4KICA8dXNlIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhsaW5rOmhyZWY9IiNmbGFnIiBtYXNrPSJ1cmwoI2ZsYWdNYXNrKSIvPgo8L3N2Zz4K" />
+  <img alt="United States of America Flag" width="44" height="30" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIwLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgogICB2aWV3Qm94PSIwIDAgMzAwIDIwNy41IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMDAgMjA3LjU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KICAuc3Qwe2ZpbGw6I0YxNUQ1RDt9CiAgLnN0MXtmaWxsOiNGRkZGRkY7fQogIC5zdDJ7ZmlsbDojMzM4REM5O30KPC9zdHlsZT4KCjxkZWZzPgogIDxtYXNrIGlkPSJmbGFnTWFzayIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0zMDApIj4KICAgICAgPGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJ0cmFuc2xhdGUiIGZyb209Ii0zMDAgMCIgdG89IjAgMCIgZHVyPSIzcyIgYmVnaW49IjBzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPgogICAgICA8dXNlIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhsaW5rOmhyZWY9IiN3YXZlIi8+CiAgICA8L2c+CiAgPC9tYXNrPgogIDxnIGlkPSJ3YXZlIj4KICAgIDxwYXRoIGZpbGw9IndoaXRlIiBkPSJNMzAwLDIwMS43YzAsMCwyMiwxMS44LDUwLDBjMjcuOC0xMS43LDUwLDAsNTAsMHMyNi42LDEyLDUwLDBzNTAsMCw1MCwwczIyLjksMTEuNyw1MC4xLDBjMjcuMi0xMS43LDUwLDAsNTAsMAogICAgICBWNS43YzAsMC0yOC4yLTExLjctNTAsMHMtNTAsMC01MCwwcy0yNS0xMi43LTUwLDBjLTIzLjQsMTEuOS01MCwwLTUwLDBzLTIzLjEtMTIuMi01MC4xLDBjLTI5LjUsMTMuMy01MCwwLTUwLDBsMCwwCiAgICAgIGMtMS4zLTAuNS0yOC42LTExLjQtNDkuOSwwYy0yMS44LDExLjctNTAsMC01MCwwcy0yNS0xMi43LTUwLDBjLTIzLjQsMTEuOS01MCwwLTUwLDBTNzYuOS02LjUsNTAsNS43QzIwLjUsMTksMCw1LjcsMCw1Ljd2MTk2CiAgICAgIGMwLDAsMjIsMTEuOCw1MCwwYzI3LjgtMTEuNyw1MCwwLDUwLDBzMjYuNiwxMiw1MCwwczUwLDAsNTAsMHMyMi45LDExLjcsNTAuMSwwQzI3Ni43LDE5MC4yLDI5OS4zLDIwMS4zLDMwMCwyMDEuN0wzMDAsMjAxLjd6Ii8+CiAgPC9nPgogIDxnIGlkPSJmbGFnIj4KICAgIDxyZWN0IGNsYXNzPSJzdDAiIHdpZHRoPSIzMDAiIGhlaWdodD0iMjA3LjUiLz4KICAgIDxyZWN0IHg9IjEzNC45IiB5PSIzMC40IiBjbGFzcz0ic3QxIiB3aWR0aD0iMTY1LjEiIGhlaWdodD0iMjcuOSIvPgogICAgPHJlY3QgeD0iMTM0LjkiIHk9IjkwLjciIGNsYXNzPSJzdDEiIHdpZHRoPSIxNjUuMSIgaGVpZ2h0PSIyNy45Ii8+CiAgICA8cmVjdCB5PSIxNDkuNSIgY2xhc3M9InN0MSIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyNy45Ii8+CiAgICA8cmVjdCBjbGFzcz0ic3QyIiB3aWR0aD0iMTM0LjkiIGhlaWdodD0iMTE4LjUiLz4KICA8L2c+CjwvZGVmcz4KICA8dXNlIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhsaW5rOmhyZWY9IiNmbGFnIiBtYXNrPSJ1cmwoI2ZsYWdNYXNrKSIvPgo8L3N2Zz4K"
+  />
 </div>
 
-<div *ngIf="!isLoading">
+<div *ngIf="!isLoading" class="repo-list">
   <div *ngIf="hasRepos()" class="repos-container">
-    <h4 class="repos-count">
-      We found {{ total }} {{ "Repositories" | pluralize : reposTotal }}
-    </h4>
-    <ul class="repos-list usa-unstyled-list"
-      infinite-scroll
-      [infiniteScrollDistance]="2"
-      [infiniteScrollThrottle]="500"
-      (scrolled)="onScroll()">
-      <li *ngFor="let result of results" class="repo">
+    <div class="repo-list-summary-wrapper">
+      <p *ngIf="results.length === 0" class="repo-list-summary">No results found.</p>
+      <p *ngIf="results.length > 0" class="repo-list-summary">Results <strong>{{ getMinPageIndex() }}-{{ getMaxPageIndex() }}</strong> of <strong>{{ results.length }}</strong></p>
+    </div>
+    <pagination-template #p="paginationApi" (pageChange)="currentPage = $event">
+
+      <ul class="ngx-pagination usa-unstyled-list">
+        <li class="pagination-previous" [class.disabled]="p.isFirstPage()">
+          <span *ngIf="p.isFirstPage()"><i class="fa fa-chevron-left"></i> Prev</span>
+          <a *ngIf="!p.isFirstPage()" (click)="p.previous()"><i class="fa fa-chevron-left"></i> Prev</a>
+        </li>
+
+        <li *ngFor="let page of p.pages; let isFirst = first" class="page" [class.current]="p.getCurrent() === page.value" [class.first]="isFirst">
+          <a (click)="p.setCurrent(page.value)" *ngIf="p.getCurrent() !== page.value">
+            {{ page.label }}
+          </a>
+          <span *ngIf="p.getCurrent() === page.value">
+            {{ page.label }}
+          </span>
+        </li>
+
+        <li class="pagination-next" [class.disabled]="p.isLastPage()">
+          <span *ngIf="p.isLastPage()">Next <i class="fa fa-chevron-right"></i></span>
+          <a *ngIf="!p.isLastPage()" (click)="p.next()">Next <i class="fa fa-chevron-right"></i></a>
+        </li>
+      </ul>
+
+    </pagination-template>
+    <ul class="repos-list repos-list--infinite-scrolled usa-unstyled-list"		 
+        infinite-scroll		      
+        [infiniteScrollDistance]="500"
+        [infiniteScrollThrottle]="500"
+        (scrolled)="onScroll()">
+      <li *ngFor="let result of loadedResults" class="repo">
         <div *ngIf="result.agency;then repoListItem else agencyListItem"></div>
         <ng-template #repoListItem>
           <repo-list-item [repo]="result"></repo-list-item>
@@ -23,9 +49,41 @@
         </ng-template>
       </li>
     </ul>
-    <button *ngIf="showLoadMore" (click)="loadMore()" class="load-more-button">
-      Load More Repos
-    </button>
+    <ul class="repos-list repos-list--paged usa-unstyled-list">
+      <li *ngFor="let result of results | paginate: { itemsPerPage: pageSize, currentPage: currentPage }" class="repo">
+        <div *ngIf="result.agency;then repoListItem else agencyListItem"></div>
+        <ng-template #repoListItem>
+          <repo-list-item [repo]="result"></repo-list-item>
+        </ng-template>
+        <ng-template #agencyListItem>
+          <agency-list-item [agency]="result"></agency-list-item>
+        </ng-template>
+      </li>
+    </ul>
+    <pagination-template (pageChange)="currentPage = $event">
+        
+      <ul class="ngx-pagination usa-unstyled-list">
+        <li class="pagination-previous" [class.disabled]="p.isFirstPage()">
+          <span *ngIf="p.isFirstPage()"><i class="fa fa-chevron-left"></i> Prev</span>
+          <a *ngIf="!p.isFirstPage()" (click)="p.previous()"><i class="fa fa-chevron-left"></i> Prev</a>
+        </li>
+
+        <li *ngFor="let page of p.pages; let isFirst = first" class="page" [class.current]="p.getCurrent() === page.value" [class.first]="isFirst">
+          <a (click)="p.setCurrent(page.value)" *ngIf="p.getCurrent() !== page.value">
+            {{ page.label }}
+          </a>
+          <span *ngIf="p.getCurrent() === page.value">
+            {{ page.label }}
+          </span>
+        </li>
+
+        <li class="pagination-next" [class.disabled]="p.isLastPage()">
+          <span *ngIf="p.isLastPage()">Next <i class="fa fa-chevron-right"></i></span>
+          <a *ngIf="!p.isLastPage()" (click)="p.next()">Next <i class="fa fa-chevron-right"></i></a>
+        </li>
+      </ul>
+
+    </pagination-template>
   </div>
 
   <div *ngIf="!hasRepos()" class="no-repos">

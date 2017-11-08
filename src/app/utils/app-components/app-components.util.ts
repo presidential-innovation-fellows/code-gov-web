@@ -62,6 +62,8 @@ export * from '../../components/policy-guide/policy/policy-exceptions';
 export * from '../../components/policy-guide/policy/policy-implementation';
 export * from '../../components/policy-guide/policy/policy-appendix';
 
+export * from '../../components/show-more';
+
 export * from '../../components/tools';
 export * from '../../components/tools/schema-validator';
 export * from '../../components/tools/upgrade-schema';

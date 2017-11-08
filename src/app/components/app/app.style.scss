@@ -162,7 +162,7 @@
 }
 
 .footer-links {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 
   a {
     font-size: 0.9em;
@@ -170,7 +170,10 @@
 
   li {
     display: inline-block;
-    margin-right: 1em;
+
+    &:not(:last-of-type) {
+      margin-right: 1em;
+    }
   }
 }
 

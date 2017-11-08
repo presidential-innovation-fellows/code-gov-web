@@ -78,23 +78,23 @@ button {
   }
 }
 
-input,
-label {
-  max-width: none;
-}
-
-label {
-  height: 0px;
-  margin: 0;
-  overflow: none;
-  text-align: left;
-  text-indent: -9999px;
-}
-
 .search-form {
   @include clearfix;
   padding-left: 2rem;
   padding-right: 2rem;
+
+  input,
+  label {
+    max-width: none;
+  }
+
+  label {
+    height: 0px;
+    margin: 0;
+    overflow: none;
+    text-align: left;
+    text-indent: -9999px;
+  }
 }
 
 .search-input-container {

@@ -6,9 +6,9 @@ import {
 import { RouterModule } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
+import { MobileService } from '../../services/mobile';
 import { HeaderNavigationComponent } from './header-navigation.component';
 import { TestBed, ComponentFixture, inject } from '@angular/core/testing';
-import { MobileService } from '../../services/mobile';
 
 describe('HeaderNavigationComponent', () => {
   describe('component logic', () => {
@@ -20,7 +20,9 @@ describe('HeaderNavigationComponent', () => {
           imports: [
             RouterModule.forRoot([]),
           ],
-          declarations: [ HeaderNavigationComponent ],
+          declarations: [
+            HeaderNavigationComponent,
+          ],
           providers: [
             { provide: APP_BASE_HREF, useValue: '/' },
             MobileService,

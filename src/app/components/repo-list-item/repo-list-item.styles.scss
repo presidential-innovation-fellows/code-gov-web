@@ -2,14 +2,26 @@
 @import '../../../styles/base/variables';
 @import '~uswds/src/stylesheets/core/variables';
 
-a {
+.repo-list-item {
   display: block;
   margin-bottom: 1em;
+  padding: 0.5rem;
   text-decoration: none;
 
-  &:hover {
-    h3 {
-      color: $color-primary;
+  a {
+    color: $brand-teal;
+  }
+
+  @media screen and (max-width: $small-screen - 1) {
+    &.card {
+      border-left: 0;
+      border-right: 0;
+      border-top: 0;
+      padding-bottom: 3rem;
+  
+      &:hover {
+        box-shadow: none;
+      } 
     }
   }
 }
@@ -23,16 +35,36 @@ p {
   margin: 0;
 }
 
-.repo-features {
-  margin-top: 0.2em;
+.repo-description {
+  margin-bottom: 1rem;
+}
 
-  i {
-    color: $brand-teal;
+.repo-features {
+  background-color: $color-cool-blue-lightest;
+  color: $brand-blue-dark;
+  display: none;
+  font-size: 0.8em;
+  margin-bottom: 1rem;
+  padding: 0.7rem 1rem;
+
+  @media screen and (min-width: $small-screen) {
+    display: block;
   }
 
   li {
     display: inline-block;
-    margin-right: 0.75em;
+    margin-right: 1.5rem;
+
+    i {
+      font-size: 1.5em;
+      margin-right: 0.5rem;
+      vertical-align: bottom;
+    }
+
+    a {
+      color: $brand-blue-dark;
+      text-decoration: none;
+    }
 
     &:last-child {
       margin-right: 0;
@@ -41,5 +73,21 @@ p {
         margin-right: 0.2em;
       }
     }
+  }
+}
+
+.repo-agency-icon {
+  font-size: 0;
+
+  img {
+    margin-right: 0.5rem;
+    max-height: 2rem;
+    max-width: 2rem;
+    vertical-align: middle;
+  }
+
+  span {
+    font-size: 18px;
+    vertical-align: middle;
   }
 }
