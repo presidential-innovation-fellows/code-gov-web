@@ -32,9 +32,9 @@
         <div class="dashboard-agency-requirements" *ngFor="let requirement of status.requirements">
           <div *ngIf="requirement.text=='agencyWidePolicy'">
             <div class="requirement {{requirement.status}} ">
-                <span *ngIf="requirement.status=='compliant'">Agency policy is consistent with the Federal Source Code Policy</span>
+                <span *ngIf="requirement.status=='compliant'">Agency policy is consistent with the Federal Source Code Policy.</span>
                 <span *ngIf="requirement.status=='partial'">Agency policy is being updated for consistency with the Federal Source Code Policy.</span>
-                <span *ngIf="requirement.status=='noncompliant'">Agency policy has not been updated for consistency with the Federal Source Code Policy</span>
+                <span *ngIf="requirement.status=='noncompliant'">Agency policy has not been updated for consistency with the Federal Source Code Policy.</span>
             </div>
           </div>
           <div *ngIf="requirement.text=='schemaFormat'">
