@@ -1,5 +1,5 @@
 {
-  "timestamp": "Mon Nov 20 2017 10:14:35 GMT-0500 (EST)",
+  "timestamp": "Tue Nov 21 2017 10:59:08 GMT-0500 (EST)",
   "statuses": {
     "USDA": {
       "status": "NOT FULLY COMPLIANT: 25 WARNINGS, 25 validation errors, 2 REQUESTED ENHANCEMENTS",
@@ -910,7 +910,7 @@
           "website": "https://www.dhs.gov",
           "codeUrl": "/data/fallback/DHS.json",
           "requirements": {
-            "agencyWidePolicy": 0.5,
+            "agencyWidePolicy": 1,
             "openSourceRequirement": 0,
             "inventoryRequirement": 0,
             "schemaFormat": 0,
@@ -919,7 +919,7 @@
         }
       },
       "requirements": {
-        "agencyWidePolicy": 0.5,
+        "agencyWidePolicy": 1,
         "openSourceRequirement": 0,
         "inventoryRequirement": 0,
         "schemaFormat": 0,
