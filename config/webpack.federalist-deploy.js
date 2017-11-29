@@ -145,14 +145,14 @@ module.exports = function (env) {
             dotfiles: true
           };
 
-          // ghpages.publish(webpackConfig({env: ENV}).output.path, options, function(err) {
-          //   if (err) {
-          //     console.log('GitHub deployment done. STATUS: ERROR: '+err);
-          //     throw err;
-          //   } else {
-          //     console.log('GitHub deployment done. STATUS: SUCCESS.');
-          //   }
-          // });
+          ghpages.publish(webpackConfig({env: ENV}).output.path, options, function(err) {
+            if (err) {
+              console.log('GitHub deployment done. STATUS: ERROR: '+err);
+              throw err;
+            } else {
+              console.log('GitHub deployment done. STATUS: SUCCESS.');
+            }
+          });
         })
       }
     ]
