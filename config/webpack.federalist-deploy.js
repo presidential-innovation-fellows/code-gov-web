@@ -11,6 +11,7 @@ const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const webpackMerge = require('webpack-merge'); // used to merge webpack configs
 const ghpages = require('gh-pages');
 const webpack = require('webpack');
+const RobotstxtPlugin = require('robotstxt-webpack-plugin').default;
 const webpackConfig = ghDeploy.getWebpackConfigModule();
 const commonConfig = require('./webpack.common.js');
 
@@ -27,41 +28,39 @@ const ENV = 'production';
 let BASEURL;
 let gtmAuth;
 let GIT_BRANCH_NAME;
+let robotsTxtConf = {
+  policy: [
+    {
+      userAgent: '*',
+      disallow: '/'
+    }
+  ],
+  host: 'https://staging.code.gov'
+};
 
-if (helpers.hasProcessFlag('github-stag')) {
-  BASEURL = '/code-gov-web/';
-  gtmAuth = 'GTM-NTMZFB';
-  GIT_BRANCH_NAME = 'gh-pages';
-} else if (helpers.hasProcessFlag('federalist-stag')){
+if (helpers.hasProcessFlag('federalist-stag')){
   GIT_BRANCH_NAME = 'federalist-stag';
   BASEURL = '/';
   gtmAuth = 'GTM-M9L9Q5';
-  
-} else if (helpers.hasProcessFlag('federalist-dev')){
-  
-  GIT_BRANCH_NAME = 'federalist-dev';
-  BASEURL = '/preview/gsa/code-gov-web/'+GIT_BRANCH_NAME+'/';
-  gtmAuth = 'GTM-M9L9Q5';
-  
-  
-}
-else if (helpers.hasProcessFlag('dashboard-preview')){
+
+} else if (helpers.hasProcessFlag('dashboard-preview')){
   GIT_BRANCH_NAME = 'federalist-dashboard-preview';
   BASEURL = '/preview/gsa/code-gov-web/'+GIT_BRANCH_NAME+'/';
   gtmAuth = 'GTM-M9L9Q5';
   
-}
-else if (helpers.hasProcessFlag('federalist-prod')){
+} else if (helpers.hasProcessFlag('federalist-prod')){
   GIT_BRANCH_NAME = 'federalist-pages';
   BASEURL = '/';
   gtmAuth = 'GTM-M9L9Q5';
+  robotsTxtConf.policy = [{
+    userAgent: '*',
+    allow: '/'
+  }];
+  robotsTxtConf.host = 'https://code.gov';
   
-  
-}
-
-else {
+} else {
   GIT_BRANCH_NAME = 'federalist-dev';
-  BASEURL = '/preview/gsa/code-gov-web/federalist-dev/';
+  BASEURL = `/preview/gsa/code-gov-web/${GIT_BRANCH_NAME}/`;
   gtmAuth = 'GTM-M9L9Q5';
   
 }
@@ -128,6 +127,8 @@ module.exports = function (env) {
         ]
       }),
 
+      new RobotstxtPlugin(robotsTxtConf),
+
       function() {
         this.plugin('done', function() {
           console.log('Starting deployment to GitHub.');
@@ -144,14 +145,14 @@ module.exports = function (env) {
             dotfiles: true
           };
 
-          ghpages.publish(webpackConfig({env: ENV}).output.path, options, function(err) {
-            if (err) {
-              console.log('GitHub deployment done. STATUS: ERROR: '+err);
-              throw err;
-            } else {
-              console.log('GitHub deployment done. STATUS: SUCCESS.');
-            }
-          });
+          // ghpages.publish(webpackConfig({env: ENV}).output.path, options, function(err) {
+          //   if (err) {
+          //     console.log('GitHub deployment done. STATUS: ERROR: '+err);
+          //     throw err;
+          //   } else {
+          //     console.log('GitHub deployment done. STATUS: SUCCESS.');
+          //   }
+          // });
         })
       }
     ]
