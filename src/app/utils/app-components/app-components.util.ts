@@ -15,6 +15,7 @@ export * from '../../components/privacy-policy';
 export * from '../../components/repo-list';
 export * from '../../components/repo-list-item';
 export * from '../../components/repos-search';
+export * from '../../components/roadmap';
 export * from '../../components/search-input';
 export * from '../../components/search-results';
 export * from '../../components/sidebar';

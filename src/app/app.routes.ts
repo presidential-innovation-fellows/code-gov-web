@@ -4,6 +4,7 @@ import {
    HomeComponent,
    HomeLayoutComponent,
    PrivacyPolicyComponent,
+   RoadmapComponent,
    SchemaValidatorComponent,
    SearchResultsComponent,
    SharedLayoutComponent,
@@ -22,6 +23,7 @@ export const ROUTES: Routes = [
       ...POLICY_GUIDE_ROUTES,
       { path: 'search', component: SearchResultsComponent },
       { path: 'privacy-policy', component: PrivacyPolicyComponent },
+      { path: 'roadmap', component: RoadmapComponent },
       { path: '**', component: FourOhFourComponent },
     ]
   },
