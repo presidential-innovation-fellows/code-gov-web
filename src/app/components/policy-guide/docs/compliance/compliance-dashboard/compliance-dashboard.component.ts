@@ -59,11 +59,11 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
              // if agencyWidePolicy is null in report.json it means the agency doesn't have
              // to comply, so don't include it in the dash.
              // TODO: should make this more explicit in the API,
-            if (result.statuses[status].requirements['agencyWidePolicy'] != null) {
+            if (result.statuses[status].metadata.agency.requirements['agencyWidePolicy'] != null) {
               requirements = [];
-              for (let requirement in result.statuses[status].requirements) {
-                if (result.statuses[status].requirements.hasOwnProperty(requirement)) {
-                  rValue = result.statuses[status].requirements[requirement];
+              for (let requirement in result.statuses[status].metadata.agency.requirements) {
+                if (result.statuses[status].metadata.agency.requirements.hasOwnProperty(requirement)) {
+                  rValue = result.statuses[status].metadata.agency.requirements[requirement];
 
                   if (rValue < 1) {
                     if (rValue > 0) {
