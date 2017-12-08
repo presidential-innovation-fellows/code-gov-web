@@ -9,7 +9,7 @@
     </ul>
   </div>
   <div class="search-results-header usa-grid">
-    <h3 class="repos-count">
+    <h3 *ngIf="total" class="repos-count">
       We found {{ total }} {{ "Repositories" | pluralize : reposTotal }} for "{{ queryValue }}"
     </h3>
     <form class="search-meta-section" [formGroup]="metaForm">
