@@ -117,6 +117,15 @@ export class SearchResultsComponent {
   sortResults(results) {
     if (this.metaForm.value.sort === 'date') {
       return results.sort((a, b) => {
+        // Move entries without dates to the very end.
+        if (!a.date) {
+          return -1;
+        }
+
+        if (!b.date) {
+          return 1;
+        }
+
         return a.date.lastModified > b.date.lastModified ? -1 : a.date.lastModified === b.date.lastModified ? 0 : 1;
       });
     } else if (this.metaForm.value.sort === 'relevance') {
