@@ -77,7 +77,7 @@
           </ng-template>
         </li>
         <li class="card repo-license usa-width-one-half">
-          <div *ngIf="repo.permissions.licenses[0] && repo.permissions.licenses[0].name | isdefined; then licenseBlock else noLicenseBlock"></div>
+          <div *ngIf="(repo.permissions | isdefined) && (repo.permissions.licenses | isdefined) && (repo.permissions.licenses[0] | isdefined) && (repo.permissions.licenses[0].name | isdefined); then licenseBlock else noLicenseBlock"></div>
           <ng-template #licenseBlock>
             <div class="card__icon">
 
