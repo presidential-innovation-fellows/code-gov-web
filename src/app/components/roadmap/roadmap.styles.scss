@@ -1,4 +1,4 @@
-@import '../../../styles/base/all';
+@import '../../../styles/base/variables';
 
 /* overarching page styles */
 .roadmap-general {
@@ -22,6 +22,12 @@
   h3,
   p {
     color: $color-black;
+  }
+
+  table {
+    border-spacing: 0;
+    margin: 2em 0;
+    min-width: 100%;
   }
 
   th {
