@@ -1,15 +1,17 @@
+@import '~bourbon/app/assets/stylesheets/bourbon';
+@import '~bourbon-neat/app/assets/stylesheets/neat';
+@import '~uswds/src/stylesheets/core/variables';
 @import '../../../styles/base/variables';
 
 /* overarching page styles */
 .roadmap-general {
-
   h3,
   p {
-    color: $color-black;
+    color: $color-gray-dark;
   }
 }
 
-.search-results-banner {
+.roadmap-results-banner {
   background: url('assets/img/american_flag_1920x1280_gradient.jpg');
   background-attachment: fixed;
   background-size: cover;
@@ -25,7 +27,33 @@
   }
 }
 
+.roadmap-results-breadcrumb {
+  font-size: 0.8em;
+  margin-bottom: 4rem;
+
+  ul {
+    li {
+      display: inline-block;
+
+      &::before {
+        content: '> ';
+      }
+
+      &:first-of-type {
+        &::before {
+          content: '';
+        }
+      }
+
+      a {
+        color: $color-black;
+      }
+    }
+  }
+}
+
 /* roadmap overview section of page */
+
 .roadmap-overview {
   padding: 1em 0em 1em;
   margin-top: 2em;
@@ -37,7 +65,7 @@
 
   h3,
   p {
-    color: $color-black;
+    color: $color-gray-dark;
   }
 
   table {
@@ -47,14 +75,14 @@
   }
 
   th {
-    color: $color-black;
+    color: $color-gray-dark;
     font-size: 1.3em;
     text-align: center;
     background-color: $color-cool-blue-lightest;
   }
 
   ul {
-    color: $color-black;
+    color: $color-gray-dark;
     list-style: none;
   }
 
