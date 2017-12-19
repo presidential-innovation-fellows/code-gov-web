@@ -33,7 +33,7 @@
     "agency": {
       "type": "string",
       "description": "The agency acronym for Clinger Cohen Act agency, as defined by the United States Government Manual."
-      
+
     },
     "releases": {
       "type": "array",
@@ -90,7 +90,8 @@
                   "exemptByNationalSecurity",
                   "exemptByAgencySystem",
                   "exemptByAgencyMission",
-                  "exemptByCIO"
+                  "exemptByCIO",
+                  "exemptByPolicyDate"
                 ],
                 "additionalProperties": false
               },
@@ -110,7 +111,7 @@
               "type": "string",
               "description": "An array of keywords that will be helpful in discovering and searching for the release."
             }
-            
+
           },
           "contact": {
             "type": "object",
@@ -118,12 +119,12 @@
               "email": {
                 "type": "string",
                 "description": "The email address for the point of contact for the release."
-                
+
               },
               "name": {
                 "type": "string",
                 "description": "The name of the point of contact for the release."
-                
+
               },
               "URL": {
                 "type": "string",
@@ -228,7 +229,7 @@
                   "format": "uri",
                   "description": "The URL where the software can be found."
                 }
-                
+
               },
               "additionalProperties": false
             }
