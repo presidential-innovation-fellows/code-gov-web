@@ -11,7 +11,7 @@
   }
 }
 
-.roadmap-results-banner {
+.roadmap-banner {
   background: url('assets/img/american_flag_1920x1280_gradient.jpg');
   background-attachment: fixed;
   background-size: cover;
@@ -27,7 +27,7 @@
   }
 }
 
-.roadmap-results-breadcrumb {
+.roadmap-breadcrumb {
   font-size: 0.8em;
   margin-bottom: 4rem;
 
@@ -56,8 +56,10 @@
 
 .roadmap-overview {
   padding: 1em 0em 1em;
-  margin-top: 2em;
-  margin-bottom: 1em;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 /* roadmap table section of page */
@@ -70,7 +72,7 @@
 
   table {
     border-spacing: 0;
-    margin: 2em 0;
+    margin: 2rem 0;
     min-width: 100%;
   }
 
@@ -87,19 +89,19 @@
   }
 
   .fa-graphic-spacing {
-    border-right: 0;
-    padding-right: 0em;
-    padding-left: 0em;
+    border-right: 0rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
   }
 
   .spacing-fa {
-    border-left: 0;
-    padding-left: 0em;
+    border-left: 0rem;
+    padding-left: 0rem;
   }
 
-  padding: 1em 0em 1em;
-  table {margin-top: .25em};
-  table {margin-bottom: .1em};
+  padding: 1rem 0rem 1rem;
+  table {margin-top: .25rem};
+  table {margin-bottom: .1rem};
 }
 
 /* font awesome graphics for the table */
@@ -113,7 +115,7 @@
 
 /* disclaimer section of page */
 .roadmap-disclaimer {
-  padding: 1em 0em 1em;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding: 1rem 0rem 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
