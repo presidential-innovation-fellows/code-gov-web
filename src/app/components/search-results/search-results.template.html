@@ -1,13 +1,16 @@
 <div class="search-results-content">
+
   <div class="search-results-banner">
     <h1>Search Results</h1>
   </div>
+
   <div class="search-results-breadcrumb usa-grid">
     <ul class="usa-unstyled-list">
       <li><a routerLink="/">Home</a></li>
       <li>Search Results</li>
     </ul>
   </div>
+
   <div class="search-results-header usa-grid">
     <h3 *ngIf="total" class="repos-count">
       We found {{ total }} {{ "Repositories" | pluralize : reposTotal }} for "{{ queryValue }}"
@@ -30,6 +33,7 @@
       </p>
     </form>
   </div>
+
   <div class="usa-grid">
     <!-- TODO: Add this section back in once we have better data quality -->
     <!-- <div class="search-filter-section">
@@ -68,8 +72,10 @@
         </fieldset>
       </form>
     </div> -->
+
     <div class="search-results-section">
       <repo-list [queryValue]="queryValue" [results]="filteredResults" [pageSize]="pageSize"></repo-list>
     </div>
+
   </div>
 </div>
