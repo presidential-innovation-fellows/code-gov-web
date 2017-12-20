@@ -68,10 +68,23 @@
     padding: 0rem 3rem 0rem 3rem;
   }
 
+  //slight bump past left & right alignment, should be 3rem
   table {
     min-width: 100%;
-    padding: 0rem 3rem 0rem 3rem;
+    padding: 0rem 2.5rem 0rem 2.5rem;
+  }
 
+  table tr:last-child td:first-child {
+    border-bottom-left-radius: 5px;
+  }
+
+  table tr:last-child td:last-child {
+    border-bottom-right-radius: 5px;
+  }
+
+  table th{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
   }
 
   th {
@@ -81,17 +94,38 @@
     background-color: $color-cool-blue-lightest;
   }
 
-  ul {
+  td {
     color: $color-gray-dark;
-    list-style: none;
   }
 
-  .fa-graphic-spacing {
-    border-right: 0rem;
+  td:has(i){
+    text-align: right;
   }
 
-  .spacing-fa {
+  .text-cell {
     border-left: 0rem;
+    border-bottom: 0rem;
+    border-top: 0rem;
+    text-align: left;
+  }
+
+  .graphic-cell {
+    border-right: 0rem;
+    border-bottom: 0rem;
+    border-top: 0rem;
+    text-align: right;
+  }
+
+  .last-text-cell {
+    border-left: 0rem;
+    border-top: 0rem;
+    text-align: left;
+  }
+
+  .last-graphic-cell {
+    border-right: 0rem;
+    border-top: 0rem;
+    text-align: right;
   }
 
   padding: 0rem 0rem 1rem;
