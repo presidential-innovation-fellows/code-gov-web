@@ -55,11 +55,8 @@
 /* roadmap overview section of page */
 
 .roadmap-overview {
-  padding: 1em 0em 1em;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  padding: 0rem 3rem 3rem 3rem;
+
 }
 
 /* roadmap table section of page */
@@ -68,12 +65,13 @@
   h3,
   p {
     color: $color-gray-dark;
+    padding: 0rem 3rem 0rem 3rem;
   }
 
   table {
-    border-spacing: 0;
-    margin: 2rem 0;
     min-width: 100%;
+    padding: 0rem 3rem 0rem 3rem;
+
   }
 
   th {
@@ -90,16 +88,13 @@
 
   .fa-graphic-spacing {
     border-right: 0rem;
-    padding-right: 0rem;
-    padding-left: 0rem;
   }
 
   .spacing-fa {
     border-left: 0rem;
-    padding-left: 0rem;
   }
 
-  padding: 1rem 0rem 1rem;
+  padding: 0rem 0rem 1rem;
   table {margin-top: .25rem};
   table {margin-bottom: .1rem};
 }
@@ -113,9 +108,9 @@
   color: $color-gold-light;
 }
 
+
 /* disclaimer section of page */
 .roadmap-disclaimer {
-  padding: 1rem 0rem 1rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
