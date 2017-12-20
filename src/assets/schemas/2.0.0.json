@@ -258,17 +258,14 @@
             "properties": {
               "created": {
                 "type": "string",
-                "format": "date",
                 "description": "The date the release was created, in YYYY-MM-DD or ISO 8601 format."
               },
               "lastModified": {
                 "type": "string",
-                "format": "date",
                 "description": "The date the release was modified, in YYYY-MM-DD or ISO 8601 format."
               },
               "metadataLastUpdated": {
                 "type": "string",
-                "format": "date",
                 "description": "The date the metadata of the release was last updated, in YYYY-MM-DD or ISO 8601 format."
               }
             },
