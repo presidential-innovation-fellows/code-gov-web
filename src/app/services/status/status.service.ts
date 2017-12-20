@@ -48,6 +48,8 @@ class CodeJsonIssue {
 class AgencyRequirements {
   agencyWidePolicy: Number;
   schemaFormat: Number;
+  codeInventoried: Number;
+  metOpenSourceRequirement: Number;
   overallCompliance: Number;
 }
 
