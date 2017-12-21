@@ -18,7 +18,7 @@
     "webpack-dev-server": "webpack-dev-server",
     "webdriver-manager": "webdriver-manager",
     "protractor": "protractor",
-    "clean": "npm cache clean && npm run rimraf -- node_modules doc coverage dist",
+    "clean": "npm cache verify && npm run rimraf -- node_modules doc coverage dist",
     "clean:dist": "npm run rimraf -- dist",
     "preclean:install": "npm run clean",
     "clean:install": "npm set progress=false && npm install",
