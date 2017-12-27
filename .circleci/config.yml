@@ -76,10 +76,10 @@ jobs:
       - run:
           name: Run Integration Tests
           command: npm run e2e
-  deploy:
+  deploy-staging:
     working_directory: ~/code-gov
     docker:
-      - image: circleci/node:6.12-stretch-browsers
+      - image: circleci/node:6.12-stretch
     steps:
       - checkout
       - run:
@@ -88,6 +88,18 @@ jobs:
       - run:
         name: Deploy to Staging
         command: npm run federalist-deploy:stag
+  deploy-production:
+    working_directory: ~/code-gov
+    docker:
+      - image: circleci/node:6.12-stretch
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - run:
+        name: Deploy to Production
+        command: npm run federalist-deploy:prod  
 workflows:
   version: 2
   build-test-deploy:
@@ -99,10 +111,18 @@ workflows:
       - integration:
           requires: 
             - test
-      - deploy:
+      - deploy-staging:
           requires: 
             - integration
           filters:
             branches:
               only: master
+      - deploy-production:
+          requires:
+            - integration
+          filters:
+            tags:
+              only: /^v(\d+\.)?(\d+\.)?(\*|\d+)$/
+            branches:
+              ignore: /.*/
       
