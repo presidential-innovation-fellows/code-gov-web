@@ -12,7 +12,7 @@
   "license": "MIT",
   "scripts": {
     "rimraf": "rimraf",
-    "tslint": "tslint --type-check --project tsconfig.json",
+    "tslint": "tslint --project tsconfig.json",
     "typedoc": "typedoc",
     "webpack": "webpack",
     "webpack-dev-server": "webpack-dev-server",
