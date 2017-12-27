@@ -1,15 +1,41 @@
 {
   "name": "code-gov-web",
   "version": "1.0.2",
-  "description": "Code.gov is a website promoting good practices in code development, collaboration, and reuse across the U.S.  Government. Code.gov will provide tools and guidance to help agencies implement the [Federal Source Code Policy](https://sourcecode.cio.gov). It will include an inventory of the government's custom code to promote reuse between agencies and will provide tools to help government and the public collaborate on open source projects.",
+  "description": "Code.gov is a website promoting good practices in code development, collaboration, and reuse across the U.S. Government. Code.gov will provide tools and guidance to help agencies implement the [Federal Source Code Policy](https://sourcecode.cio.gov). It will include an inventory of the government's custom code to promote reuse between agencies and will provide tools to help government and the public collaborate on open source projects.",
   "keywords": [
     "angular2",
     "webpack",
     "typescript"
   ],
-  "author": "Patrick Stapleton <patrick@angularclass.com>",
-  "homepage": "https://github.com/presidential-innovation-fellows/code-gov-web",
-  "license": "MIT",
+  "author": {
+    "name": "Code.gov Team",
+    "url": "https://code.gov",
+    "email": "code@gsa.gov"
+  },
+  "contributors": [
+    {
+      "name": "Zachary Kuhn",
+      "url": "https://github.com/zachary-kuhn"
+    },
+    {
+      "name": "Froilan Irizarry",
+      "url": "https://github.com/froi"
+    },
+    {
+      "name": "Olivier Kamanda",
+      "url": "https://github.com/okamanda"
+    },
+    {
+      "name": "Luke Keller",
+      "url": "https://github.com/lukad03"
+    },
+    {
+      "name": "Matt Bailey",
+      "url": "https://github.com/mattbaiely0"
+    }
+  ],
+  "homepage": "https://github.com/GSA/code-gov-web",
+  "license": "CC0-1.0",
   "scripts": {
     "rimraf": "rimraf",
     "tslint": "tslint --project tsconfig.json",
@@ -49,9 +75,8 @@
     "lint": "npm run tslint \"src/**/*.ts\"",
     "pree2e": "npm run webdriver:update -- --standalone",
     "e2e": "npm run protractor",
-    "e2e:live": "npm run e2e -- --elementExplorer",
+    "e2e:debug": "npm run e2e -- --elementExplorer",
     "test": "karma start",
-    "ci": "npm run lint && npm test && npm run e2e",
     "docs": "npm run typedoc -- --options typedoc.json --exclude '**/*.spec.ts' ./src/",
     "start": "npm run server:dev",
     "start:hmr": "npm run server:dev:hmr",
@@ -180,10 +205,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/presidential-innovation-fellows/code-gov-web.git"
+    "url": "https://github.com/GSA/code-gov-web.git"
   },
   "bugs": {
-    "url": "https://github.com/presidential-innovation-fellows/code-gov-web/issues"
+    "url": "https://github.com/GSA/code-gov-web/issues"
   },
   "engines": {
     "node": ">= 6.9.5",
