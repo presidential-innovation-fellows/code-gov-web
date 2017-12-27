@@ -33,20 +33,19 @@ import { TermService } from '../../services/term';
 })
 
 export class SearchInputComponent {
-  private propagateChange = (_: any) => {};
   @Input() queryValue = '';
   @Output() queryValueChange = new EventEmitter();
   @Input() autofocus = false;
   @Input() name: string;
   @Input() ngModel: any;
-  @Input() placeholder: string = "Search Thousands of Projects...";
+  @Input() placeholder: string = 'Search Thousands of Projects...';
   @Input() withIcon: boolean = false;
   @ViewChild('query') queryElement: ElementRef;
   @ViewChild('searchInput') searchInputElement: ElementRef;
   public autocompleteVisible: boolean = false;
   public queryInputValue: string = '';
-  private termResultsReturnedSource = new BehaviorSubject<Array<any>>([]);
   termResultsObservable: Observable<Array<any>>;
+  private termResultsReturnedSource = new BehaviorSubject<Array<any>>([]);
 
   /**
    * Constructs a ReposSearchComponent.
@@ -153,4 +152,5 @@ export class SearchInputComponent {
     this.queryValue = newValue;
     this.queryValueChange.emit(newValue);
   }
+  private propagateChange = (_: any) => {};
 }

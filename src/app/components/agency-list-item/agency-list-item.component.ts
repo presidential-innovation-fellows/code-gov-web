@@ -12,6 +12,6 @@ export class AgencyListItemComponent {
   constructor() {}
 
   getIcon() {
-    return `assets/img/logos/agencies/${this.agency.id}-50x50.png`
+    return `assets/img/logos/agencies/${this.agency.id}-50x50.png`;
   }
 }

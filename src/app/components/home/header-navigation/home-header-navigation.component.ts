@@ -17,7 +17,7 @@ export class HomeHeaderNavigationComponent {
 
   /**
    * Triggers whenever the window is scrolled.
-   * 
+   *
    * @param $event - the scrolling event
    */
   onScrollHandler($event) {

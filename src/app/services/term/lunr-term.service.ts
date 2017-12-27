@@ -16,6 +16,7 @@ import { zipIndexResults } from '../../utils/zipIndexResults';
 @Injectable()
 
 export class LunrTermService implements TermService {
+  termResultsReturned$;
   private repositoriesIndex: any;
   private agenciesIndex: any;
   private agenciesByRef: Object = {};
@@ -26,8 +27,6 @@ export class LunrTermService implements TermService {
   private releasesSubscription: Subscription;
   private agenciesResults = [];
   private releasesResults = [];
-
-  termResultsReturned$;
 
   constructor(
     private agenciesIndexService: AgenciesIndexService,

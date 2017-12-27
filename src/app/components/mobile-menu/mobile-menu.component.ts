@@ -21,9 +21,9 @@ import { MobileService } from '../../services/mobile';
 })
 
 export class MobileMenuComponent {
-  private isOpen: boolean = false;
   public sideNavSubscription: Subscription;
   public searchQuery: string = '';
+  private isOpen: boolean = false;
   private openAccordions: object = {};
   private agencies = [];
 
@@ -43,7 +43,7 @@ export class MobileMenuComponent {
       '/policy-guide/docs/open-source': router.isActive('/policy-guide/docs/open-source', false),
     };
 
-    this.agencies = this.agencyService.getAgencies()
+    this.agencies = this.agencyService.getAgencies();
   }
 
   ngOnDestroy() {

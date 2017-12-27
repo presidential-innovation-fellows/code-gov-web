@@ -81,7 +81,7 @@ export class SearchResultsComponent {
 
   ngOnInit() {
     this.stateService.set('section', 'explore-code');
-    
+
     this.routeSubscription = this.activatedRoute.queryParams.subscribe(
       (response: any) => {
         this.queryValue = response.q;
@@ -193,6 +193,8 @@ export class SearchResultsComponent {
   }
 
   getLicenses() {
-    return uniq(compact(flatten(this.results.map(result => result.permissions && result.permissions.licenses ? result.permissions.licenses.map(license => license.name) : []))));
+    return uniq(compact(flatten(this.results.map(
+      result => result.permissions && result.permissions.licenses ?
+        result.permissions.licenses.map(license => license.name) : []))));
   }
 }

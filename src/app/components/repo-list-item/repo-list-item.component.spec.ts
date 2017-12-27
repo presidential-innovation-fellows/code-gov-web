@@ -57,7 +57,7 @@ describe('RepoListItemComponent', () => {
   describe('isGitHubRepo()', () => {
     function testUrl(url, isGitHubRepo) {
       fixture.componentInstance.repo.repositoryURL = url;
-      
+
       expect(component.isGitHubRepo()).toBe(isGitHubRepo);
     }
 

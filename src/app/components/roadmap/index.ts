@@ -1,1 +1,1 @@
-export * from './roadmap.component'
+export * from './roadmap.component';

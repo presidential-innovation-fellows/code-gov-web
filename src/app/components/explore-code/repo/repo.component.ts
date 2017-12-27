@@ -61,10 +61,10 @@ export class RepoComponent implements OnInit, OnDestroy {
   getRepositoryUrl() {
     if (!this.repo.repositoryURL) return null;
 
-    if(this.repo.repositoryURL.startsWith('git://')) {
-      const matcher = /git:\/\/(.*?)\/(.*?)\/(.*?)\.git/
+    if (this.repo.repositoryURL.startsWith('git://')) {
+      const matcher = /git:\/\/(.*?)\/(.*?)\/(.*?)\.git/;
       const matches = matcher.exec(this.repo.repositoryURL);
-      return `https://${matches[1]}/${matches[2]}/${matches[3]}`
+      return `https://${matches[1]}/${matches[2]}/${matches[3]}`;
     }
 
     return this.repo.repositoryURL;
