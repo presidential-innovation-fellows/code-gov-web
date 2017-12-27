@@ -120,7 +120,7 @@ describe('AgencyComponent', () => {
             }
           }
         })
-      )
+      );
 
       this.agencyComponent.agencyRepos();
       expect(this.agencyComponent.allRepos).toEqual([
