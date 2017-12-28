@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ${WORKING_DIRECTORY}
+    working_directory: ~/code-gov
     docker:
       - image: circleci/node:6.12.2-stretch
     steps:
