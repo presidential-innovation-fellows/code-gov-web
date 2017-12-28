@@ -111,18 +111,18 @@ workflows:
       - integration:
           requires: 
             - test
-      - deploy-hold:
+      - hold:
           type: approval
           requires: integration
       - deploy-staging:
           requires: 
-            - deploy-hold
+            - hold
           filters:
             branches:
               only: master
       - deploy-production:
           requires:
-            - deploy-hold
+            - hold
           filters:
             tags:
               only: /^v(\d+\.)?(\d+\.)?(\*|\d+)$/
