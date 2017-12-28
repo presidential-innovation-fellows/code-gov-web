@@ -113,7 +113,8 @@ workflows:
             - test
       - hold:
           type: approval
-          requires: integration
+          requires: 
+            - integration
       - deploy-staging:
           requires: 
             - hold
