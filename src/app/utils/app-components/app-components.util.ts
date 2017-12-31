@@ -15,6 +15,7 @@ export * from '../../components/privacy-policy';
 export * from '../../components/repo-list';
 export * from '../../components/repo-list-item';
 export * from '../../components/repos-search';
+export * from '../../components/roadmap';
 export * from '../../components/search-input';
 export * from '../../components/search-results';
 export * from '../../components/sidebar';
@@ -61,6 +62,8 @@ export * from '../../components/policy-guide/policy/policy-open-source';
 export * from '../../components/policy-guide/policy/policy-exceptions';
 export * from '../../components/policy-guide/policy/policy-implementation';
 export * from '../../components/policy-guide/policy/policy-appendix';
+
+export * from '../../components/show-more';
 
 export * from '../../components/tools';
 export * from '../../components/tools/schema-validator';

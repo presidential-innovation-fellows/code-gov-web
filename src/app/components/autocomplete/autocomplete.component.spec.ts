@@ -2,7 +2,8 @@ import {
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
 } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 import { AutocompleteComponent } from './autocomplete.component';
 import { TestBed, ComponentFixture, inject } from '@angular/core/testing';
 

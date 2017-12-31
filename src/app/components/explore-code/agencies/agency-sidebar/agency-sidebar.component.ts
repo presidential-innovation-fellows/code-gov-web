@@ -18,4 +18,8 @@ export class AgencySidebarComponent {
   ngOnInit() {
     this.agencies = this.agencyService.getAgencies();
   }
+
+  getIcon(agency) {
+    return `assets/img/logos/agencies/${agency.id}-50x50.png`;
+  }
 }

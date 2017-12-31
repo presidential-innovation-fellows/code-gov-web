@@ -1,18 +1,30 @@
-<a class="card card--focusable" routerLink="/explore-code/agencies/{{repo.agency}}/repos/{{repo.name}}">
-  <h3 class="repo-name">{{ repo.name }}</h3>
+<div class="repo-list-item card card--focusable">
+  <h3 class="repo-name"><a routerLink="/explore-code/agencies/{{repo.agency}}/repos/{{repo.name}}">{{ repo.name }}</a></h3>
   <p class="repo-description">
     {{ repo.description | truncate : 200 }}
   </p>
-  <ul class="usa-unstyled-list repo-features">
-    <li *ngFor="let language of repo.languages" class="language">
-      <i class="devicons devicons-{{language | lowercase | languageIcon }}"></i>
-      <span>{{ language }}</span>
+  <ul *ngIf="isGitHubRepo() || repo.permissions.usageType === 'openSource' || repo.permissions.usageType === 'governmentWideReuse' || (repo.languages && repo.languages.length > 0) || repo.permissions.licenses[0].name" class="repo-features usa-unstyled-list">
+    <li *ngIf="isGitHubRepo()">
+      <i class="fa fa-github"></i>
+      <span><a [href]="repo.repositoryURL">{{ repo.repositoryURL }}</a></span>
     </li>
     <li *ngIf="repo.permissions.usageType === 'openSource'">
-      <i class="fa fa-code"></i><span>Open Source</span>
+      <i class="fa fa-check-circle-o"></i><span>Open Source</span>
     </li>
     <li *ngIf="repo.permissions.usageType === 'governmentWideReuse'">
       <i class="fa fa-refresh"></i><span>Gov-wide Reuse</span>
     </li>
+    <li *ngIf="repo.languages && repo.languages.length > 0" class="language">
+      <i class="fa fa-code"></i>
+      <span *ngFor="let language of repo.languages">{{ language }}</span>
+    </li>
+    <li *ngIf="repo.permissions && repo.permissions.licenses && repo.permissions.licenses.length > 0 && repo.permissions.licenses[0].name">
+      <i class="fa fa-certificate"></i>
+      <span>{{ repo.permissions.licenses[0].name }}</span>
+    </li>
   </ul>
-</a>
+  <p *ngIf="agency" class="repo-agency-icon">
+    <img [src]="getAgencyIcon()">
+    <span>{{ agency.name }}</span>
+  </p>
+</div>

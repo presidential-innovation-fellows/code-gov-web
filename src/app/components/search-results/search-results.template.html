@@ -1,14 +1,75 @@
 <div class="search-results-content">
-  <div class="search-container">
-    <div class="usa-grid">
-      <div class="search-col">
-        <repos-search [queryValue]="queryValue" buttonClasses="button--primary"></repos-search>
-      </div>
-    </div>
+  <div class="search-results-banner">
+    <h1>Search Results</h1>
+  </div>
+  <div class="search-results-breadcrumb usa-grid">
+    <ul class="usa-unstyled-list">
+      <li><a routerLink="/">Home</a></li>
+      <li>Search Results</li>
+    </ul>
+  </div>
+  <div class="search-results-header usa-grid">
+    <h3 *ngIf="total" class="repos-count">
+      We found {{ total }} {{ "Repositories" | pluralize : reposTotal }} for "{{ queryValue }}"
+    </h3>
+    <form class="search-meta-section" [formGroup]="metaForm">
+      <p>
+        <label for="sort">Sort</label>
+        <select id="sort" name="sort" formControlName="sort">
+          <option value="relevance">Relevance</option>
+          <option value="date">Date</option>
+        </select>
+      </p>
+      <p class="page-size-field">
+        <label for="pageSize">Items Per Page</label>
+        <select id="pageSize" name="pageSize" formControlName="pageSize">
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+        </select>
+      </p>
+    </form>
   </div>
   <div class="usa-grid">
-    <div class="content-col">
-      <repo-list [queryValue]="queryValue"></repo-list>
+    <!-- TODO: Add this section back in once we have better data quality -->
+    <!-- <div class="search-filter-section">
+      <h4>Filter</h4>
+      <form class="search-filters" [formGroup]="filterForm">
+        <fieldset class="usa-fieldset-inputs">
+          <ul class="search-filter usa-unstyled-list" *ngIf="getLanguages().length > 0">
+            <li>
+              <h5>Language</h5>
+              <show-more [formGroup]="filterForm" name="languages" [list]="getLanguages()"></show-more>
+            </li>
+          </ul>
+          <ul class="search-filter usa-unstyled-list" *ngIf="getLicenses().length > 0">
+            <li>
+              <h5>License</h5>
+              <ul class="usa-unstyled-list">
+                <li *ngFor="let license of getLicenses()">
+                  <input id="license-{{ license }}" name="license" type="checkbox" value="{{ license }}" /><label for="license-{{ license }}"><span>{{ license }}</span></label>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="search-filter usa-unstyled-list">
+            <li>
+              <h5>Usage Type</h5>
+              <ul class="usa-unstyled-list" [formGroup]="filterForm.controls.usageTypes">
+                <li>
+                  <input id="usage-type-government-wide-reuse" name="usageType" type="checkbox" value="government-wide-reuse" formControlName="governmentWideReuse" /><label for="usage-type-government-wide-reuse"><span>Government-Wide Reuse</span></label>
+                </li>
+                <li>
+                  <input id="usage-type-open-source" name="usageType" type="checkbox" value="open-source" formControlName="openSource" /><label for="usage-type-open-source"><span>Open Source</span></label>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </fieldset>
+      </form>
+    </div> -->
+    <div class="search-results-section">
+      <repo-list [queryValue]="queryValue" [results]="filteredResults" [pageSize]="pageSize"></repo-list>
     </div>
   </div>
 </div>

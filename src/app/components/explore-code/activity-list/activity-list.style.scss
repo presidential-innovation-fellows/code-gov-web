@@ -1,4 +1,7 @@
-@import '../../../../styles/base/all';
+@import '../../../../styles/base/variables';
+@import '~bourbon/app/assets/stylesheets/bourbon';
+@import '~bourbon-neat/app/assets/stylesheets/neat';
+@import '~uswds/src/stylesheets/core/variables';
 
 .activity {
   margin-bottom: 1em;
@@ -65,7 +68,7 @@
     @include clearfix;
 
     div {
-      @include grid-column(6);
+      @include span-columns(6);
     }
 
     h3 {

@@ -1,4 +1,8 @@
-@import '../../../styles/base/all';
+@import '~bourbon/app/assets/stylesheets/bourbon';
+@import '~bourbon-neat/app/assets/stylesheets/neat';
+@import '../../../styles/base/grid-settings';
+@import '../../../styles/base/variables';
+@import '~uswds/src/stylesheets/core/variables';
 
 body {
   background-color: $color-white;
@@ -37,9 +41,11 @@ body {
   }
 
   hr {
+    border-bottom: 0;
     border-top: 6px solid $brand-teal;
+    margin-bottom: 2rem;
     margin-top: 3rem;
-    width: 30rem;
+    max-width: 30rem;
 
     @media screen and (min-width: $small-screen) {
       margin-top: 6rem;
@@ -90,7 +96,12 @@ body {
 }
 
 .about-action {
+  @include span-columns(12);
   text-align: center;
+
+  @media screen and (min-width: $medium-screen) {
+    @include span-columns(4);
+  }
 
   > a > img {
     padding: 1rem;
@@ -185,7 +196,7 @@ body {
 .banner-background {
   animation: 15s linear zoomOutOnBackground;
   background-attachment: scroll;
-  background-image: url('assets/img/american_flag_1920x1280_gradient.jpg');
+  background-image: url('../../../assets/img/american_flag_1920x1280_gradient.jpg');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -279,7 +290,7 @@ body {
 
   .usa-grid {
     @media screen and (min-width: $medium-screen) {
-      background: url('assets/img/featured-projects/typing.png');
+      background: url('../../../assets/img/featured-projects/typing.png');
       background-position: 0% 100%;
       background-repeat: no-repeat;
       background-size: 34rem;
@@ -315,7 +326,7 @@ body {
 
   .usa-grid {
     @media screen and (min-width: $medium-screen) {
-      background: url('assets/img/featured-projects/construction_worker.png');
+      background: url('../../../assets/img/featured-projects/construction_worker.png');
       background-position: 103% 100%;
       background-repeat: no-repeat;
       background-size: 34rem;
@@ -358,8 +369,8 @@ body {
   color: $color-white;
 
   @media screen and (min-width: $medium-screen) {
-    background: url('assets/img/featured-projects/grass.png'), #3f7fab;
-    background: url('assets/img/featured-projects/grass.png'), linear-gradient(215deg, #3f7fab, #6db5f1);
+    background: url('../../../assets/img/featured-projects/grass.png'), #3f7fab;
+    background: url('../../../assets/img/featured-projects/grass.png'), linear-gradient(215deg, #3f7fab, #6db5f1);
     background-position: 0% 100%;
     background-repeat: no-repeat;
     background-size: cover, contain;
@@ -386,7 +397,7 @@ body {
 
   .usa-grid {
     @media screen and (min-width: $medium-screen) {
-      background: url('assets/img/featured-projects/house_for_sale.png');
+      background: url('../../../assets/img/featured-projects/house_for_sale.png');
       background-position: 0% 100%;
       background-repeat: no-repeat;
       background-size: 50%;
@@ -451,7 +462,7 @@ body {
 
 .press {
   background-attachment: scroll;
-  background-image: url('assets/img/american_flag_1920x1280_gradient.png');
+  background-image: url('../../../assets/img/american_flag_1920x1280_gradient.jpg');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -468,9 +479,11 @@ body {
   }
 
   hr {
+    border-bottom: 0;
     border-top: 4px solid $brand-teal;
+    margin-bottom: 2rem;
     margin-top: 2rem;
-    width: 30rem;
+    max-width: 30rem;
 
     @media screen and (min-width: $small-screen) {
       margin-top: 3rem;

@@ -5,12 +5,15 @@ import {
   Response
 } from '@angular/http';
 import { Injectable } from '@angular/core';
-import { Observable, Subject, Subscription } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
+import { Subscription } from 'rxjs/Subscription';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import 'rxjs/add/operator/map';
 
 import { AgenciesIndexService, ReleasesIndexService } from '../indexes';
 import { SearchService } from './search.service';
+import { zipIndexResults } from '../../utils/zipIndexResults';
 
 @Injectable()
 
@@ -18,19 +21,12 @@ export class LunrSearchService implements SearchService {
   searchResultsReturned$: Observable<Array<any>>;
   total = 0;
 
-  private searchObservable = new Observable();
   private results = [];
-  private loadedResults = [];
-  private currentIndex = 0;
-  private pageSize = 20;
   private searchResultsReturnedSource = new BehaviorSubject<Array<any>>(null);
-  private previousQuery = '';
   private agenciesSource: Subject<any> = new Subject();
   private releasesSource: Subject<any> = new Subject();
   private agenciesSubscription: Subscription;
   private releasesSubscription: Subscription;
-  private agenciesResults = [];
-  private releasesResults = [];
 
   constructor(
     private agenciesIndexService: AgenciesIndexService,
@@ -51,20 +47,12 @@ export class LunrSearchService implements SearchService {
     this.releasesSubscription = Observable.zip(
       releasesReturned,
       agenciesReturned,
-      function (releasesResults, agenciesResults) {
-        return [...agenciesResults, ...releasesResults]
-          .sort((a, b) => a.score > b.score ? -1 : a.score === b.score ? 0 : 1)
-          .map(result => result.item);
-      },
+      zipIndexResults,
     ).subscribe((searchResults) => {
-      this.currentIndex = 0;
       this.results = searchResults;
 
       this.total = this.results.length;
-      this.loadedResults = this.results
-        .slice(this.currentIndex, this.currentIndex + this.pageSize);
-      this.currentIndex = this.currentIndex + this.pageSize;
-      this.searchResultsReturnedSource.next(this.loadedResults);
+      this.searchResultsReturnedSource.next(this.results);
     });
   }
 
@@ -76,15 +64,5 @@ export class LunrSearchService implements SearchService {
   search(query: string) {
     this.releasesIndexService.search(query, this.releasesSource);
     this.agenciesIndexService.search(query, this.agenciesSource);
-  }
-
-  nextPage() {
-    if (this.currentIndex <= this.total) {
-      this.loadedResults = this.loadedResults.concat(
-        this.results
-          .slice(this.currentIndex, this.currentIndex + this.pageSize));
-      this.currentIndex = this.currentIndex + this.pageSize;
-      this.searchResultsReturnedSource.next(this.loadedResults);
-    }
   }
 }

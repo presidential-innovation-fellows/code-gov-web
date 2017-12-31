@@ -1,80 +1,82 @@
-<sidebar>
-  <sidebar-menu-text>Menu</sidebar-menu-text>
-  <sidebar-content>
-    <li routerLinkActive="usa-current">
-      <a routerLink="overview" routerLinkActive="usa-current">Overview</a>
-      <ul class="usa-sidenav-sub_list">
-        <li>
-          <a routerLink="overview/introduction" routerLinkActive="usa-current">
-            Introduction
-          </a>
-        </li>
-        <li>
-          <a routerLink="overview/tracking-progress" routerLinkActive="usa-current">
-            Tracking Progress
-          </a>
-        </li>
-      </ul>
-    </li>
-    <li routerLinkActive="usa-current">
-      <a routerLink="compliance" routerLinkActive="usa-current">Compliance</a>
-      <ul class="usa-sidenav-sub_list">
-        <li>
-          <a routerLink="compliance/dashboard" routerLinkActive="usa-current">
-            Agency Compliance
-          </a>
-        </li>
-        <li> <!-- todo -->
-          <a routerLink="compliance/procurement" routerLinkActive="usa-current">
-            How to Procure Software
-          </a>
-        </li>
-        <li>
-          <a routerLink="compliance/inventory-code" routerLinkActive="usa-current">
-            How to Inventory Code
-          </a>
-          <ul class="usa-sidenav-sub_list">
-            <li>
-              <a routerLink="compliance/inventory-code/tools/validate-schema" routerLinkActive="usa-current">
-                Validate Schema
-              </a>
-            </li>
-            <li>
-              <a routerLink="compliance/inventory-code/tools/upgrade-schema" routerLinkActive="usa-current">
-                Upgrade Schema
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li routerLinkActive="usa-current">
-      <a routerLink="open-source" routerLinkActive="usa-current">Open Source Pilot</a>
-      <ul class="usa-sidenav-sub_list">
-        <li>
-          <a routerLink="open-source/introduction" routerLinkActive="usa-current">
-            Introduction
-          </a>
-        </li>
-        <li>
-          <a routerLink="open-source/resources" routerLinkActive="usa-current">
-            Tools and Resources
-          </a>
-        </li>
-        <li>
-          <a routerLink="open-source/measuring-code" routerLinkActive="usa-current">
-            How to Measure Code
-          </a>
-        </li>
-        <li> <!-- todo -->
-          <a routerLink="open-source/licensing" routerLinkActive="usa-current">
-            Licensing
-          </a>
-        </li>
-      </ul>
-    </li>
-  </sidebar-content>
-</sidebar>
+<div class="sidebar-docs">
+  <sidebar>
+    <sidebar-menu-text>Menu</sidebar-menu-text>
+    <sidebar-content>
+      <li routerLinkActive="usa-current">
+        <a routerLink="overview" routerLinkActive="usa-current">Overview</a>
+        <ul class="usa-sidenav-sub_list">
+          <li>
+            <a routerLink="overview/introduction" routerLinkActive="usa-current">
+              Introduction
+            </a>
+          </li>
+          <li>
+            <a routerLink="overview/tracking-progress" routerLinkActive="usa-current">
+              Tracking Progress
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li routerLinkActive="usa-current">
+        <a routerLink="compliance" routerLinkActive="usa-current">Compliance</a>
+        <ul class="usa-sidenav-sub_list">
+          <li>
+            <a routerLink="compliance/dashboard" routerLinkActive="usa-current">
+              Agency Compliance
+            </a>
+          </li>
+          <li> <!-- todo -->
+            <a routerLink="compliance/procurement" routerLinkActive="usa-current">
+              How to Procure Software
+            </a>
+          </li>
+          <li>
+            <a routerLink="compliance/inventory-code" routerLinkActive="usa-current">
+              How to Inventory Code
+            </a>
+            <ul class="usa-sidenav-sub_list">
+              <li>
+                <a routerLink="compliance/inventory-code/tools/validate-schema" routerLinkActive="usa-current">
+                  Validate Schema
+                </a>
+              </li>
+              <li>
+                <a routerLink="compliance/inventory-code/tools/upgrade-schema" routerLinkActive="usa-current">
+                  Upgrade Schema
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li routerLinkActive="usa-current">
+        <a routerLink="open-source" routerLinkActive="usa-current">Open Source Pilot</a>
+        <ul class="usa-sidenav-sub_list">
+          <li>
+            <a routerLink="open-source/introduction" routerLinkActive="usa-current">
+              Introduction
+            </a>
+          </li>
+          <li>
+            <a routerLink="open-source/resources" routerLinkActive="usa-current">
+              Tools and Resources
+            </a>
+          </li>
+          <li>
+            <a routerLink="open-source/measuring-code" routerLinkActive="usa-current">
+              How to Measure Code
+            </a>
+          </li>
+          <li> <!-- todo -->
+            <a routerLink="open-source/licensing" routerLinkActive="usa-current">
+              Licensing
+            </a>
+          </li>
+        </ul>
+      </li>
+    </sidebar-content>
+  </sidebar>
+</div>
 
 <section class="docs-content">
   <router-outlet></router-outlet>

@@ -1,0 +1,91 @@
+@import '../../../styles/base/variables';
+
+/* overarching page styles */
+.roadmap-general {
+
+  h3,
+  p {
+    color: $color-black;
+  }
+}
+
+.search-results-banner {
+  background: url('assets/img/american_flag_1920x1280_gradient.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  margin-bottom: 2rem;
+  padding-bottom: 8rem;
+  padding-top: 8rem;
+  text-align: center;
+
+  h1 {
+    color: $color-white;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+}
+
+/* roadmap overview section of page */
+.roadmap-overview {
+  padding: 1em 0em 1em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+/* roadmap table section of page */
+.roadmap-table {
+
+  h3,
+  p {
+    color: $color-black;
+  }
+
+  table {
+    border-spacing: 0;
+    margin: 2em 0;
+    min-width: 100%;
+  }
+
+  th {
+    color: $color-black;
+    font-size: 1.3em;
+    text-align: center;
+    background-color: $color-cool-blue-lightest;
+  }
+
+  ul {
+    color: $color-black;
+    list-style: none;
+  }
+
+  .fa-graphic-spacing {
+    border-right: 0;
+    padding-right: 0em;
+    padding-left: 0em;
+  }
+
+  .spacing-fa {
+    border-left: 0;
+    padding-left: 0em;
+  }
+
+  padding: 1em 0em 1em;
+  table {margin-top: .25em};
+  table {margin-bottom: .1em};
+}
+
+/* font awesome graphics for the table */
+.fa.fa-check {
+  color: $color-green-light;
+}
+
+.fa.fa-circle {
+  color: $color-gold-light;
+}
+
+/* disclaimer section of page */
+.roadmap-disclaimer {
+  padding: 1em 0em 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}

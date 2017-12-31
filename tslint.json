@@ -5,10 +5,20 @@
   "rules": {
     "member-access": false,
     "member-ordering": [
-      true,
-      "public-before-private",
-      "static-before-instance",
-      "variables-before-functions"
+      true, 
+      {
+        "order":[ 
+          "public-static-field",
+          "public-instance-field",
+          "private-static-field",
+          "private-instance-field",
+          "public-constructor",
+          "private-constructor",
+          "public-instance-method",
+          "protected-instance-method",
+          "private-instance-method"
+        ]
+      }
     ],
     "no-any": false,
     "no-inferrable-types": false,
@@ -75,7 +85,7 @@
     ],
     "max-line-length": [
       true,
-      100
+      120
     ],
     "no-require-imports": false,
     "no-trailing-whitespace": true,

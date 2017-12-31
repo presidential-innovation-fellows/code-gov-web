@@ -8,6 +8,8 @@
   <title>Code.gov</title>
   <meta name="description" content="Code.gov is a platform designed to improve access to the federal government’s custom-developed software.">
 
+  <meta property="og:title" content="Code.gov" />
+  <meta property="og:site_name" content="Code.gov" />
   <meta property="og:image" content="assets/img/og.jpg">
   <meta property="og:image:url" content="assets/img/og.jpg">
   <meta property="og:image:type" content="image/jpeg">
@@ -17,20 +19,19 @@
   <meta property="twitter:image:src" content="https://code.gov/assets/img/og.jpg">
   <meta property="twitter:image:width" content="1200">
   <meta property="twitter:image:height" content="600">
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@CodeDotGov" />
+  <meta name="twitter:title" content="Code.gov" />
+  <meta name="twitter:description" content="Code.gov is a platform designed to improve access to the federal government’s custom-developed software." />
+  <meta name="twitter:image" content="https://code.gov/assets/img/og.jpg" />
 
   <link rel="image_src" type="image/jpeg" href="https://code.gov/assets/img/og.jpg">
-  <link rel="preload" href="assets/fonts/fontawesome-webfont.woff2?v=4.6.3" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="./assets/img/american_flag_1920x1280_gradient.jpg">
+  <link rel="stylesheet" href="assets/fonts.css" as="style" onload="this.rel='stylesheet'">
 
-  <link rel="stylesheet" href="assets/fonts.css">
-  <link rel="stylesheet" href="assets/uswds.min.css">
-  <link rel="stylesheet" href="assets/dashboard.css">
-  <link rel="stylesheet" href="assets/bootstrap.min.css">
-  <link rel="preload" href="assets/img/american_flag_1920x1280_gradient.jpg" as="image">
-
-  <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.en&unknown=polyfill"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.en&unknown=polyfill" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.js" defer></script>
 
   <% if (webpackConfig.htmlElements.headTags) { %>
   <!-- Configured Head Tags  -->

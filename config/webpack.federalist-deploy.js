@@ -47,9 +47,9 @@ if (helpers.hasProcessFlag('federalist-stag')){
   GIT_BRANCH_NAME = 'federalist-dashboard-preview';
   BASEURL = '/preview/gsa/code-gov-web/'+GIT_BRANCH_NAME+'/';
   gtmAuth = 'GTM-M9L9Q5';
-  
+
 } else if (helpers.hasProcessFlag('federalist-prod')){
-  GIT_BRANCH_NAME = 'federalist-pages';
+  GIT_BRANCH_NAME = 'federalist-prod';
   BASEURL = '/';
   gtmAuth = 'GTM-M9L9Q5';
   robotsTxtConf.policy = [{
@@ -57,12 +57,12 @@ if (helpers.hasProcessFlag('federalist-stag')){
     allow: '/'
   }];
   robotsTxtConf.host = 'https://code.gov';
-  
+
 } else {
   GIT_BRANCH_NAME = 'federalist-dev';
   BASEURL = `/preview/gsa/code-gov-web/${GIT_BRANCH_NAME}/`;
   gtmAuth = 'GTM-M9L9Q5';
-  
+
 }
 
 const METADATA = webpackMerge(webpackConfig.metadata, {
@@ -105,7 +105,6 @@ module.exports = function (env) {
             postcssImport({ addDependencyTo: webpack }),
             postcssCssnext({
               browsers: ['last 2 versions', 'ie >= 9'],
-              compress: true,
             }),
           ],
           sassLoader: {

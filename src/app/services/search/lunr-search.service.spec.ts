@@ -7,7 +7,7 @@ import {
   Response,
   XHRBackend
 } from '@angular/http';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 
 import { LunrSearchService } from './lunr-search.service';
 

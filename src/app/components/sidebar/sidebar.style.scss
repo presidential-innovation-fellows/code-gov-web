@@ -1,4 +1,6 @@
-@import '../../../styles/base/all';
+@import '~bourbon/app/assets/stylesheets/bourbon';
+@import '~bourbon-neat/app/assets/stylesheets/neat';
+@import '~uswds/src/stylesheets/core/variables';
 
 .menu-icon {
   transform: rotate(0deg);
@@ -149,10 +151,6 @@
 
 .sidebar {
   position: relative;
-
-  @media screen and (min-width: $medium-screen) {
-    @include grid-column(3);
-  }
 
   &.active {
     .usa-sidenav-list {

@@ -33,7 +33,7 @@
     "agency": {
       "type": "string",
       "description": "The agency acronym for Clinger Cohen Act agency, as defined by the United States Government Manual."
-      
+
     },
     "releases": {
       "type": "array",
@@ -90,7 +90,8 @@
                   "exemptByNationalSecurity",
                   "exemptByAgencySystem",
                   "exemptByAgencyMission",
-                  "exemptByCIO"
+                  "exemptByCIO",
+                  "exemptByPolicyDate"
                 ],
                 "additionalProperties": false
               },
@@ -110,7 +111,7 @@
               "type": "string",
               "description": "An array of keywords that will be helpful in discovering and searching for the release."
             }
-            
+
           },
           "contact": {
             "type": "object",
@@ -118,12 +119,12 @@
               "email": {
                 "type": "string",
                 "description": "The email address for the point of contact for the release."
-                
+
               },
               "name": {
                 "type": "string",
                 "description": "The name of the point of contact for the release."
-                
+
               },
               "URL": {
                 "type": "string",
@@ -204,8 +205,11 @@
                   "type": "string",
                   "format": "uri",
                   "description": "The URL where the code repository, project, library or release can be found."
+                },
+                "isGovernmentRepo": {
+                  "type": "boolean",
+                  "description": "Is the code repository owned or managed by a federal agency?"
                 }
-                
               },
               "additionalProperties": false
             }
@@ -225,7 +229,7 @@
                   "format": "uri",
                   "description": "The URL where the software can be found."
                 }
-                
+
               },
               "additionalProperties": false
             }
@@ -254,17 +258,14 @@
             "properties": {
               "created": {
                 "type": "string",
-                "format": "date",
                 "description": "The date the release was created, in YYYY-MM-DD or ISO 8601 format."
               },
               "lastModified": {
                 "type": "string",
-                "format": "date",
                 "description": "The date the release was modified, in YYYY-MM-DD or ISO 8601 format."
               },
               "metadataLastUpdated": {
                 "type": "string",
-                "format": "date",
                 "description": "The date the metadata of the release was last updated, in YYYY-MM-DD or ISO 8601 format."
               }
             },

@@ -1,4 +1,6 @@
-@import '../../../../styles/base/all';
+@import '~bourbon/app/assets/stylesheets/addons/clearfix';
+@import '../../../../styles/base/variables';
+@import '~uswds/src/stylesheets/core/variables';
 
 .repo-container {
   @include clearfix;

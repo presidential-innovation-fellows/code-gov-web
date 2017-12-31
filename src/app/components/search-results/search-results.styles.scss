@@ -1,9 +1,161 @@
-@import '../../../styles/base/all';
+@import '~bourbon/app/assets/stylesheets/bourbon';
+@import '~bourbon-neat/app/assets/stylesheets/neat';
+@import '~uswds/src/stylesheets/core/variables';
+@import '../../../styles/base/variables';
 
-.search-col {
-  @media screen and (min-width: $medium-screen) {
-    @include grid-column(9);
+h3 {
+  font-size: 1.2em;
+}
+
+.search-results-banner {
+  background: url('assets/img/american_flag_1920x1280_gradient.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  margin-bottom: 2rem;
+  padding-bottom: 8rem;
+  padding-top: 8rem;
+  text-align: center;
+
+  h1 {
+    color: $color-white;
+    margin-bottom: 0;
+    text-transform: uppercase;
   }
+}
+
+.search-results-breadcrumb {
+  font-size: 0.8em;
+  margin-bottom: 4rem;
+
+  ul {
+    li {
+      display: inline-block;
+
+      &::before {
+        content: '> ';
+      }
+
+      &:first-of-type {
+        &::before {
+          content: '';
+        }
+      }
+
+      a {
+        color: $color-black;
+      }
+    }
+  }
+}
+
+.search-results-header {
+  h3 {
+    display: inline-block;
+  }
+
+  .search-meta-section {
+    clear: both;
+    float: left;
+
+    @media screen and (min-width: $medium-screen) {
+      clear: none;
+      float: right;
+    }
+
+    .page-size-field {
+      display: none;
+      margin-left: 2rem;
+
+      @media screen and (min-width: $large-screen) {
+        display: inline-block;
+      } 
+    }
+
+    label,
+    p,
+    select {
+      float: left;
+      margin-top: 0;
+      margin-bottom: 0;
+      white-space: nowrap;
+    }
+
+    p {
+      background-color: $brand-blue-gray-dark;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      color: $color-white;
+      line-height: 1;
+    }
+
+    label {
+      border-bottom: 1px solid transparent;
+      border-top: 1px solid transparent;
+      font-size: 0.7em;
+      font-weight: bold;
+      line-height: 1.3;
+      padding-bottom: 0.4rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-top: 0.4rem;
+      vertical-align: text-bottom;
+    }
+
+    select {
+      border-color: $color-gray-lighter;
+      font-size: 0.7em;
+      height: auto;
+      padding-bottom: 0.4rem;
+      padding-top: 0.4rem;
+      vertical-align: top;
+      width: auto;
+    }
+  }
+}
+
+.search-filter-section {
+  @include span-columns(3);
+
+  padding-top: 2rem;
+
+  h4 {
+    margin-bottom: 1rem;
+  }
+}
+
+.search-filters {
+  background-color: $color-gray-lightest;
+  padding: 1rem;
+}
+
+.search-filter {
+  h5 {
+    color: $color-black;
+    margin-top: 0;
+  }
+
+  ul {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    font-size: 0.8em;
+
+    label {
+      span {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% - 30px);
+      }
+    }
+  }
+
+  .show-more {
+    color: $color-gray-medium;
+    text-decoration: none;
+  }
+}
+
+.search-results-section {
+  @include span-columns(12);
 }
 
 .load-more-button {
@@ -17,6 +169,7 @@
 }
 
 .repos-count {
+  float: left;
   font-size: 1.1em;
   font-weight: bold;
 }

@@ -1,14 +1,22 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject, Subscription } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
+import { Subscription } from 'rxjs/Subscription';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import 'rxjs/add/observable/concat';
+import 'rxjs/add/observable/zip';
+import 'rxjs/add/operator/first';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/single';
 
 import { AgenciesIndexService, ReleasesIndexService } from '../indexes';
 import { TermService } from './term.service';
+import { zipIndexResults } from '../../utils/zipIndexResults';
 
 @Injectable()
 
 export class LunrTermService implements TermService {
+  termResultsReturned$;
   private repositoriesIndex: any;
   private agenciesIndex: any;
   private agenciesByRef: Object = {};
@@ -19,8 +27,6 @@ export class LunrTermService implements TermService {
   private releasesSubscription: Subscription;
   private agenciesResults = [];
   private releasesResults = [];
-
-  termResultsReturned$;
 
   constructor(
     private agenciesIndexService: AgenciesIndexService,
@@ -43,11 +49,7 @@ export class LunrTermService implements TermService {
     this.searchResults = Observable.zip(
       releasesReturned,
       agenciesReturned,
-      function (releasesResults, agenciesResults) {
-        return [...agenciesResults, ...releasesResults]
-          .sort((a, b) => a.score > b.score ? -1 : a.score === b.score ? 0 : 1)
-          .map(result => result.item);
-      },
+      zipIndexResults,
     );
   }
 

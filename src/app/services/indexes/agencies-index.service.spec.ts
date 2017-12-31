@@ -7,7 +7,8 @@ import {
   Response,
   XHRBackend
 } from '@angular/http';
-import { Observable, Subject } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 
 import { AgenciesIndexService } from './agencies-index.service';
 

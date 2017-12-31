@@ -26,25 +26,27 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 <h4>Required</h4>
 
 <ul>
-	<li><code>version</code>: [string] The version of the metadata schema in use. Implements semantic versioning 2.0.0 rules as defined at http://semver.org. For example "2.0.0."</li>
+	<li><code>version</code>: [string] Code.gov’s version of the metadata schema in use. Implements semantic versioning 2.0.0 rules as defined at http://semver.org. For example "2.0.0."</li>
   <li><code>measurementType</code>: [object] An object containing description of the open source measurement method.
   <ul>
     <li><code>method</code>: [enum] An enumerated list of methods for measuring the open source requirement.
+    
     <ul>
-      <li><code>linesOfCode</code>: Source lines of code.</li>
-				<li><code>modules</code>: Number of self-contained modules.</li>
-        <li><code>cost</code>: Cost of software development.</li>
-        <li><code>projects</code>: Number of software projects.</li>
-        <li><code>systems</code>: System certification and accreditation boundaries.</li>
+      	<li><code>cost</code>: Cost of software development.</li>
+        <li><code>systems</code>: System certification and accreditation boundaries.</li> 
+        <li><code>projects</code>: A complete software solution / project.</li>     	
+		<li><code>modules</code>: A self-contained module from a software solution.</li>
+        <li><code>linesOfCode</code>: Source lines of code.</li>
         <li><code>other</code>: Another measurement method not referenced above.</li>
-			</ul>
+	</ul>
+    
     </li>
     </ul>
     <ul>
     <li><code>ifOther</code>: [string] A one- or two- sentence description of the measurement type used, if 'other' is selected as the value of 'method' field.</li>
 			</ul>
   </li>
-	<li><code>agency</code>: [string] The agency acronym for Clinger Cohen Act agency, as defined by the United States Government Manual. For example "GSA" or "DOD."</li>
+	<li><code>agency</code>: [string] The agency acronym for Clinger Cohen Act agency, as defined by the United States Government Manual. For example "GSA" or "DOD." Please use uppercase letters.</li>
 	<li><code>releases</code>: [array] Contains objects representing each versioned source code release made available.</li>
 	<ul>
 		<li>
@@ -69,13 +71,15 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
     <li><code>usageType</code>: [enum] A list of enumerated values which describes the usage permissions for the release.
     <ul>
       <li><code>openSource</code>: Open source</li>
-				<li><code>governmentWideReuse</code>: Government-wide reuse.</li>
-        <li><code>exemptByLaw</code>: The sharing of the source code is restricted by law or regulation, including—but not limited to—patent or intellectual property law, the Export Asset Regulations, the International Traffic in Arms Regulation, and the Federal laws and regulations governing classified information.</li>
-        <li><code>exemptByNationalSecurity</code>: The sharing of the source code would create an identifiable risk to the detriment of national security, confidentiality of Government information, or individual privacy.</li>
-        <li><code>exemptByAgencySystem</code>: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel.</li>
-        <li><code>exemptByAgencyMission</code>: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations.</li>
-        <li><code>exemptByCIO</code>: The CIO believes it is in the national interest to exempt sharing the source code.</li>
-			</ul>
+	  <li><code>governmentWideReuse</code>: Government-wide reuse.</li>
+      <li><code>exemptByLaw</code>: The sharing of the source code is restricted by law or regulation, including—but not limited to—patent or intellectual property law, the Export Asset Regulations, the International Traffic in Arms Regulation, and the Federal laws and regulations governing classified information.</li>
+       <li><code>exemptByNationalSecurity</code>: The sharing of the source code would create an identifiable risk to the detriment of national security, confidentiality of Government information, or individual privacy.</li>
+       <li><code>exemptByAgencySystem</code>: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel.</li>
+       <li><code>exemptByAgencyMission</code>: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations.</li>
+       <li><code>exemptByCIO</code>: The CIO believes it is in the national interest to exempt sharing the source code.</li>
+       <li><code>exemptByPolicyDate</code>: The release was created prior to the M-16-21 policy (August 8, 2016).</li>
+	</ul>
+
     </li>
     </ul>
     <ul>
@@ -86,7 +90,7 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 			<code>laborHours</code>: [number] An estimate of total labor hours spent by your organization/component across all versions of this release. This includes labor performed by federal employees and contractors.
 		</li>
 		<li>
-			<code>tags</code>: [array] An array of keywords that will be helpful in discovering and searching for the release.</li>
+			<code>tags</code>: [array] An array of keywords that will be helpful in discovering and searching for the release. For example: cms, feature, image processing, tool, integration, accessibility, 508, geospatial, map, etc.</li>
 		<li>
 			<code>contact</code>: [object] Information about contacting the release.
 			<ul>
@@ -115,7 +119,7 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 					<li><code>"Archival"</code> - finished release, but no longer actively maintained.</li>
 				</ul>
 			</li>
-			<li><code>vcs</code>: [string] A lowercase string with the name of the version control system that is being used for the release. For example, 'git.'</li>
+			<li><code>vcs</code>: [string] A lowercase string with the name of the version control system that is being used for the release. For example: git, cvs, svn, mercurial, vss, etc.</li>
 			<li><code>homepageURL</code>: [string] The URL of the public release homepage.</li>
 			<li><code>downloadURL</code>: [string] The URL where a distribution of the release can be found.</li>
 			<li><code>disclaimerText</code>: [string] Short paragraph that includes disclaimer language to accompany the release.</li>
@@ -139,8 +143,8 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 			<li>
 			<code>relatedCode</code>: [array] An array of affiliated government repositories that may be a part of the same project. For example,  relatedCode for 'code-gov-web' would include 'code-gov-api' and 'code-gov-tools'.
 			<ul>
-				<li><code>codeName</code>: [string] The name of the code repository, project, library or release.</li>
-        <li><code>codeURL</code>: [string] The URL where the code repository, project, library or release can be found.</li>
+				<li><code>name</code>: [string] The name of the code repository, project, library or release.</li>
+        <li><code>URL</code>: [string] The URL where the code repository, project, library or release can be found.</li>
 				<li><code>isGovernmentRepo</code>: [boolean] True or False. Is the code repository owned or managed by a federal agency?</li>
 
 			</ul>
@@ -157,7 +161,7 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 
 			<li><code>date</code>: [object] A date object describing the release.
 				<ul>
-					<li><code>created</code>: [string] The date the release was created, in YYYY-MM-DD or ISO 8601 format.</li>
+					<li><code>created</code>: [string] The date the release was originally created, in YYYY-MM-DD or ISO 8601 format.</li>
 					<li><code>lastModified</code>: [string] The date the release was modified, in YYYY-MM-DD or ISO 8601 format.</li>
 					<li><code>metadataLastUpdated</code>: [string] The date the metadata of the release was last updated, in YYYY-MM-DD or ISO 8601 format.</li>
 				</ul>

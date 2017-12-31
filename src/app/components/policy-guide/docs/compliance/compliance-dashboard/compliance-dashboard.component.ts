@@ -38,7 +38,7 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
   getAgencyIds() {
     this.agencyIds = [];
     const agencies = this.agencyService.getAgencies();
-    for (let agency of agencies){
+    for (let agency of agencies) {
       this.agencyIds.push(agency.id);
     }
   }
@@ -109,6 +109,10 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
         }
     });
 
+  }
+
+  getIcon(status) {
+    return `assets/img/logos/agencies/${status.agency.id}.png`;
   }
 
 }

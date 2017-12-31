@@ -1,7 +1,7 @@
 const execSync = require('child_process').execSync;
 const helpers = require('../helpers');
 
-const HTTPS_REPO_NAME_RE = /Push  URL: https:\/\/github\.com\/.*\/(.*)\.git/;
+const HTTPS_REPO_NAME_RE = /Push  URL: https:\/\/github\.com\/.*\/(.*)/;
 const SSH_REPO_NAME_RE = /Push\s*URL:\s*git@github\.com:.*\/(.*)\.git/;
 
 function getWebpackConfigModule() {

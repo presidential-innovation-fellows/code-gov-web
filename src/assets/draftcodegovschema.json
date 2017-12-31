@@ -81,7 +81,8 @@
                   "exemptByNationalSecurity",
                   "exemptByAgencySystem",
                   "exemptByAgencyMission",
-                  "exemptByCIO"
+                  "exemptByCIO",
+                  "exemptByPolicyDate"
                 ]
               },
               "exemptionText": {

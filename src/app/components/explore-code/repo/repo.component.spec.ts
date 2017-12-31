@@ -7,7 +7,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { By } from '@angular/platform-browser';
 
 import { Angulartics2, Angulartics2Module } from 'angulartics2';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 
 import { AgencyService } from '../../../services/agency';
 import { ExternalLinkDirective } from '../../../directives/external-link';

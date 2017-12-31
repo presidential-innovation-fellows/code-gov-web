@@ -102,13 +102,12 @@ module.exports = function (options) {
           postcssImport({ addDependencyTo: webpack }),
           postcssCssnext({
             browsers: ['last 2 versions', 'ie >= 9'],
-            compress: true,
           }),
         ],
         sassLoader: {
           includePaths: [
             require('bourbon').includePaths,
-            require('bourbon-neat').includePaths
+            require('bourbon-neat').includePaths,
           ]
         },
         tslint: {
@@ -199,7 +198,8 @@ module.exports = function (options) {
     entry: {
       'polyfills': './src/polyfills.browser.ts',
       'vendor': './src/vendor.browser.ts',
-      'main': './src/main.browser.ts'
+      'main': './src/main.browser.ts',
+      'styles': './src/styles/base/_all.scss',
     },
 
     resolve: {
@@ -229,18 +229,22 @@ module.exports = function (options) {
         },
         {
           test: /\.scss$/,
-          exclude: /node_modules/,
-          loaders: [{
-            loader: 'raw-loader',
-          }, {
-            loader: 'postcss-loader',
-          }, {
-            loader: 'sass-loader',
-          }]
+          exclude: [ /node_modules/, /src\/styles/],
+          loader: 'raw-loader!postcss-loader!sass-loader?sourceMap',
+        },
+        {
+          test: /\.scss$/,
+          include: /src\/styles/,
+          loader: 'style-loader!css-loader!postcss-loader!resolve-url-loader!sass-loader?sourceMap',
+        },
+        {
+          test: /\.scss$/,
+          include: /node_modules/,
+          loader: 'style-loader!css-loader!postcss-loader!resolve-url-loader!sass-loader?sourceMap',
         },
         {
           test: /\.html$/,
-          loader: 'raw-loader',
+          loader: 'html-loader',
           exclude: [helpers.root('src/index.html')]
         },
         {

@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { Subscription } from 'rxjs/Subscription';
 
 import { MobileService } from '../../services/mobile';
 import { SearchInputComponent } from '../search-input';
@@ -20,13 +20,14 @@ export class HeaderNavigationComponent {
   isSearchBoxShown: boolean = false;
   searchBoxActiveSubscription: Subscription;
   @ViewChild(SearchInputComponent) child: SearchInputComponent;
-  
+
 
   constructor(
     public router: Router,
     private mobileService: MobileService,
   ) {
-    this.searchBoxActiveSubscription = this.mobileService.activeSearchBox$.subscribe(isSearchBoxShown => this.isSearchBoxShown = isSearchBoxShown);
+    this.searchBoxActiveSubscription = this.mobileService.activeSearchBox$.subscribe(
+      isSearchBoxShown => this.isSearchBoxShown = isSearchBoxShown);
   }
 
   ngOnDestroy() {
@@ -67,7 +68,7 @@ export class HeaderNavigationComponent {
 
   /**
    * Triggers whenever the window is scrolled.
-   * 
+   *
    * @param $event - the scrolling event
    */
   onScrollHandler($event) {
