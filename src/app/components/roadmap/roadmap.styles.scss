@@ -60,18 +60,64 @@
 }
 
 /* roadmap table section of page */
-.roadmap-table {
+.roadmap-table-title {
 
   h3,
-  p {
+  {
     color: $color-gray-dark;
-    padding: 0rem 3rem 0rem 3rem;
+    padding: 0rem 0rem 2rem;
+    table {margin-top: .25rem};
+    table {margin-bottom: .1rem};
+  }
+}
+
+.roadmap-table {
+
+  table {
+    width: 100%
   }
 
-  //slight bump past left & right alignment, should be 3rem
-  table {
-    min-width: 100%;
-    padding: 0rem 2.5rem 0rem 2.5rem;
+  th {
+    color: $color-gray-dark;
+    font-size: 1.3em;
+    text-align: center;
+    background-color: $color-cool-blue-lightest;
+    border-color: $color-gray-lighter;
+    border-width: 2px;
+  }
+
+  td {
+    color: $color-gray-dark;
+    border-color: $color-gray-lighter;
+    border-width: 2px;
+    width: 10%;
+  }
+
+  td.widerow {
+    padding-left: 1%;
+    width: 90%;
+  }
+
+  td.text-cell {
+    border-left: 0rem;
+    border-bottom: 0rem;
+    border-top: 0rem;
+  }
+
+  td.graphic-cell {
+    border-right: 0rem;
+    border-bottom: 0rem;
+    border-top: 0rem;
+  }
+
+  td.text-cell-last {
+    border-left: 0rem;
+    border-top: 0rem;
+  }
+
+  td.graphic-cell-last {
+    border-right: 0rem;
+    border-top: 0rem;
   }
 
   table tr:last-child td:first-child {
@@ -87,50 +133,50 @@
     border-top-right-radius: 5px;
   }
 
-  th {
-    color: $color-gray-dark;
-    font-size: 1.3em;
-    text-align: center;
-    background-color: $color-cool-blue-lightest;
-  }
+}
 
-  td {
-    color: $color-gray-dark;
-  }
+
+/* left over from original page
 
   td:has(i){
-    text-align: right;
-  }
-
-  .text-cell {
-    border-left: 0rem;
-    border-bottom: 0rem;
-    border-top: 0rem;
-    text-align: left;
-  }
-
-  .graphic-cell {
-    border-right: 0rem;
-    border-bottom: 0rem;
-    border-top: 0rem;
-    text-align: right;
-  }
-
-  .last-text-cell {
-    border-left: 0rem;
-    border-top: 0rem;
-    text-align: left;
-  }
-
-  .last-graphic-cell {
-    border-right: 0rem;
-    border-top: 0rem;
     text-align: right;
   }
 
   padding: 0rem 0rem 1rem;
   table {margin-top: .25rem};
   table {margin-bottom: .1rem};
+
+*/
+
+
+/* legend under roadmap table */
+.roadmap-legend {
+
+  table {
+    border: none;
+    width: 100%;
+  }
+
+  td {
+    color: $color-gray-dark;
+    border: none;
+    width: 10%;
+  }
+
+  td.widerow {
+    border: none;
+    padding-left: 1%;
+    width: 90%;
+  }
+
+  td.pull-down {
+    padding-bottom: 0%;
+  }
+
+  td.push-up {
+    padding-top: 2%;
+  }
+
 }
 
 /* font awesome graphics for the table */
