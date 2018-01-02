@@ -20,7 +20,7 @@ export class MobileMenuButtonComponent {
   constructor(
     private mobileService: MobileService,
   ) {
-    this.mobileService.activeSideNav$.subscribe(isOpen => this._isOpen = isOpen)
+    this.mobileService.activeSideNav$.subscribe(isOpen => this._isOpen = isOpen);
   }
 
   toggleSideNav() {

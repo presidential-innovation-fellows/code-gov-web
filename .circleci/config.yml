@@ -1,19 +1,38 @@
+version: 2
 jobs:
   build:
     working_directory: ~/code-gov
     docker:
-      - image: circleci/node:6.11.0
+      - image: circleci/node:6.12.2-stretch
     steps:
       - checkout
-      - run: 
+      - run:
+          name: Add Node Module's bin to PATH
+          command: echo "export PATH=`pwd`/node_modules/.bin:$PATH" >> $BASH_ENV
+      - restore_cache:
+          key: code-gov-web-{{ checksum "package.json" }}
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - save_cache:
+          key: code-gov-web-{{ checksum "package.json" }}
+          paths:
+            - code-gov-web/node_modules
+      - run:
+          name: Run Linter
+          command: npm run lint
+  test:
+    working_directory: ~/code-gov
+    docker:
+      - image: circleci/node:6.12.2-stretch
+    steps:
+      - checkout
+      - run:
           name: download-cc-test-reporter
           command: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
       - run: 
           name: make-test-reporter-executable
           command: chmod +x ./cc-test-reporter
-      - run:
-          name: Add Node Module's bin to PATH
-          command: echo "export PATH=`pwd`/node_modules/.bin:$PATH" >> $BASH_ENV
       - restore_cache:
           key: code-gov-web-{{ checksum "package.json" }}
       - run:
@@ -35,3 +54,84 @@ jobs:
       - store_artifacts:
           path: coverage
           prefix: coverage
+  integration:
+    working_directory: ~/code-gov
+    docker:
+      - image: circleci/node:6.12-stretch-browsers
+    steps:
+      - checkout
+      - restore_cache:
+          key: code-gov-web-{{ checksum "package.json" }}
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - save_cache:
+          key: code-gov-web-{{ checksum "package.json" }}
+          paths:
+            - code-gov-web/node_modules
+      - run:
+          name: Start Server
+          command: npm start
+          background: true
+      - run:
+          name: Run Integration Tests
+          command: npm run e2e
+  deploy-staging:
+    working_directory: ~/code-gov
+    docker:
+      - image: circleci/node:6.12-stretch
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - run:
+        name: Deploy to Staging
+        command: npm run federalist-deploy:stag
+  deploy-production:
+    working_directory: ~/code-gov
+    docker:
+      - image: circleci/node:6.12-stretch
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - run:
+        name: Deploy to Production
+        command: npm run federalist-deploy:prod  
+workflows:
+  version: 2
+  build-test-deploy:
+    jobs:
+      - build
+      - test:
+          requires: 
+            - build
+      - integration:
+          requires: 
+            - test
+      - hold:
+          type: approval
+          requires: 
+            - integration
+          filters:
+            branches:
+              only: ${STAGING_BRANCH}
+            tags:
+              only: ${TAG_VERSION_REGEXP}
+      - deploy-staging:
+          requires: 
+            - hold
+          filters:
+            branches:
+              only: ${STAGING_BRANCH}
+      - deploy-production:
+          requires:
+            - hold
+          filters:
+            tags:
+              only: ${TAG_VERSION_REGEXP}
+            branches:
+              ignore: /.*/
+      

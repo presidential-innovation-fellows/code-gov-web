@@ -74,8 +74,10 @@ export class AgencyComponent implements OnInit, OnDestroy {
       subscribe((result) => {
         if (result && result.releases !== null && typeof result.releases === 'object') {
           this.allRepos = Object.values(result.releases).filter(repo => this.filterByAgency(repo))
-            .filter(repo => repo.permissions.usageType === 'openSource' || repo.permissions.usageType === 'governmentWideReuse')
-            .sort((a, b) => a.name.toLowerCase() < b.name.toLowerCase() ? -1 : a.name.toLowerCase() === b.name.toLowerCase() ? 0 : 1);
+            .filter(repo => repo.permissions.usageType === 'openSource' ||
+              repo.permissions.usageType === 'governmentWideReuse')
+            .sort((a, b) => a.name.toLowerCase() < b.name.toLowerCase() ? -1 :
+              a.name.toLowerCase() === b.name.toLowerCase() ? 0 : 1);
           this.repos = this.allRepos.slice(0, this.repos.length || this.pageSize);
           this.currentIndex = this.repos.length || this.pageSize;
           this.hasRepos = this.checkRepos(this.repos);

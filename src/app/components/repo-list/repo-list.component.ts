@@ -52,7 +52,7 @@ export class RepoListComponent {
     // transform value for display
     return this._results;
   }
-  
+
   @Input()
   set results(results: Array<any>) {
     this.loadedResults = results.slice(0, this.PAGE_SIZE);
