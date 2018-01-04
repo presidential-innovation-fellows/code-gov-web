@@ -9,6 +9,14 @@
   p {
     color: $color-gray-dark;
   }
+  a {
+    color: $brand-teal-dark;
+    text-decoration: underline;
+
+    &:hover {
+      color: $brand-teal;
+    }
+  }
 }
 
 .roadmap-banner {
@@ -83,13 +91,13 @@
     text-align: center;
     background-color: $color-cool-blue-lightest;
     border-color: $color-gray-lighter;
-    border-width: 2px;
+    border-width: 1px;
   }
 
   td {
     color: $color-gray-dark;
     border-color: $color-gray-lighter;
-    border-width: 2px;
+    border-width: 1px;
     width: 10%;
   }
 
@@ -157,6 +165,7 @@
 
   td.pull-down {
     padding-bottom: 0%;
+    padding-top: 4%;
   }
 
   td.push-up {
