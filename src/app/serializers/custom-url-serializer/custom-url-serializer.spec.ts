@@ -119,7 +119,7 @@ describe('CustomUrlSerializer', () => {
          * gives the same results as the default url serializer
          * when there are no parentheses present
          */
-        expect(actual_url).toEqual(original_url);
+        expect(actualUrl).toEqual(originalUrl);
 
       });
     });
@@ -139,7 +139,7 @@ describe('CustomUrlSerializer', () => {
           returns the reverse of the parse method.  We should note that we
           check if the parse method by itself is correct above.
         */
-        expect(original_url).toEqual(actual_url);
+        expect(originalUrl).toEqual(actualUrl);
 
       });
     });
@@ -176,7 +176,7 @@ describe('CustomUrlSerializer', () => {
           let originalUrl: string = '/explore-code/agencies/NASA/repos/Acoustic' +
             'Propagation and Emulation Toolset (APET)';
 
-          testComponent.setUrl(original_url);
+          testComponent.setUrl(originalUrl);
 
           fixture.detectChanges();
 
