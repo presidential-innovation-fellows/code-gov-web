@@ -52,12 +52,12 @@
       "id": "DOS",
       "name": "Department of State"
     },
-    "DOT": {
-      "id": "DOT",
+    "USDOT": {
+      "id": "USDOT",
       "name": "Department of Transportation"
     },
-    "TRE": {
-      "id": "TRE",
+    "TREASURY": {
+      "id": "TREASURY",
       "name": "Department of the Treasury"
     },
     "VA": {
