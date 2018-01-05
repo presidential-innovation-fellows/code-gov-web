@@ -173,7 +173,7 @@ describe('CustomUrlSerializer', () => {
 
       it('should set correct href when use unescaped url', () => {
 
-          let originalUrl: string = '/explore-code/agencies/NASA/repos/Acoustic' +
+          let originalUrl: string = '/explore-code/agencies/NASA/repos/Acoustic ' +
             'Propagation and Emulation Toolset (APET)';
 
           testComponent.setUrl(originalUrl);
