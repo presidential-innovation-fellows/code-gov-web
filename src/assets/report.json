@@ -1748,14 +1748,14 @@
         "overallCompliance": 0.75
       }
     },
-    "DOT": {
+    "USDOT": {
       "status": "FULLY COMPLIANT: 0 validation errors",
       "issues": [],
       "version": "2.0.0",
       "metadata": {
         "agency": {
           "name": "Department of Transportation",
-          "acronym": "DOT",
+          "acronym": "USDOT",
           "website": "https://www.transportation.gov/",
           "codeUrl": "https://www.transportation.gov/code.json",
           "requirements": {
@@ -1771,14 +1771,14 @@
         "overallCompliance": 1
       }
     },
-    "TRE": {
+    "TREASURY": {
       "status": "FULLY COMPLIANT: 0 validation errors",
       "issues": [],
       "version": "1.0.1",
       "metadata": {
         "agency": {
           "name": "Department of Treasury",
-          "acronym": "TRE",
+          "acronym": "TREASURY",
           "website": "https://www.treasury.gov/",
           "codeUrl": "https://www.treasury.gov/code.json",
           "requirements": {

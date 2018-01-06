@@ -53,12 +53,12 @@ export const AGENCIES = [
     name: 'Department of State'
   },
    {
-    id: 'DOT',
+    id: 'USDOT',
     name: 'Department of Transportation'
   },
 
   {
-    id: 'TRE',
+    id: 'TREASURY',
     name: 'Department of the Treasury'
   },
   {

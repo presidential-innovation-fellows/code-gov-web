@@ -43,6 +43,8 @@ import { StateService } from './services/state';
 import { StatusService } from './services/status';
 import { MonacoEditorService } from './components/monaco-editor';
 import { ElasticsearchTermService, LunrTermService, TermService } from './services/term';
+import { UrlSerializer } from '@angular/router';
+import { CustomUrlSerializer } from './serializers/custom-url-serializer';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -61,6 +63,7 @@ const APP_PROVIDERS = [
   StateService,
   StatusService,
   { provide: TermService, useClass: LunrTermService },
+  { provide: UrlSerializer, useClass: CustomUrlSerializer }
 ];
 
 /**
