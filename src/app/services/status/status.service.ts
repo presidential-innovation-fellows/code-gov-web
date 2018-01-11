@@ -82,7 +82,7 @@ class AgencyStatuses {
   DOJ: AgencyStatus;
   DOL: AgencyStatus;
   DOS: AgencyStatus;
-  DOT: AgencyStatus;
+  USDOT: AgencyStatus;
   ED: AgencyStatus;
   EPA: AgencyStatus;
   FEMA: AgencyStatus;
@@ -96,7 +96,7 @@ class AgencyStatuses {
   OPM: AgencyStatus;
   SBA: AgencyStatus;
   SSA: AgencyStatus;
-  TRE: AgencyStatus;
+  TREASURY: AgencyStatus;
   USDA: AgencyStatus;
   VA: AgencyStatus;
 }

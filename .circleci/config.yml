@@ -33,6 +33,10 @@ jobs:
       - run: 
           name: make-test-reporter-executable
           command: chmod +x ./cc-test-reporter
+      - run:
+          name: code-climate-before-build
+          command: |
+              ./cc-test-reporter before-build
       - restore_cache:
           key: code-gov-web-{{ checksum "package.json" }}
       - run:
@@ -117,21 +121,21 @@ workflows:
             - integration
           filters:
             branches:
-              only: ${STAGING_BRANCH}
+              only: master
             tags:
-              only: ${TAG_VERSION_REGEXP}
+              only: /^v(\d+\.){2}\d+$/
       - deploy-staging:
           requires: 
             - hold
           filters:
             branches:
-              only: ${STAGING_BRANCH}
+              only: master
       - deploy-production:
           requires:
             - hold
           filters:
             tags:
-              only: ${TAG_VERSION_REGEXP}
+              only: /^v(\d+\.){2}\d+$/
             branches:
               ignore: /.*/
       
