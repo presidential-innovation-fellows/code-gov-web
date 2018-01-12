@@ -90,8 +90,8 @@ jobs:
           name: Install Dependencies
           command: npm install
       - run:
-        name: Deploy to Staging
-        command: npm run federalist-deploy:stag
+          name: Deploy to Staging
+          command: npm run federalist-deploy:stag
   deploy-production:
     working_directory: ~/code-gov
     docker:
