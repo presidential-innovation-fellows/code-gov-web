@@ -102,8 +102,8 @@ jobs:
           name: Install Dependencies
           command: npm install
       - run:
-        name: Deploy to Production
-        command: npm run federalist-deploy:prod  
+          name: Deploy to Production
+          command: npm run federalist-deploy:prod  
 workflows:
   version: 2
   build-test-deploy:
