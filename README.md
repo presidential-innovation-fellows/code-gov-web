@@ -67,7 +67,7 @@ This step must be done before the next step.
 * In a third terminal window, run `npm run e2e`. The Chrome browser will be launched to
 run the tests and the test results will be displayed in this window.
 
-End-to-end tests need to be written in a file with an `.e2e.ts` extension.
+End-to-end tests need to be written in a file with a `.e2e.ts` extension.
 
 ## Deployment
 This app uses the `github-deploy` package for handling deployment. To configure
@@ -94,7 +94,7 @@ the app. For example, you can find Policy Guide content in
 
 ## Component Structure
 Most Components have a `style`, `template`, and `component` file. Template files
-are composed of HTML with Angular syntax for inserting content and view
+are composed of HTML with the Angular syntax for inserting content and view
 conditionals. Styles are encapsulated by default unless the Component has
 `ViewEncapsulation` disabled, so global class names are generally not an issue.
 
@@ -111,7 +111,7 @@ As stated in [CONTRIBUTING](CONTRIBUTING.md):
 
 > All contributions to this project will be released under the CC0
 dedication. By submitting a pull request, you are agreeing to comply
-with this waiver of copyright interest.
+with this waiver of the copyright interest.
 
 > This repo is built on top of the
 [Angular2 Webpack Starter](https://github.com/AngularClass/angular2-webpack-starter)
