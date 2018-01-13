@@ -44,13 +44,6 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
   }
 
   getStatuses() {
-    let agency;
-    let requirements;
-    let rValue;
-    let requirementStatus;
-    let overallStatus;
-    let codePath;
-
     this.statusesSub = this.statusService.getJsonFile().
       subscribe((result) => {
         if (result) {
@@ -60,19 +53,21 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
              // to comply, so don't include it in the dash.
              // TODO: should make this more explicit in the API,
             if (result.statuses[status].metadata.agency.requirements['agencyWidePolicy'] != null) {
-              requirements = [];
+
+              let requirements = [];
+              let overallStatus;
+
               for (let requirement in result.statuses[status].metadata.agency.requirements) {
                 if (result.statuses[status].metadata.agency.requirements.hasOwnProperty(requirement)) {
-                  rValue = result.statuses[status].metadata.agency.requirements[requirement];
+                  const rValue = result.statuses[status].metadata.agency.requirements[requirement];
 
-                  if (rValue < 1) {
-                    if (rValue > 0) {
-                      requirementStatus = 'partial';
-                    } else {
-                      requirementStatus = 'noncompliant';
-                    }
-                  } else {
+                  let requirementStatus = 'noncompliant';
+
+                  if (rValue >= 1) {
                     requirementStatus = 'compliant';
+                  }
+                  if (rValue > 0 && rValue < 1) {
+                    requirementStatus = 'partial';
                   }
 
                   if (requirement !== 'overallCompliance') {
@@ -83,13 +78,13 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
                 }
               }
 
+              let codePath = null;
+
               if (this.agencyIds.find((x) => x === status)) {
                 codePath = '/explore-code/agencies/' + status;
-              } else {
-                codePath = null;
               }
 
-              agency = {
+              let agency = {
                 id: status,
                 name: result.statuses[status].metadata.agency.name,
                 overall: overallStatus,
