@@ -21,7 +21,7 @@ const postcssImport = require('postcss-import');
 /**
  * Webpack Constants
  */
-const GIT_REMOTE_NAME = 'origin';
+const GIT_REMOTE_NAME = process.env.GIT_REMOTE_NAME || 'origin';
 const COMMIT_MESSAGE = 'Updates';
 const GH_REPO_NAME = ghDeploy.getRepoName(GIT_REMOTE_NAME);
 const ENV = 'production';

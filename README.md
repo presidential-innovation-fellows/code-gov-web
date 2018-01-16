@@ -73,8 +73,10 @@ End-to-end tests need to be written in a file with an `.e2e.ts` extension.
 This app uses the `github-deploy` package for handling deployment. To configure
 deployment, customize the `config/github-deploy` and `webpack.github-deploy`
 files to match your settings. When ready to deploy, run
-`npm run github-deploy:dev` or `npm run github-deploy:prod`, depending on your
-intended destination.
+`npm run federalist-deploy:dev` or `npm run federalist-deploy:prod`, depending on your
+intended destination.  If you are deploying from a fork, you will have to set
+the `GIT_REMOTE_NAME` environmental variable,
+like `GIT_REMOTE_NAME="upstream" npm run federalist-deploy`.
 
 ## Deployment Problems
 When pushing to staging or dev branches, you might run into an occasional error warning that the branch you're pushing to already exists. If you see this, you need to clear the cache in the gh-pages module using this command: `rm -rf node_modules/gh-pages/.cache` 
