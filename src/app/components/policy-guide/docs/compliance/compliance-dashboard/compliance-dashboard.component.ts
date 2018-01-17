@@ -47,19 +47,19 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
     this.statusesSub = this.statusService.getJsonFile().
       subscribe((result) => {
         if (result) {
-          for (let status in result.statuses) {
+          for (let statusAgency in result.statuses) {
 
              // if agencyWidePolicy is null in report.json it means the agency doesn't have
              // to comply, so don't include it in the dash.
              // TODO: should make this more explicit in the API,
-            if (result.statuses[status].metadata.agency.requirements['agencyWidePolicy'] != null) {
+            if (result.statuses[statusAgency].requirements['agencyWidePolicy'] !== null) {
 
               let requirements = [];
               let overallStatus;
 
-              for (let requirement in result.statuses[status].metadata.agency.requirements) {
-                if (result.statuses[status].metadata.agency.requirements.hasOwnProperty(requirement)) {
-                  const rValue = result.statuses[status].metadata.agency.requirements[requirement];
+              for (let requirement in result.statuses[statusAgency].requirements) {
+                if (result.statuses[statusAgency].requirements.hasOwnProperty(requirement)) {
+                  const rValue = result.statuses[statusAgency].requirements[requirement];
 
                   let requirementStatus = 'noncompliant';
 
@@ -85,13 +85,13 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
               }
 
               let agency = {
-                id: status,
-                name: result.statuses[status].metadata.agency.name,
+                id: result.statuses[statusAgency].metadata.agency.id,
+                name: result.statuses[statusAgency].metadata.agency.name,
                 overall: overallStatus,
                 codePath: codePath
               };
               this.statuses.push({
-                id: status,
+                id: statusAgency,
                 agency: agency,
                 requirements: requirements
               });
@@ -100,7 +100,7 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
           }
 
           this.statuses = this.statuses.sort((a, b) => {
-            return a.agency.name < b.agency.name ? -1 : a.agency.name === b.agency.name ? 0 : 1;
+            return a.agency.id < b.agency.id ? -1 : a.agency.id > b.agency.id ? 1 : 0;
           });
         } else {
           console.log('Error.');
@@ -110,7 +110,7 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
   }
 
   getIcon(status) {
-    return `assets/img/logos/agencies/${status.agency.id}.png`;
+    return `assets/img/logos/agencies/${status.id}.png`;
   }
 
 }
