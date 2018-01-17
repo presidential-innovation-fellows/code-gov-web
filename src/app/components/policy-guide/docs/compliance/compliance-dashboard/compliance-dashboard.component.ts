@@ -66,7 +66,7 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
                   if (rValue >= 1) {
                     requirementStatus = 'compliant';
                   }
-                  if (rValue > 0 && rValue < 1) {
+                  if (rValue >= 0.25 && rValue < 1) {
                     requirementStatus = 'partial';
                   }
 
