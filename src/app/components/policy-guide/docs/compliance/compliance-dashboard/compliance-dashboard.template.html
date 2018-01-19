@@ -32,42 +32,23 @@
         <div class="dashboard-agency-requirements" *ngFor="let requirement of status.requirements">
           <div *ngIf="requirement.text=='agencyWidePolicy'">
             <div class="requirement {{requirement.status}} ">
-                <span *ngIf="requirement.status=='compliant'">Agency policy is consistent with the Federal Source Code Policy.</span>
-                <span *ngIf="requirement.status=='partial'">Agency policy is being updated for consistency with the Federal Source Code Policy.</span>
-                <span *ngIf="requirement.status=='noncompliant'">Agency policy has not been updated for consistency with the Federal Source Code Policy.</span>
-            </div>
-          </div>
-          <div *ngIf="requirement.text=='schemaFormat'">
-            <div class="requirement {{requirement.status}} ">
-                <span *ngIf="requirement.status=='compliant'">Code inventory has been published.</span>
-                <span *ngIf="requirement.status=='partial'">Code inventory has been published but has technical errors.</span>
-                <span *ngIf="requirement.status=='noncompliant'">Code inventory has not been published.</span>
-            </div>
-          </div>
-          <div *ngIf="requirement.text=='inventoryRequirement'">
-            <div class="requirement {{requirement.status}} ">
-                <span *ngIf="requirement.status=='compliant'">
-                  Agency has inventoried 100% of its new custom code.
-                </span>
-                <span *ngIf="requirement.status=='partial'">
-                  Agency has inventoried more than 50% of its new custom code.
-                </span>
-                <span *ngIf="requirement.status=='noncompliant'">
-                  Agency has inventoried less than 50% of its new custom code.
-                </span>
+                <span *ngIf="requirement.status=='compliant'">Agency policy is consistent with the Federal Source Code Policy</span>
+                <span *ngIf="requirement.status=='partial'">Agency policy is being updated for consistency with the Federal Source Code Policy</span>
+                <span *ngIf="requirement.status=='noncompliant'">Agency policy has not been reviewed for consistency with the Federal Source Code Policy</span>
             </div>
           </div>
           <div *ngIf="requirement.text=='openSourceRequirement'">
             <div class="requirement {{requirement.status}} ">
-                <span *ngIf="requirement.status=='compliant'">
-                  Agency has open sourced more than 20% of its new custom code.
-                </span>
-                <span *ngIf="requirement.status=='partial'">
-                  Agency has open sourced more than 10% of its new custom code.
-                </span>
-                <span *ngIf="requirement.status=='noncompliant'">
-                  Agency has open sourced less than 10% of its new custom code.
-                </span>
+                <span *ngIf="requirement.status=='compliant'">Agency has open sourced greater than 20% of their custom developed code.</span>
+                <span *ngIf="requirement.status=='partial'">Agency has open sourced greater than 10% of their custom developed code.</span>
+                <span *ngIf="requirement.status=='noncompliant'">Agency has open sourced less than 10% of their custom developed code.</span>
+            </div>
+          </div>
+          <div *ngIf="requirement.text=='inventoryRequirement'">
+            <div class="requirement {{requirement.status}} ">
+                <span *ngIf="requirement.status=='compliant'">Agency has inventoried 100% of new custom code.</span>
+                <span *ngIf="requirement.status=='partial'">Agency has inventoried more than 50% of new custom code.</span>
+                <span *ngIf="requirement.status=='noncompliant'">Agency has inventoried less than 50% of new custom code.</span>
             </div>
           </div>
         </div>
