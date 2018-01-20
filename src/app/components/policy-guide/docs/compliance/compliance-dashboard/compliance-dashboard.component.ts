@@ -44,35 +44,30 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
   }
 
   getStatuses() {
-    let agency;
-    let requirements;
-    let rValue;
-    let requirementStatus;
-    let overallStatus;
-    let codePath;
-
     this.statusesSub = this.statusService.getJsonFile().
       subscribe((result) => {
         if (result) {
-          for (let status in result.statuses) {
+          for (let statusAgency in result.statuses) {
 
              // if agencyWidePolicy is null in report.json it means the agency doesn't have
              // to comply, so don't include it in the dash.
              // TODO: should make this more explicit in the API,
-            if (result.statuses[status].requirements['agencyWidePolicy'] != null) {
-              requirements = [];
-              for (let requirement in result.statuses[status].requirements) {
-                if (result.statuses[status].requirements.hasOwnProperty(requirement)) {
-                  rValue = result.statuses[status].requirements[requirement];
+            if (result.statuses[statusAgency].requirements['agencyWidePolicy'] !== null) {
 
-                  if (rValue < 1) {
-                    if (rValue > 0) {
-                      requirementStatus = 'partial';
-                    } else {
-                      requirementStatus = 'noncompliant';
-                    }
-                  } else {
+              let requirements = [];
+              let overallStatus;
+
+              for (let requirement in result.statuses[statusAgency].requirements) {
+                if (result.statuses[statusAgency].requirements.hasOwnProperty(requirement)) {
+                  const rValue = result.statuses[statusAgency].requirements[requirement];
+
+                  let requirementStatus = 'noncompliant';
+
+                  if (rValue >= 1) {
                     requirementStatus = 'compliant';
+                  }
+                  if (rValue >= 0.25 && rValue < 1) {
+                    requirementStatus = 'partial';
                   }
 
                   if (requirement !== 'overallCompliance') {
@@ -83,27 +78,30 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
                 }
               }
 
+              let codePath = null;
+
               if (this.agencyIds.find((x) => x === status)) {
                 codePath = '/explore-code/agencies/' + status;
-              } else {
-                codePath = null;
               }
 
-              agency = {
-                id: status,
-                name: result.statuses[status].metadata.agency.name,
+              let agency = {
+                id: result.statuses[statusAgency].metadata.agency.id,
+                name: result.statuses[statusAgency].metadata.agency.name,
                 overall: overallStatus,
                 codePath: codePath
               };
               this.statuses.push({
-                id: status,
+                id: statusAgency,
                 agency: agency,
                 requirements: requirements
               });
               this.updated = result.timestamp;
-
             }
           }
+
+          this.statuses = this.statuses.sort((a, b) => {
+            return a.agency.id < b.agency.id ? -1 : a.agency.id > b.agency.id ? 1 : 0;
+          });
         } else {
           console.log('Error.');
         }
@@ -112,7 +110,7 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
   }
 
   getIcon(status) {
-    return `assets/img/logos/agencies/${status.agency.id}.png`;
+    return `assets/img/logos/agencies/${status.id}.png`;
   }
 
 }

@@ -1,6 +1,6 @@
 export const AGENCIES = [
   {
-    id: 'AID',
+    id: 'USAID',
     name: 'Agency for International Development'
   },
   {

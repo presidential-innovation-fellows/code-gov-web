@@ -90,8 +90,8 @@ jobs:
           name: Install Dependencies
           command: npm install
       - run:
-        name: Deploy to Staging
-        command: npm run federalist-deploy:stag
+          name: Deploy to Staging
+          command: npm run federalist-deploy:stag
   deploy-production:
     working_directory: ~/code-gov
     docker:
@@ -102,8 +102,8 @@ jobs:
           name: Install Dependencies
           command: npm install
       - run:
-        name: Deploy to Production
-        command: npm run federalist-deploy:prod  
+          name: Deploy to Production
+          command: npm run federalist-deploy:prod  
 workflows:
   version: 2
   build-test-deploy:
@@ -121,21 +121,21 @@ workflows:
             - integration
           filters:
             branches:
-              only: ${STAGING_BRANCH}
+              only: master
             tags:
-              only: ${TAG_VERSION_REGEXP}
+              only: /^v(\d+\.){2}\d+$/
       - deploy-staging:
           requires: 
             - hold
           filters:
             branches:
-              only: ${STAGING_BRANCH}
+              only: master
       - deploy-production:
           requires:
             - hold
           filters:
             tags:
-              only: ${TAG_VERSION_REGEXP}
+              only: /^v(\d+\.){2}\d+$/
             branches:
               ignore: /.*/
       

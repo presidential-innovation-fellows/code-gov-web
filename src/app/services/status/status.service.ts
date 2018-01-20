@@ -48,6 +48,8 @@ class CodeJsonIssue {
 class AgencyRequirements {
   agencyWidePolicy: Number;
   schemaFormat: Number;
+  codeInventoried: Number;
+  metOpenSourceRequirement: Number;
   overallCompliance: Number;
 }
 
@@ -72,7 +74,7 @@ class AgencyStatus {
 }
 
 class AgencyStatuses {
-  AID: AgencyStatus;
+  USAID: AgencyStatus;
   CFPB: AgencyStatus;
   DHS: AgencyStatus;
   DOC: AgencyStatus;
