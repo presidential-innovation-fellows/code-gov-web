@@ -1,0 +1,185 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "agency": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "acronym": {
+          "type": "string"
+        },
+        "website": {
+          "type": "string",
+          "format": "uri"
+        },
+        "codeUrl": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "organization": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "Ideation",
+        "Alpha",
+        "Beta",
+        "Production",
+        "Archival",
+        "ideation",
+        "alpha",
+        "beta",
+        "production",
+        "archival"
+      ]
+    },
+    "vcs": {
+      "type": "string"
+    },
+    "repository": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "license": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "homepage": {
+      "type": "string",
+      "format": "uri"
+    },
+    "downloadURL": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "contact": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "email": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "twitter": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "phone": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "email"
+      ]
+    },
+    "partners": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          }
+        }
+      }
+    },
+    "openSourceProject": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "governmentWideReuseProject": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "closedProject": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "exemption": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1,
+      "maximum": 5
+    },
+    "exemptionText": {
+      "type": "string"
+    },
+    "updated": {
+      "type": "object",
+      "properties": {
+        "metadataLastUpdated": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "lastCommit": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "sourceCodeLastModified": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  },
+  "required": [
+    "name",
+    "description",
+    "license",
+    "openSourceProject",
+    "governmentWideReuseProject",
+    "tags",
+    "contact",
+    "repository"
+  ]
+}
