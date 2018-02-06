@@ -111,7 +111,7 @@ describe('RepoComponent', () => {
     let repos = { releases: {} };
     spyOn(reposService, 'getJsonFile').and.returnValue(Observable.of(repos));
     // instantiate a new RepoComponent so that ngOnInit() doesn't get called
-    let newRepoComponent = new RepoComponent(null, agencyService, reposService, null, metaService);
+    let newRepoComponent = new RepoComponent(null, agencyService, null, reposService, null, metaService);
 
     // call getRepo() that invokes reposService.getJsonFile()
     newRepoComponent.getRepo('VA', '');

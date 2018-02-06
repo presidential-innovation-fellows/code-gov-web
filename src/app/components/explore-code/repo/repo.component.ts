@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import { AgencyService, Agency } from '../../../services/agency';
+import { ClientService } from '../../../services/client';
 import { ExternalLinkDirective } from '../../../directives/external-link';
 import { ReposService } from '../../../services/repos';
 import { SeoService } from '../../../services/seo';
@@ -22,6 +23,7 @@ export class RepoComponent implements OnInit, OnDestroy {
   constructor(
     private route: ActivatedRoute,
     private agencyService: AgencyService,
+    private clientService: ClientService,
     private reposService: ReposService,
     private seoService: SeoService,
     private readonly meta: MetaService
