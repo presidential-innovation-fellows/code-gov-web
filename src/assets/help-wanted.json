@@ -44,5 +44,115 @@
       "agency_id": "GSA",
       "license": "CC0-1.0"
     }
+    {
+      "id": 3,
+      "title": "Allow user to view an item from the left pane while editing",
+      "description": "Issue Description:\nWhen editing, a very common observation is users single-clicking an object in the left pane (both browse tree and search) and being taken out of Edit mode, or being warned with the 'Unsaved changes' dialog. What they want is to be able to see an object before adding it to a thing they're currently editing.\n\nProposed solution:\n\nSingle-clicking in the left pane during Edit mode displays the clicked object in an overlay without taking the user out of Edit mode.\nAll normal 'view' functionality (like plot pan/zoom) would be available.\nThere should be a 'Add This Item' button available in the overlay as well that would add the item being viewed to the object being edited, then closes the overlay.",
+      "updated": "2017-12-13",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "impact": "Open Government",
+      "projectURL": "https://github.com/nasa/openmct",
+      "issueURL": "https://github.com/nasa/openmct/issues/928",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "NASA",
+      "license": "Apache License, Version 2.0"
+    }
+    {
+      "id": 4,
+      "title": "Add 'Create..' Option to create object inside other object.",
+      "description": "It should be possible for a user to right click on an object in the tree view and select 'create...' to create an object inside of that object. This option should not exist for objects that do not have composition.",
+      "updated": "2017-12-13",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "impact": "Open Government",
+      "projectURL": "https://github.com/nasa/openmct",
+      "issueURL": "https://github.com/nasa/openmct/issues/354",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "NASA",
+      "license": "Apache License, Version 2.0"
+    }
+    {
+      "id": 5,
+      "title": "Remove action is available for non-editable objects",
+      "description": "Attempting to use the action fails as expected, but it probably shouldn't be available in the first place. This is evident in the live demo. Navigate to a non-editable layout (eg. anything under 'demo objects'). The context menu on any of the objects in the layout includes the remove action.",
+      "updated": "2018-1-10",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Bug",
+      "impact": "Open Government",
+      "projectURL": "https://github.com/nasa/openmct",
+      "issueURL": "https://github.com/nasa/openmct/issues/1542",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "NASA",
+      "license": "Apache License, Version 2.0"
+    }
+    {
+      "id": 6,
+      "title": "Timers aren't visually indicating countdown or countup",
+      "description": "Timers should display + or - depending on whether they are counting up or down. This is a regression error, they used to do this.",
+      "updated": "2018-1-29",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Bug",
+      "impact": "Open Government",
+      "projectURL": "https://github.com/nasa/openmct",
+      "issueURL": "https://github.com/nasa/openmct/issues/1895",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "NASA",
+      "license": "Apache License, Version 2.0"
+    }
+    {
+      "id": 7,
+      "title": "Timers aren't visually indicating countdown or countup",
+      "description": "TThe table component can sometimes produce various errors when the view changes (eg. on save, on navigation away etc.).",
+      "updated": "2018-1-19",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Bug",
+      "impact": "Open Government",
+      "projectURL": "https://github.com/nasa/openmct",
+      "issueURL": "https://github.com/nasa/openmct/issues/1884",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "NASA",
+      "license": "Apache License, Version 2.0"
+    }
   ]
 }
