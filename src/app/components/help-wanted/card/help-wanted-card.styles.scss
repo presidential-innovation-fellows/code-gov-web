@@ -1,0 +1,90 @@
+@import '../../../../styles/base/variables';
+
+.help-wanted-card {
+  height: 100%;
+
+  h3,
+  p {
+    margin: 0;
+  }
+
+  h3 {
+    line-height: 1;
+
+    a {
+      color: $brand-teal-medium;
+      font-weight: bold;
+    }
+  }
+
+  p {
+    color: $color-black;
+    line-height: 1.1;
+  }
+
+  small {
+    color: $color-gray-light;
+    font-size: 1em;
+  }
+
+  dl {
+    background-color: $color-cool-blue-lightest;
+    margin-bottom: 0.25rem;
+    padding: 0.75rem 0.75rem;
+
+    > div {
+      display: inline-block;
+      line-height: 1.1;
+      margin-left: 1rem;
+      text-indent: -1rem;
+
+      &:not(:last-of-type) {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  dd,
+  dt {
+    display: inline;
+    margin: 0;
+  }
+
+  dd {
+    font-weight: bold;
+  }
+
+  dt {
+    color: $color-gray;
+  }
+  
+  .agency-details {
+    padding: 10px 0px 0px 0px;
+    img {
+      height: 25px;
+      vertical-align: bottom;
+      max-width: 100px;
+    }
+    .help-wanted-agency-name {
+        color: $color-gray-light;
+    }
+  }
+  
+  .help-wanted-card-description {
+    word-wrap: break-word;
+  }
+
+  .help-wanted-card-actions {
+    a {
+      button {
+        margin-bottom: 0;
+        width: fit-content;
+    
+        &:last-of-type {
+          margin-right: 0
+        }
+      }
+    }
+  }
+
+}

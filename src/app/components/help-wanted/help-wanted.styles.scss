@@ -1,0 +1,284 @@
+@import '~bourbon/app/assets/stylesheets/bourbon';
+@import '~bourbon-neat/app/assets/stylesheets/neat';
+@import '~uswds/src/stylesheets/core/variables';
+@import '../../../styles/base/variables';
+@import '../../../styles/base/grid-settings';
+
+
+  .banner-help-wanted {
+    background: url('assets/img/american_flag_1920x1280_gradient.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    margin-bottom: 2rem;
+    padding-bottom: 5rem;
+    padding-top: 8rem;
+    text-align: center;
+
+    h1 {
+      color: $color-white;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: $color-white;
+      max-width: 80%;
+      text-align: center;
+      padding-left: 20%;
+      line-height: 1.5;
+      margin-top: 1em;
+      margin-bottom: -2em;
+    }
+
+    //To accocunt for header p text pushing the padding
+    @media screen and (min-width: $large-screen) {
+      padding-bottom: 8rem;
+    }
+  }
+
+/*
+
+#banner-help-wanted {
+
+  max-height: 20rem;
+
+ .banner-background {
+    background-attachment: scroll;
+    background-image: url('assets/img/american_flag_1920x1280_gradient.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin-bottom: 2rem;
+    padding-bottom: 8rem;
+    padding-top: 8rem;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 100%;
+
+    // HACK: This is a hack to prevent ugliness on iOS
+    @media screen and (min-width: 768px) {
+      background-attachment: fixed;
+    }
+  }
+
+  p {
+    max-width: 80%;
+  }
+}
+*/
+
+.help-wanted-breadcrumb {
+  font-size: 1em;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+
+  ul {
+    li {
+      display: inline-block;
+      font-weight: bold;
+
+      &::before {
+        content: '> ';
+        font-weight: normal;
+      }
+
+      &:first-of-type {
+        &::before {
+          content: '';
+        }
+      }
+
+      a {
+        color: $color-black;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+#help-wanted-filter-section {
+  @include span-columns(3);
+
+  h4 {
+    color: $color-black;
+    font-family: $header-font-family;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 5.5rem;
+    margin-bottom: 0;
+  }
+
+  h5 {
+    font-family: Helvetica, $header-font-family;
+  }
+}
+
+.help-wanted-filters {
+  background-color: $color-gray-lightest;
+  padding: 1rem;
+  min-width: min-content;
+}
+
+.help-wanted-filter {
+  h5 {
+    color: $color-black;
+    margin-top: 5px;
+    margin-bottom: 4px;
+  }
+
+  ul {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    font-size: 0.8em;
+
+    label {
+      span {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% - 30px);
+      }
+    }
+  }
+
+// USWDS usa-unstyled-list workaround - webpage and mobile form
+  .filter-bottom-padding {
+    padding-bottom: 5px;
+  }
+
+  .show-more {
+    color: $color-gray-medium;
+    text-decoration: none;
+  }
+}
+
+.help-wanted-results {
+  @include span-columns(9);
+}
+
+.help-wanted-content-header {
+  border-bottom: 1px solid $color-gray-lighter;
+  margin-bottom: 2rem;
+
+  h4 {
+    color: $color-black;
+    float: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 5.5rem;
+    margin-bottom: 0;
+  }
+
+  &::after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+}
+
+.help-wanted-tabs {
+  float: right;
+  line-height: 5.5rem;
+
+  li {
+    display: inline-block;
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    &.active {
+      a {
+        border-bottom: 4px solid $brand-teal-medium;
+        color: $color-black;
+      }
+    }
+
+    a {
+      border-bottom: 4px solid transparent;
+      color: $color-gray-light;
+      font-weight: bold;
+      padding-bottom: 0.5rem;
+      padding-top: 0.5rem;
+
+      &:hover {
+        color: $color-black;
+      }
+    }
+  }
+}
+
+.help-wanted-content {
+  margin-bottom: 4rem;
+}
+
+.help-wanted-content-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.help-wanted-content-item {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .help-wanted-results {
+    width: 100%;
+
+    .help-wanted-content-header {
+      float: none;
+
+      #filter-popup-trigger-button {
+        width: 15rem;
+      }
+
+    }
+  }
+
+  .filter-form-popup {
+
+    background-color: $color-gray-lightest;
+    bottom: 0;
+    left: -100%;
+    overflow: scroll;
+    padding: 0.5rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    &.display {
+      left: 0;
+      transition: .5s;
+    }
+
+    .close-button-wrapper {
+      padding: 0.5rem;
+      text-align: right;
+
+      .close-button {
+        font-size: 4rem;
+      }
+    }
+
+    h4 {
+      color: black;
+      font-family: $header-font-family;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    h5 {
+      font-family: $header-font-family;
+    }
+
+  }
+
+}

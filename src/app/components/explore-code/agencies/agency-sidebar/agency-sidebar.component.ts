@@ -20,6 +20,7 @@ export class AgencySidebarComponent {
   }
 
   getIcon(agency) {
-    return `assets/img/logos/agencies/${agency.id}-50x50.png`;
+    return this.agencyService.getIcon(agency);
   }
+
 }

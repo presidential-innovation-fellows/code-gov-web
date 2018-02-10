@@ -131,71 +131,14 @@ body {
   }
 }
 
-.banner {
-  height: 90vh;
+.banner#banner-home {
+
   min-height: 48rem;
-  position: relative;
 
-  @media screen and (min-width: $small-screen) {
-    padding: 16rem 0 16rem;
-  }
-
-  h1 {
-    font-size: 2em;
-    margin-bottom: 0;
-
-    @media screen and (min-width: $small-screen) {
-      font-size: 2.8em;
-    }
-
-    @media screen and (min-width: $medium-screen) {
-      font-size: 3.2em;
-    }
-  }
-
-  p {
-    color: $color-gray-lighter;
-    font-size: 1em;
-    margin: 2rem auto 3rem;
-    max-width: 40rem;
-
-    @media screen and (min-width: $small-screen) {
-      font-size: 1.2em;
-    }
-
-    @media screen and (min-width: $medium-screen) {
-      font-size: 1.4em;
-    }
-  }
-
-  input {
-    max-width: 670px;
-    margin: 0 auto;
-  }
-
-  .usa-button {
-    box-shadow: 0 3px 7px rgba($color-black, 0.1);
-    font-size: 1em;
-    margin: 0 auto;
-    max-width: 12em;
-
-    @media screen and (min-width: $small-screen) {
-      font-size: 1.2em;
-      max-width: none;
-    }
-  }
 }
 
-.banner-background-container {
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 100%;
-}
+
+
 
 .banner-background {
   animation: 15s linear zoomOutOnBackground;
@@ -218,16 +161,7 @@ body {
   }
 }
 
-.banner-container {
-  left: 50%;
-  margin: 0 auto;
-  max-width: 55em;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  width: 100%;
-}
+
 
 .featured-projects {
   text-align: center;

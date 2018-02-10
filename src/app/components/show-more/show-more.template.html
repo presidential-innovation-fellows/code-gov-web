@@ -1,8 +1,9 @@
 <ul class="usa-unstyled-list" [formGroup]="formGroup.controls[name]">
-  <li *ngFor="let item of list | slice:0:maxShown">
+  <li *ngFor="let item of list | slice:0:getNumberToShow()">
     <input id="{{ name }}-{{ item }}" [formControlName]="item" type="checkbox" value="{{ item }}" /><label for="{{ name }}-{{ item }}"><span>{{ item }}</span></label>
   </li>
   <li>
     <a *ngIf="isShowAllVisible()" class="show-more" href="#" (click)="showAll($event)">Show more</a>
+    <a *ngIf="isShowLessVisible()" class="show-more" href="#" (click)="showLess($event)">Show less</a>
   </li>
 </ul>

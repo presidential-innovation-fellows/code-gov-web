@@ -24,6 +24,7 @@ import { ROUTES } from './app.routes';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { ExternalLinkDirective } from './directives/external-link';
 import { ToggleMenuDirective } from './directives/toggle-menu';
+import { CapitalizePipe } from './pipes/capitalize';
 import { LanguageIconPipe } from './pipes/language-icon';
 import { PluralizePipe } from './pipes/pluralize';
 import { TruncatePipe } from './pipes/truncate';
@@ -32,6 +33,7 @@ import { IsDefinedPipe } from './pipes/is-defined';
 import { APP_COMPONENTS } from './utils/app-components';
 import { AgencyService, AGENCIES } from './services/agency';
 import { AgencyApiService } from './services/agency-api';
+import { HelpWantedService } from './services/help-wanted';
 import { AgenciesIndexService, ReleasesIndexService } from './services/indexes';
 import { MobileService } from './services/mobile';
 import { ModalService } from './services/modal';
@@ -52,6 +54,7 @@ const APP_PROVIDERS = [
   AgenciesIndexService,
   AgencyService,
   AgencyApiService,
+  HelpWantedService,
   MobileService,
   ModalService,
   MonacoEditorService,
@@ -85,6 +88,7 @@ const APP_PROVIDERS = [
   declarations: [
     APP_COMPONENTS,
     ExternalLinkDirective,
+    CapitalizePipe,
     LanguageIconPipe,
     PluralizePipe,
     IsDefinedPipe,

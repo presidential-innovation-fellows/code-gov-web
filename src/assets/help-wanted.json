@@ -1,0 +1,158 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Code.gov Administration Tool for Agency Inventory Upload and Maintenance",
+      "description": "Issue Description:\nThis task supports the Code.gov team. We have an admin tool prototype and want to bring it to production for agency use. There is both a front-end web interface and a database.\n\nSpecific tasks:\n\nGet the current prototype admin tool working. Front-end repo here - https://github.com/GSA/code-gov-admintool; Back-end repo here - https://github.com/GSA/code-gov-admin-backend.\nWork with the Code.gov team and me (Joe Castle) to determine path forward for production. This includes integration with Code.gov, including the environment with security, CI, code scanning, databases, etc.\nContact Info:\nName: Joseph Castle\nEmail: joseph.castle@gsa.gov",
+      "updated": "2018-01-23T03:11:00Z",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Large",
+      "type": "Enhancement",
+      "impact": "Open Government",
+      "projectURL": "https://code.gov/#/explore-code/agencies/GSA/repos/Code.gov",
+      "issueURL": "https://github.com/GSA/code-gov-web/issues/417",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": 2,
+      "title": "Labor Hours Estimation for Code.gov Open Source Repositories",
+      "description": "Issue Description:\nThis task supports the Code.gov team. We want to estimate total lines of code and total hours and costs for the code that is located in all of our open source repositories. The open source repositories are listed in the agency json files as shown on Code.gov.\n\nSpecific tasks:\n\nCount total lines of code for all open source repos on Code.gov using CLOC - https://github.com/AlDanial/cloc.\nDetermine labor hours and costs of total lines of code using the COCOMO II Model - http://csse.usc.edu/tools/cocomoii.php. Parameters TBD and can work with me (Joe Castle) on this.\nProvide all of this in a program/script that can be run on a regular basis to account for new code as it is added to Code.gov\nContact Info:\nName: Joseph Castle\nEmail: joseph.castle@gsa.gov",
+      "updated": "2018-01-23T03:11:00Z",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "impact": "Open Government",
+      "projectURL": "https://code.gov/#/explore-code/agencies/GSA/repos/Code.gov",
+      "issueURL": "https://github.com/GSA/code-gov-web/issues/416",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": 3,
+      "title": "Allow user to view an item from the left pane while editing",
+      "description": "Issue Description:\nWhen editing, a very common observation is users single-clicking an object in the left pane (both browse tree and search) and being taken out of Edit mode, or being warned with the 'Unsaved changes' dialog. What they want is to be able to see an object before adding it to a thing they're currently editing.\n\nProposed solution:\n\nSingle-clicking in the left pane during Edit mode displays the clicked object in an overlay without taking the user out of Edit mode.\nAll normal 'view' functionality (like plot pan/zoom) would be available.\nThere should be a 'Add This Item' button available in the overlay as well that would add the item being viewed to the object being edited, then closes the overlay.",
+      "updated": "2017-12-13",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "impact": "Open Government",
+      "projectURL": "https://code.gov/#/explore-code/agencies/NASA/repos/Open%20Mission%20Control%20Technologies%20%28Open%20MCT%29",
+      "issueURL": "https://github.com/nasa/openmct/issues/928",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "NASA",
+      "license": "Apache License, Version 2.0"
+    },
+    {
+      "id": 4,
+      "title": "Add 'Create..' Option to create object inside other object.",
+      "description": "It should be possible for a user to right click on an object in the tree view and select 'create...' to create an object inside of that object. This option should not exist for objects that do not have composition.",
+      "updated": "2017-12-13",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "impact": "Open Government",
+      "projectURL": "https://code.gov/#/explore-code/agencies/NASA/repos/Open%20Mission%20Control%20Technologies%20%28Open%20MCT%29",
+      "issueURL": "https://github.com/nasa/openmct/issues/354",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "NASA",
+      "license": "Apache License, Version 2.0"
+    },
+    {
+      "id": 5,
+      "title": "Remove action is available for non-editable objects",
+      "description": "Attempting to use the action fails as expected, but it probably shouldn't be available in the first place. This is evident in the live demo. Navigate to a non-editable layout (eg. anything under 'demo objects'). The context menu on any of the objects in the layout includes the remove action.",
+      "updated": "2018-1-10",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Bug",
+      "impact": "Open Government",
+      "projectURL": "https://code.gov/#/explore-code/agencies/NASA/repos/Open%20Mission%20Control%20Technologies%20%28Open%20MCT%29",
+      "issueURL": "https://github.com/nasa/openmct/issues/1542",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "NASA",
+      "license": "Apache License, Version 2.0"
+    },
+    {
+      "id": 6,
+      "title": "Timers aren't visually indicating countdown or countup",
+      "description": "Timers should display + or - depending on whether they are counting up or down. This is a regression error, they used to do this.",
+      "updated": "2018-1-29",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Bug",
+      "impact": "Open Government",
+      "projectURL": "https://code.gov/#/explore-code/agencies/NASA/repos/Open%20Mission%20Control%20Technologies%20%28Open%20MCT%29",
+      "issueURL": "https://github.com/nasa/openmct/issues/1895",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "NASA",
+      "license": "Apache License, Version 2.0"
+    },
+    {
+      "id": 7,
+      "title": "Timers aren't visually indicating countdown or countup",
+      "description": "The table component can sometimes produce various errors when the view changes (eg. on save, on navigation away etc.).",
+      "updated": "2018-1-19",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Bug",
+      "impact": "Open Government",
+      "projectURL": "https://code.gov/#/explore-code/agencies/NASA/repos/Open%20Mission%20Control%20Technologies%20%28Open%20MCT%29",
+      "issueURL": "https://github.com/nasa/openmct/issues/1884",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "NASA",
+      "license": "Apache License, Version 2.0"
+    }
+  ]
+}

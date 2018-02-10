@@ -1,0 +1,35 @@
+<div class="help-wanted-card card card--focusable">
+  <h3><a external-link [href]="item.projectURL">{{ item.title }}</a></h3>
+  <small>Last updated {{ item.updated | date: "MMM d 'at' h':'mm a"}}</small>
+  <p class="help-wanted-card-description">{{ item.description | truncate : 250}}</p>
+  <dl *ngIf="!mobile">
+    <div>
+      <dt>Language:</dt>
+      <dd>{{ item.languages.join(', ') }}</dd>
+    </div>
+
+    <div>
+      <dt>Skill Level:</dt>
+      <dd>{{ item.skill | capitalize }}</dd>
+    </div>
+
+    <div>
+      <dt>Effort:</dt>
+      <dd>{{ item.effort }}</dd>
+    </div>
+    
+    <div>
+      <dt>Impact:</dt>
+      <dd>{{ item.impact | capitalize }}</dd>
+    </div>
+    
+  </dl>
+  <div class="help-wanted-card-actions">
+    <a external-link [href]="item.projectURL" *ngIf="item.projectURL"><button class="usa-button button--tertiary">Project Details</button></a>
+    <a external-link [href]="item.issueURL" *ngIf="item.issueURL"><button class="usa-button button--tertiary">Start Now</button></a>
+  </div>
+  <div class="agency-details">
+    <img [src]="item.image" *ngIf="item.image"/>
+    <span *ngIf="item?.agency?.name" class="help-wanted-agency-name">{{item?.agency?.name}}</span>
+  </div>
+</div>

@@ -1,5 +1,6 @@
 import { Angulartics2 } from 'angulartics2';
 import { Directive, ElementRef, Output, Renderer } from '@angular/core';
+import * as URL from 'url-parse';
 
 import { ModalService } from '../../services/modal';
 
@@ -28,20 +29,21 @@ export class ExternalLinkDirective {
   }
 
   isExternalLink(url) {
-    return !this.url.match(/(.+\.)?([^.]+)\.(?:gov|mil)$/);
+    let host = new URL(url).host;
+    return !host.endsWith('.gov') && !host.endsWith('.mil');
   }
 
   onClick(event: any) {
-    this.url = this.el.nativeElement.getAttribute('href');
+    let url = this.el.nativeElement.getAttribute('href');
 
     this.angulartics2.eventTrack.next({
       action: 'Click',
       properties: { category: 'External Link' }
     });
 
-    if (this.isExternalLink(this.url)) {
+    if (this.isExternalLink(url)) {
       event.preventDefault();
-      this.modalContent['url'] = this.url;
+      this.modalContent['url'] = url;
       this.modalService.showModal(this.modalContent);
     }
   }

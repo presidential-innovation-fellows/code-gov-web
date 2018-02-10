@@ -87,7 +87,8 @@
     "version": "npm run build",
     "postversion": "git push && git push --tags",
     "postinstall": "typings install",
-    "licenses": "license-checker --json --relativeLicensePath --out dependency_licenses.json"
+    "licenses": "license-checker --json --relativeLicensePath --out dependency_licenses.json",
+    "list-git-conflicts": "git diff --name-only --diff-filter=U"
   },
   "dependencies": {
     "@angular/animations": "^4.4.4",
@@ -133,6 +134,7 @@
     "sass-loader": "^6.0.6",
     "typed.js": "^1.1.1",
     "typings": "^2.1.1",
+    "url-parse": "^1.2.0",
     "uswds": "^1.4.4",
     "webpack-create-file-plugin": "^0.1.0",
     "zone.js": "^0.8.19"

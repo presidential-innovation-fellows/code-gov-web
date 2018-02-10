@@ -40,7 +40,7 @@ module.exports = function (options) {
     gtmAuth: isProd ? 'GTM-M9L9Q5' : 'GTM-MSJCVS',
     HMR: isProd ? false : helpers.hasProcessFlag('hot'),
     ENV: options.env,
-    port: process.env.PORT || isProd ? 8080 : 2700,
+    port: process.env.PORT || (isProd ? 8080 : 2700),
     host: process.env.HOST || 'localhost'
   };
 
