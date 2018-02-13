@@ -12,7 +12,6 @@
     line-height: 1;
 
     a {
-      color: $brand-teal-medium;
       font-weight: bold;
     }
   }
@@ -28,7 +27,6 @@
   }
 
   dl {
-    background-color: $color-cool-blue-lightest;
     margin-bottom: 0.25rem;
     padding: 0.75rem 0.75rem;
 
@@ -79,6 +77,7 @@
       button {
         margin-bottom: 0;
         width: fit-content;
+        font-weight: 700;
     
         &:last-of-type {
           margin-right: 0
