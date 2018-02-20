@@ -52,8 +52,8 @@
       "id": "DOS",
       "name": "Department of State"
     },
-    "USDOT": {
-      "id": "USDOT",
+    "DOT": {
+      "id": "DOT",
       "name": "Department of Transportation"
     },
     "TREASURY": {

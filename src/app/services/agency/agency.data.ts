@@ -53,7 +53,7 @@ export const AGENCIES = [
     name: 'Department of State'
   },
    {
-    id: 'USDOT',
+    id: 'DOT',
     name: 'Department of Transportation'
   },
 
