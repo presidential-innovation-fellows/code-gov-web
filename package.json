@@ -177,7 +177,7 @@
     "karma-remap-istanbul": "^0.6.0",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-story-reporter": "^0.3.1",
-    "karma-webpack": "^2.0.9",
+    "karma-webpack": "2.0.9",
     "mkdirp": "^0.5.1",
     "parse5": "^2.2.2",
     "postcss-cssnext": "^2.7.0",
