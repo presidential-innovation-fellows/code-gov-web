@@ -1,80 +1,17 @@
 {
-  "timestamp": "Tue Feb 20 2018 17:06:07 GMT-0500 (EST)",
+  "timestamp": "Tue Feb 27 2018 13:10:51 GMT-0500 (EST)",
   "statuses": {
-    "USDA": {
-      "status": "PARTIALY COMPLIANT",
-      "issues": [],
-      "version": "2.0.0",
-      "metadata": {
-        "agency": {
-          "id": 1,
-          "name": "Department of Agriculture",
-          "acronym": "USDA",
-          "website": "https://usda.gov/",
-          "codeUrl": "https://www.usda.gov/code.json"
-        }
-      },
-      "requirements": {
-        "agencyWidePolicy": 0.75,
-        "openSourceRequirement": 0,
-        "inventoryRequirement": 0,
-        "schemaFormat": 1,
-        "overallCompliance": 0.25
-      }
-    },
-    "HHS": {
-      "status": "PARTIALY COMPLIANT",
-      "issues": [],
-      "version": "2.0.0",
-      "metadata": {
-        "agency": {
-          "id": 6,
-          "name": "Department of Health and Human Services",
-          "acronym": "HHS",
-          "website": "https://hhs.gov",
-          "codeUrl": "https://www.hhs.gov/code.json"
-        }
-      },
-      "requirements": {
-        "agencyWidePolicy": 1,
-        "openSourceRequirement": 0,
-        "inventoryRequirement": 0,
-        "schemaFormat": 1,
-        "overallCompliance": 0.3333333333333333
-      }
-    },
-    "NSF": {
-      "status": "FULLY COMPLIANT",
-      "issues": [],
-      "version": "2.0.0",
-      "metadata": {
-        "agency": {
-          "id": 20,
-          "name": "National Science Foundation",
-          "acronym": "NSF",
-          "website": "https://nsf.gov/",
-          "codeUrl": "https://www.nsf.gov/code.json"
-        }
-      },
-      "requirements": {
-        "agencyWidePolicy": 1,
-        "openSourceRequirement": 1,
-        "inventoryRequirement": 1,
-        "schemaFormat": 1,
-        "overallCompliance": 1
-      }
-    },
-    "DOS": {
+    "VA": {
       "status": "NOT COMPLIANT",
       "issues": [],
-      "version": "1.0.3",
+      "version": "2.0.0",
       "metadata": {
         "agency": {
-          "id": 12,
-          "name": "Department of State",
-          "acronym": "DOS",
-          "website": "https://state.gov/",
-          "codeUrl": "https://www.state.gov/code.json"
+          "id": 15,
+          "name": "Department of Veterans Affairs",
+          "acronym": "VA",
+          "website": "https://va.gov/",
+          "codeUrl": "https://www.va.gov/code.json"
         }
       },
       "requirements": {
@@ -127,67 +64,46 @@
         "overallCompliance": 0.3333333333333333
       }
     },
-    "USAID": {
+    "NSF": {
+      "status": "FULLY COMPLIANT",
+      "issues": [],
+      "version": "2.0.0",
+      "metadata": {
+        "agency": {
+          "id": 20,
+          "name": "National Science Foundation",
+          "acronym": "NSF",
+          "website": "https://nsf.gov/",
+          "codeUrl": "https://www.nsf.gov/code.json"
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "openSourceRequirement": 1,
+        "inventoryRequirement": 1,
+        "schemaFormat": 1,
+        "overallCompliance": 1
+      }
+    },
+    "USDA": {
       "status": "PARTIALY COMPLIANT",
       "issues": [],
       "version": "2.0.0",
       "metadata": {
         "agency": {
-          "id": 18,
-          "name": "Agency for International Development",
-          "acronym": "USAID",
-          "website": "https://usaid.gov/",
-          "codeUrl": "https://www.usaid.gov/code.json"
+          "id": 1,
+          "name": "Department of Agriculture",
+          "acronym": "USDA",
+          "website": "https://usda.gov/",
+          "codeUrl": "https://www.usda.gov/code.json"
         }
       },
       "requirements": {
-        "agencyWidePolicy": 1,
+        "agencyWidePolicy": 0.75,
         "openSourceRequirement": 0,
         "inventoryRequirement": 0,
         "schemaFormat": 1,
-        "overallCompliance": 0.3333333333333333
-      }
-    },
-    "DHS": {
-      "status": "PARTIALY COMPLIANT",
-      "issues": [],
-      "version": "2.0.0",
-      "metadata": {
-        "agency": {
-          "id": 8,
-          "name": "Department of Homeland Security",
-          "acronym": "DHS",
-          "website": "https://www.dhs.gov",
-          "codeUrl": "https://www.dhs.gov/code.json"
-        }
-      },
-      "requirements": {
-        "agencyWidePolicy": 1,
-        "openSourceRequirement": 0,
-        "inventoryRequirement": 0,
-        "schemaFormat": 1,
-        "overallCompliance": 0.3333333333333333
-      }
-    },
-    "NRC": {
-      "status": "PARTIALY COMPLIANT",
-      "issues": [],
-      "version": "1.0.1",
-      "metadata": {
-        "agency": {
-          "id": 21,
-          "name": "Nuclear Regulatory Commission",
-          "acronym": "NRC",
-          "website": "https://www.nrc.gov/",
-          "codeUrl": "https://www.nrc.gov/code.json"
-        }
-      },
-      "requirements": {
-        "agencyWidePolicy": 1,
-        "openSourceRequirement": 0,
-        "inventoryRequirement": 0,
-        "schemaFormat": 1,
-        "overallCompliance": 0.3333333333333333
+        "overallCompliance": 0.25
       }
     },
     "NARA": {
@@ -211,71 +127,25 @@
         "overallCompliance": 0.6666666666666666
       }
     },
-    "DOC": {
-      "status": "PARTIALY COMPLIANT",
-      "issues": [
-        {
-          "error": "error loading: https://www.commerce.gov/code.json - reason: statusCode 404"
-        }
-      ],
-      "version": "N/A",
-      "metadata": {
-        "agency": {
-          "id": 2,
-          "name": "Department of Commerce",
-          "acronym": "DOC",
-          "website": "https://www.commerce.gov/",
-          "codeUrl": "https://www.commerce.gov/code.json"
-        }
-      },
-      "requirements": {
-        "agencyWidePolicy": 0.75,
-        "openSourceRequirement": 0,
-        "inventoryRequirement": 0,
-        "schemaFormat": 0.5,
-        "overallCompliance": 0.25
-      }
-    },
-    "DOT": {
-      "status": "PARTIALY COMPLIANT",
+    "DOS": {
+      "status": "NOT COMPLIANT",
       "issues": [],
-      "version": "2.0.0",
+      "version": "1.0.3",
       "metadata": {
         "agency": {
-          "id": 13,
-          "name": "Department of Transportation",
-          "acronym": "DOT",
-          "website": "https://www.transportation.gov/",
-          "codeUrl": "https://www.transportation.gov/code.json"
+          "id": 12,
+          "name": "Department of State",
+          "acronym": "DOS",
+          "website": "https://state.gov/",
+          "codeUrl": "https://www.state.gov/code.json"
         }
       },
       "requirements": {
-        "agencyWidePolicy": 1,
-        "openSourceRequirement": 0.5,
-        "inventoryRequirement": 0,
-        "schemaFormat": 1,
-        "overallCompliance": 0.5
-      }
-    },
-    "SBA": {
-      "status": "PARTIALY COMPLIANT",
-      "issues": [],
-      "version": "2.0.0",
-      "metadata": {
-        "agency": {
-          "id": 23,
-          "name": "Small Business Administration",
-          "acronym": "SBA",
-          "website": "https://sba.gov/",
-          "codeUrl": "https://www.sba.gov/code.json"
-        }
-      },
-      "requirements": {
-        "agencyWidePolicy": 1,
+        "agencyWidePolicy": 0,
         "openSourceRequirement": 0,
         "inventoryRequirement": 0,
         "schemaFormat": 1,
-        "overallCompliance": 0.3333333333333333
+        "overallCompliance": 0
       }
     },
     "SSA": {
@@ -299,27 +169,6 @@
         "overallCompliance": 0.8333333333333334
       }
     },
-    "EPA": {
-      "status": "PARTIALY COMPLIANT",
-      "issues": [],
-      "version": "1.0.1",
-      "metadata": {
-        "agency": {
-          "id": 16,
-          "name": "Environmental Protection Agency",
-          "acronym": "EPA",
-          "website": "https://epa.gov/",
-          "codeUrl": "https://www.epa.gov/code.json"
-        }
-      },
-      "requirements": {
-        "agencyWidePolicy": 1,
-        "openSourceRequirement": 0.5,
-        "inventoryRequirement": 0,
-        "schemaFormat": 1,
-        "overallCompliance": 0.5
-      }
-    },
     "TREASURY": {
       "status": "PARTIALY COMPLIANT",
       "issues": [],
@@ -341,46 +190,152 @@
         "overallCompliance": 0.25
       }
     },
-    "GSA": {
-      "status": "FULLY COMPLIANT",
+    "SBA": {
+      "status": "PARTIALY COMPLIANT",
       "issues": [],
       "version": "2.0.0",
       "metadata": {
         "agency": {
-          "id": 19,
-          "name": "General Services Administration",
-          "acronym": "GSA",
-          "website": "https://gsa.gov/",
-          "codeUrl": "https://www.gsa.gov/code.json"
+          "id": 23,
+          "name": "Small Business Administration",
+          "acronym": "SBA",
+          "website": "https://sba.gov/",
+          "codeUrl": "https://www.sba.gov/code.json"
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
-        "openSourceRequirement": 1,
-        "inventoryRequirement": 1,
+        "openSourceRequirement": 0,
+        "inventoryRequirement": 0,
         "schemaFormat": 1,
-        "overallCompliance": 1
+        "overallCompliance": 0.3333333333333333
       }
     },
-    "DOE": {
-      "status": "FULLY COMPLIANT",
+    "USAID": {
+      "status": "PARTIALY COMPLIANT",
       "issues": [],
       "version": "2.0.0",
       "metadata": {
         "agency": {
-          "id": 5,
-          "name": "Department of Energy",
-          "acronym": "DOE",
-          "website": "https://energy.gov/",
-          "codeUrl": "https://www.energy.gov/code.json"
+          "id": 18,
+          "name": "Agency for International Development",
+          "acronym": "USAID",
+          "website": "https://usaid.gov/",
+          "codeUrl": "https://www.usaid.gov/code.json"
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
-        "openSourceRequirement": 1,
-        "inventoryRequirement": 1,
+        "openSourceRequirement": 0,
+        "inventoryRequirement": 0,
         "schemaFormat": 1,
-        "overallCompliance": 1
+        "overallCompliance": 0.3333333333333333
+      }
+    },
+    "EPA": {
+      "status": "PARTIALY COMPLIANT",
+      "issues": [
+        {
+          "keyword": "required",
+          "dataPath": ".releases[5].contact",
+          "schemaPath": "#/properties/releases/items/properties/contact/required",
+          "params": {
+            "missingProperty": "email"
+          },
+          "message": "should have required property 'email'"
+        },
+        {
+          "keyword": "required",
+          "dataPath": ".releases[11].contact",
+          "schemaPath": "#/properties/releases/items/properties/contact/required",
+          "params": {
+            "missingProperty": "email"
+          },
+          "message": "should have required property 'email'"
+        },
+        {
+          "keyword": "required",
+          "dataPath": ".releases[22].contact",
+          "schemaPath": "#/properties/releases/items/properties/contact/required",
+          "params": {
+            "missingProperty": "email"
+          },
+          "message": "should have required property 'email'"
+        },
+        {
+          "keyword": "required",
+          "dataPath": ".releases[43].contact",
+          "schemaPath": "#/properties/releases/items/properties/contact/required",
+          "params": {
+            "missingProperty": "email"
+          },
+          "message": "should have required property 'email'"
+        },
+        {
+          "keyword": "required",
+          "dataPath": ".releases[64].contact",
+          "schemaPath": "#/properties/releases/items/properties/contact/required",
+          "params": {
+            "missingProperty": "email"
+          },
+          "message": "should have required property 'email'"
+        },
+        {
+          "keyword": "required",
+          "dataPath": ".releases[81].contact",
+          "schemaPath": "#/properties/releases/items/properties/contact/required",
+          "params": {
+            "missingProperty": "email"
+          },
+          "message": "should have required property 'email'"
+        },
+        {
+          "keyword": "required",
+          "dataPath": ".releases[82].contact",
+          "schemaPath": "#/properties/releases/items/properties/contact/required",
+          "params": {
+            "missingProperty": "email"
+          },
+          "message": "should have required property 'email'"
+        },
+        {
+          "keyword": "required",
+          "dataPath": ".releases[101].contact",
+          "schemaPath": "#/properties/releases/items/properties/contact/required",
+          "params": {
+            "missingProperty": "email"
+          },
+          "message": "should have required property 'email'"
+        },
+        {
+          "keyword": "required",
+          "dataPath": ".releases[104].contact",
+          "schemaPath": "#/properties/releases/items/properties/contact/required",
+          "params": {
+            "missingProperty": "email"
+          },
+          "message": "should have required property 'email'"
+        },
+        {
+          "error": "Agency: EPA - Error: Agency: EPA has not passed schema validation."
+        }
+      ],
+      "version": "2.0.0",
+      "metadata": {
+        "agency": {
+          "id": 16,
+          "name": "Environmental Protection Agency",
+          "acronym": "EPA",
+          "website": "https://epa.gov/",
+          "codeUrl": "https://www.epa.gov/code.json"
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "openSourceRequirement": 0.5,
+        "inventoryRequirement": 0,
+        "schemaFormat": 0.5,
+        "overallCompliance": 0.5
       }
     },
     "DOI": {
@@ -408,6 +363,90 @@
         "overallCompliance": 0
       }
     },
+    "GSA": {
+      "status": "FULLY COMPLIANT",
+      "issues": [],
+      "version": "2.0.0",
+      "metadata": {
+        "agency": {
+          "id": 19,
+          "name": "General Services Administration",
+          "acronym": "GSA",
+          "website": "https://gsa.gov/",
+          "codeUrl": "https://www.gsa.gov/code.json"
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "openSourceRequirement": 1,
+        "inventoryRequirement": 1,
+        "schemaFormat": 1,
+        "overallCompliance": 1
+      }
+    },
+    "NRC": {
+      "status": "PARTIALY COMPLIANT",
+      "issues": [],
+      "version": "1.0.1",
+      "metadata": {
+        "agency": {
+          "id": 21,
+          "name": "Nuclear Regulatory Commission",
+          "acronym": "NRC",
+          "website": "https://www.nrc.gov/",
+          "codeUrl": "https://www.nrc.gov/code.json"
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "openSourceRequirement": 0,
+        "inventoryRequirement": 0,
+        "schemaFormat": 1,
+        "overallCompliance": 0.3333333333333333
+      }
+    },
+    "DOE": {
+      "status": "FULLY COMPLIANT",
+      "issues": [],
+      "version": "2.0.0",
+      "metadata": {
+        "agency": {
+          "id": 5,
+          "name": "Department of Energy",
+          "acronym": "DOE",
+          "website": "https://energy.gov/",
+          "codeUrl": "https://www.energy.gov/code.json"
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "openSourceRequirement": 1,
+        "inventoryRequirement": 1,
+        "schemaFormat": 1,
+        "overallCompliance": 1
+      }
+    },
+    "DOT": {
+      "status": "PARTIALY COMPLIANT",
+      "issues": [],
+      "version": "2.0.0",
+      "metadata": {
+        "agency": {
+          "id": 13,
+          "name": "Department of Transportation",
+          "acronym": "DOT",
+          "website": "https://www.transportation.gov/",
+          "codeUrl": "https://www.transportation.gov/code.json"
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "openSourceRequirement": 0.5,
+        "inventoryRequirement": 0,
+        "schemaFormat": 1,
+        "overallCompliance": 0.5
+      }
+    },
     "ED": {
       "status": "PARTIALY COMPLIANT",
       "issues": [],
@@ -429,42 +468,21 @@
         "overallCompliance": 0.6666666666666666
       }
     },
-    "VA": {
-      "status": "NOT COMPLIANT",
-      "issues": [],
-      "version": "2.0.0",
-      "metadata": {
-        "agency": {
-          "id": 15,
-          "name": "Department of Veterans Affairs",
-          "acronym": "VA",
-          "website": "https://va.gov/",
-          "codeUrl": "https://www.va.gov/code.json"
-        }
-      },
-      "requirements": {
-        "agencyWidePolicy": 0,
-        "openSourceRequirement": 0,
-        "inventoryRequirement": 0,
-        "schemaFormat": 1,
-        "overallCompliance": 0
-      }
-    },
-    "OPM": {
+    "DOC": {
       "status": "PARTIALY COMPLIANT",
       "issues": [
         {
-          "error": "error loading: https://www.opm.gov/code.json - reason: statusCode 404"
+          "error": "error loading: https://www.commerce.gov/code.json - reason: statusCode 404"
         }
       ],
       "version": "N/A",
       "metadata": {
         "agency": {
-          "id": 22,
-          "name": "Office of Personnel Management",
-          "acronym": "OPM",
-          "website": "https://opm.gov/",
-          "codeUrl": "https://www.opm.gov/code.json"
+          "id": 2,
+          "name": "Department of Commerce",
+          "acronym": "DOC",
+          "website": "https://www.commerce.gov/",
+          "codeUrl": "https://www.commerce.gov/code.json"
         }
       },
       "requirements": {
@@ -496,27 +514,6 @@
         "overallCompliance": 0.8333333333333334
       }
     },
-    "HUD": {
-      "status": "PARTIALY COMPLIANT",
-      "issues": [],
-      "version": "2.0.0",
-      "metadata": {
-        "agency": {
-          "id": 7,
-          "name": "Department of Housing and Urban Development",
-          "acronym": "HUD",
-          "website": "https://www.hud.gov/",
-          "codeUrl": "https://www.hud.gov/code.json"
-        }
-      },
-      "requirements": {
-        "agencyWidePolicy": 0.75,
-        "openSourceRequirement": 0,
-        "inventoryRequirement": 1,
-        "schemaFormat": 1,
-        "overallCompliance": 0.5833333333333334
-      }
-    },
     "DOD": {
       "status": "NOT COMPLIANT",
       "issues": [
@@ -540,6 +537,94 @@
         "inventoryRequirement": 0,
         "schemaFormat": 0.5,
         "overallCompliance": 0
+      }
+    },
+    "DHS": {
+      "status": "PARTIALY COMPLIANT",
+      "issues": [],
+      "version": "2.0.0",
+      "metadata": {
+        "agency": {
+          "id": 8,
+          "name": "Department of Homeland Security",
+          "acronym": "DHS",
+          "website": "https://www.dhs.gov",
+          "codeUrl": "https://www.dhs.gov/code.json"
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "openSourceRequirement": 0,
+        "inventoryRequirement": 0,
+        "schemaFormat": 1,
+        "overallCompliance": 0.3333333333333333
+      }
+    },
+    "HUD": {
+      "status": "PARTIALY COMPLIANT",
+      "issues": [],
+      "version": "2.0.0",
+      "metadata": {
+        "agency": {
+          "id": 7,
+          "name": "Department of Housing and Urban Development",
+          "acronym": "HUD",
+          "website": "https://www.hud.gov/",
+          "codeUrl": "https://www.hud.gov/code.json"
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0.75,
+        "openSourceRequirement": 0,
+        "inventoryRequirement": 1,
+        "schemaFormat": 1,
+        "overallCompliance": 0.5833333333333334
+      }
+    },
+    "HHS": {
+      "status": "PARTIALY COMPLIANT",
+      "issues": [],
+      "version": "2.0.0",
+      "metadata": {
+        "agency": {
+          "id": 6,
+          "name": "Department of Health and Human Services",
+          "acronym": "HHS",
+          "website": "https://hhs.gov",
+          "codeUrl": "https://www.hhs.gov/code.json"
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "openSourceRequirement": 0,
+        "inventoryRequirement": 0,
+        "schemaFormat": 1,
+        "overallCompliance": 0.3333333333333333
+      }
+    },
+    "OPM": {
+      "status": "PARTIALY COMPLIANT",
+      "issues": [
+        {
+          "error": "error loading: https://www.opm.gov/code.json - reason: statusCode 404"
+        }
+      ],
+      "version": "N/A",
+      "metadata": {
+        "agency": {
+          "id": 22,
+          "name": "Office of Personnel Management",
+          "acronym": "OPM",
+          "website": "https://opm.gov/",
+          "codeUrl": "https://www.opm.gov/code.json"
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0.75,
+        "openSourceRequirement": 0,
+        "inventoryRequirement": 0,
+        "schemaFormat": 0.5,
+        "overallCompliance": 0.25
       }
     }
   }
