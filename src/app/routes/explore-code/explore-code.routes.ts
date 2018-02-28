@@ -15,11 +15,11 @@ export const EXPLORE_CODE_ROUTES: Routes = [
     path: 'explore-code',
     component: ExploreCodeComponent,
     children: [
-      { path: '', redirectTo: 'agencies/' + AGENCIES[0].id, pathMatch: 'full' },
+      { path: '', redirectTo: 'agencies/NASA', pathMatch: 'full' },
       { path: 'agencies',
         component: AgenciesComponent,
         children: [
-          { path: '', redirectTo: AGENCIES[0].id, pathMatch: 'full' },
+          { path: '', redirectTo: '/NASA', pathMatch: 'full' },
           { path: ':id', component: AgencyComponent }
         ]
       },

@@ -1,5 +1,12 @@
 <section *ngIf="repo" class="repo-container">
   <header>
+      <div class="repo-breadcrumb">
+          <ul class="usa-unstyled-list">
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/explore-code/agencies/{{ repo.agency.name }}">{{ repo.agency.name }}</a></li>
+            <li>{{ repo.name }}</li>
+          </ul>
+        </div>
     <div class="repo-header-container">
       <h3>
         <a routerLink="/explore-code/agencies/{{repo.agency.id}}">

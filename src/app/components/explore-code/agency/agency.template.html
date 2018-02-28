@@ -32,9 +32,8 @@
                     <span>{{ language }}</span>
                   </li>
                   <li>
-                    <i class="icon fa fa-code"></i>
-                    <span *ngIf="repo.permissions.usageType === 'openSource'">Open Source</span>
-                    <span *ngIf="repo.permissions.usageType === 'governmentWideReuse'">Government-Wide Reuse</span>
+                    <span *ngIf="repo.permissions.usageType === 'openSource'"><i class="icon fa fa-check-circle-o"></i>Open Source</span>
+                    <span *ngIf="repo.permissions.usageType === 'governmentWideReuse'"><i class="icon fa fa-refresh"></i>Government-Wide Reuse</span>
                   </li>
                 </ul>
               </div>

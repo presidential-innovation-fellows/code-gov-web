@@ -23,17 +23,14 @@
 .repo { 
 
   a {
-    color: $color-gray;
     display: block;
     font-size: 0.95em;
     margin-bottom: 1em;
     text-decoration: none;
-
-    &:hover {
       h3 {
         color: $color-primary;
+        text-decoration: underline;
       }
-    }
   }
 
   p {
@@ -41,6 +38,7 @@
     margin: 0;
   }
 }
+
 
 .repos-count {
   margin: 0 0 1.5em;
@@ -52,6 +50,7 @@
   li {
     display: inline-block;
     margin-right: 0.75em;
+    color: $color-primary;
 
     &:last-child {
       margin-right: 0;

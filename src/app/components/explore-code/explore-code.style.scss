@@ -1,10 +1,20 @@
 @import '~bourbon/app/assets/stylesheets/addons/font-stacks';
 @import '~uswds/src/stylesheets/core/variables';
 
-.explore-code-content {
-  padding: 0.75em 0 3em;
+.agencies-banner {
+  background: url('assets/img/american_flag_1920x1280_gradient.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  margin-bottom: 2rem;
+  padding-bottom: 8rem;
+  padding-top: 8rem;
+  text-align: center;
 
-  @media screen and (min-width: $medium-screen) {
-    padding: 2em 0 3em;
+  h1 {
+    color: $color-white;
+    margin-bottom: 0;
+    text-transform: uppercase;
   }
 }
+
+

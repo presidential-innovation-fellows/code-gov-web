@@ -2,6 +2,37 @@
 @import '../../../../styles/base/grid-settings';
 @import '~bourbon/app/assets/stylesheets/bourbon';
 @import '~bourbon-neat/app/assets/stylesheets/neat';
+@import '~uswds/src/stylesheets/core/variables';
+
+
+.agencies-breadcrumb {
+  font-size: 0.8em;
+  margin-bottom: 4rem;
+
+  ul {
+    li {
+      display: inline-block;
+
+      &::before {
+        content: '> ';
+      }
+
+      &:first-of-type {
+        &::before {
+          content: '';
+        }
+      }
+
+      a {
+        color: $color-black;
+      }
+
+      &:last-child {
+        font-weight: $font-bold;
+      }
+    }
+  }
+}
 
 .sidebar-agencies {
   @media screen and (min-width: $medium-screen) {
