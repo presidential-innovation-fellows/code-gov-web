@@ -21,7 +21,12 @@
           <span *ngIf="displayRepo(repo)">
             <a routerLink="/explore-code/agencies/{{repo.agency.acronym}}/repos/{{repo.repoID}}">
               <div class="card card--focusable">
-                <h3 class="repo-name">{{ repo.name }}</h3>
+                <h3 class="repo-name">{{ repo.name }}
+                  <span 
+                    class="repo-label"
+                    [ngClass]="{'state': repo.orgType === 'state', 'city': repo.orgType === 'city'}">
+                  </span>
+                </h3>
                 <p class="repo-description">
                   {{ repo.description | truncate : 200 }}
                 </p>

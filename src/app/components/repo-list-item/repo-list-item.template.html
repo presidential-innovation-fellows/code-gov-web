@@ -1,5 +1,11 @@
 <div class="repo-list-item card card--focusable">
-  <h3 class="repo-name"><a routerLink="/explore-code/agencies/{{repo.agency.acronym}}/repos/{{repo.repoID}}">{{ repo.name }}</a></h3>
+  <h3 class="repo-name">
+    <a routerLink="/explore-code/agencies/{{repo.agency.acronym}}/repos/{{repo.repoID}}">{{ repo.name }}</a>
+    <span 
+      class="repo-label"
+      [ngClass]="{'state': repo.orgType === 'state', 'city': repo.orgType === 'city'}">
+    </span>
+  </h3>
   <p *ngIf="agency" class="repo-agency-icon">
     <span>{{ agency?.name }}</span>
   </p>

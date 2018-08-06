@@ -21,8 +21,12 @@
 }
 
 h3 {
-  margin-bottom: 0.2em;
+  margin-bottom: 2.5em;
   font-weight: $font-bold;
+
+  @media screen and (min-width: $medium-screen) {
+    margin-bottom: 0.2em;
+  }
 }
 
 p {
@@ -83,5 +87,50 @@ p {
     font-size: $small-font-size;
     vertical-align: middle;
     color: $color-gray-light;
+  }
+}
+
+
+.repo-label {
+  border: $color-green-light;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 2px $color-green-light;
+  color: $color-green-light;
+  display: block;
+  font-size: .65em;
+  margin-top: .2rem;
+  padding: .2rem .7rem;
+  position: absolute;
+  width: fit-content;
+
+  &:before {
+    content: "Federal";
+  }
+
+  @media screen and (min-width: $medium-screen) {
+    bottom: .5rem;
+    display: inline-block;
+    margin-left: 1rem;
+    position: relative;
+  }
+
+  &.city {
+    border: $color-secondary-dark;
+    color: $color-secondary-dark;
+    box-shadow: inset 0 0 0 2px $color-secondary-dark;
+    
+    &:before {
+      content: "City";
+    }
+  }
+
+  &.state {
+    border: orange;
+    color: orange;
+    box-shadow: inset 0 0 0 2px orange;
+    
+    &:before {
+      content: "State";
+   }
   }
 }

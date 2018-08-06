@@ -4,7 +4,7 @@
 
   h1 {
     font-size: 1.8em;
-    margin-bottom: 0.2em;
+    margin-bottom: .2em;
   }
 
   .loading-dialog {
@@ -30,6 +30,10 @@
       h3 {
         color: $color-primary;
         text-decoration: underline;
+        margin-bottom: 2.5em;
+        @media screen and (min-width: $medium-screen) {
+          margin-bottom: 0.2em;
+        }
       }
   }
 
@@ -37,7 +41,7 @@
     font-size: 0.95em;
     margin: 0;
   }
-}
+}  
 
 
 .repos-count {
@@ -59,5 +63,50 @@
         margin-right: 0.2em;
       }
     }
+  }
+}
+
+
+.repo-label {
+  border: $color-green-light;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 2px $color-green-light;
+  color: $color-green-light;
+  display: block;
+  font-size: .65em;
+  margin-top: .2rem;
+  padding: .2rem .7rem;
+  position: absolute;
+  width: fit-content;
+
+  &:before {
+    content: "Federal";
+  }
+
+  @media screen and (min-width: $medium-screen) {
+    bottom: .5rem;
+    display: inline-block;
+    margin-left: 1rem;
+    position: relative;
+  }
+
+  &.city {
+    border: $color-secondary-dark;
+    color: $color-secondary-dark;
+    box-shadow: inset 0 0 0 2px $color-secondary-dark;
+    
+    &:before {
+      content: "City";
+    }
+  }
+
+  &.state {
+    border: orange;
+    color: orange;
+    box-shadow: inset 0 0 0 2px orange;
+    
+    &:before {
+      content: "State";
+   }
   }
 }
