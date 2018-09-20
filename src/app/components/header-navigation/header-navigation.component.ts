@@ -57,6 +57,11 @@ export class HeaderNavigationComponent {
     });
   }
 
+  ngAfterContentInit() {
+    Array.prototype.slice.call(document.querySelectorAll("header ul a[href='#']"))
+    .forEach(a => a.href = window.location.hash);
+  }
+
   ngOnDestroy() {
     this.searchBoxActiveSubscription.unsubscribe();
   }
