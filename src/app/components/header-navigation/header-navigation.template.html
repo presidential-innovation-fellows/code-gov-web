@@ -27,7 +27,7 @@
         role="menuitem"
       ></a>
 
-      <a *ngIf="!menuOption.url" [textContent]="menuOption.name" (click)="onClickMenuOption(menuOption, $event)"  tabindex="0" role="menuitem" aria-haspopup="true" href="#"></a>
+      <a *ngIf="!menuOption.url" [textContent]="menuOption.name" (click)="onClickMenuOption(menuOption, $event)"  tabindex="0" role="menuitem" aria-haspopup="true"  href="javascript:void(0);"></a>
 
       <ul *ngIf="menuOption.links && menuOption.links.length > 0" role="menu">
         <li *ngFor="let link of menuOption.links" role="none">
