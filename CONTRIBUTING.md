@@ -14,7 +14,7 @@ We encourage you to read this project's CONTRIBUTING policy (you are here), its 
 - Improve or create documentation for code-gov-web.
 - Help us improve our unit and integrations tests.
 - Triage tickets and review patches triaging-tickets created by other users.
-- We want to ensure a welcoming environment for all of our projects. Our staff follows this [Code of Conduct](CODE_Of_CONDUCT.md)
+- We want to ensure a welcoming environment for all of our projects. Our staff follows this [Code of Conduct](CODE_OF_CONDUCT.md)
 
 ## Public domain
 
