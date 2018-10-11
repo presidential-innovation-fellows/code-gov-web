@@ -16,7 +16,7 @@
   </div>
   <div class="browse">
     Or
-    <select (change)="onBrowseByEntityChange($event.target.value)" id="agencyList" aria-label="browse by agency">
+    <select (change)="onBrowseByEntityChange($event.target.value)" id="agencyList" aria-label="browse by agency" style="height: 25px">
       <option [textContent]="browse_by_text"></option>
       <option value="All">All</option>
       <option *ngFor="let entity of entities" [textContent]="entity.name" [value]="entity.acronym"></option>
