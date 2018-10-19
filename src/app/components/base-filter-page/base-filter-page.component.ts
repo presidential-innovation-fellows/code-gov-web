@@ -1,5 +1,5 @@
 import { JsonPipe } from '@angular/common';
-import { ChangeDetectorRef, Component, ElementRef, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, HostListener, ViewEncapsulation } from '@angular/core';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
@@ -49,6 +49,9 @@ export class BaseFilterPageComponent {
   // added by children
   public sortOptions: String[];
   public selectedSortOption: String;
+
+  isMobile: boolean;
+  sideNavBarWidth: string = '0';
 
   /**
    * On removal from the DOM, unsubscribe from URL updates.
@@ -319,5 +322,24 @@ export class BaseFilterPageComponent {
       default:
         break;
     }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    if (window.innerWidth < 750) {
+      this.isMobile = true;
+    } else {
+      this.isMobile = false;
+      this.sideNavBarWidth = '0';
+    }
+  }
+
+  onShowFilter() {
+    this.sideNavBarWidth = '100%';
+  }
+
+  onCloseNavBar() {
+    this.sideNavBarWidth = '0';
+
   }
 }

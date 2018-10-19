@@ -159,3 +159,59 @@
   }
 
 }
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  box-sizing: border-box;
+}
+
+.close-search-box-button {
+  color: black;
+  cursor: pointer;
+  float: right;
+  font-size: 1.4em;
+  height: 42px;
+  line-height: 42px;
+  position: relative;
+  text-decoration: none;
+  transition: 0.25s transform;
+  width: 10%;
+
+  @media screen and (min-width: $medium-screen) {
+    width: 42px;
+  }
+
+  &:focus,
+  &:hover {
+    transform: scale(1.5);
+
+    > i {
+      color: black;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  > i {
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.sidenav-padding {
+  padding: 5px 15px 5px 15px;
+}
+
+.sidenav-padding > div > filter-box > div {
+  margin: 0 0 2rem 0 !important;
+}

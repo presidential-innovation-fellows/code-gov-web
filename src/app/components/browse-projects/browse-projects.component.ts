@@ -41,6 +41,7 @@ export class BrowseProjectsComponent extends BaseFilterPageComponent {
   }
 
   ngOnInit() {
+    this.isMobile = window.innerWidth < 750;
     this.bannerImage = this.sanitizer.bypassSecurityTrustStyle(`url('${images.background}')`);
 
     this.stateService.set('section', 'browse-projects');

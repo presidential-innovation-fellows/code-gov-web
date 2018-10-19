@@ -40,6 +40,7 @@ export class HelpWantedComponent extends BaseFilterPageComponent {
   }
 
   ngOnInit() {
+    this.isMobile = window.innerWidth < 750;
     this.bannerImage = this.sanitizer.bypassSecurityTrustStyle(`url('${images.background}')`);
 
     this.helpWantedService.getTasks().subscribe(tasks => {

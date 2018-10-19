@@ -21,19 +21,46 @@
   </div>
   <div class="indented">
     <div id="filter-boxes-section">
-      <h2>Filter</h2>
-      <filter-box title="Language" [attr.options]="languages | json" (change)="onFilterBoxChange($event)"></filter-box>
+      <h2 *ngIf="!isMobile">Filter</h2>
+      <div style="display: inline; width: 100%">
+        <button *ngIf="isMobile" style="width: 100%" (click)="onShowFilter()">
+          Filter
+        </button>
+      </div>
+      <div id="sideNavBar" [style.width]="sideNavBarWidth" class="sidenav">
+        <div class="sidenav-padding">
+          <div style="display: flex; justify-content: right;">
+            <a class="close-search-box-button" (click)="onCloseNavBar()">
+              <i class="icon icon-cancel"></i>
+            </a>
+          </div>
+          <filter-box title="Language" [attr.options]="languages | json" (change)="onFilterBoxChange($event)"></filter-box>
 
-      <filter-box [style.display]="agencies && agencies.length > 1 ? 'block' : 'none'" title="Federal Agency" [attr.options]="agencies | json" (change)="onFilterBoxChange($event)"></filter-box>
+          <filter-box [style.display]="agencies && agencies.length > 1 ? 'block' : 'none'" title="Federal Agency" [attr.options]="agencies | json" (change)="onFilterBoxChange($event)"></filter-box>
 
-      <filter-box title="Skill Level" options='["Beginner","Intermediate","Advanced"]' (change)="onFilterBoxChange($event)"></filter-box>
+          <filter-box title="Skill Level" options='["Beginner","Intermediate","Advanced"]' (change)="onFilterBoxChange($event)"></filter-box>
 
-      <filter-box title="Time Required" options='["Small","Medium","Large"]' (change)="onFilterBoxChange($event)"></filter-box>
+          <filter-box title="Time Required" options='["Small","Medium","Large"]' (change)="onFilterBoxChange($event)"></filter-box>
 
-      <filter-box title="Type" [attr.options]="types | json" (change)="onFilterBoxChange($event)"></filter-box>
+          <filter-box title="Type" [attr.options]="types | json" (change)="onFilterBoxChange($event)"></filter-box>
 
-      <filter-box [style.display]="licenses && licenses.length > 1 ? 'block' : 'none'" title="License" [attr.options]="licenses | json" (change)="onFilterBoxChange($event)"></filter-box>
+          <filter-box [style.display]="licenses && licenses.length > 1 ? 'block' : 'none'" title="License" [attr.options]="licenses | json" (change)="onFilterBoxChange($event)"></filter-box>
 
+        </div>
+      </div>
+      <div *ngIf="!isMobile">
+        <filter-box title="Language" [attr.options]="languages | json" (change)="onFilterBoxChange($event)"></filter-box>
+
+        <filter-box [style.display]="agencies && agencies.length > 1 ? 'block' : 'none'" title="Federal Agency" [attr.options]="agencies | json" (change)="onFilterBoxChange($event)"></filter-box>
+
+        <filter-box title="Skill Level" options='["Beginner","Intermediate","Advanced"]' (change)="onFilterBoxChange($event)"></filter-box>
+
+        <filter-box title="Time Required" options='["Small","Medium","Large"]' (change)="onFilterBoxChange($event)"></filter-box>
+
+        <filter-box title="Type" [attr.options]="types | json" (change)="onFilterBoxChange($event)"></filter-box>
+
+        <filter-box [style.display]="licenses && licenses.length > 1 ? 'block' : 'none'" title="License" [attr.options]="licenses | json" (change)="onFilterBoxChange($event)"></filter-box>
+      </div>
     </div>
     <div id="filter-results-section">
       <div class="sort-section">
