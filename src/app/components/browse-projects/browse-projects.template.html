@@ -15,8 +15,8 @@
       <div class="width-quarter">
         <repos-search autofocus=true buttonClasses="alt" placeholder="{{ queryValue }}"></repos-search>
       </div>
-      <h3 *ngIf="total" class="repos-count width-three-quarters">
-        {{ total }} {{ "Repositories" | pluralize : reposTotal }}
+      <h3 *ngIf="finalResults" class="repos-count width-three-quarters">
+        {{ finalResults.length }} {{ "Repositories" | pluralize : reposTotal }}
       </h3>
     </div>
   </div>

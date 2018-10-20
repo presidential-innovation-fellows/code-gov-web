@@ -24,16 +24,27 @@
 }
 
 /* roadmap table section of page */
+.roadmap-table {
+
+  table {
+    margin: .25rem auto .1rem;
+  }
+
+  tbody tr {
+    background-color: $color-white;
+  }
+}
+
+/* roadmap { title } table section of page */
 .roadmap-table-title {
 
-  h3,
+  h3
   {
     color: $color-gray-dark;
     padding: 0rem 0rem 2rem;
-    table {margin-top: .25rem};
-    table {margin-bottom: .1rem};
   }
 }
+
 /* legend under roadmap table */
 .roadmap-legend {
 

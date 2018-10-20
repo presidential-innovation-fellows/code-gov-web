@@ -30,6 +30,16 @@ export class RepoListComponent {
     }
   }
 
+  /**
+   * When the current page has updated.
+   *
+   * @return {void}
+   */
+  onPageChange(page: number) {
+    this.currentPage = page;
+    window.scrollTo(0, 0);
+  }
+
   /* We have to do something weird here.  Basically, angular doesn't trigger
     ngOnChanges on when the properties on an input property changes.  ngOnChanges
     only checks if an object changes.  If we sort the results, this isn't technically
