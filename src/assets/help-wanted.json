@@ -471,7 +471,8 @@
       "popular": true,
       "license": "CC0 1.0 Universal License",
       "agency": {
-        "acronym": "Department of Education"
+        "acronym": "ED",
+        "name": "Department of Education"
       },
       "date": {
         "lastModified": "2018-09-20"

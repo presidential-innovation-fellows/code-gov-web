@@ -32,7 +32,7 @@
         </ng-template>
       </li>
     </ul>
-    <pagination-template #p="paginationApi" (pageChange)="currentPage = $event">
+    <pagination-template #p="paginationApi" (pageChange)="onPageChange($event)">
         <nav role="navigation" aria-label="Pagination Navigation" tabindex="0">
           <ul class="ngx-pagination">
               <div class="repo-list-summary-wrapper" tabindex="0">
@@ -43,7 +43,7 @@
               <span *ngIf="p.isFirstPage()" aria-label="Previous"><i class="icon icon-angle-circled-left"></i> Prev</span>
               <a *ngIf="!p.isFirstPage()" (click)="p.previous()"><i class="icon icon-angle-circled-up"></i> Prev</a>
               </li>
-  
+
               <li *ngFor="let page of p.pages; let isFirst = first" class="page" [class.current]="p.getCurrent() === page.value" [class.first]="isFirst" tabindex="0">
               <a (click)="p.setCurrent(page.value)" *ngIf="p.getCurrent() !== page.value" attr.aria-label="Go to page {{ page.label }}">
                   {{ page.label }}
@@ -52,7 +52,7 @@
                   {{ page.label }}
               </span>
               </li>
-  
+
               <li class="pagination-next" [class.disabled]="p.isLastPage()" tabindex="0">
               <span *ngIf="p.isLastPage()">Next <i class="icon icon-angle-circled-right"></i></span>
               <a *ngIf="!p.isLastPage()" (click)="p.next()">Next <i class="icon icon-angle-circled-right"></i></a>
