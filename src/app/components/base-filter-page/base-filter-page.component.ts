@@ -12,6 +12,7 @@ import { StateService } from '../../services/state';
 import * as allLanguages from '../../../enums/languages.json';
 
 import { content, images } from '../../../../config/code-gov-config.json';
+import { BaseFilterSideNavComponent } from './base-filter-side-nav.component';
 
 const licenseNameToId = {};
 const licenseIdToName = {};
@@ -29,7 +30,7 @@ Object.entries(licenseList).forEach(values => {
   template: ''
 })
 
-export class BaseFilterPageComponent {
+export class BaseFilterPageComponent extends BaseFilterSideNavComponent {
   public searchQuery: string = '';
   public bannerImage: SafeStyle;
   public queryValue: string = '';
@@ -49,9 +50,6 @@ export class BaseFilterPageComponent {
   // added by children
   public sortOptions: String[];
   public selectedSortOption: String;
-
-  isMobile: boolean;
-  sideNavBarWidth: string = '0';
 
   /**
    * On removal from the DOM, unsubscribe from URL updates.
@@ -322,24 +320,5 @@ export class BaseFilterPageComponent {
       default:
         break;
     }
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize() {
-    if (window.innerWidth < 750) {
-      this.isMobile = true;
-    } else {
-      this.isMobile = false;
-      this.sideNavBarWidth = '0';
-    }
-  }
-
-  onShowFilter() {
-    this.sideNavBarWidth = '100%';
-  }
-
-  onCloseNavBar() {
-    this.sideNavBarWidth = '0';
-
   }
 }
