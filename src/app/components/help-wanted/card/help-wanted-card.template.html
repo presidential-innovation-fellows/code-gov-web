@@ -10,12 +10,12 @@
     </div> -->
 
     <div *ngIf="item?.agency?.acronym">
-      <dt>Agency:
+      <dt>Agency:</dt>
       <dd><a [routerLink]="['/browse-projects']" [queryParams]="{agencies:item?.agency?.acronym}">{{item?.agency?.acronym}}</a></dd>
     </div>
 
     <div *ngIf="item?.date?.lastModified">
-      <dt>Last updated:
+      <dt>Last updated:</dt>
       <dd>{{item?.date?.lastModified | date: "MMM d yyyy 'at' h':'mm a"}}</dd>
     </div>
 
